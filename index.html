@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --forest:#1a3a2a;
+  --forest2:#234d38;
+  --forest3:#2d6347;
+  --forest4:#3a7a58;
+  --sage:#7aab8e;
+  --sage2:#a8c9b5;
+  --cream:#faf8f2;
+  --cream2:#f3f0e6;
+  --cream3:#e8e3d4;
+  --gold:#c9a84c;
+  --gold2:#e8c96a;
+  --line:#ddd8c8;
+  --line2:#ccc6b4;
+  --text:#1c1a14;
+  --text2:#4a4638;
+  --text3:#8a8474;
+  --card:#ffffff;
+  --bg:var(--cream);
+  --serif:'Playfair Display',Georgia,serif;
+  --body:'Source Serif 4',Georgia,serif;
+  --sans:'DM Sans',sans-serif;
+  --max:960px;
+  --r:3px;
+}
+[data-theme="dark"]{
+  --cream:#0e1a14;
+  --cream2:#132019;
+  --cream3:#1c2e22;
+  --line:#2a3d30;
+  --line2:#3a5044;
+  --text:#e8f0e4;
+  --text2:#9db89a;
+  --text3:#5a7464;
+  --card:#132019;
+  --bg:var(--cream);
+}
+html{font-size:16px;scroll-behavior:smooth;background:var(--cream)}
+body{color:var(--text);font-family:var(--body);line-height:1.7;min-height:100vh;background:var(--cream);transition:background 0.3s,color 0.3s}
+a{text-decoration:none;color:inherit}
+
+/* READING PROGRESS */
+#prog{position:fixed;top:0;left:0;height:2px;background:var(--gold);z-index:9999;width:0;transition:width 0.1s linear}
+
+/* NAV */
+nav{background:var(--forest);position:sticky;top:0;z-index:300;border-bottom:1px solid rgba(255,255,255,0.06)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px;gap:2rem}
+.nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.nav-icon{width:28px;height:28px;flex-shrink:0}
+.nav-name{font-family:var(--serif);font-size:1.05rem;font-weight:700;color:#fff;letter-spacing:-0.01em;white-space:nowrap}
+.nav-name em{font-style:italic;font-weight:400;color:var(--sage2)}
+.nav-links{display:flex;gap:0;list-style:none;flex:1;justify-content:center}
+.nav-links a{font-family:var(--sans);font-size:0.72rem;font-weight:400;color:rgba(255,255,255,0.6);padding:6px 14px;transition:color 0.2s;letter-spacing:0.04em;text-transform:uppercase}
+.nav-links a:hover{color:#fff}
+.nav-right{display:flex;align-items:center;gap:0.75rem;flex-shrink:0}
+.nav-search{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);padding:6px 12px;border-radius:var(--r);cursor:pointer;font-family:var(--sans);font-size:0.72rem;letter-spacing:0.04em;transition:all 0.2s;text-transform:uppercase}
+.nav-search:hover{background:rgba(255,255,255,0.14);color:#fff}
+.nav-theme{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);width:32px;height:32px;border-radius:var(--r);cursor:pointer;font-size:0.85rem;transition:all 0.2s;display:flex;align-items:center;justify-content:center}
+.nav-theme:hover{background:rgba(255,255,255,0.14);color:#fff}
+.nav-sub{background:var(--gold);color:var(--forest);border:none;font-family:var(--sans);font-size:0.7rem;font-weight:600;padding:7px 16px;border-radius:var(--r);cursor:pointer;letter-spacing:0.05em;text-transform:uppercase;transition:all 0.2s;white-space:nowrap}
+.nav-sub:hover{background:var(--gold2)}
+
+/* SEARCH OVERLAY */
+.s-overlay{position:fixed;inset:0;background:rgba(10,20,14,0.88);z-index:500;display:flex;align-items:flex-start;justify-content:center;padding-top:100px;opacity:0;pointer-events:none;transition:opacity 0.2s;backdrop-filter:blur(6px)}
+.s-overlay.open{opacity:1;pointer-events:all}
+.s-box{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:1.5rem;width:100%;max-width:520px;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
+.s-wrap{display:flex;align-items:center;gap:10px;border-bottom:2px solid var(--forest3);padding-bottom:10px}
+.s-input{flex:1;background:none;border:none;font-family:var(--serif);font-size:1.1rem;color:var(--text);outline:none;font-style:italic}
+.s-input::placeholder{color:var(--text3)}
+.s-close{background:none;border:none;color:var(--text3);cursor:pointer;font-family:var(--sans);font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;padding:4px 8px;transition:color 0.2s}
+.s-close:hover{color:var(--text)}
+.s-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:1.25rem}
+.s-tag{background:var(--cream2);border:1px solid var(--line);color:var(--text2);font-family:var(--sans);font-size:0.68rem;font-weight:500;padding:4px 12px;border-radius:20px;cursor:pointer;transition:all 0.2s;letter-spacing:0.04em;text-transform:uppercase}
+.s-tag:hover{background:var(--forest);color:#fff;border-color:var(--forest)}
+
+/* TICKER */
+.ticker{background:var(--forest2);border-bottom:1px solid rgba(255,255,255,0.06);overflow:hidden;padding:8px 0}
+.ticker-track{display:flex;animation:ticker 35s linear infinite;white-space:nowrap}
+.ticker-item{font-family:var(--sans);font-size:0.62rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);padding:0 2.5rem}
+.ticker-sep{color:var(--gold);opacity:0.5}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* HERO */
+.hero{background:var(--forest);padding:4.5rem 2rem 4rem;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;top:0;right:0;bottom:0;width:40%;background:linear-gradient(135deg,transparent,rgba(255,255,255,0.02));pointer-events:none}
+.hero-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:55fr 45fr;gap:4rem;align-items:start;position:relative}
+.hero-kicker{font-family:var(--sans);font-size:0.62rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage);margin-bottom:1.25rem;display:flex;align-items:center;gap:10px}
+.hero-kicker::before{content:'';width:28px;height:1px;background:var(--sage)}
+.hero-title{font-family:var(--serif);font-size:clamp(2rem,3.8vw,2.8rem);font-weight:700;color:#fff;line-height:1.15;letter-spacing:-0.025em;margin-bottom:1.25rem}
+.hero-title em{font-style:italic;font-weight:400;color:var(--sage2)}
+.hero-sub{font-family:var(--body);font-size:1rem;font-weight:300;color:rgba(255,255,255,0.55);line-height:1.82;margin-bottom:2rem;font-style:italic}
+.hero-btns{display:flex;gap:12px}
+.btn-p{background:var(--gold);color:var(--forest);font-family:var(--sans);font-size:0.75rem;font-weight:600;padding:11px 22px;border-radius:var(--r);border:none;cursor:pointer;letter-spacing:0.05em;text-transform:uppercase;transition:all 0.2s}
+.btn-p:hover{background:var(--gold2);transform:translateY(-1px)}
+.btn-o{background:transparent;color:rgba(255,255,255,0.7);font-family:var(--sans);font-size:0.75rem;font-weight:500;padding:11px 22px;border-radius:var(--r);border:1px solid rgba(255,255,255,0.2);cursor:pointer;letter-spacing:0.05em;text-transform:uppercase;transition:all 0.2s}
+.btn-o:hover{border-color:rgba(255,255,255,0.5);color:#fff}
+.hero-side{border-left:1px solid rgba(255,255,255,0.1);padding-left:3rem}
+.hs-label{font-family:var(--sans);font-size:0.6rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);margin-bottom:1.25rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(255,255,255,0.08)}
+.hs-item{padding:1rem 0;border-bottom:1px solid rgba(255,255,255,0.07);cursor:pointer;transition:all 0.2s}
+.hs-item:last-child{border-bottom:none}
+.hs-item:hover .hs-title{color:var(--sage2)}
+.hs-num{font-family:var(--serif);font-size:1.3rem;font-style:italic;color:rgba(255,255,255,0.12);line-height:1;margin-bottom:0.35rem}
+.hs-cat{font-family:var(--sans);font-size:0.58rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--sage);margin-bottom:0.3rem}
+.hs-title{font-family:var(--sans);font-size:0.84rem;font-weight:500;color:rgba(255,255,255,0.78);line-height:1.4;transition:color 0.15s}
+.hs-time{font-family:var(--sans);font-size:0.62rem;color:rgba(255,255,255,0.28);margin-top:0.35rem}
+
+/* SECTION CHROME */
+.sec{padding:4rem 2rem;background:var(--cream)}
+.sec-alt{background:var(--cream2)}
+.sec-inner{max-width:var(--max);margin:0 auto}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;border-bottom:2px solid var(--text);padding-bottom:0.75rem;margin-bottom:2.5rem}
+.sec-title{font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--text);letter-spacing:-0.02em}
+.sec-more{font-family:var(--sans);font-size:0.68rem;font-weight:500;color:var(--text3);letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+.sec-more:hover{color:var(--forest3)}
+
+/* FEATURED GRID */
+.feat-grid{display:grid;grid-template-columns:3fr 2fr;gap:0;border:1px solid var(--line)}
+.feat-main{padding:2rem;border-right:1px solid var(--line);cursor:pointer;transition:background 0.2s}
+.feat-main:hover{background:var(--cream2)}
+.feat-main:hover .art-title{color:var(--forest3)}
+.feat-badge{display:inline-block;font-family:var(--sans);font-size:0.58rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:var(--forest);color:#fff;padding:3px 9px;border-radius:1px;margin-bottom:1rem}
+.art-cat{font-family:var(--sans);font-size:0.6rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--forest3);margin-bottom:0.6rem}
+.art-title{font-family:var(--serif);font-size:1.4rem;font-weight:700;color:var(--text);line-height:1.25;margin-bottom:0.75rem;letter-spacing:-0.02em;transition:color 0.2s}
+.art-excerpt{font-family:var(--body);font-size:0.92rem;font-weight:300;color:var(--text2);line-height:1.8;font-style:italic;margin-bottom:1.25rem}
+.art-meta{font-family:var(--sans);font-size:0.68rem;color:var(--text3);display:flex;gap:1rem;align-items:center}
+.art-min{background:var(--cream3);padding:2px 7px;font-size:0.62rem;color:var(--text2);font-weight:500}
+.feat-side{display:flex;flex-direction:column}
+.side-art{padding:1.5rem;border-bottom:1px solid var(--line);cursor:pointer;transition:background 0.2s;flex:1;display:flex;flex-direction:column}
+.side-art:last-child{border-bottom:none}
+.side-art:hover{background:var(--cream2)}
+.side-art:hover .art-title{color:var(--forest3)}
+.side-art .art-title{font-size:0.95rem;line-height:1.38;margin-bottom:0.5rem}
+.side-art .art-excerpt{font-size:0.82rem}
+
+/* ARTICLE GRID */
+.art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
+.art-card{padding:1.75rem 1.5rem;border-right:1px solid var(--line);cursor:pointer;transition:background 0.2s}
+.art-card:last-child{border-right:none}
+.art-card:hover{background:var(--cream2)}
+.art-card:hover .art-title{color:var(--forest3)}
+
+/* SCROLL STRIP */
+.scroll-sec{background:var(--cream2);padding:4rem 0 4rem 2rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.scroll-head{max-width:var(--max);margin:0 auto 2rem;padding-right:2rem;display:flex;align-items:baseline;justify-content:space-between}
+.scroll-track{display:flex;gap:0;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;scroll-snap-type:x mandatory}
+.scroll-track::-webkit-scrollbar{display:none}
+.scroll-card{background:var(--card);border:1px solid var(--line);border-right:none;min-width:240px;max-width:240px;padding:1.5rem;cursor:pointer;transition:background 0.2s;scroll-snap-align:start;flex-shrink:0}
+.scroll-card:last-child{border-right:1px solid var(--line)}
+.scroll-card:hover{background:var(--cream2)}
+.scroll-card:hover .art-title{color:var(--forest3)}
+.scroll-num{font-family:var(--serif);font-size:1.8rem;font-style:italic;color:var(--line2);line-height:1;margin-bottom:0.75rem}
+
+/* CASE STUDIES */
+.case-sec{background:var(--forest);padding:4rem 2rem}
+.case-inner{max-width:var(--max);margin:0 auto}
+.case-head{display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.12);padding-bottom:0.75rem;margin-bottom:2.5rem}
+.case-head .sec-title{color:#fff}
+.case-head .sec-more{color:rgba(255,255,255,0.35)}
+.case-head .sec-more:hover{color:var(--sage2)}
+.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.case-card{border:1px solid rgba(255,255,255,0.08);border-right:none;padding:1.75rem 1.5rem;cursor:pointer;transition:background 0.2s;position:relative}
+.case-card:last-child{border-right:1px solid rgba(255,255,255,0.08)}
+.case-card:hover{background:rgba(255,255,255,0.04)}
+.case-card:hover .cs-title{color:var(--sage2)}
+.case-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;opacity:0;transition:opacity 0.2s}
+.case-card:hover::before{opacity:1}
+.cc-red::before{background:var(--cc-red,#e05c4a)}
+.cc-amber::before{background:#c9a84c}
+.cc-green::before{background:var(--sage)}
+.cc-blue::before{background:#4a8ab5}
+.cc-purple::before{background:#8a5ab5}
+.cc-teal::before{background:var(--forest4)}
+.cs-tag{display:inline-block;font-family:var(--sans);font-size:0.58rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:3px 8px;border-radius:1px;margin-bottom:0.75rem}
+.t-red{background:rgba(224,92,74,0.15);color:#e08474}
+.t-amber{background:rgba(201,168,76,0.15);color:var(--gold2)}
+.t-green{background:rgba(122,171,142,0.15);color:var(--sage2)}
+.t-blue{background:rgba(74,138,181,0.15);color:#7ab4d5}
+.t-purple{background:rgba(138,90,181,0.15);color:#b48ad5}
+.t-teal{background:rgba(58,122,88,0.15);color:var(--sage)}
+.cs-year{font-family:var(--sans);font-size:0.65rem;font-weight:500;letter-spacing:0.08em;color:rgba(255,255,255,0.28);margin-bottom:0.65rem;display:flex;align-items:center;gap:8px}
+.cs-year::before{content:'';width:16px;height:1px;background:rgba(255,255,255,0.15)}
+.cs-title{font-family:var(--serif);font-size:1rem;font-weight:700;color:rgba(255,255,255,0.82);line-height:1.35;margin-bottom:0.65rem;transition:color 0.15s}
+.cs-sum{font-family:var(--body);font-size:0.8rem;font-weight:300;color:rgba(255,255,255,0.42);line-height:1.72;font-style:italic;margin-bottom:1rem}
+.cs-read{font-family:var(--sans);font-size:0.68rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--sage);display:inline-flex;align-items:center;gap:5px;transition:gap 0.2s}
+.cs-read:hover{gap:9px}
+
+/* ABOUT */
+.about-sec{background:var(--cream);padding:4rem 2rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:5fr 7fr;gap:5rem;align-items:start}
+.about-left{}
+.about-label{font-family:var(--sans);font-size:0.6rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--text3);margin-bottom:1.25rem;display:flex;align-items:center;gap:8px}
+.about-label::before{content:'';width:20px;height:1px;background:var(--line2)}
+.about-heading{font-family:var(--serif);font-size:1.7rem;font-weight:700;color:var(--text);line-height:1.2;letter-spacing:-0.025em;margin-bottom:0.3rem}
+.about-heading em{font-style:italic;font-weight:400;color:var(--forest3)}
+.about-sub{font-family:var(--sans);font-size:0.72rem;color:var(--text3);letter-spacing:0.06em;text-transform:uppercase;margin-top:1rem}
+.about-right{}
+.about-body{font-family:var(--body);font-size:0.98rem;font-weight:300;color:var(--text2);line-height:1.88;font-style:italic}
+.about-body p+p{margin-top:1.1rem}
+.about-body strong{font-style:normal;color:var(--text);font-weight:400}
+
+/* CONTACT */
+.contact-sec{background:var(--cream2);padding:4rem 2rem}
+.contact-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:2fr 3fr;gap:4rem;align-items:start}
+.contact-label{font-family:var(--sans);font-size:0.6rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--text3);margin-bottom:1rem;display:flex;align-items:center;gap:8px}
+.contact-label::before{content:'';width:20px;height:1px;background:var(--line2)}
+.contact-heading{font-family:var(--serif);font-size:1.6rem;font-weight:700;color:var(--text);line-height:1.2;letter-spacing:-0.02em;margin-bottom:0.75rem}
+.contact-heading em{font-style:italic;font-weight:400;color:var(--forest3)}
+.contact-sub{font-family:var(--body);font-size:0.9rem;font-weight:300;color:var(--text2);line-height:1.8;font-style:italic;margin-bottom:1.75rem}
+.contact-info{display:flex;flex-direction:column;gap:0.75rem}
+.c-info-row{background:var(--card);border:1px solid var(--line);padding:0.875rem 1.1rem;display:flex;align-items:center;gap:12px}
+.c-info-dot{width:6px;height:6px;border-radius:50%;background:var(--forest3);flex-shrink:0}
+.c-info-label{font-family:var(--sans);font-size:0.6rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text3);margin-bottom:1px}
+.c-info-val{font-family:var(--sans);font-size:0.82rem;font-weight:400;color:var(--text)}
+.contact-form{background:var(--card);border:1px solid var(--line);padding:2rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.form-grp{display:flex;flex-direction:column;gap:5px;margin-bottom:1rem}
+.form-grp:last-of-type{margin-bottom:1.25rem}
+.form-label{font-family:var(--sans);font-size:0.62rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text3)}
+.form-input{background:var(--cream2);border:1px solid var(--line);padding:10px 13px;font-family:var(--body);font-size:0.88rem;color:var(--text);outline:none;transition:border-color 0.2s;width:100%;border-radius:0;font-style:italic}
+.form-input::placeholder{color:var(--text3);font-style:italic}
+.form-input:focus{border-color:var(--forest3)}
+.form-ta{resize:vertical;min-height:96px}
+.form-btn{width:100%;background:var(--forest);color:#fff;font-family:var(--sans);font-size:0.75rem;font-weight:600;padding:12px;border:none;cursor:pointer;letter-spacing:0.06em;text-transform:uppercase;transition:background 0.2s}
+.form-btn:hover{background:var(--forest3)}
+
+/* NEWSLETTER */
+.nl-sec{background:var(--forest);padding:3.5rem 2rem}
+.nl-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.nl-label{font-family:var(--sans);font-size:0.6rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage);margin-bottom:0.75rem;display:flex;align-items:center;gap:8px}
+.nl-label::before{content:'';width:20px;height:1px;background:var(--sage)}
+.nl-title{font-family:var(--serif);font-size:1.7rem;font-weight:700;color:#fff;letter-spacing:-0.025em;line-height:1.2;margin-bottom:0.4rem}
+.nl-title em{font-style:italic;font-weight:400;color:var(--sage2)}
+.nl-sub{font-family:var(--body);font-size:0.88rem;font-weight:300;color:rgba(255,255,255,0.48);line-height:1.78;font-style:italic}
+.nl-form{display:flex;gap:0}
+.nl-input{flex:1;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-right:none;font-family:var(--body);font-size:0.88rem;padding:11px 14px;color:#fff;outline:none;transition:border-color 0.2s;font-style:italic}
+.nl-input::placeholder{color:rgba(255,255,255,0.3)}
+.nl-input:focus{border-color:var(--sage)}
+.nl-btn{background:var(--gold);color:var(--forest);border:none;font-family:var(--sans);font-size:0.72rem;font-weight:600;padding:11px 20px;cursor:pointer;letter-spacing:0.06em;text-transform:uppercase;transition:all 0.2s;white-space:nowrap}
+.nl-btn:hover{background:var(--gold2)}
+.nl-note{font-family:var(--sans);font-size:0.62rem;color:rgba(255,255,255,0.28);margin-top:0.65rem;letter-spacing:0.02em}
+
+/* FOOTER */
+footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);padding:1.5rem 2rem}
+.foot-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.foot-logo{display:flex;align-items:center;gap:8px}
+.foot-logo-icon{width:22px;height:22px}
+.foot-logo-name{font-family:var(--serif);font-size:0.88rem;font-weight:700;color:rgba(255,255,255,0.7)}
+.foot-logo-name em{font-style:italic;font-weight:400;color:var(--sage)}
+.foot-links{display:flex;gap:1.5rem}
+.foot-links a{font-family:var(--sans);font-size:0.65rem;letter-spacing:0.05em;text-transform:uppercase;color:rgba(255,255,255,0.3);transition:color 0.2s}
+.foot-links a:hover{color:var(--sage2)}
+.foot-copy{font-family:var(--sans);font-size:0.62rem;color:rgba(255,255,255,0.2)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.hero-inner{animation:fadeUp 0.55s ease both}
+.feat-grid{animation:fadeUp 0.55s 0.08s ease both}
+</style>
+</head>
+<body>
+
+<div id="prog"></div>
+
+<!-- SEARCH -->
+<div class="s-overlay" id="sOverlay" onclick="closeSrch(event)">
+  <div class="s-box">
+    <div class="s-wrap">
+      <input class="s-input" placeholder="Search articles, case studies..." id="sInput">
+      <button class="s-close" onclick="toggleSrch()">Close</button>
+    </div>
+    <div class="s-tags">
+      <span class="s-tag">Drug Launches</span>
+      <span class="s-tag">Careers</span>
+      <span class="s-tag">Brand Strategy</span>
+      <span class="s-tag">Regulatory</span>
+      <span class="s-tag">OTC vs Rx</span>
+      <span class="s-tag">Digital Marketing</span>
+      <span class="s-tag">Case Studies</span>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="#">
+      <!-- ICON SVG -->
+      <svg class="nav-icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="14" cy="14" r="13" fill="#2d6347" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+        <path d="M9 14h10M14 9v10" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"/>
+        <circle cx="14" cy="14" r="3.5" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+        <circle cx="14" cy="14" r="1.5" fill="#c9a84c"/>
+      </svg>
+      <span class="nav-name">Figuring Out <em>Pharma</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Blogs</a></li>
+      <li><a href="#">Case Studies</a></li>
+      <li><a href="#">Categories</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="nav-search" onclick="toggleSrch()">Search</button>
+      <button class="nav-theme" onclick="toggleTheme()" id="themeBtn">&#9790;</button>
+      <button class="nav-sub">Subscribe</button>
+    </div>
+  </div>
+</nav>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-item">Drug Launches</span><span class="ticker-item ticker-sep">&#x2022;</span>
+    <span class="ticker-item">Brand Strategy</span><span class="ticker-item ticker-sep">&#x2022;</span>
+    <span class="ticker-item">Pharma Careers</span><span class="ticker-item ticker-sep">&#x2022;</span>
+    <span class="ticker-item">Market Access</span><span class="ticker-item ticker-sep">&#x2022;</span>
+    <span class="ticker-item">GTM Strategy</span><span class="ticker-item ticker-sep">&#x2022;</span>
+    <span class="ticker-item">Regulatory Affairs</span><span class="ticker-item ticker-sep">&#x2022;</span>
+    <span class="ticker-item">OTC vs Rx</span><span class="ticker-item ticker-sep">&#x2022;</span>
+    <span class="ticker-item">Medical Reps</span><span class="ticker-item ticker-sep">&#x2022;</span>
+    <span class="ticker-item">Drug Launches</span><span class="ticker-item ticker-sep">&#x2022;</span>
+    <span class="ticker-item">Brand Strategy</span><span class="ticker-item ticker-sep">&#x2022;</span>
+    <span class="ticker-item">Pharma Careers</span><span class="ticker-item ticker-sep">&#x2022;</span>
+    <span class="ticker-item">Market Access</span><span class="ticker-item ticker-sep">&#x2022;</span>
+    <span class="ticker-item">GTM Strategy</span><span class="ticker-item ticker-sep">&#x2022;</span>
+    <span class="ticker-item">Regulatory Affairs</span><span class="ticker-item ticker-sep">&#x2022;</span>
+    <span class="ticker-item">OTC vs Rx</span><span class="ticker-item ticker-sep">&#x2022;</span>
+    <span class="ticker-item">Medical Reps</span><span class="ticker-item ticker-sep">&#x2022;</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-kicker">Pharma, explained for curious minds</div>
+      <h1 class="hero-title">The pharma industry,<br><em>figured out</em> in public.</h1>
+      <p class="hero-sub">Deep dives into drug launches, brand strategy, pharma careers and industry history — written for students and freshers who want to understand how this industry actually works, not how textbooks say it does.</p>
+      <div class="hero-btns">
+        <button class="btn-p" onclick="document.querySelector('.sec').scrollIntoView({behavior:'smooth'})">Read Latest Articles</button>
+        <button class="btn-o" onclick="document.querySelector('.case-sec').scrollIntoView({behavior:'smooth'})">Explore Case Studies</button>
+      </div>
+    </div>
+    <div class="hero-side">
+      <div class="hs-label">Also reading</div>
+      <div class="hs-item" onclick="sendPrompt('Write a full article outline for: How Crocin became a ₹1000 crore brand without advertising to doctors')">
+        <div class="hs-num">01</div>
+        <div class="hs-cat">Brand Strategy</div>
+        <div class="hs-title">How Crocin became a &#x20B9;1000 crore brand without advertising to doctors</div>
+        <div class="hs-time">9 min read</div>
+      </div>
+      <div class="hs-item" onclick="sendPrompt('Write a full article outline for: Why pharma companies cannot advertise drugs on TV in India')">
+        <div class="hs-num">02</div>
+        <div class="hs-cat">Industry</div>
+        <div class="hs-title">Why pharma companies can't advertise drugs on TV in India</div>
+        <div class="hs-time">6 min read</div>
+      </div>
+      <div class="hs-item" onclick="sendPrompt('Write a full article outline for: What does a pharma product manager actually do day to day')">
+        <div class="hs-num">03</div>
+        <div class="hs-cat">Careers</div>
+        <div class="hs-title">What does a pharma product manager actually do — day by day</div>
+        <div class="hs-time">7 min read</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED -->
+<section class="sec">
+  <div class="sec-inner">
+    <div class="sec-head">
+      <div class="sec-title">Featured</div>
+      <a class="sec-more" href="#">All articles &#x2192;</a>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-main" onclick="sendPrompt('Write a full article for: What I actually learned about pharma during my industrial training and what nobody tells you')">
+        <div class="feat-badge">Editor's Pick</div>
+        <div class="art-cat">Careers</div>
+        <div class="art-title">What I actually learned about pharma during my industrial training — and what nobody tells you</div>
+        <p class="art-excerpt">Two months on a GMP manufacturing floor taught me more about the gap between pharma education and pharma reality than three years of textbooks ever did. Here is what genuinely surprised me.</p>
+        <div class="art-meta"><span class="art-min">8 min read</span><span>Careers</span></div>
+      </div>
+      <div class="feat-side">
+        <div class="side-art" onclick="sendPrompt('Write a full article outline for: How drugs are priced in India — the real explanation')">
+          <div class="art-cat">Industry</div>
+          <div class="art-title">How drugs are priced in India — the real explanation</div>
+          <p class="art-excerpt">DPCO, trade margins, and what your pharmacoeconomics textbook quietly skipped.</p>
+          <div class="art-meta" style="margin-top:auto;padding-top:0.75rem"><span class="art-min">5 min</span></div>
+        </div>
+        <div class="side-art" onclick="sendPrompt('Write a full article outline for: FMCG vs pharma marketing — explained from scratch no assumptions')">
+          <div class="art-cat">Marketing</div>
+          <div class="art-title">FMCG vs pharma marketing — explained from scratch, no assumptions</div>
+          <p class="art-excerpt">People keep saying pharma is just like FMCG. It is not. Here is the full breakdown.</p>
+          <div class="art-meta" style="margin-top:auto;padding-top:0.75rem"><span class="art-min">11 min</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LATEST -->
+<section class="sec sec-alt">
+  <div class="sec-inner">
+    <div class="sec-head">
+      <div class="sec-title">Latest</div>
+      <a class="sec-more" href="#">View all &#x2192;</a>
+    </div>
+    <div class="art-grid">
+      <div class="art-card" onclick="sendPrompt('Write a full article outline for: OTC vs prescription — two completely different marketing games in pharma')">
+        <div class="art-cat">Marketing</div>
+        <div class="art-title">OTC vs prescription — two completely different marketing games</div>
+        <p class="art-excerpt" style="font-family:var(--body);font-size:0.83rem;font-weight:300;color:var(--text2);line-height:1.72;font-style:italic;margin-bottom:0.75rem;margin-top:0.5rem">Same molecule, completely different playbook depending on who you are allowed to talk to.</p>
+        <div class="art-meta"><span class="art-min">6 min</span></div>
+      </div>
+      <div class="art-card" onclick="sendPrompt('Write a full article outline for: Digital marketing in pharma — why it is 10 years behind and why that is finally changing')">
+        <div class="art-cat">Digital</div>
+        <div class="art-title">Digital marketing in pharma is 10 years behind — and that is finally changing</div>
+        <p class="art-excerpt" style="font-family:var(--body);font-size:0.83rem;font-weight:300;color:var(--text2);line-height:1.72;font-style:italic;margin-bottom:0.75rem;margin-top:0.5rem">Every other industry figured out content marketing. Pharma is still running on MR visits and key opinion leaders.</p>
+        <div class="art-meta"><span class="art-min">8 min</span></div>
+      </div>
+      <div class="art-card" onclick="sendPrompt('Write a full article outline for: What actually happens in a pharma brand review meeting')">
+        <div class="art-cat">Careers</div>
+        <div class="art-title">What actually happens in a pharma brand review meeting</div>
+        <p class="art-excerpt" style="font-family:var(--body);font-size:0.83rem;font-weight:300;color:var(--text2);line-height:1.72;font-style:italic;margin-bottom:0.75rem;margin-top:0.5rem">Nobody describes the room. The numbers reviewed, the questions asked, what the PM actually defends.</p>
+        <div class="art-meta"><span class="art-min">5 min</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCROLL STRIP -->
+<div class="scroll-sec">
+  <div class="scroll-head">
+    <div class="sec-title">In Depth</div>
+    <a class="sec-more" href="#">All essays &#x2192;</a>
+  </div>
+  <div class="scroll-track">
+    <div class="scroll-card" onclick="sendPrompt('Write a full article outline for: What is a product monograph and why does it shape everything in pharma marketing')">
+      <div class="scroll-num">01</div>
+      <div class="art-cat">Marketing</div>
+      <div class="art-title" style="font-size:0.9rem">What is a product monograph — and why does it shape everything in pharma marketing</div>
+      <div class="art-meta" style="margin-top:0.75rem"><span class="art-min">4 min</span></div>
+    </div>
+    <div class="scroll-card" onclick="sendPrompt('Write a full article outline for: How a pharma drug launch actually works in India step by step')">
+      <div class="scroll-num">02</div>
+      <div class="art-cat">Industry</div>
+      <div class="art-title" style="font-size:0.9rem">How a pharma drug launch actually works in India — step by step</div>
+      <div class="art-meta" style="margin-top:0.75rem"><span class="art-min">10 min</span></div>
+    </div>
+    <div class="scroll-card" onclick="sendPrompt('Write a full article outline for: How medical reps are trained and what they are actually selling')">
+      <div class="scroll-num">03</div>
+      <div class="art-cat">Industry</div>
+      <div class="art-title" style="font-size:0.9rem">How medical reps are trained — and what they are actually selling</div>
+      <div class="art-meta" style="margin-top:0.75rem"><span class="art-min">7 min</span></div>
+    </div>
+    <div class="scroll-card" onclick="sendPrompt('Write a full article outline for: Mankind Pharma rise — what pharma students should know about it')">
+      <div class="scroll-num">04</div>
+      <div class="art-cat">Brand Strategy</div>
+      <div class="art-title" style="font-size:0.9rem">Mankind Pharma's rise — what every pharma student should understand</div>
+      <div class="art-meta" style="margin-top:0.75rem"><span class="art-min">9 min</span></div>
+    </div>
+    <div class="scroll-card" onclick="sendPrompt('Write a full article outline for: The difference between a pharma brand manager and a product manager')">
+      <div class="scroll-num">05</div>
+      <div class="art-cat">Careers</div>
+      <div class="art-title" style="font-size:0.9rem">Brand manager vs product manager in pharma — what is actually different</div>
+      <div class="art-meta" style="margin-top:0.75rem"><span class="art-min">6 min</span></div>
+    </div>
+    <div class="scroll-card" onclick="sendPrompt('Write a full article outline for: How market share works in pharma — IQVIA IMS data explained')">
+      <div class="scroll-num">06</div>
+      <div class="art-cat">Industry</div>
+      <div class="art-title" style="font-size:0.9rem">How market share works in pharma — IQVIA data, explained plainly</div>
+      <div class="art-meta" style="margin-top:0.75rem"><span class="art-min">8 min</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- CASE STUDIES -->
+<section class="case-sec">
+  <div class="case-inner">
+    <div class="case-head">
+      <div class="sec-title">Pharma Case Studies</div>
+      <a class="sec-more" href="#">All case studies &#x2192;</a>
+    </div>
+    <div class="case-grid">
+      <div class="case-card cc-red" onclick="sendPrompt('Write a detailed case study article on: The Thalidomide Tragedy — what happened, what changed, and what pharma learned')">
+        <div class="cs-tag t-red">Tragedy</div>
+        <div class="cs-year">1957 &#x2013; 1962</div>
+        <div class="cs-title">The Thalidomide Tragedy</div>
+        <p class="cs-sum">A sedative prescribed to pregnant women caused birth defects in thousands of babies — and permanently changed how drugs get approved worldwide.</p>
+        <span class="cs-read">Read case study &#x2192;</span>
+      </div>
+      <div class="case-card cc-amber" onclick="sendPrompt('Write a detailed case study on: Ranbaxy FDA case — what happened, why it matters for Indian pharma')">
+        <div class="cs-tag t-amber">Regulatory</div>
+        <div class="cs-year">2004 &#x2013; 2013</div>
+        <div class="cs-title">Ranbaxy and the FDA</div>
+        <p class="cs-sum">India's biggest pharma success story collapsed under data fraud allegations. The case reshaped how generic manufacturers are scrutinised globally.</p>
+        <span class="cs-read">Read case study &#x2192;</span>
+      </div>
+      <div class="case-card cc-red" onclick="sendPrompt('Write a detailed case study on: Vioxx withdrawal by Merck — what happened and what it means for pharma marketing and safety')">
+        <div class="cs-tag t-red">Withdrawal</div>
+        <div class="cs-year">2004</div>
+        <div class="cs-title">The Vioxx Withdrawal</div>
+        <p class="cs-sum">Merck pulled its blockbuster painkiller after links to heart attacks emerged. One of the largest and most studied drug withdrawals in history.</p>
+        <span class="cs-read">Read case study &#x2192;</span>
+      </div>
+      <div class="case-card cc-green" onclick="sendPrompt('Write a detailed case study on: COVID-19 vaccine development — how it happened so fast and what it means for pharma')">
+        <div class="cs-tag t-green">Breakthrough</div>
+        <div class="cs-year">2020 &#x2013; 2021</div>
+        <div class="cs-title">COVID-19 Vaccine Development</div>
+        <p class="cs-sum">Vaccines approved in under a year. How pharma, governments, and regulators did something that had never been done before, at a scale and speed without precedent.</p>
+        <span class="cs-read">Read case study &#x2192;</span>
+      </div>
+      <div class="case-card cc-blue" onclick="sendPrompt('Write a detailed case study on: Lipitor patent cliff — what happened when the worlds best selling drug lost patent protection')">
+        <div class="cs-tag t-blue">Patent</div>
+        <div class="cs-year">2011</div>
+        <div class="cs-title">Lipitor's Patent Cliff</div>
+        <p class="cs-sum">When the world's best-selling drug lost patent protection, Pfizer lost $10 billion overnight. The story of pharma's biggest single-day revenue collapse.</p>
+        <span class="cs-read">Read case study &#x2192;</span>
+      </div>
+      <div class="case-card cc-purple" onclick="sendPrompt('Write a detailed case study on: Bayer Monsanto merger — what it means for pharma and agribusiness')">
+        <div class="cs-tag t-purple">M&amp;A</div>
+        <div class="cs-year">2018</div>
+        <div class="cs-title">Bayer–Monsanto Merger</div>
+        <p class="cs-sum">A $63 billion deal combining pharma and agriculture. How one of the most controversial mergers in recent history played out — and the cost Bayer is still paying.</p>
+        <span class="cs-read">Read case study &#x2192;</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-sec">
+  <div class="about-inner">
+    <div class="about-left">
+      <div class="about-label">About this blog</div>
+      <div class="about-heading">Pharma, explained for people who are <em>still figuring it out.</em></div>
+      <div class="about-sub">Written for curious pharma students &amp; freshers</div>
+    </div>
+    <div class="about-right">
+      <div class="about-body">
+        <p>You spend four years studying pharma and still have no idea how the industry actually works — how drugs get marketed, how brands are built, how companies decide what to launch next, and what happens when things go wrong.</p>
+        <p>Textbooks cover the science. Nobody covers the business. <strong>This blog is an honest attempt to fix that.</strong></p>
+        <p>No expert positioning, no recycled content from other blogs. Just a fresher asking real questions, doing the research, and writing down what they find — in plain language, without assuming you already know everything.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="nl-sec">
+  <div class="nl-inner">
+    <div>
+      <div class="nl-label">Newsletter</div>
+      <div class="nl-title">One piece.<br><em>Every two weeks.</em></div>
+      <p class="nl-sub">A new essay on pharma marketing, industry breakdowns, or career guides — written for people still figuring it out, not people who already know everything.</p>
+    </div>
+    <div>
+      <div class="nl-form">
+        <input class="nl-input" type="email" placeholder="your@email.com">
+        <button class="nl-btn">Subscribe</button>
+      </div>
+      <p class="nl-note">No spam. No fluff. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-sec">
+  <div class="contact-inner">
+    <div>
+      <div class="contact-label">Contact</div>
+      <div class="contact-heading">Get in <em>touch.</em></div>
+      <p class="contact-sub">Have a topic suggestion, a question about pharma, or want to collaborate? Write in — responses within 48 hours.</p>
+      <div class="contact-info">
+        <div class="c-info-row">
+          <div class="c-info-dot"></div>
+          <div><div class="c-info-label">Email</div><div class="c-info-val">contact@figuringoutpharma.com</div></div>
+        </div>
+        <div class="c-info-row">
+          <div class="c-info-dot"></div>
+          <div><div class="c-info-label">Response time</div><div class="c-info-val">Within 48 hours</div></div>
+        </div>
+        <div class="c-info-row">
+          <div class="c-info-dot"></div>
+          <div><div class="c-info-label">Based in</div><div class="c-info-val">Mumbai, India</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="form-row">
+        <div class="form-grp" style="margin-bottom:0"><label class="form-label">Name</label><input class="form-input" placeholder="Your name"></div>
+        <div class="form-grp" style="margin-bottom:0"><label class="form-label">Email</label><input class="form-input" placeholder="your@email.com"></div>
+      </div>
+      <div class="form-grp"><label class="form-label">Subject</label><input class="form-input" placeholder="Topic suggestion, collaboration..."></div>
+      <div class="form-grp"><label class="form-label">Message</label><textarea class="form-input form-ta" placeholder="What is on your mind?"></textarea></div>
+      <button class="form-btn">Send Message</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-logo">
+      <svg class="foot-logo-icon" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="11" cy="11" r="10" fill="#2d6347" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+        <path d="M7 11h8M11 7v8" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="11" cy="11" r="2.8" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.8"/>
+        <circle cx="11" cy="11" r="1.2" fill="#c9a84c"/>
+      </svg>
+      <span class="foot-logo-name">Figuring Out <em>Pharma</em></span>
+    </div>
+    <div class="foot-links">
+      <a href="#">Home</a>
+      <a href="#">Blogs</a>
+      <a href="#">Case Studies</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="foot-copy">&#169; 2026 Figuring Out Pharma</div>
+  </div>
+</footer>
+
+<script>
+// PROGRESS
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  const pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
+  document.getElementById('prog').style.width=pct+'%';
+});
+// THEME
+function toggleTheme(){
+  const html=document.documentElement;
+  const dark=html.getAttribute('data-theme')==='dark';
+  html.setAttribute('data-theme',dark?'light':'dark');
+  document.getElementById('themeBtn').innerHTML=dark?'&#9790;':'&#9728;';
+  localStorage.setItem('fop-theme',dark?'light':'dark');
+}
+const saved=localStorage.getItem('fop-theme');
+if(saved){document.documentElement.setAttribute('data-theme',saved);document.getElementById('themeBtn').innerHTML=saved==='dark'?'&#9728;':'&#9790;';}
+// SEARCH
+function toggleSrch(){
+  document.getElementById('sOverlay').classList.toggle('open');
+  if(document.getElementById('sOverlay').classList.contains('open')) setTimeout(()=>document.getElementById('sInput').focus(),50);
+}
+function closeSrch(e){if(e.target===document.getElementById('sOverlay'))toggleSrch();}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('sOverlay').classList.remove('open');});
+</script>
+</body>
+</html>

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============================================================
+  HOW TO USE THIS TEMPLATE
+  
+  1. Make a copy of this file and rename it to your article slug
+     Example: how-drugs-are-priced-in-india.html
+  
+  2. Find every line marked EDIT and replace the placeholder text
+  
+  3. Write your article in the ARTICLE BODY section below
+  
+  4. Save the file and upload to your Netlify folder
+  
+  That is it. New article live in under 10 minutes.
+================================================================ -->
+
+<!-- EDIT: Change this to your article title -->
+<title>What I actually learned during my industrial training — Figuring Out Pharma</title>
+
+<meta name="description" content="EDIT: Write one sentence describing what this article is about. This shows up in Google search results.">
+
+<!-- EDIT: Change og:title and og:description for social sharing previews -->
+<meta property="og:title" content="EDIT: Article title here">
+<meta property="og:description" content="EDIT: One sentence summary here">
+<meta property="og:type" content="article">
+
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --forest:#1a3a2a;--forest2:#234d38;--forest3:#2d6347;--forest4:#3a7a58;
+  --sage:#7aab8e;--sage2:#a8c9b5;
+  --cream:#faf8f2;--cream2:#f3f0e6;--cream3:#e8e3d4;
+  --gold:#c9a84c;--gold2:#e8c96a;
+  --line:#ddd8c8;--line2:#ccc6b4;
+  --text:#1c1a14;--text2:#4a4638;--text3:#8a8474;
+  --card:#ffffff;
+  --serif:'Playfair Display',Georgia,serif;
+  --body:'Source Serif 4',Georgia,serif;
+  --sans:'DM Sans',sans-serif;
+  --max:960px;--prose:680px;
+}
+[data-theme="dark"]{
+  --cream:#0e1a14;--cream2:#132019;--cream3:#1c2e22;
+  --line:#2a3d30;--line2:#3a5044;
+  --text:#e8f0e4;--text2:#9db89a;--text3:#5a7464;
+  --card:#132019;
+}
+html{font-size:16px;scroll-behavior:smooth;background:var(--cream)}
+body{color:var(--text);font-family:var(--body);line-height:1.7;background:var(--cream);transition:background 0.3s,color 0.3s}
+a{text-decoration:none;color:inherit}
+
+/* READING PROGRESS */
+#prog{position:fixed;top:0;left:0;height:2px;background:var(--gold);z-index:9999;width:0%;transition:width 0.1s linear;pointer-events:none}
+
+/* NAV */
+nav{background:var(--forest);position:sticky;top:0;z-index:300;border-bottom:1px solid rgba(255,255,255,0.06)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:52px;gap:2rem}
+.nav-logo{display:flex;align-items:center;gap:9px;flex-shrink:0}
+.nav-icon{width:24px;height:24px}
+.nav-name{font-family:var(--serif);font-size:0.98rem;font-weight:700;color:#fff;letter-spacing:-0.01em;white-space:nowrap}
+.nav-name em{font-style:italic;font-weight:400;color:var(--sage2)}
+.nav-links{display:flex;gap:0;list-style:none;flex:1;justify-content:center}
+.nav-links a{font-family:var(--sans);font-size:0.7rem;font-weight:400;color:rgba(255,255,255,0.55);padding:6px 13px;transition:color 0.2s;letter-spacing:0.04em;text-transform:uppercase}
+.nav-links a:hover{color:#fff}
+.nav-right{display:flex;align-items:center;gap:0.75rem;flex-shrink:0}
+.nav-theme{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);width:30px;height:30px;border-radius:2px;cursor:pointer;font-size:0.82rem;transition:all 0.2s;display:flex;align-items:center;justify-content:center}
+.nav-theme:hover{background:rgba(255,255,255,0.14);color:#fff}
+.nav-sub{background:var(--gold);color:var(--forest);border:none;font-family:var(--sans);font-size:0.68rem;font-weight:600;padding:6px 14px;border-radius:2px;cursor:pointer;letter-spacing:0.05em;text-transform:uppercase;transition:all 0.2s}
+.nav-sub:hover{background:var(--gold2)}
+
+/* ARTICLE HEADER */
+.art-header{background:var(--forest);padding:3.5rem 2rem 3rem;border-bottom:1px solid rgba(255,255,255,0.06)}
+.art-header-inner{max-width:var(--prose);margin:0 auto}
+.art-cat{font-family:var(--sans);font-size:0.62rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);margin-bottom:1rem;display:flex;align-items:center;gap:8px}
+.art-cat a{color:var(--sage);transition:color 0.2s}
+.art-cat a:hover{color:var(--sage2)}
+.art-cat-sep{opacity:0.4}
+.art-title{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;color:#fff;line-height:1.18;letter-spacing:-0.025em;margin-bottom:1.25rem}
+.art-title em{font-style:italic;font-weight:400;color:var(--sage2)}
+.art-deck{font-family:var(--body);font-size:1.05rem;font-weight:300;color:rgba(255,255,255,0.58);line-height:1.78;font-style:italic;margin-bottom:1.75rem}
+.art-meta-row{display:flex;align-items:center;gap:1.5rem;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,0.1)}
+.meta-author{font-family:var(--sans);font-size:0.78rem;font-weight:500;color:rgba(255,255,255,0.7)}
+.meta-sep{color:rgba(255,255,255,0.2);font-size:0.8rem}
+.meta-date{font-family:var(--sans);font-size:0.72rem;color:rgba(255,255,255,0.4)}
+.meta-time{font-family:var(--sans);font-size:0.7rem;font-weight:500;background:rgba(201,168,76,0.2);color:var(--gold2);padding:3px 9px;border-radius:1px;letter-spacing:0.04em}
+
+/* COVER IMAGE AREA */
+.cover{max-width:var(--prose);margin:0 auto;padding:2.5rem 2rem 0}
+.cover-img{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,var(--forest2),var(--forest3));display:flex;align-items:center;justify-content:center;border:1px solid var(--line);position:relative;overflow:hidden}
+.cover-placeholder{font-family:var(--sans);font-size:0.72rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--sage);text-align:center;line-height:1.8}
+.cover-placeholder span{display:block;font-family:var(--serif);font-size:2rem;font-style:italic;color:rgba(255,255,255,0.15);margin-bottom:0.5rem}
+.cover-caption{font-family:var(--sans);font-size:0.68rem;color:var(--text3);margin-top:0.6rem;font-style:italic;text-align:right}
+
+/* LAYOUT: PROSE + STICKY TOC */
+.art-layout{max-width:var(--max);margin:0 auto;padding:2.5rem 2rem 4rem;display:grid;grid-template-columns:1fr 220px;gap:4rem;align-items:start}
+
+/* TOC */
+.toc{position:sticky;top:70px;border:1px solid var(--line);padding:1.25rem;background:var(--cream2)}
+.toc-label{font-family:var(--sans);font-size:0.6rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3);margin-bottom:0.875rem;padding-bottom:0.625rem;border-bottom:1px solid var(--line)}
+.toc-list{list-style:none;display:flex;flex-direction:column;gap:2px}
+.toc-list a{font-family:var(--sans);font-size:0.78rem;font-weight:400;color:var(--text2);padding:4px 8px;display:block;border-left:2px solid transparent;transition:all 0.2s;line-height:1.4}
+.toc-list a:hover,.toc-list a.active{color:var(--forest3);border-left-color:var(--forest3);background:var(--cream)}
+.toc-list .toc-h3{padding-left:18px;font-size:0.72rem;color:var(--text3)}
+.toc-share{margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--line)}
+.toc-share-label{font-family:var(--sans);font-size:0.6rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:0.625rem}
+.share-btn{display:block;width:100%;font-family:var(--sans);font-size:0.72rem;font-weight:500;color:var(--text2);background:var(--cream);border:1px solid var(--line);padding:7px 12px;margin-bottom:6px;cursor:pointer;text-align:left;transition:all 0.2s;letter-spacing:0.02em}
+.share-btn:hover{background:var(--forest);color:#fff;border-color:var(--forest)}
+
+/* PROSE */
+.prose{max-width:var(--prose);font-family:var(--body);font-size:1.05rem;line-height:1.82;color:var(--text2)}
+.prose h2{font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-0.02em;margin:2.5rem 0 1rem;padding-top:0.5rem}
+.prose h3{font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--text);line-height:1.3;margin:2rem 0 0.75rem;font-style:italic}
+.prose p{margin-bottom:1.4rem;font-weight:300}
+.prose p:last-child{margin-bottom:0}
+.prose strong{color:var(--text);font-weight:500;font-style:normal}
+.prose em{font-style:italic}
+.prose a{color:var(--forest3);text-decoration:underline;text-decoration-color:var(--sage2);text-underline-offset:3px;transition:color 0.2s}
+.prose a:hover{color:var(--forest)}
+.prose ul,.prose ol{padding-left:1.5rem;margin-bottom:1.4rem}
+.prose li{margin-bottom:0.4rem;font-weight:300}
+.prose blockquote{border-left:3px solid var(--gold);padding:0.875rem 1.25rem;margin:2rem 0;background:var(--cream2);font-style:italic;color:var(--text2)}
+.prose blockquote p{margin-bottom:0;font-size:1rem}
+.prose .callout{background:var(--cream2);border:1px solid var(--line);border-left:3px solid var(--forest3);padding:1.25rem 1.5rem;margin:2rem 0}
+.prose .callout-label{font-family:var(--sans);font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--forest3);margin-bottom:0.5rem}
+.prose .callout p{margin-bottom:0;font-size:0.92rem}
+.prose hr{border:none;border-top:1px solid var(--line);margin:2.5rem 0}
+.prose figure{margin:2rem 0}
+.prose figcaption{font-family:var(--sans);font-size:0.72rem;color:var(--text3);text-align:center;margin-top:0.5rem;font-style:italic}
+
+/* ARTICLE FOOTER */
+.art-foot{max-width:var(--prose);margin:0 auto;padding:2.5rem 2rem 0;border-top:1px solid var(--line)}
+.tags-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:2rem}
+.tag-pill{font-family:var(--sans);font-size:0.65rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:4px 12px;border:1px solid var(--line);color:var(--text3);transition:all 0.2s;cursor:pointer}
+.tag-pill:hover{background:var(--forest);color:#fff;border-color:var(--forest)}
+
+/* RELATED ARTICLES */
+.related{background:var(--cream2);border-top:1px solid var(--line);padding:3.5rem 2rem}
+.related-inner{max-width:var(--max);margin:0 auto}
+.related-head{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:1.75rem;padding-bottom:0.75rem;border-bottom:2px solid var(--text);letter-spacing:-0.01em}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
+.rel-card{padding:1.5rem;border-right:1px solid var(--line);cursor:pointer;transition:background 0.2s}
+.rel-card:last-child{border-right:none}
+.rel-card:hover{background:var(--cream)}
+.rel-card:hover .rel-title{color:var(--forest3)}
+.rel-cat{font-family:var(--sans);font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--forest3);margin-bottom:0.5rem}
+.rel-title{font-family:var(--serif);font-size:0.95rem;font-weight:700;color:var(--text);line-height:1.35;margin-bottom:0.5rem;transition:color 0.15s;letter-spacing:-0.01em}
+.rel-time{font-family:var(--sans);font-size:0.62rem;color:var(--text3)}
+
+/* FOOTER */
+footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);padding:1.25rem 2rem}
+.foot-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.foot-logo{display:flex;align-items:center;gap:8px}
+.foot-logo svg{width:20px;height:20px}
+.foot-logo-name{font-family:var(--serif);font-size:0.85rem;font-weight:700;color:rgba(255,255,255,0.65)}
+.foot-logo-name em{font-style:italic;font-weight:400;color:var(--sage)}
+.foot-links{display:flex;gap:1.5rem}
+.foot-links a{font-family:var(--sans);font-size:0.62rem;letter-spacing:0.05em;text-transform:uppercase;color:rgba(255,255,255,0.28);transition:color 0.2s}
+.foot-links a:hover{color:var(--sage2)}
+.foot-copy{font-family:var(--sans);font-size:0.6rem;color:rgba(255,255,255,0.2)}
+</style>
+</head>
+<body>
+
+<div id="prog"></div>
+
+<!-- NAV — do not edit this section -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="../index.html">
+      <svg class="nav-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="30" fill="#2d6347"/>
+        <circle cx="32" cy="32" r="22" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+        <rect x="29" y="14" width="6" height="36" rx="2" fill="#c9a84c"/>
+        <rect x="14" y="29" width="36" height="6" rx="2" fill="#c9a84c"/>
+        <circle cx="32" cy="32" r="4" fill="#ffffff" opacity="0.85"/>
+        <circle cx="32" cy="32" r="2" fill="#c9a84c"/>
+      </svg>
+      <span class="nav-name">Figuring Out <em>Pharma</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="#">Blogs</a></li>
+      <li><a href="#">Case Studies</a></li>
+      <li><a href="#">Categories</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="nav-theme" onclick="toggleTheme()" id="themeBtn">&#9790;</button>
+      <button class="nav-sub">Subscribe</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================
+  ARTICLE HEADER — EDIT EVERYTHING INSIDE THIS SECTION
+================================================================ -->
+<header class="art-header">
+  <div class="art-header-inner">
+
+    <!-- EDIT: Category and subcategory -->
+    <div class="art-cat">
+      <a href="#">Careers</a>
+      <span class="art-cat-sep">/</span>
+      <a href="#">Industrial Training</a>
+    </div>
+
+    <!-- EDIT: Your article title. Use <em> tags for the italic part -->
+    <h1 class="art-title">
+      What I actually learned about pharma during my <em>industrial training</em> — and what nobody tells you
+    </h1>
+
+    <!-- EDIT: One or two sentence summary of what the article covers -->
+    <p class="art-deck">
+      Two months on a GMP manufacturing floor taught me more about the gap between pharma education and pharma reality than three years of textbooks. Here is what genuinely surprised me.
+    </p>
+
+    <div class="art-meta-row">
+      <!-- EDIT: Author name -->
+      <span class="meta-author">Figuring Out Pharma</span>
+      <span class="meta-sep">·</span>
+      <!-- EDIT: Publication date -->
+      <span class="meta-date">June 2026</span>
+      <span class="meta-sep">·</span>
+      <!-- EDIT: Estimated reading time — count roughly 200 words per minute -->
+      <span class="meta-time">8 min read</span>
+    </div>
+
+  </div>
+</header>
+
+<!-- ============================================================
+  COVER IMAGE
+  Replace the placeholder div with an <img> tag when you have one:
+  <img src="../images/your-image-name.jpg" alt="Brief description">
+================================================================ -->
+<div class="cover">
+  <div class="cover-img">
+    <div class="cover-placeholder">
+      <span>&#9650;</span>
+      Replace this with your article cover image<br>
+      Recommended size: 1200 x 675px<br>
+      Source: Undraw.co or Ideogram.ai
+    </div>
+  </div>
+  <!-- EDIT: Image credit if applicable, or delete this line -->
+  <p class="cover-caption">Illustration via Undraw.co</p>
+</div>
+
+<!-- ============================================================
+  ARTICLE LAYOUT: PROSE (LEFT) + TABLE OF CONTENTS (RIGHT)
+================================================================ -->
+<div class="art-layout">
+
+  <!-- ARTICLE BODY — WRITE YOUR ARTICLE HERE -->
+  <article class="prose">
+
+    <!-- 
+      WRITING GUIDE:
+      - Use <h2 id="section-name"> for main section headings
+      - Use <h3> for sub-headings within a section
+      - Use <p> for paragraphs
+      - Use <blockquote> for quotes or standout statements
+      - Use <div class="callout"> for key facts or summaries
+      - Give each h2 a unique id="" that matches the TOC links below
+      - Aim for 800–1200 words for a standard article
+    -->
+
+    <p>
+      When I started my industrial training at a GMP-regulated pharma manufacturer, I had a clear picture of what it would be like. Rows of gleaming equipment, white-coated scientists, everything running with precision. Three years of B.Pharma had given me that mental image.
+    </p>
+
+    <p>
+      The reality was more interesting — and more instructive — than anything I had imagined.
+    </p>
+
+    <h2 id="what-gmp-actually-means">What GMP actually means when you are standing inside it</h2>
+
+    <p>
+      Good Manufacturing Practice is something every pharma student learns in theory. You know the definition. You can write an exam answer about documentation, batch records, and SOPs. What you cannot learn from a textbook is <strong>what it feels like to work inside a GMP environment</strong> — the constant documentation, the way every decision gets signed and countersigned, the culture of traceability.
+    </p>
+
+    <p>
+      Nothing moves without a paper trail. Not a single raw material, not a single process step. I watched experienced operators stop everything — an entire production line — to investigate a number that did not match by a fraction. That is not inefficiency. That is the system working exactly as designed.
+    </p>
+
+    <blockquote>
+      <p>The difference between academic GMP and real GMP is the same as the difference between reading about swimming and being in the water. Everything makes more sense once you are in it.</p>
+    </blockquote>
+
+    <h2 id="the-gap-between-quality-and-marketing">The gap between product quality and market-ready presentation</h2>
+
+    <p>
+      This was the observation that stayed with me longest. A pharmaceutical product can be technically excellent — meeting every specification, passing every quality check — and still lose in the market to a competitor with inferior chemistry but better packaging and a stronger brand name.
+    </p>
+
+    <p>
+      I spent time mapping packaging cost structures against regulatory requirements. What I found was that packaging decisions are not purely aesthetic. They are <strong>a negotiation between compliance, cost, shelf life, and brand perception</strong> — all happening simultaneously, all with their own constraints.
+    </p>
+
+    <div class="callout">
+      <div class="callout-label">Key insight</div>
+      <p>The operations team optimises for compliance and cost. The marketing team optimises for perception and recall. These two objectives are often in direct tension, and nobody in the textbook told me that tension was normal.</p>
+    </div>
+
+    <h2 id="cross-functional-reality">The cross-functional reality nobody prepares you for</h2>
+
+    <p>
+      In college, subjects are siloed. Quality Assurance is a separate paper from Pharmaceutical Marketing. Regulatory Affairs is separate from Production. In an actual manufacturing facility, these departments are in constant conversation — and often in conflict.
+    </p>
+
+    <p>
+      QA wants more testing. Production wants faster timelines. Marketing wants packaging changes that QA needs to validate. Regulatory Affairs needs documentation for all of it. Understanding that <strong>the real job is managing these interfaces, not just executing within one function</strong> — that was the single biggest gap between my education and the professional reality.
+    </p>
+
+    <h2 id="what-this-means-for-students">What this means if you are still in B.Pharma</h2>
+
+    <p>
+      Your degree teaches you the science. It does not teach you the business. It teaches you what a batch record is — not why the batch record exists within a system of incentives, regulations, liabilities, and commercial pressures.
+    </p>
+
+    <p>
+      The students who move fastest after graduation are not the ones who scored highest on exams. They are the ones who understood early that pharma is a business that happens to be built on science — not a science that happens to sell products.
+    </p>
+
+    <p>
+      Go for the industrial training. Ask questions that are not on the syllabus. The manufacturing floor will teach you things that no lecture can.
+    </p>
+
+    <hr>
+
+    <p>
+      <em>If you found this useful, the next article worth reading is on how a pharma product manager actually operates — which connects directly to the cross-functional picture described here.</em>
+    </p>
+
+  </article>
+
+  <!-- TABLE OF CONTENTS — EDIT THE LINKS TO MATCH YOUR H2 IDs -->
+  <aside>
+    <div class="toc">
+      <div class="toc-label">In this article</div>
+      <ul class="toc-list">
+        <!-- EDIT: Each href="#..." must match the id="" on your h2 headings above -->
+        <li><a href="#what-gmp-actually-means">What GMP actually means</a></li>
+        <li><a href="#the-gap-between-quality-and-marketing">Quality vs marketing</a></li>
+        <li><a href="#cross-functional-reality">Cross-functional reality</a></li>
+        <li><a href="#what-this-means-for-students">What this means for you</a></li>
+      </ul>
+      <div class="toc-share">
+        <div class="toc-share-label">Share</div>
+        <button class="share-btn" onclick="copyLink()">Copy link</button>
+        <button class="share-btn" onclick="shareLinkedIn()">LinkedIn</button>
+      </div>
+    </div>
+  </aside>
+
+</div>
+
+<!-- ARTICLE FOOTER — EDIT TAGS -->
+<div class="art-foot">
+  <!-- EDIT: Add relevant tags for this article -->
+  <div class="tags-row">
+    <span class="tag-pill">Industrial Training</span>
+    <span class="tag-pill">GMP</span>
+    <span class="tag-pill">Pharma Careers</span>
+    <span class="tag-pill">B.Pharma</span>
+    <span class="tag-pill">Manufacturing</span>
+  </div>
+</div>
+
+<!-- RELATED ARTICLES — EDIT ALL THREE -->
+<section class="related">
+  <div class="related-inner">
+    <div class="related-head">Related Articles</div>
+    <div class="related-grid">
+
+      <!-- EDIT: Related article 1 -->
+      <div class="rel-card" onclick="window.location='#'">
+        <div class="rel-cat">Marketing</div>
+        <div class="rel-title">FMCG vs pharma marketing — explained from scratch, no assumptions</div>
+        <div class="rel-time">11 min read</div>
+      </div>
+
+      <!-- EDIT: Related article 2 -->
+      <div class="rel-card" onclick="window.location='#'">
+        <div class="rel-cat">Careers</div>
+        <div class="rel-title">What does a pharma product manager actually do — day by day</div>
+        <div class="rel-time">7 min read</div>
+      </div>
+
+      <!-- EDIT: Related article 3 -->
+      <div class="rel-card" onclick="window.location='#'">
+        <div class="rel-cat">Industry</div>
+        <div class="rel-title">How drugs are priced in India — the real explanation</div>
+        <div class="rel-time">5 min read</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER — do not edit -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-logo">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="30" fill="#2d6347"/>
+        <rect x="29" y="14" width="6" height="36" rx="2" fill="#c9a84c"/>
+        <rect x="14" y="29" width="36" height="6" rx="2" fill="#c9a84c"/>
+        <circle cx="32" cy="32" r="3" fill="#fff" opacity="0.85"/>
+      </svg>
+      <span class="foot-logo-name">Figuring Out <em>Pharma</em></span>
+    </div>
+    <div class="foot-links">
+      <a href="../index.html">Home</a>
+      <a href="#">Blogs</a>
+      <a href="#">Case Studies</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="foot-copy">&#169; 2026 Figuring Out Pharma</div>
+  </div>
+</footer>
+
+<script>
+// READING PROGRESS
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  const pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
+  document.getElementById('prog').style.width=pct+'%';
+});
+
+// ACTIVE TOC HIGHLIGHT
+const headings=document.querySelectorAll('.prose h2');
+const tocLinks=document.querySelectorAll('.toc-list a');
+window.addEventListener('scroll',()=>{
+  let current='';
+  headings.forEach(h=>{if(h.offsetTop-120<=window.scrollY)current=h.id});
+  tocLinks.forEach(a=>{
+    a.classList.remove('active');
+    if(a.getAttribute('href')==='#'+current)a.classList.add('active');
+  });
+});
+
+// THEME TOGGLE
+function toggleTheme(){
+  const html=document.documentElement;
+  const dark=html.getAttribute('data-theme')==='dark';
+  html.setAttribute('data-theme',dark?'light':'dark');
+  document.getElementById('themeBtn').innerHTML=dark?'&#9790;':'&#9728;';
+  localStorage.setItem('fop-theme',dark?'light':'dark');
+}
+const saved=localStorage.getItem('fop-theme');
+if(saved){document.documentElement.setAttribute('data-theme',saved);document.getElementById('themeBtn').innerHTML=saved==='dark'?'&#9728;':'&#9790;';}
+
+// SHARE FUNCTIONS
+function copyLink(){
+  navigator.clipboard.writeText(window.location.href).then(()=>{
+    const btn=event.target;btn.textContent='Copied!';
+    setTimeout(()=>btn.textContent='Copy link',2000);
+  });
+}
+function shareLinkedIn(){
+  window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank');
+}
+</script>
+</body>
+</html>

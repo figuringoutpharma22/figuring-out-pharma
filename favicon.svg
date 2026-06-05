@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Outer circle — forest green -->
+  <circle cx="32" cy="32" r="30" fill="#1a3a2a"/>
+  <!-- Subtle inner ring -->
+  <circle cx="32" cy="32" r="22" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <!-- Pharmaceutical cross — gold -->
+  <rect x="29" y="14" width="6" height="36" rx="2" fill="#c9a84c"/>
+  <rect x="14" y="29" width="36" height="6" rx="2" fill="#c9a84c"/>
+  <!-- Centre dot — white -->
+  <circle cx="32" cy="32" r="4" fill="#ffffff" opacity="0.9"/>
+  <!-- Tiny centre fill — gold -->
+  <circle cx="32" cy="32" r="2" fill="#c9a84c"/>
+</svg>
