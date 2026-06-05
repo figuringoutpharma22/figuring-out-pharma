@@ -32,6 +32,9 @@
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+<!-- Mobile & tablet responsive styles -->
+<link rel="stylesheet" href="../mobile.css">
+
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -68,7 +71,7 @@ nav{background:var(--forest);position:sticky;top:0;z-index:300;border-bottom:1px
 .nav-name{font-family:var(--serif);font-size:0.98rem;font-weight:700;color:#fff;letter-spacing:-0.01em;white-space:nowrap}
 .nav-name em{font-style:italic;font-weight:400;color:var(--sage2)}
 .nav-links{display:flex;gap:0;list-style:none;flex:1;justify-content:center}
-.nav-links a{font-family:var(--sans);font-size:0.7rem;font-weight:400;color:rgba(255,255,255,0.55);padding:6px 13px;transition:color 0.2s;letter-spacing:0.04em;text-transform:uppercase}
+.nav-links a{font-family:var(--sans);font-size:0.7rem;font-weight:400;color:rgba(255,255,255,0.55);padding:6px 10px;transition:color 0.2s;letter-spacing:0.04em;text-transform:uppercase;white-space:nowrap}
 .nav-links a:hover{color:#fff}
 .nav-right{display:flex;align-items:center;gap:0.75rem;flex-shrink:0}
 .nav-theme{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);width:30px;height:30px;border-radius:2px;cursor:pointer;font-size:0.82rem;transition:all 0.2s;display:flex;align-items:center;justify-content:center}
@@ -196,7 +199,19 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
     <div class="nav-right">
       <button class="nav-theme" onclick="toggleTheme()" id="themeBtn">&#9790;</button>
       <button class="nav-sub">Subscribe</button>
+      <button class="nav-hamburger" onclick="toggleMobileMenu()" id="hamburgerBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </div>
+  <!-- Mobile dropdown menu -->
+  <div class="nav-mobile-menu" id="mobileMenu">
+    <a href="../index.html">Home</a>
+    <a href="#">Blogs</a>
+    <a href="#">Case Studies</a>
+    <a href="#">Categories</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
   </div>
 </nav>
 
@@ -431,6 +446,18 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
 </footer>
 
 <script>
+// MOBILE MENU
+function toggleMobileMenu(){
+  const menu=document.getElementById('mobileMenu');
+  menu.classList.toggle('open');
+}
+document.addEventListener('click',function(e){
+  const menu=document.getElementById('mobileMenu');
+  const btn=document.getElementById('hamburgerBtn');
+  if(menu&&btn&&!menu.contains(e.target)&&!btn.contains(e.target)){
+    menu.classList.remove('open');
+  }
+});
 // READING PROGRESS
 window.addEventListener('scroll',()=>{
   const h=document.documentElement;

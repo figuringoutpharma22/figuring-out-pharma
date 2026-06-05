@@ -1,0 +1,9 @@
+# robots.txt — Figuring Out Pharma
+# This file tells search engine crawlers (Google, Bing, etc.) what they can and cannot access.
+# "Allow all" means Google can read and index every page on your site.
+
+User-agent: *
+Allow: /
+
+# This points Google to your sitemap so it finds all your pages faster
+Sitemap: https://figuringoutpharma.com/sitemap.xml

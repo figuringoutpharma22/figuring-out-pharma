@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SITEMAP — Figuring Out Pharma
+  
+  This file tells Google every page on your website.
+  Every time you publish a new article, add a new <url> block
+  following the same pattern as the ones below.
+  
+  HOW TO UPDATE:
+  1. Copy one of the <url> blocks below
+  2. Change the <loc> to your new article's full URL
+  3. Change the <lastmod> to today's date (YYYY-MM-DD format)
+  4. Save the file, commit and push from GitHub Desktop
+  5. Go to Google Search Console → Sitemaps → submit this URL:
+     https://figuringoutpharma.com/sitemap.xml
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- HOMEPAGE -->
+  <url>
+    <loc>https://figuringoutpharma.com/</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ARTICLES — add a new block here each time you publish -->
+  <url>
+    <loc>https://figuringoutpharma.com/articles/what-i-learned-during-industrial-training.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!--
+    EXAMPLE — copy and paste this block for each new article:
+    
+    <url>
+      <loc>https://figuringoutpharma.com/articles/YOUR-ARTICLE-SLUG.html</loc>
+      <lastmod>YYYY-MM-DD</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  -->
+
+</urlset>

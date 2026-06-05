@@ -3,7 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO: Page title — shown in Google search results and browser tab -->
+<title>Figuring Out Pharma — Pharma Marketing, Drug Launches & Careers Explained</title>
+
+<!-- SEO: Description — shown under your title in Google results (keep under 155 characters) -->
+<meta name="description" content="Deep dives into pharma marketing, drug launches, brand strategy and careers in India — written for B.Pharma students and freshers figuring out the industry.">
+
+<!-- SEO: Keywords (minor signal but worth including) -->
+<meta name="keywords" content="pharma marketing India, B.Pharma careers, drug launch strategy, pharma brand management, pharmaceutical marketing, pharma students India">
+
+<!-- SEO: Author -->
+<meta name="author" content="Figuring Out Pharma">
+
+<!-- SEO: Tell Google this is the definitive URL for this page -->
+<link rel="canonical" href="https://figuringoutpharma.com/">
+
+<!-- Social sharing: When someone shares on LinkedIn or WhatsApp, this controls the preview -->
+<meta property="og:title" content="Figuring Out Pharma — Pharma Marketing & Careers Explained">
+<meta property="og:description" content="Deep dives into pharma marketing, drug launches, brand strategy and careers in India — written for B.Pharma students figuring out the industry.">
+<meta property="og:url" content="https://figuringoutpharma.com/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://figuringoutpharma.com/og-image.png">
+
+<!-- Twitter/X card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Figuring Out Pharma">
+<meta name="twitter:description" content="Pharma marketing, drug launches & careers — explained for B.Pharma students in India.">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Mobile & tablet responsive styles -->
+<link rel="stylesheet" href="mobile.css">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -58,7 +92,7 @@ nav{background:var(--forest);position:sticky;top:0;z-index:300;border-bottom:1px
 .nav-name{font-family:var(--serif);font-size:1.05rem;font-weight:700;color:#fff;letter-spacing:-0.01em;white-space:nowrap}
 .nav-name em{font-style:italic;font-weight:400;color:var(--sage2)}
 .nav-links{display:flex;gap:0;list-style:none;flex:1;justify-content:center}
-.nav-links a{font-family:var(--sans);font-size:0.72rem;font-weight:400;color:rgba(255,255,255,0.6);padding:6px 14px;transition:color 0.2s;letter-spacing:0.04em;text-transform:uppercase}
+.nav-links a{font-family:var(--sans);font-size:0.72rem;font-weight:400;color:rgba(255,255,255,0.6);padding:6px 10px;transition:color 0.2s;letter-spacing:0.04em;text-transform:uppercase;white-space:nowrap}
 .nav-links a:hover{color:#fff}
 .nav-right{display:flex;align-items:center;gap:0.75rem;flex-shrink:0}
 .nav-search{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);padding:6px 12px;border-radius:var(--r);cursor:pointer;font-family:var(--sans);font-size:0.72rem;letter-spacing:0.04em;transition:all 0.2s;text-transform:uppercase}
@@ -312,7 +346,19 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
       <button class="nav-search" onclick="toggleSrch()">Search</button>
       <button class="nav-theme" onclick="toggleTheme()" id="themeBtn">&#9790;</button>
       <button class="nav-sub">Subscribe</button>
+      <button class="nav-hamburger" onclick="toggleMobileMenu()" id="hamburgerBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </div>
+  <!-- Mobile dropdown menu — hidden on desktop, shown when hamburger is tapped -->
+  <div class="nav-mobile-menu" id="mobileMenu">
+    <a href="#">Home</a>
+    <a href="#">Blogs</a>
+    <a href="#">Case Studies</a>
+    <a href="#">Categories</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
   </div>
 </nav>
 
@@ -647,6 +693,18 @@ function toggleTheme(){
 }
 const saved=localStorage.getItem('fop-theme');
 if(saved){document.documentElement.setAttribute('data-theme',saved);document.getElementById('themeBtn').innerHTML=saved==='dark'?'&#9728;':'&#9790;';}
+// MOBILE MENU
+function toggleMobileMenu(){
+  const menu=document.getElementById('mobileMenu');
+  menu.classList.toggle('open');
+}
+document.addEventListener('click',function(e){
+  const menu=document.getElementById('mobileMenu');
+  const btn=document.getElementById('hamburgerBtn');
+  if(menu&&btn&&!menu.contains(e.target)&&!btn.contains(e.target)){
+    menu.classList.remove('open');
+  }
+});
 // SEARCH
 function toggleSrch(){
   document.getElementById('sOverlay').classList.toggle('open');
