@@ -679,9 +679,9 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
     </div>
 
     <div>
-      <div class="nl-form" id="beehiiv-form">
+      <div class="nl-form">
         <input class="nl-input" type="email" id="beehiiv-email" placeholder="your@email.com" autocomplete="off">
-        <button class="nl-btn" id="beehiiv-btn" onclick="beehiivSubscribe()">Subscribe</button>
+        <button class="nl-btn" id="beehiiv-btn">Subscribe</button>
       </div>
       <p class="nl-note" id="beehiiv-note">No spam. No fluff. Unsubscribe anytime.</p>
     </div>
@@ -689,36 +689,33 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
   </div>
 </section>
 
-<!-- Beehiiv loader script -->
-<script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="1f5fe9e8-a51f-4053-9ab0-aeaab60d1167"></script>
-
 <script>
-function beehiivSubscribe() {
-  var email = document.getElementById('beehiiv-email').value.trim();
-  var note = document.getElementById('beehiiv-note');
-  var btn = document.getElementById('beehiiv-btn');
+(function() {
+  function doSubscribe() {
+    var emailEl = document.getElementById('beehiiv-email');
+    var noteEl  = document.getElementById('beehiiv-note');
+    if (!emailEl) return;
 
-  // Basic validation
-  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    note.textContent = 'Please enter a valid email address.';
-    note.style.color = '#e8a484';
-    return;
+    var email = emailEl.value.trim();
+
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      noteEl.textContent = 'Please enter a valid email address.';
+      noteEl.style.color = '#e8a484';
+      return;
+    }
+
+    window.location.href = 'https://figuring-outs-newsletter.beehiiv.com/subscribe?email=' + encodeURIComponent(email);
   }
 
-  // Redirect to Beehiiv subscribe page with email pre-filled
-  var beehiivUrl = 'https://figuring-outs-newsletter.beehiiv.com/subscribe?email=' + encodeURIComponent(email);
-  window.location.href = beehiivUrl;
-}
-
-// Allow pressing Enter in the input field
-document.addEventListener('DOMContentLoaded', function() {
-  var input = document.getElementById('beehiiv-email');
-  if (input) {
-    input.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter') beehiivSubscribe();
+  document.addEventListener('DOMContentLoaded', function() {
+    var btn   = document.getElementById('beehiiv-btn');
+    var input = document.getElementById('beehiiv-email');
+    if (btn)   btn.addEventListener('click', doSubscribe);
+    if (input) input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') doSubscribe();
     });
-  }
-});
+  });
+})();
 </script>
 
 
