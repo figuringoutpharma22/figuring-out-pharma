@@ -791,7 +791,7 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
         <div class="nl-brevo-row">
           <input
             style="flex:1;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-right:none;color:#fff;font-family:'Source Serif 4',Georgia,serif;font-size:0.88rem;font-style:italic;padding:11px 14px;outline:none;width:100%;"
-            type="email"
+            type="text"
             id="EMAIL"
             name="EMAIL"
             autocomplete="off"
@@ -816,7 +816,7 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
   </div>
 </section>
 
-<!-- Brevo form JS — required for validation and submission -->
+<!-- Brevo form — intercept submit, post in background, show inline message -->
 <script>
   window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
   window.LOCALE = 'en';
@@ -826,6 +826,45 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
   window.INVALID_DATE = "Please enter a valid date";
   window.REQUIRED_MULTISELECT_MESSAGE = 'Please select at least 1 option';
   var AUTOHIDE = Boolean(0);
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var form = document.getElementById('sib-form');
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // stop page redirect
+
+      var emailInput = document.getElementById('EMAIL');
+      var email = emailInput ? emailInput.value.trim() : '';
+      var errorBox = document.getElementById('error-message');
+      var successBox = document.getElementById('success-message');
+
+      // Basic email check
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        if (errorBox) { errorBox.style.display = 'block'; errorBox.querySelector('span').textContent = 'Please enter a valid email address.'; }
+        if (successBox) successBox.style.display = 'none';
+        return;
+      }
+
+      var formData = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors' // Brevo doesn't allow CORS — no-cors means we can't read the response but the POST goes through
+      })
+      .then(function() {
+        // no-cors means we always land here — assume success if no network error
+        if (successBox) { successBox.style.display = 'block'; }
+        if (errorBox) errorBox.style.display = 'none';
+        if (emailInput) emailInput.value = '';
+      })
+      .catch(function() {
+        if (errorBox) { errorBox.style.display = 'block'; errorBox.querySelector('span').textContent = 'Could not connect. Please try again.'; }
+        if (successBox) successBox.style.display = 'none';
+      });
+    });
+  });
 </script>
 <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 
