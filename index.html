@@ -403,11 +403,11 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
     </a>
     <ul class="nav-links">
       <li><a href="#">Home</a></li>
-      <li><a href="#">Blogs</a></li>
-      <li><a href="#">Case Studies</a></li>
-      <li><a href="#">Categories</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#blogs">Blogs</a></li>
+      <li><a href="#case-studies">Case Studies</a></li>
+      <li><a href="#latest">Categories</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-right">
       <button class="nav-search" onclick="toggleSrch()">Search</button>
@@ -421,11 +421,11 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
   <!-- Mobile dropdown menu — hidden on desktop, shown when hamburger is tapped -->
   <div class="nav-mobile-menu" id="mobileMenu">
     <a href="#">Home</a>
-    <a href="#">Blogs</a>
-    <a href="#">Case Studies</a>
-    <a href="#">Categories</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
+    <a href="#blogs">Blogs</a>
+    <a href="#case-studies">Case Studies</a>
+    <a href="#latest">Categories</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </div>
 </nav>
 
@@ -488,7 +488,7 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
 </section>
 
 <!-- FEATURED -->
-<section class="sec">
+<section class="sec" id="blogs">
   <div class="sec-inner">
     <div class="sec-head">
       <div class="sec-title">Featured</div>
@@ -521,7 +521,7 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
 </section>
 
 <!-- LATEST -->
-<section class="sec sec-alt">
+<section class="sec sec-alt" id="latest">
   <div class="sec-inner">
     <div class="sec-head">
       <div class="sec-title">Latest</div>
@@ -597,7 +597,7 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
 </div>
 
 <!-- CASE STUDIES -->
-<section class="case-sec">
+<section class="case-sec" id="case-studies">
   <div class="case-inner">
     <div class="case-head">
       <div class="sec-title">Pharma Case Studies</div>
@@ -651,7 +651,7 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
 </section>
 
 <!-- ABOUT -->
-<section class="about-sec">
+<section class="about-sec" id="about">
   <div class="about-inner">
     <div class="about-left">
       <div class="about-label">About this blog</div>
@@ -668,26 +668,171 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
   </div>
 </section>
 
-<!-- NEWSLETTER -->
+<!-- NEWSLETTER — Brevo form, restyled to match FOP design -->
+
+<!-- Brevo required styles — kept minimal, overridden below -->
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+<style>
+/* ── Override ALL Brevo defaults so it matches our design ── */
+#sib-container{
+  background:transparent!important;
+  border:none!important;
+  border-radius:0!important;
+  padding:0!important;
+  max-width:100%!important;
+  text-align:left!important;
+}
+.sib-form{background:transparent!important;text-align:left!important}
+.sib-form-container{background:transparent!important}
+/* Hide Brevo's own heading and subtext — we use ours */
+.sib-form-block:first-child,
+.sib-form-block:nth-child(2){display:none!important}
+/* Email input — matches nl-input style */
+#sib-container input#EMAIL{
+  width:100%!important;
+  background:rgba(255,255,255,0.07)!important;
+  border:1px solid rgba(255,255,255,0.15)!important;
+  border-right:none!important;
+  color:#fff!important;
+  font-family:'Source Serif 4',Georgia,serif!important;
+  font-size:0.88rem!important;
+  font-style:italic!important;
+  padding:11px 14px!important;
+  border-radius:0!important;
+  outline:none!important;
+  box-shadow:none!important;
+  height:auto!important;
+}
+#sib-container input#EMAIL::placeholder{color:rgba(255,255,255,0.3)!important;font-style:italic}
+#sib-container input#EMAIL:focus{border-color:#7aab8e!important;background:rgba(255,255,255,0.1)!important}
+/* Hide Brevo's label above the input */
+.entry__label{display:none!important}
+.form__entry.entry_block{margin:0!important;padding:0!important}
+.form__label-row{margin:0!important}
+.entry__field{margin:0!important}
+/* Submit button — matches nl-btn style */
+.sib-form-block__button{
+  background:#c9a84c!important;
+  color:#1a3a2a!important;
+  font-family:'DM Sans',Arial,sans-serif!important;
+  font-size:0.72rem!important;
+  font-weight:700!important;
+  letter-spacing:0.06em!important;
+  text-transform:uppercase!important;
+  padding:11px 20px!important;
+  border:none!important;
+  border-radius:0!important;
+  cursor:pointer!important;
+  white-space:nowrap!important;
+  height:auto!important;
+  transition:background 0.2s!important;
+}
+.sib-form-block__button:hover{background:#e8c96a!important}
+/* Row: input + button side by side */
+.sib-form .sib-form-block:nth-child(3){padding:0!important}
+#sib-container form{padding:0!important}
+#sib-container form > div{padding:0!important}
+/* Put input and button in a flex row */
+.sib-form-block.sib-input,
+.sib-form-block:has(#EMAIL){padding:0!important;flex:1}
+/* Wrap the two form blocks (input + button) in a row */
+#sib-form{display:flex!important;flex-direction:column!important;gap:0!important}
+.nl-brevo-row{display:flex;gap:0;align-items:stretch;margin-bottom:0.65rem}
+.nl-brevo-row .sib-input{flex:1}
+/* Error/success messages */
+#error-message,#success-message{
+  max-width:100%!important;
+  margin-bottom:10px!important;
+  font-family:'DM Sans',Arial,sans-serif!important;
+  font-size:0.8rem!important;
+  border-radius:2px!important;
+}
+/* Note below form */
+.nl-note{font-family:'DM Sans',sans-serif;font-size:0.62rem;color:rgba(255,255,255,0.28);margin-top:0.65rem;letter-spacing:0.02em}
+/* Hide the honeypot hidden input visually */
+.input--hidden{display:none!important}
+/* Progress spinner icon inside button */
+.sib-hide-loader-icon{display:none}
+/* Mobile: stack input and button vertically */
+@media(max-width:480px){
+  .nl-brevo-row{flex-direction:column}
+  #sib-container input#EMAIL{border-right:1px solid rgba(255,255,255,0.15)!important;border-bottom:none!important}
+  .sib-form-block__button{width:100%!important}
+}
+</style>
+
 <section class="nl-sec">
   <div class="nl-inner">
+
+    <!-- LEFT: heading and description — unchanged -->
     <div>
       <div class="nl-label">Newsletter</div>
       <div class="nl-title">One piece.<br><em>Every two weeks.</em></div>
       <p class="nl-sub">A new essay on pharma marketing, industry breakdowns, or career guides — written for people still figuring it out, not people who already know everything.</p>
     </div>
+
+    <!-- RIGHT: real Brevo form, restyled -->
     <div>
-      <div class="nl-form">
-        <input class="nl-input" type="email" placeholder="your@email.com">
-        <button class="nl-btn">Subscribe</button>
+      <!-- Error / success messages -->
+      <div id="error-message" class="sib-form-message-panel" style="font-family:'DM Sans',Helvetica,sans-serif;font-size:0.8rem;text-align:left;color:#661d1d;background-color:#ffeded;border-color:#ff4949;border-radius:2px;max-width:100%;margin-bottom:10px;display:none">
+        <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+          <span class="sib-form-message-panel__inner-text">Subscription could not be saved. Please try again.</span>
+        </div>
       </div>
-      <p class="nl-note">No spam. No fluff. Unsubscribe anytime.</p>
+      <div id="success-message" class="sib-form-message-panel" style="font-family:'DM Sans',Helvetica,sans-serif;font-size:0.8rem;text-align:left;color:#085229;background-color:#e7faf0;border-color:#13ce66;border-radius:2px;max-width:100%;margin-bottom:10px;display:none">
+        <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+          <span class="sib-form-message-panel__inner-text">You're subscribed. Welcome.</span>
+        </div>
+      </div>
+
+      <!-- The form itself -->
+      <form id="sib-form" method="POST" action="https://357651e5.sibforms.com/serve/MUIFAA0uZO7UhODMQbjv7z868AganYe02z8cJ3NkeLiEVPqUmhiUlynEZNQGYM6pxPqh14V-etCs_wGH2Up-81zFgHfMWlgdzrzoTo8uLGBMVPxlGNrrVwqcdwUC_htmwzzYp7D5URTVBFPBBjsgUJn0XTGnixndjYGNbgaL6mpA2VjirMf9AsZ4ueu7YhUED_T2wRQKS_57vhTLbA==" data-type="subscription">
+        <!-- Input + button in a flex row -->
+        <div class="nl-brevo-row">
+          <input
+            style="flex:1;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-right:none;color:#fff;font-family:'Source Serif 4',Georgia,serif;font-size:0.88rem;font-style:italic;padding:11px 14px;outline:none;width:100%;"
+            type="email"
+            id="EMAIL"
+            name="EMAIL"
+            autocomplete="off"
+            placeholder="your@email.com"
+            data-required="true"
+            required
+          />
+          <button
+            style="background:#c9a84c;color:#1a3a2a;font-family:'DM Sans',Arial,sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:11px 20px;border:none;cursor:pointer;white-space:nowrap;transition:background 0.2s;"
+            type="submit"
+            onmouseover="this.style.background='#e8c96a'"
+            onmouseout="this.style.background='#c9a84c'"
+          >Subscribe</button>
+        </div>
+        <p class="nl-note">No spam. No fluff. Unsubscribe anytime.</p>
+        <!-- Brevo required hidden fields — do not remove -->
+        <input type="text" name="email_address_check" value="" style="display:none">
+        <input type="hidden" name="locale" value="en">
+      </form>
     </div>
+
   </div>
 </section>
 
+<!-- Brevo form JS — required for validation and submission -->
+<script>
+  window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+  window.LOCALE = 'en';
+  window.EMAIL_INVALID_MESSAGE = "Please enter a valid email address.";
+  window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank.";
+  window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please try again.";
+  window.INVALID_DATE = "Please enter a valid date";
+  window.REQUIRED_MULTISELECT_MESSAGE = 'Please select at least 1 option';
+  var AUTOHIDE = Boolean(0);
+</script>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
+
+
 <!-- CONTACT -->
-<section class="contact-sec">
+<section class="contact-sec" id="contact">
   <div class="contact-inner">
     <div>
       <div class="contact-label">Contact</div>
@@ -765,6 +910,12 @@ function toggleMobileMenu(){
   const menu=document.getElementById('mobileMenu');
   menu.classList.toggle('open');
 }
+// Close menu when any mobile nav link is tapped
+document.querySelectorAll('.nav-mobile-menu a').forEach(function(link){
+  link.addEventListener('click',function(){
+    document.getElementById('mobileMenu').classList.remove('open');
+  });
+});
 document.addEventListener('click',function(e){
   const menu=document.getElementById('mobileMenu');
   const btn=document.getElementById('hamburgerBtn');
