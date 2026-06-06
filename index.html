@@ -412,7 +412,7 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
     <div class="nav-right">
       <button class="nav-search" onclick="toggleSrch()">Search</button>
       <button class="nav-theme" onclick="toggleTheme()" id="themeBtn">&#9790;</button>
-      <button class="nav-sub">Subscribe</button>
+      <a href="https://figuring-outs-newsletter.beehiiv.com/subscribe" target="_blank"><button class="nav-sub">Subscribe</button></a>
       <button class="nav-hamburger" onclick="toggleMobileMenu()" id="hamburgerBtn" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -679,77 +679,65 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
     </div>
 
     <div>
-      <div class="nl-form">
-        <input class="nl-input" type="email" id="beehiiv-email" placeholder="your@email.com" autocomplete="off">
-        <button class="nl-btn" id="beehiiv-btn">Subscribe</button>
-      </div>
-      <p class="nl-note" id="beehiiv-note">No spam. No fluff. Unsubscribe anytime.</p>
+      <a href="https://figuring-outs-newsletter.beehiiv.com/subscribe" target="_blank">
+        <button class="nl-btn" style="padding:13px 32px;font-size:0.78rem">Subscribe to the Newsletter</button>
+      </a>
+      <p class="nl-note" style="margin-top:0.75rem">No spam. No fluff. Unsubscribe anytime.</p>
     </div>
 
   </div>
 </section>
 
-<script>
-(function() {
-  function doSubscribe() {
-    var emailEl = document.getElementById('beehiiv-email');
-    var noteEl  = document.getElementById('beehiiv-note');
-    if (!emailEl) return;
-
-    var email = emailEl.value.trim();
-
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      noteEl.textContent = 'Please enter a valid email address.';
-      noteEl.style.color = '#e8a484';
-      return;
-    }
-
-    window.location.href = 'https://figuring-outs-newsletter.beehiiv.com/subscribe?email=' + encodeURIComponent(email);
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    var btn   = document.getElementById('beehiiv-btn');
-    var input = document.getElementById('beehiiv-email');
-    if (btn)   btn.addEventListener('click', doSubscribe);
-    if (input) input.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter') doSubscribe();
-    });
-  });
-})();
-</script>
+<!-- Beehiiv newsletter linked via nav and newsletter section -->
 
 
 
 <!-- CONTACT -->
 <section class="contact-sec" id="contact">
-  <div class="contact-inner">
+  <div class="contact-inner" style="grid-template-columns:1fr;max-width:680px">
     <div>
       <div class="contact-label">Contact</div>
       <div class="contact-heading">Get in <em>touch.</em></div>
-      <p class="contact-sub">Have a topic suggestion, a question about pharma, or want to collaborate? Write in — responses within 48 hours.</p>
-      <div class="contact-info">
+      <p class="contact-sub">Have a topic suggestion, a question about pharma, or want to collaborate? Send a direct email — responses within 48 hours.</p>
+
+      <div class="contact-info" style="margin-top:2rem">
+
+        <a href="mailto:contact@figuringoutpharma.com" style="text-decoration:none">
+          <div class="c-info-row" style="transition:background 0.2s;cursor:pointer" onmouseover="this.style.background='var(--cream3)'" onmouseout="this.style.background=''">
+            <div class="c-info-dot" style="width:8px;height:8px"></div>
+            <div style="flex:1">
+              <div class="c-info-label">Email</div>
+              <div class="c-info-val">contact@figuringoutpharma.com</div>
+            </div>
+            <div style="font-family:var(--sans);font-size:0.68rem;color:var(--text3);letter-spacing:0.04em">Write in →</div>
+          </div>
+        </a>
+
         <div class="c-info-row">
-          <div class="c-info-dot"></div>
-          <div><div class="c-info-label">Email</div><div class="c-info-val">contact@figuringoutpharma.com</div></div>
+          <div class="c-info-dot" style="width:8px;height:8px"></div>
+          <div style="flex:1">
+            <div class="c-info-label">Response time</div>
+            <div class="c-info-val">Within 48 hours</div>
+          </div>
         </div>
+
         <div class="c-info-row">
-          <div class="c-info-dot"></div>
-          <div><div class="c-info-label">Response time</div><div class="c-info-val">Within 48 hours</div></div>
+          <div class="c-info-dot" style="width:8px;height:8px"></div>
+          <div style="flex:1">
+            <div class="c-info-label">Based in</div>
+            <div class="c-info-val">Mumbai, India</div>
+          </div>
         </div>
+
         <div class="c-info-row">
-          <div class="c-info-dot"></div>
-          <div><div class="c-info-label">Based in</div><div class="c-info-val">Mumbai, India</div></div>
+          <div class="c-info-dot" style="width:8px;height:8px"></div>
+          <div style="flex:1">
+            <div class="c-info-label">Topics welcome</div>
+            <div class="c-info-val">Article suggestions, case study ideas, pharma career questions, collaborations</div>
+          </div>
         </div>
+
       </div>
-    </div>
-    <div class="contact-form">
-      <div class="form-row">
-        <div class="form-grp" style="margin-bottom:0"><label class="form-label">Name</label><input class="form-input" placeholder="Your name"></div>
-        <div class="form-grp" style="margin-bottom:0"><label class="form-label">Email</label><input class="form-input" placeholder="your@email.com"></div>
-      </div>
-      <div class="form-grp"><label class="form-label">Subject</label><input class="form-input" placeholder="Topic suggestion, collaboration..."></div>
-      <div class="form-grp"><label class="form-label">Message</label><textarea class="form-input form-ta" placeholder="What is on your mind?"></textarea></div>
-      <button class="form-btn">Send Message</button>
     </div>
   </div>
 </section>
@@ -768,10 +756,10 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
     </div>
     <div class="foot-links">
       <a href="#">Home</a>
-      <a href="#">Blogs</a>
-      <a href="#">Case Studies</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
+      <a href="#blogs">Blogs</a>
+      <a href="#case-studies">Case Studies</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </div>
     <div class="foot-copy">&#169; 2026 Figuring Out Pharma</div>
   </div>
