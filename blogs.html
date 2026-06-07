@@ -316,6 +316,19 @@ fetch('articles.json')
   .then(function(r){return r.json();})
   .then(function(data){
     allArticles = data;
+    // Check if a category was passed in the URL e.g. blogs.html?cat=Marketing
+    var urlParams = new URLSearchParams(window.location.search);
+    var catParam = urlParams.get('cat');
+    if(catParam){
+      currentFilter = catParam;
+      // Activate the matching filter button
+      document.querySelectorAll('.filter-btn').forEach(function(btn){
+        btn.classList.remove('active');
+        if(btn.getAttribute('data-filter') === catParam){
+          btn.classList.add('active');
+        }
+      });
+    }
     renderArticles();
   })
   .catch(function(){
