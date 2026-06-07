@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FMCG vs Pharma Marketing — Explained from Scratch, No Assumptions — Figuring Out Pharma</title>
+
+<meta name="description" content="People say pharma marketing is just like FMCG. It is not. Here is a full breakdown of how the two industries actually work — and why the differences matter for your career.">
+
+<meta property="og:title" content="FMCG vs Pharma Marketing — Explained from Scratch">
+<meta property="og:description" content="People say pharma marketing is just like FMCG. It is not. Here is the full breakdown.">
+<meta property="og:type" content="article">
+
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --forest:#1a3a2a;--forest2:#234d38;--forest3:#2d6347;--forest4:#3a7a58;
+  --sage:#7aab8e;--sage2:#a8c9b5;
+  --cream:#faf8f2;--cream2:#f3f0e6;--cream3:#e8e3d4;
+  --gold:#c9a84c;--gold2:#e8c96a;
+  --line:#ddd8c8;--line2:#ccc6b4;
+  --text:#1c1a14;--text2:#4a4638;--text3:#8a8474;
+  --card:#ffffff;
+  --serif:'Playfair Display',Georgia,serif;
+  --body:'Source Serif 4',Georgia,serif;
+  --sans:'DM Sans',sans-serif;
+  --max:960px;--prose:680px;
+}
+[data-theme="dark"]{
+  --cream:#0e1a14;--cream2:#132019;--cream3:#1c2e22;
+  --line:#2a3d30;--line2:#3a5044;
+  --text:#e8f0e4;--text2:#9db89a;--text3:#5a7464;
+  --card:#132019;
+}
+html{font-size:16px;scroll-behavior:smooth;background:var(--cream)}
+body{color:var(--text);font-family:var(--body);line-height:1.7;background:var(--cream);transition:background 0.3s,color 0.3s}
+a{text-decoration:none;color:inherit}
+
+/* READING PROGRESS */
+#prog{position:fixed;top:0;left:0;height:2px;background:var(--gold);z-index:9999;width:0%;transition:width 0.1s linear;pointer-events:none}
+
+/* NAV */
+nav{background:var(--forest);position:sticky;top:0;z-index:300;border-bottom:1px solid rgba(255,255,255,0.06)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:52px;gap:2rem}
+.nav-logo{display:flex;align-items:center;gap:9px;flex-shrink:0}
+.nav-icon{width:24px;height:24px}
+.nav-name{font-family:var(--serif);font-size:0.98rem;font-weight:700;color:#fff;letter-spacing:-0.01em;white-space:nowrap}
+.nav-name em{font-style:italic;font-weight:400;color:var(--sage2)}
+.nav-links{display:flex;gap:0;list-style:none;flex:1;justify-content:center}
+.nav-links a{font-family:var(--sans);font-size:0.7rem;font-weight:400;color:rgba(255,255,255,0.55);padding:6px 13px;transition:color 0.2s;letter-spacing:0.04em;text-transform:uppercase}
+.nav-links a:hover{color:#fff}
+.nav-right{display:flex;align-items:center;gap:0.75rem;flex-shrink:0}
+.nav-theme{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);width:30px;height:30px;border-radius:2px;cursor:pointer;font-size:0.82rem;transition:all 0.2s;display:flex;align-items:center;justify-content:center}
+.nav-theme:hover{background:rgba(255,255,255,0.14);color:#fff}
+.nav-sub{background:var(--gold);color:var(--forest);border:none;font-family:var(--sans);font-size:0.68rem;font-weight:600;padding:6px 14px;border-radius:2px;cursor:pointer;letter-spacing:0.05em;text-transform:uppercase;transition:all 0.2s}
+.nav-sub:hover{background:var(--gold2)}
+
+/* HAMBURGER */
+.nav-hamburger{display:none;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);width:30px;height:30px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:4px;flex-shrink:0;border-radius:2px}
+.nav-hamburger span{display:block;width:14px;height:1.5px;background:currentColor}
+.nav-mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--forest2);border-bottom:1px solid rgba(255,255,255,0.08);z-index:299;padding:0.5rem 0}
+.nav-mobile-menu a{display:block;font-family:var(--sans);font-size:0.82rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.7);padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,0.06)}
+.nav-mobile-menu a:last-child{border-bottom:none}
+
+/* ARTICLE HEADER */
+.art-header{background:var(--forest);padding:3.5rem 2rem 3rem;border-bottom:1px solid rgba(255,255,255,0.06)}
+.art-header-inner{max-width:var(--prose);margin:0 auto}
+.art-cat{font-family:var(--sans);font-size:0.62rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);margin-bottom:1rem;display:flex;align-items:center;gap:8px}
+.art-cat a{color:var(--sage);transition:color 0.2s}
+.art-cat a:hover{color:var(--sage2)}
+.art-cat-sep{opacity:0.4}
+.art-title{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;color:#fff;line-height:1.18;letter-spacing:-0.025em;margin-bottom:1.25rem}
+.art-title em{font-style:italic;font-weight:400;color:var(--sage2)}
+.art-deck{font-family:var(--body);font-size:1.05rem;font-weight:300;color:rgba(255,255,255,0.58);line-height:1.78;font-style:italic;margin-bottom:1.75rem}
+.art-meta-row{display:flex;align-items:center;gap:1.5rem;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,0.1)}
+.meta-author{font-family:var(--sans);font-size:0.78rem;font-weight:500;color:rgba(255,255,255,0.7)}
+.meta-sep{color:rgba(255,255,255,0.2);font-size:0.8rem}
+.meta-date{font-family:var(--sans);font-size:0.72rem;color:rgba(255,255,255,0.4)}
+.meta-time{font-family:var(--sans);font-size:0.7rem;font-weight:500;background:rgba(201,168,76,0.2);color:var(--gold2);padding:3px 9px;border-radius:1px;letter-spacing:0.04em}
+
+/* COVER IMAGE AREA */
+.cover{max-width:var(--prose);margin:0 auto;padding:2.5rem 2rem 0}
+.cover-img{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,var(--forest2),var(--forest3));display:flex;align-items:center;justify-content:center;border:1px solid var(--line);position:relative;overflow:hidden}
+.cover-placeholder{font-family:var(--sans);font-size:0.72rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--sage);text-align:center;line-height:1.8}
+.cover-placeholder span{display:block;font-family:var(--serif);font-size:2rem;font-style:italic;color:rgba(255,255,255,0.15);margin-bottom:0.5rem}
+.cover-caption{font-family:var(--sans);font-size:0.68rem;color:var(--text3);margin-top:0.6rem;font-style:italic;text-align:right}
+
+/* LAYOUT */
+.art-layout{max-width:var(--max);margin:0 auto;padding:2.5rem 2rem 4rem;display:grid;grid-template-columns:1fr 220px;gap:4rem;align-items:start}
+
+/* TOC */
+.toc{position:sticky;top:70px;border:1px solid var(--line);padding:1.25rem;background:var(--cream2)}
+.toc-label{font-family:var(--sans);font-size:0.6rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3);margin-bottom:0.875rem;padding-bottom:0.625rem;border-bottom:1px solid var(--line)}
+.toc-list{list-style:none;display:flex;flex-direction:column;gap:2px}
+.toc-list a{font-family:var(--sans);font-size:0.78rem;font-weight:400;color:var(--text2);padding:4px 8px;display:block;border-left:2px solid transparent;transition:all 0.2s;line-height:1.4}
+.toc-list a:hover,.toc-list a.active{color:var(--forest3);border-left-color:var(--forest3);background:var(--cream)}
+.toc-share{margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--line)}
+.toc-share-label{font-family:var(--sans);font-size:0.6rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:0.625rem}
+.share-btn{display:block;width:100%;font-family:var(--sans);font-size:0.72rem;font-weight:500;color:var(--text2);background:var(--cream);border:1px solid var(--line);padding:7px 12px;margin-bottom:6px;cursor:pointer;text-align:left;transition:all 0.2s;letter-spacing:0.02em}
+.share-btn:hover{background:var(--forest);color:#fff;border-color:var(--forest)}
+
+/* PROSE */
+.prose{max-width:var(--prose);font-family:var(--body);font-size:1.05rem;line-height:1.82;color:var(--text2)}
+.prose h2{font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-0.02em;margin:2.5rem 0 1rem;padding-top:0.5rem}
+.prose h3{font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--text);line-height:1.3;margin:2rem 0 0.75rem;font-style:italic}
+.prose p{margin-bottom:1.4rem;font-weight:300}
+.prose p:last-child{margin-bottom:0}
+.prose strong{color:var(--text);font-weight:500;font-style:normal}
+.prose em{font-style:italic}
+.prose a{color:var(--forest3);text-decoration:underline;text-decoration-color:var(--sage2);text-underline-offset:3px;transition:color 0.2s}
+.prose a:hover{color:var(--forest)}
+.prose ul,.prose ol{padding-left:1.5rem;margin-bottom:1.4rem}
+.prose li{margin-bottom:0.4rem;font-weight:300}
+.prose blockquote{border-left:3px solid var(--gold);padding:0.875rem 1.25rem;margin:2rem 0;background:var(--cream2);font-style:italic;color:var(--text2)}
+.prose blockquote p{margin-bottom:0;font-size:1rem}
+.prose .callout{background:var(--cream2);border:1px solid var(--line);border-left:3px solid var(--forest3);padding:1.25rem 1.5rem;margin:2rem 0}
+.prose .callout-label{font-family:var(--sans);font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--forest3);margin-bottom:0.5rem}
+.prose .callout p{margin-bottom:0;font-size:0.92rem}
+.prose hr{border:none;border-top:1px solid var(--line);margin:2.5rem 0}
+.prose figure{margin:2rem 0}
+.prose figcaption{font-family:var(--sans);font-size:0.72rem;color:var(--text3);text-align:center;margin-top:0.5rem;font-style:italic}
+
+/* COMPARISON TABLE */
+.compare-table{width:100%;border-collapse:collapse;margin:2rem 0;font-family:var(--sans);font-size:0.82rem}
+.compare-table th{background:var(--forest);color:#fff;padding:10px 14px;text-align:left;font-weight:600;letter-spacing:0.04em;font-size:0.72rem;text-transform:uppercase}
+.compare-table th:first-child{background:var(--forest2)}
+.compare-table td{padding:10px 14px;border:1px solid var(--line);color:var(--text2);vertical-align:top;line-height:1.5}
+.compare-table tr:nth-child(even) td{background:var(--cream2)}
+.compare-table td:first-child{font-weight:600;color:var(--text);background:var(--cream2);font-size:0.75rem;letter-spacing:0.02em}
+.compare-table tr:nth-child(even) td:first-child{background:var(--cream3)}
+
+/* ARTICLE FOOTER */
+.art-foot{max-width:var(--prose);margin:0 auto;padding:2.5rem 2rem 0;border-top:1px solid var(--line)}
+.tags-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:2rem}
+.tag-pill{font-family:var(--sans);font-size:0.65rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:4px 12px;border:1px solid var(--line);color:var(--text3);transition:all 0.2s;cursor:pointer}
+.tag-pill:hover{background:var(--forest);color:#fff;border-color:var(--forest)}
+
+/* RELATED */
+.related{background:var(--cream2);border-top:1px solid var(--line);padding:3.5rem 2rem}
+.related-inner{max-width:var(--max);margin:0 auto}
+.related-head{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:1.75rem;padding-bottom:0.75rem;border-bottom:2px solid var(--text);letter-spacing:-0.01em}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
+.rel-card{padding:1.5rem;border-right:1px solid var(--line);cursor:pointer;transition:background 0.2s}
+.rel-card:last-child{border-right:none}
+.rel-card:hover{background:var(--cream)}
+.rel-card:hover .rel-title{color:var(--forest3)}
+.rel-cat{font-family:var(--sans);font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--forest3);margin-bottom:0.5rem}
+.rel-title{font-family:var(--serif);font-size:0.95rem;font-weight:700;color:var(--text);line-height:1.35;margin-bottom:0.5rem;transition:color 0.15s;letter-spacing:-0.01em}
+.rel-time{font-family:var(--sans);font-size:0.62rem;color:var(--text3)}
+
+/* FOOTER */
+footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);padding:1.25rem 2rem}
+.foot-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.foot-logo{display:flex;align-items:center;gap:8px}
+.foot-logo svg{width:20px;height:20px}
+.foot-logo-name{font-family:var(--serif);font-size:0.85rem;font-weight:700;color:rgba(255,255,255,0.65)}
+.foot-logo-name em{font-style:italic;font-weight:400;color:var(--sage)}
+.foot-links{display:flex;gap:1.5rem}
+.foot-links a{font-family:var(--sans);font-size:0.62rem;letter-spacing:0.05em;text-transform:uppercase;color:rgba(255,255,255,0.28);transition:color 0.2s}
+.foot-links a:hover{color:var(--sage2)}
+.foot-copy{font-family:var(--sans);font-size:0.6rem;color:rgba(255,255,255,0.2)}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .nav-inner{padding:0 1.25rem}
+  .nav-hamburger{display:flex}
+  .nav-mobile-menu.open{display:block}
+  .art-layout{grid-template-columns:1fr;padding:2rem 1.25rem 3rem}
+  .toc{position:static;margin-bottom:2rem}
+  .art-header{padding:2.5rem 1.25rem 2rem}
+  .cover{padding:1.5rem 1.25rem 0}
+  .art-foot{padding:2rem 1.25rem 0}
+  .related{padding:2.5rem 1.25rem}
+  .related-grid{grid-template-columns:1fr}
+  .rel-card{border-right:none;border-bottom:1px solid var(--line)}
+  .rel-card:last-child{border-bottom:none}
+  .foot-inner{flex-direction:column;gap:1rem;align-items:flex-start}
+  footer{padding:1.25rem}
+  .compare-table{font-size:0.74rem}
+  .compare-table th,.compare-table td{padding:8px 10px}
+}
+@media(max-width:480px){
+  .art-title{font-size:1.7rem!important}
+  .prose{font-size:0.98rem}
+  .foot-links{flex-wrap:wrap;gap:0.75rem}
+}
+</style>
+</head>
+<body>
+
+<div id="prog"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="../index.html">
+      <svg class="nav-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="30" fill="#2d6347"/>
+        <circle cx="32" cy="32" r="22" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+        <rect x="29" y="14" width="6" height="36" rx="2" fill="#c9a84c"/>
+        <rect x="14" y="29" width="36" height="6" rx="2" fill="#c9a84c"/>
+        <circle cx="32" cy="32" r="4" fill="#ffffff" opacity="0.85"/>
+        <circle cx="32" cy="32" r="2" fill="#c9a84c"/>
+      </svg>
+      <span class="nav-name">Figuring Out <em>Pharma</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="#">Blogs</a></li>
+      <li><a href="#">Case Studies</a></li>
+      <li><a href="#">Categories</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="nav-theme" onclick="toggleTheme()" id="themeBtn">&#9790;</button>
+      <a href="https://figuring-outs-newsletter.beehiiv.com/subscribe" target="_blank"><button class="nav-sub">Subscribe</button></a>
+      <button class="nav-hamburger" onclick="toggleMobileMenu()" id="hamburgerBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile-menu" id="mobileMenu">
+    <a href="../index.html">Home</a>
+    <a href="#">Blogs</a>
+    <a href="#">Case Studies</a>
+    <a href="#">Categories</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
+</nav>
+
+<!-- ARTICLE HEADER -->
+<header class="art-header">
+  <div class="art-header-inner">
+    <div class="art-cat">
+      <a href="#">Marketing</a>
+      <span class="art-cat-sep">/</span>
+      <a href="#">Industry</a>
+    </div>
+    <h1 class="art-title">
+      FMCG vs pharma marketing — <em>explained from scratch,</em> no assumptions
+    </h1>
+    <p class="art-deck">
+      People keep saying pharma is just like FMCG with more regulations. It is not. The two industries sell completely differently, to completely different people, for completely different reasons. Here is the full breakdown.
+    </p>
+    <div class="art-meta-row">
+      <span class="meta-author">Figuring Out Pharma</span>
+      <span class="meta-sep">·</span>
+      <span class="meta-date">June 2026</span>
+      <span class="meta-sep">·</span>
+      <span class="meta-time">11 min read</span>
+    </div>
+  </div>
+</header>
+
+<!-- COVER IMAGE -->
+<div class="cover">
+  <div class="cover-img">
+    <div class="cover-placeholder">
+      <span>&#9650;</span>
+      Replace this with your article cover image<br>
+      Recommended size: 1200 x 675px<br>
+      Source: Undraw.co or Ideogram.ai
+    </div>
+  </div>
+  <p class="cover-caption">Illustration via Undraw.co</p>
+</div>
+
+<!-- ARTICLE LAYOUT -->
+<div class="art-layout">
+
+  <article class="prose">
+
+    <p>
+      At some point in every B.Pharma student's life, someone says: "Pharma marketing is just FMCG with more rules." A professor, a LinkedIn post, a senior at placement season. It sounds plausible. Both industries sell products. Both have brands. Both care about distribution and pricing.
+    </p>
+
+    <p>
+      But spend five minutes actually looking at how the two industries work, and the comparison starts falling apart. The customer is different. The decision-maker is different. The way a product lives and dies in the market is different. The regulations are in a completely different universe.
+    </p>
+
+    <p>
+      This article breaks it all down from zero — no assumptions about what you already know.
+    </p>
+
+    <h2 id="what-each-industry-is-actually-selling">What each industry is actually selling</h2>
+
+    <p>
+      Start here, because everything else flows from this.
+    </p>
+
+    <p>
+      An FMCG company — think HUL, Nestlé, P&G — is selling products that make everyday life better, easier, or more enjoyable. Shampoo, biscuits, detergent, face wash. Nobody needs a prescription to buy them. Nobody needs a doctor's recommendation. You see an ad, you like it, you pick it off the shelf. The job of FMCG marketing is to make you want the product and make sure it is in front of you when you do.
+    </p>
+
+    <p>
+      A pharma company is doing something fundamentally different. It is selling a chemical molecule that treats a specific disease. The person buying the product usually has no idea whether they need it. They cannot assess whether it is safe for them. In most cases, they are <strong>legally not allowed</strong> to buy it without a doctor's approval. The job of pharma marketing is not to make patients want the product — it is to convince a doctor that this is the right drug for their patients.
+    </p>
+
+    <blockquote>
+      <p>In FMCG, the goal is to build desire. In pharma, the goal is to build trust — with a professional who will then make the decision on behalf of the patient.</p>
+    </blockquote>
+
+    <p>
+      That one difference changes almost everything else.
+    </p>
+
+    <h2 id="who-you-are-actually-marketing-to">Who you are actually marketing to</h2>
+
+    <p>
+      In FMCG, whoever buys the product is usually the same person who uses it. You buy the shampoo, you wash your hair with it. This means FMCG can run mass media campaigns — television ads, billboards, Instagram reels — aimed at the general public and it works. Reach enough people, create enough desire, and you will sell more shampoo.
+    </p>
+
+    <p>
+      Pharma does not have this luxury, at least not for prescription drugs. The person who takes the medicine is the patient. But the person who decides which medicine they take is the doctor. And the person who actually stocks and dispenses it is the pharmacist. And the person who ultimately pays for it might be an insurance company or the government. These are four completely different audiences with four completely different motivations.
+    </p>
+
+    <p>
+      Let us go through each one:
+    </p>
+
+    <h3>Doctors (the gatekeeper)</h3>
+    <p>
+      This is the primary audience for most prescription drug marketing. Doctors are not moved by brand slogans or celebrity endorsements. They want clinical data. How effective is this drug? What are the side effects? How does it compare to what I am already prescribing? Is there published research I can look at? A pharma marketer's job, in large part, is to get this information in front of the right doctors — consistently, credibly, and compliantly.
+    </p>
+
+    <h3>Pharmacists (the gatekeeper at the counter)</h3>
+    <p>
+      The pharmacist matters more than most people think. For OTC drugs especially, a pharmacist's recommendation carries enormous weight. Studies have shown that close to 45% of patients directly ask pharmacists for advice on minor illnesses. Pharmacists also control substitution — if your brand is not available, they can recommend a generic or a competitor. So pharma companies work hard to keep pharmacists informed, stocked, and incentivised to recommend their brand.
+    </p>
+
+    <h3>Patients (the end user)</h3>
+    <p>
+      Patients matter more in OTC categories and in disease awareness campaigns. But even here, their role is different from an FMCG consumer. A patient dealing with diabetes or hypertension is not going to switch brands the way you might switch biscuits. They follow their doctor's advice, they worry about side effects, and they want reassurance that the drug is safe and accessible. Marketing to patients is less about desire and more about awareness and adherence.
+    </p>
+
+    <h3>Payers (the ones holding the budget)</h3>
+    <p>
+      This is almost invisible in India compared to Western markets, but it exists. Government health schemes like PMJAY, insurance companies, and hospital formulary committees all decide which drugs they will cover. Getting your drug onto these lists requires a different kind of pitch entirely — health economics, cost-effectiveness, and population-level outcomes. This is marketing that most B.Pharma students never hear about.
+    </p>
+
+    <div class="callout">
+      <div class="callout-label">The key point</div>
+      <p>FMCG has one audience — the consumer. Pharma has four different audiences, each requiring a completely different message and a completely different approach. You cannot run one campaign and reach all of them.</p>
+    </div>
+
+    <h2 id="how-long-a-brand-can-actually-live">How long a brand can actually live</h2>
+
+    <p>
+      This is one of the biggest structural differences between the two industries, and it is one that does not get explained enough.
+    </p>
+
+    <p>
+      An FMCG brand can theoretically live forever. Lux soap has been around since 1925. Maggi survived a complete product ban in 2015 and came back stronger. If a brand loses relevance, the company refreshes the packaging, launches a new variant, runs a new campaign. There is no expiry date. The longer a brand survives, the more brand equity it builds, and the more valuable it becomes.
+    </p>
+
+    <p>
+      Pharmaceutical brands run on a countdown clock.
+    </p>
+
+    <p>
+      When a company develops a new drug, it files a patent. That patent gives them exclusive rights to sell the drug for 20 years from the date of filing. Sounds like a long time — but by the time the drug goes through clinical trials, regulatory approvals, and commercial launch, a company typically has only <strong>7 to 10 years of actual market exclusivity</strong> left.
+    </p>
+
+    <p>
+      When the patent expires, generic manufacturers can enter. They have not spent anything on R&D, so they can price their versions dramatically lower. In many cases, a brand loses more than 80% of its market volume within months of patent expiry. This is what the industry calls a <strong>patent cliff</strong> — and it is a cliff because the fall is sudden and steep.
+    </p>
+
+    <p>
+      This creates a completely different strategic logic. FMCG companies can invest in brand equity over decades. Pharma companies have to recover their R&D investment and make their profit within a shrinking window. Every year of delay in launching a drug is a year of exclusivity lost. Every year of patent life remaining is precious.
+    </p>
+
+    <div class="callout">
+      <div class="callout-label">Worth knowing</div>
+      <p>Pharma companies have a few strategies to extend a brand's life before the patent clock runs out: introducing a new formulation (like an extended-release version), filing for a new indication, or heavily cutting price to compete with incoming generics on volume. None of them fully replace the exclusivity window, but they can soften the fall.</p>
+    </div>
+
+    <h2 id="advertising-rules-are-completely-different">The advertising rules are completely different</h2>
+
+    <p>
+      This is where the "pharma is just FMCG with more rules" comparison really breaks down.
+    </p>
+
+    <p>
+      FMCG brands can advertise wherever they want. Television, radio, print, outdoor, digital — the whole mix is available. The goal is reach. The more eyeballs, the better. There are some restrictions around claims, but nothing that fundamentally changes how you market.
+    </p>
+
+    <p>
+      Prescription pharma cannot advertise to the public in India at all. Schedule H and Schedule X drugs — which cover most prescription medicines — are legally prohibited from mass-media advertising under the Drugs and Cosmetics Act. You cannot run a television ad for an antibiotic or a blood pressure tablet. You cannot put up a billboard for a chemotherapy drug. The law simply does not allow it.
+    </p>
+
+    <p>
+      Instead, all promotion happens through professional channels. Medical representatives — MRs — visit doctors and present clinical data. Companies sponsor medical conferences and continuing education seminars. They work with Key Opinion Leaders, which are senior specialists who influence prescribing habits across their peers. The entire promotional machinery is built around the medical community, not the general public.
+    </p>
+
+    <p>
+      Then there is a fascinating middle ground in India: <strong>Ayurvedic-classified products</strong>.
+    </p>
+
+    <p>
+      Brands like Vicks VapoRub, Zandu Balm, Eno, and Moov are registered as Ayurvedic medicines — which means they use plant-based or traditional ingredients, do not require a standard drug license, and are exempt from the advertising restrictions that apply to pharmaceutical drugs. This is why you see ads for these products on television all the time. They can look and feel like pharma products — and position themselves with clinical credibility — while operating under the lighter regulatory rules of Ayurvedic classification. It is a strategic choice that gives them the best of both worlds.
+    </p>
+
+    <h2 id="pricing-is-not-a-free-market">Pricing is not a free market in pharma</h2>
+
+    <p>
+      In FMCG, pricing is essentially a commercial decision. You study the market, look at what competitors charge, understand what your customer is willing to pay, and set a price. If costs go up, you raise prices. If you want to grow market share, you drop prices or run promotions. The market decides.
+    </p>
+
+    <p>
+      In pharma, the government has a significant say.
+    </p>
+
+    <p>
+      The Drugs (Prices Control) Order — known as DPCO — is enforced by the National Pharmaceutical Pricing Authority (NPPA). It sets price ceilings on a large number of essential medicines. Companies cannot charge above this ceiling, regardless of what they spent on R&D or manufacturing. For drugs on the National List of Essential Medicines, the ceiling is calculated based on market averages, not on individual company costs.
+    </p>
+
+    <p>
+      This fundamentally changes the commercial calculation. A pharma brand manager cannot simply raise prices when margins are squeezed. They have to find efficiencies in manufacturing, adjust the product mix, or invest in categories that are not under price control. Pricing strategy in pharma is as much about regulatory navigation as it is about commercial logic.
+    </p>
+
+    <h2 id="how-the-numbers-work-differently">How the numbers work differently</h2>
+
+    <p>
+      FMCG companies run on volume and velocity. The margins on individual products are often thin — a packet of biscuits does not make much money on its own — so the model works by selling enormous quantities quickly and keeping inventory moving. The financial health of an FMCG company is tightly linked to how fast goods move off the shelf.
+    </p>
+
+    <p>
+      Pharma has the opposite structure. Development costs are massive and upfront — clinical trials alone can cost hundreds of crores before a single unit is sold. But once a drug is approved and in market, the margins are high. The model works by recovering that upfront investment through high-margin sales during the patent exclusivity window. A pharma company's financial health is less about volume velocity and more about how efficiently it converts its assets and R&D investment into profit.
+    </p>
+
+    <p>
+      This is why you see pharma companies investing so heavily in one or two blockbuster drugs, while FMCG companies spread investment across dozens of brands and categories. The risk profile and the return structure are completely different.
+    </p>
+
+    <h2 id="where-the-two-worlds-actually-meet">Where the two worlds actually meet</h2>
+
+    <p>
+      Despite all the differences, there is one moment where pharma and FMCG thinking genuinely converge: when a prescription drug switches to over-the-counter.
+    </p>
+
+    <p>
+      This is called an Rx-to-OTC switch. It happens when a drug that previously required a prescription is reclassified so that anyone can buy it off the shelf. When this happens — often near patent expiry, when a company wants to protect brand volume before generics flood the market — the entire marketing strategy has to change overnight.
+    </p>
+
+    <p>
+      Suddenly, the patient is the audience. Suddenly, you can advertise on television. Suddenly, shelf placement, packaging design, and consumer price point matter in a way they never did before. The clinical data that worked on doctors is now irrelevant — you need a consumer insight, a simple message, and mass reach.
+    </p>
+
+    <p>
+      Companies that have only ever done professional pharma marketing often struggle with this transition. And companies that want to enter this space often bring in FMCG talent specifically to handle it. This is the one point where both skill sets genuinely need each other.
+    </p>
+
+    <h2 id="the-summary-side-by-side">The summary, side by side</h2>
+
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Dimension</th>
+          <th>FMCG</th>
+          <th>Pharma</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>What it is selling</td>
+          <td>Lifestyle improvement, convenience, enjoyment</td>
+          <td>Treatment for a specific disease or condition</td>
+        </tr>
+        <tr>
+          <td>Primary audience</td>
+          <td>The consumer — one person</td>
+          <td>Doctor, pharmacist, patient, payer — four audiences</td>
+        </tr>
+        <tr>
+          <td>Brand lifespan</td>
+          <td>Indefinite — can be refreshed forever</td>
+          <td>Finite — limited by patent expiry, typically 7–10 years of exclusivity</td>
+        </tr>
+        <tr>
+          <td>Advertising</td>
+          <td>Mass media, direct to consumer</td>
+          <td>Professional channels only (for Rx) — MRs, conferences, KOLs</td>
+        </tr>
+        <tr>
+          <td>Pricing</td>
+          <td>Market-driven, commercially flexible</td>
+          <td>Partially regulated — DPCO price ceilings on essential medicines</td>
+        </tr>
+        <tr>
+          <td>Financial model</td>
+          <td>Volume and velocity — high turnover, thinner margins</td>
+          <td>High upfront R&D cost, high margins during exclusivity window</td>
+        </tr>
+        <tr>
+          <td>Where they meet</td>
+          <td colspan="2" style="text-align:center;font-style:italic;color:var(--text3)">Rx-to-OTC switches — when a prescription drug goes over the counter</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="why-this-matters-for-your-career">Why this matters for your career</h2>
+
+    <p>
+      If you are a B.Pharma student figuring out where to go after graduation, understanding this distinction early saves you a lot of confusion. A lot of pharma job descriptions use FMCG language — brand manager, product manager, GTM strategy — which makes it easy to assume the work is similar. It is not. The skills overlap somewhat, but the context is completely different.
+    </p>
+
+    <p>
+      In pharma marketing, you need to understand clinical data well enough to present it credibly to doctors. You need to know the regulatory boundaries of what you can and cannot claim. You need to think about a brand's life in terms of patent timelines, not just consumer preference cycles. None of this appears in a standard FMCG marketing role.
+    </p>
+
+    <p>
+      Conversely, if pharma moves you toward an OTC brand or a consumer health role, the FMCG toolkit becomes genuinely useful. Consumer insight, media planning, packaging strategy, retail merchandising — these things matter in a way they do not for a pure prescription drug.
+    </p>
+
+    <p>
+      The point is: know which world you are operating in. They look similar from the outside. Inside, they work very differently.
+    </p>
+
+    <hr>
+
+    <p>
+      <em>If this was useful, the next piece worth reading is on OTC versus prescription marketing — which gets into how the strategy changes specifically when you cross that line from professional promotion to consumer advertising.</em>
+    </p>
+
+  </article>
+
+  <!-- TABLE OF CONTENTS -->
+  <aside>
+    <div class="toc">
+      <div class="toc-label">In this article</div>
+      <ul class="toc-list">
+        <li><a href="#what-each-industry-is-actually-selling">What each industry is selling</a></li>
+        <li><a href="#who-you-are-actually-marketing-to">Who you are marketing to</a></li>
+        <li><a href="#how-long-a-brand-can-actually-live">How long a brand can live</a></li>
+        <li><a href="#advertising-rules-are-completely-different">Advertising rules</a></li>
+        <li><a href="#pricing-is-not-a-free-market">Pricing</a></li>
+        <li><a href="#how-the-numbers-work-differently">How the numbers work</a></li>
+        <li><a href="#where-the-two-worlds-actually-meet">Where they meet</a></li>
+        <li><a href="#the-summary-side-by-side">Summary table</a></li>
+        <li><a href="#why-this-matters-for-your-career">Why this matters for you</a></li>
+      </ul>
+      <div class="toc-share">
+        <div class="toc-share-label">Share</div>
+        <button class="share-btn" onclick="copyLink()">Copy link</button>
+        <button class="share-btn" onclick="shareLinkedIn()">LinkedIn</button>
+      </div>
+    </div>
+  </aside>
+
+</div>
+
+<!-- ARTICLE FOOTER -->
+<div class="art-foot">
+  <div class="tags-row">
+    <span class="tag-pill">Marketing</span>
+    <span class="tag-pill">FMCG</span>
+    <span class="tag-pill">Pharma Careers</span>
+    <span class="tag-pill">B.Pharma</span>
+    <span class="tag-pill">Brand Strategy</span>
+    <span class="tag-pill">OTC</span>
+    <span class="tag-pill">DPCO</span>
+  </div>
+</div>
+
+<!-- RELATED ARTICLES -->
+<section class="related">
+  <div class="related-inner">
+    <div class="related-head">Related Articles</div>
+    <div class="related-grid">
+      <div class="rel-card" onclick="window.location='#'">
+        <div class="rel-cat">Marketing</div>
+        <div class="rel-title">OTC vs prescription — two completely different marketing games</div>
+        <div class="rel-time">6 min read</div>
+      </div>
+      <div class="rel-card" onclick="window.location='#'">
+        <div class="rel-cat">Industry</div>
+        <div class="rel-title">How drugs are priced in India — the real explanation</div>
+        <div class="rel-time">5 min read</div>
+      </div>
+      <div class="rel-card" onclick="window.location='#'">
+        <div class="rel-cat">Careers</div>
+        <div class="rel-title">What does a pharma product manager actually do — day by day</div>
+        <div class="rel-time">7 min read</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-logo">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="30" fill="#2d6347"/>
+        <rect x="29" y="14" width="6" height="36" rx="2" fill="#c9a84c"/>
+        <rect x="14" y="29" width="36" height="6" rx="2" fill="#c9a84c"/>
+        <circle cx="32" cy="32" r="3" fill="#fff" opacity="0.85"/>
+      </svg>
+      <span class="foot-logo-name">Figuring Out <em>Pharma</em></span>
+    </div>
+    <div class="foot-links">
+      <a href="../index.html">Home</a>
+      <a href="#">Blogs</a>
+      <a href="#">Case Studies</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="foot-copy">&#169; 2026 Figuring Out Pharma</div>
+  </div>
+</footer>
+
+<script>
+// READING PROGRESS
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  const pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
+  document.getElementById('prog').style.width=pct+'%';
+});
+
+// ACTIVE TOC HIGHLIGHT
+const headings=document.querySelectorAll('.prose h2');
+const tocLinks=document.querySelectorAll('.toc-list a');
+window.addEventListener('scroll',()=>{
+  let current='';
+  headings.forEach(h=>{if(h.offsetTop-120<=window.scrollY)current=h.id});
+  tocLinks.forEach(a=>{
+    a.classList.remove('active');
+    if(a.getAttribute('href')==='#'+current)a.classList.add('active');
+  });
+});
+
+// THEME TOGGLE
+function toggleTheme(){
+  const html=document.documentElement;
+  const dark=html.getAttribute('data-theme')==='dark';
+  html.setAttribute('data-theme',dark?'light':'dark');
+  document.getElementById('themeBtn').innerHTML=dark?'&#9790;':'&#9728;';
+  localStorage.setItem('fop-theme',dark?'light':'dark');
+}
+const saved=localStorage.getItem('fop-theme');
+if(saved){document.documentElement.setAttribute('data-theme',saved);document.getElementById('themeBtn').innerHTML=saved==='dark'?'&#9728;':'&#9790;';}
+
+// MOBILE MENU
+function toggleMobileMenu(){
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+document.querySelectorAll('.nav-mobile-menu a').forEach(function(link){
+  link.addEventListener('click',function(){
+    document.getElementById('mobileMenu').classList.remove('open');
+  });
+});
+document.addEventListener('click',function(e){
+  const menu=document.getElementById('mobileMenu');
+  const btn=document.getElementById('hamburgerBtn');
+  if(menu&&btn&&!menu.contains(e.target)&&!btn.contains(e.target)){
+    menu.classList.remove('open');
+  }
+});
+
+// SHARE
+function copyLink(){
+  navigator.clipboard.writeText(window.location.href).then(()=>{
+    const btn=event.target;btn.textContent='Copied!';
+    setTimeout(()=>btn.textContent='Copy link',2000);
+  });
+}
+function shareLinkedIn(){
+  window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank');
+}
+</script>
+</body>
+</html>
