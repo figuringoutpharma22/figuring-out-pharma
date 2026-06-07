@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pharma Case Studies — Figuring Out Pharma</title>
+<meta name="description" content="Real pharma case studies — drug withdrawals, regulatory failures, blockbuster launches and industry-changing events explained plainly.">
+<meta name="author" content="Figuring Out Pharma">
+<link rel="canonical" href="https://figuringoutpharma.com/case-studies.html">
+<meta property="og:title" content="Pharma Case Studies — Figuring Out Pharma">
+<meta property="og:description" content="Real pharma case studies explained plainly — for B.Pharma students figuring out the industry.">
+<meta property="og:url" content="https://figuringoutpharma.com/case-studies.html">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --forest:#1a3a2a;--forest2:#234d38;--forest3:#2d6347;--forest4:#3a7a58;
+  --sage:#7aab8e;--sage2:#a8c9b5;
+  --cream:#faf8f2;--cream2:#f3f0e6;--cream3:#e8e3d4;
+  --gold:#c9a84c;--gold2:#e8c96a;
+  --line:#ddd8c8;--line2:#ccc6b4;
+  --text:#1c1a14;--text2:#4a4638;--text3:#8a8474;
+  --card:#ffffff;
+  --serif:'Playfair Display',Georgia,serif;
+  --body:'Source Serif 4',Georgia,serif;
+  --sans:'DM Sans',sans-serif;
+  --max:1200px;
+}
+[data-theme="dark"]{
+  --cream:#0e1a14;--cream2:#132019;--cream3:#1c2e22;
+  --line:#2a3d30;--line2:#3a5044;
+  --text:#e8f0e4;--text2:#9db89a;--text3:#5a7464;
+  --card:#132019;
+}
+html{font-size:16px;scroll-behavior:smooth;background:var(--cream)}
+body{color:var(--text);font-family:var(--body);line-height:1.7;background:var(--cream);transition:background 0.3s,color 0.3s}
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+nav{background:var(--forest);position:sticky;top:0;z-index:300;border-bottom:1px solid rgba(255,255,255,0.06)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 3rem;display:flex;align-items:center;justify-content:space-between;height:60px;gap:2rem}
+.nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.nav-icon{width:28px;height:28px;flex-shrink:0}
+.nav-name{font-family:var(--serif);font-size:1.05rem;font-weight:700;color:#fff;letter-spacing:-0.01em;white-space:nowrap}
+.nav-name em{font-style:italic;font-weight:400;color:var(--sage2)}
+.nav-links{display:flex;gap:0;list-style:none;flex:1;justify-content:center}
+.nav-links a{font-family:var(--sans);font-size:0.72rem;font-weight:400;color:rgba(255,255,255,0.6);padding:6px 10px;transition:color 0.2s;letter-spacing:0.04em;text-transform:uppercase;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.nav-right{display:flex;align-items:center;gap:0.75rem;flex-shrink:0}
+.nav-theme{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);width:32px;height:32px;border-radius:3px;cursor:pointer;font-size:0.85rem;transition:all 0.2s;display:flex;align-items:center;justify-content:center}
+.nav-theme:hover{background:rgba(255,255,255,0.14);color:#fff}
+.nav-sub{background:var(--gold);color:var(--forest);border:none;font-family:var(--sans);font-size:0.7rem;font-weight:600;padding:7px 16px;border-radius:3px;cursor:pointer;letter-spacing:0.05em;text-transform:uppercase;transition:all 0.2s;white-space:nowrap}
+.nav-sub:hover{background:var(--gold2)}
+.nav-hamburger{display:none;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);width:32px;height:32px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;flex-shrink:0;border-radius:2px}
+.nav-hamburger span{display:block;width:16px;height:1.5px;background:currentColor}
+.nav-mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--forest2);border-bottom:1px solid rgba(255,255,255,0.08);z-index:299;padding:0.5rem 0}
+.nav-mobile-menu a{display:block;font-family:var(--sans);font-size:0.82rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.7);padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,0.06);text-decoration:none}
+.nav-mobile-menu a:last-child{border-bottom:none}
+
+/* PAGE HEADER — dark forest for case studies */
+.page-header{background:var(--forest);padding:4rem 3rem 3.5rem}
+.page-header-inner{max-width:var(--max);margin:0 auto}
+.page-kicker{font-family:var(--sans);font-size:0.62rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage);margin-bottom:1rem;display:flex;align-items:center;gap:10px}
+.page-kicker::before{content:'';width:28px;height:1px;background:var(--sage)}
+.page-title{font-family:var(--serif);font-size:clamp(2rem,3vw,3rem);font-weight:700;color:#fff;line-height:1.15;letter-spacing:-0.025em;margin-bottom:0.75rem}
+.page-title em{font-style:italic;font-weight:400;color:var(--sage2)}
+.page-sub{font-family:var(--body);font-size:1rem;font-weight:300;color:rgba(255,255,255,0.5);font-style:italic;line-height:1.8}
+
+/* FILTERS */
+.filters{background:var(--forest2);border-bottom:1px solid rgba(255,255,255,0.08);padding:1.25rem 3rem}
+.filters-inner{max-width:var(--max);margin:0 auto;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.filter-label{font-family:var(--sans);font-size:0.6rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-right:8px}
+.filter-btn{font-family:var(--sans);font-size:0.68rem;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;padding:5px 14px;border:1px solid rgba(255,255,255,0.12);background:transparent;color:rgba(255,255,255,0.45);cursor:pointer;transition:all 0.2s;border-radius:1px}
+.filter-btn:hover,.filter-btn.active{background:rgba(255,255,255,0.1);color:#fff;border-color:rgba(255,255,255,0.3)}
+
+/* CASE STUDIES GRID */
+.cs-sec{background:var(--forest);padding:4rem 3rem 5rem}
+.cs-inner{max-width:var(--max);margin:0 auto}
+.cs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+
+/* CASE STUDY CARD */
+.cs-card{border:1px solid rgba(255,255,255,0.08);border-right:none;padding:2rem 1.75rem;cursor:pointer;transition:background 0.2s;position:relative}
+.cs-card:last-child,.cs-card:nth-child(3n){border-right:1px solid rgba(255,255,255,0.08)}
+.cs-card:nth-child(n+4){border-top:none}
+.cs-card:hover{background:rgba(255,255,255,0.04)}
+.cs-card:hover .csc-title{color:var(--sage2)}
+.cs-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;opacity:0;transition:opacity 0.2s}
+.cs-card:hover::before{opacity:1}
+.tag{display:inline-block;font-family:var(--sans);font-size:0.58rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:3px 8px;border-radius:1px;margin-bottom:0.75rem}
+.t-red{background:rgba(224,92,74,0.15);color:#e08474}.cc-red::before{background:#e05c4a}
+.t-amber{background:rgba(201,168,76,0.15);color:var(--gold2)}.cc-amber::before{background:#c9a84c}
+.t-green{background:rgba(122,171,142,0.15);color:var(--sage2)}.cc-green::before{background:var(--sage)}
+.t-blue{background:rgba(74,138,181,0.15);color:#7ab4d5}.cc-blue::before{background:#4a8ab5}
+.t-purple{background:rgba(138,90,181,0.15);color:#b48ad5}.cc-purple::before{background:#8a5ab5}
+.t-teal{background:rgba(58,122,88,0.15);color:var(--sage)}.cc-teal::before{background:var(--forest4)}
+.csc-year{font-family:var(--sans);font-size:0.65rem;font-weight:500;letter-spacing:0.08em;color:rgba(255,255,255,0.28);margin-bottom:0.65rem;display:flex;align-items:center;gap:8px}
+.csc-year::before{content:'';width:16px;height:1px;background:rgba(255,255,255,0.15)}
+.csc-title{font-family:var(--serif);font-size:1.05rem;font-weight:700;color:rgba(255,255,255,0.82);line-height:1.35;margin-bottom:0.65rem;transition:color 0.15s}
+.csc-sum{font-family:var(--body);font-size:0.82rem;font-weight:300;color:rgba(255,255,255,0.42);line-height:1.72;font-style:italic;margin-bottom:1rem}
+.csc-read{font-family:var(--sans);font-size:0.68rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--sage);display:inline-flex;align-items:center;gap:5px;transition:gap 0.2s}
+.csc-read:hover{gap:9px}
+
+/* COMING SOON */
+.cs-coming{grid-column:1/-1;padding:5rem 2rem;text-align:center;border:1px solid rgba(255,255,255,0.08)}
+.cs-coming-num{font-family:var(--serif);font-size:3rem;font-style:italic;color:rgba(255,255,255,0.1);margin-bottom:1.5rem}
+.cs-coming-title{font-family:var(--serif);font-size:1.5rem;font-weight:700;color:rgba(255,255,255,0.7);margin-bottom:0.75rem}
+.cs-coming-sub{font-family:var(--body);font-size:0.95rem;font-weight:300;color:rgba(255,255,255,0.35);font-style:italic;max-width:480px;margin:0 auto 2rem;line-height:1.8}
+.cs-coming-btn{display:inline-block;background:var(--gold);color:var(--forest);font-family:var(--sans);font-size:0.72rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:11px 24px;transition:background 0.2s;text-decoration:none}
+.cs-coming-btn:hover{background:var(--gold2)}
+
+/* FOOTER */
+footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);padding:1.5rem 3rem}
+.foot-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.foot-logo{display:flex;align-items:center;gap:8px}
+.foot-logo-icon{width:22px;height:22px}
+.foot-logo-name{font-family:var(--serif);font-size:0.88rem;font-weight:700;color:rgba(255,255,255,0.7)}
+.foot-logo-name em{font-style:italic;font-weight:400;color:var(--sage)}
+.foot-links{display:flex;gap:1.5rem}
+.foot-links a{font-family:var(--sans);font-size:0.65rem;letter-spacing:0.05em;text-transform:uppercase;color:rgba(255,255,255,0.3);transition:color 0.2s}
+.foot-links a:hover{color:var(--sage2)}
+.foot-copy{font-family:var(--sans);font-size:0.62rem;color:rgba(255,255,255,0.2)}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{display:none}.nav-inner{padding:0 1.25rem}.nav-hamburger{display:flex}
+  .nav-mobile-menu.open{display:block}nav{position:sticky;top:0}
+  .page-header{padding:3rem 1.25rem 2.5rem}
+  .filters{padding:1rem 1.25rem}
+  .cs-sec{padding:3rem 1.25rem 4rem}
+  .cs-grid{grid-template-columns:1fr 1fr!important}
+  .cs-card:nth-child(2n){border-right:1px solid rgba(255,255,255,0.08)}
+  .cs-card:nth-child(2n+1){border-right:none}
+  .foot-inner{flex-direction:column;align-items:flex-start;gap:1rem}
+  footer{padding:1.5rem 1.25rem}
+}
+@media(max-width:480px){
+  .nav-inner{height:50px;padding:0 1rem}.nav-name{font-size:0.88rem}
+  .page-header{padding:2.5rem 1rem 2rem}
+  .filters{padding:0.875rem 1rem}
+  .cs-sec{padding:2.5rem 1rem 3rem}
+  .cs-grid{grid-template-columns:1fr!important}
+  .cs-card{border-right:1px solid rgba(255,255,255,0.08)!important}
+  footer{padding:1.25rem 1rem}
+  .foot-links{flex-wrap:wrap;gap:0.75rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <svg class="nav-icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="14" cy="14" r="13" fill="#2d6347" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+        <path d="M9 14h10M14 9v10" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"/>
+        <circle cx="14" cy="14" r="3.5" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+        <circle cx="14" cy="14" r="1.5" fill="#c9a84c"/>
+      </svg>
+      <span class="nav-name">Figuring Out <em>Pharma</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="case-studies.html" class="active">Case Studies</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="nav-theme" onclick="toggleTheme()" id="themeBtn">&#9790;</button>
+      <a href="https://figuring-outs-newsletter.beehiiv.com/subscribe" target="_blank"><button class="nav-sub">Subscribe</button></a>
+      <button class="nav-hamburger" onclick="toggleMobileMenu()" id="hamburgerBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="blogs.html">Blogs</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="categories.html">Categories</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-kicker">Pharma Case Studies</div>
+    <h1 class="page-title">When pharma gets it right —<br>and when it <em>goes very wrong.</em></h1>
+    <p class="page-sub">Real events, real consequences. Drug withdrawals, regulatory battles, blockbuster launches and industry-defining moments — explained plainly.</p>
+  </div>
+</div>
+
+<!-- FILTERS -->
+<div class="filters">
+  <div class="filters-inner">
+    <span class="filter-label">Filter by</span>
+    <button class="filter-btn active">All</button>
+    <button class="filter-btn">Tragedy</button>
+    <button class="filter-btn">Regulatory</button>
+    <button class="filter-btn">Withdrawal</button>
+    <button class="filter-btn">Breakthrough</button>
+    <button class="filter-btn">Patent</button>
+    <button class="filter-btn">M&A</button>
+  </div>
+</div>
+
+<!-- CASE STUDIES GRID -->
+<section class="cs-sec">
+  <div class="cs-inner">
+    <div class="cs-grid">
+
+      <!-- COMING SOON STATE -->
+      <!-- DELETE this block and replace with case study cards once articles are written -->
+      <div class="cs-coming">
+        <div class="cs-coming-num">01</div>
+        <div class="cs-coming-title">First case study dropping soon.</div>
+        <p class="cs-coming-sub">Six case studies are already planned — Thalidomide, Ranbaxy, Vioxx, COVID-19 vaccines, Lipitor's patent cliff, and Bayer-Monsanto. Subscribe to get them when they land.</p>
+        <a class="cs-coming-btn" href="https://figuring-outs-newsletter.beehiiv.com/subscribe" target="_blank">Get notified →</a>
+      </div>
+
+      <!--
+        HOW TO ADD A CASE STUDY CARD:
+        Copy this block and fill in your details.
+        Remove the coming-soon block above when you add the first card.
+
+        <div class="cs-card cc-red" onclick="window.location='articles/your-case-study-slug.html'">
+          <div class="tag t-red">Tragedy</div>
+          <div class="csc-year">1957 – 1962</div>
+          <div class="csc-title">The Thalidomide Tragedy</div>
+          <p class="csc-sum">A sedative prescribed to pregnant women caused birth defects in thousands of babies — and permanently changed how drugs get approved worldwide.</p>
+          <span class="csc-read">Read case study →</span>
+        </div>
+
+        Tag colour options: t-red / t-amber / t-green / t-blue / t-purple / t-teal
+        Card accent options: cc-red / cc-amber / cc-green / cc-blue / cc-purple / cc-teal
+      -->
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-logo">
+      <svg class="foot-logo-icon" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="11" cy="11" r="10" fill="#2d6347" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+        <path d="M7 11h8M11 7v8" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="11" cy="11" r="2.8" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.8"/>
+        <circle cx="11" cy="11" r="1.2" fill="#c9a84c"/>
+      </svg>
+      <span class="foot-logo-name">Figuring Out <em>Pharma</em></span>
+    </div>
+    <div class="foot-links">
+      <a href="index.html">Home</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="foot-copy">&#169; 2026 Figuring Out Pharma</div>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){
+  const html=document.documentElement;
+  const dark=html.getAttribute('data-theme')==='dark';
+  html.setAttribute('data-theme',dark?'light':'dark');
+  document.getElementById('themeBtn').innerHTML=dark?'&#9790;':'&#9728;';
+  localStorage.setItem('fop-theme',dark?'light':'dark');
+}
+const saved=localStorage.getItem('fop-theme');
+if(saved){document.documentElement.setAttribute('data-theme',saved);document.getElementById('themeBtn').innerHTML=saved==='dark'?'&#9728;':'&#9790;';}
+function toggleMobileMenu(){
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+document.querySelectorAll('.nav-mobile-menu a').forEach(function(l){
+  l.addEventListener('click',function(){document.getElementById('mobileMenu').classList.remove('open');});
+});
+document.addEventListener('click',function(e){
+  const m=document.getElementById('mobileMenu');const b=document.getElementById('hamburgerBtn');
+  if(m&&b&&!m.contains(e.target)&&!b.contains(e.target))m.classList.remove('open');
+});
+document.querySelectorAll('.filter-btn').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active');});
+    this.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Categories — Figuring Out Pharma</title>
+<meta name="description" content="Browse pharma articles by topic — marketing, careers, industry, brand strategy, digital and regulatory.">
+<meta name="author" content="Figuring Out Pharma">
+<link rel="canonical" href="https://figuringoutpharma.com/categories.html">
+<meta property="og:title" content="Categories — Figuring Out Pharma">
+<meta property="og:url" content="https://figuringoutpharma.com/categories.html">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --forest:#1a3a2a;--forest2:#234d38;--forest3:#2d6347;--forest4:#3a7a58;
+  --sage:#7aab8e;--sage2:#a8c9b5;
+  --cream:#faf8f2;--cream2:#f3f0e6;--cream3:#e8e3d4;
+  --gold:#c9a84c;--gold2:#e8c96a;
+  --line:#ddd8c8;--line2:#ccc6b4;
+  --text:#1c1a14;--text2:#4a4638;--text3:#8a8474;
+  --card:#ffffff;
+  --serif:'Playfair Display',Georgia,serif;
+  --body:'Source Serif 4',Georgia,serif;
+  --sans:'DM Sans',sans-serif;
+  --max:1200px;
+}
+[data-theme="dark"]{
+  --cream:#0e1a14;--cream2:#132019;--cream3:#1c2e22;
+  --line:#2a3d30;--line2:#3a5044;
+  --text:#e8f0e4;--text2:#9db89a;--text3:#5a7464;
+  --card:#132019;
+}
+html{font-size:16px;scroll-behavior:smooth;background:var(--cream)}
+body{color:var(--text);font-family:var(--body);line-height:1.7;background:var(--cream);transition:background 0.3s,color 0.3s}
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+nav{background:var(--forest);position:sticky;top:0;z-index:300;border-bottom:1px solid rgba(255,255,255,0.06)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 3rem;display:flex;align-items:center;justify-content:space-between;height:60px;gap:2rem}
+.nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.nav-icon{width:28px;height:28px;flex-shrink:0}
+.nav-name{font-family:var(--serif);font-size:1.05rem;font-weight:700;color:#fff;letter-spacing:-0.01em;white-space:nowrap}
+.nav-name em{font-style:italic;font-weight:400;color:var(--sage2)}
+.nav-links{display:flex;gap:0;list-style:none;flex:1;justify-content:center}
+.nav-links a{font-family:var(--sans);font-size:0.72rem;font-weight:400;color:rgba(255,255,255,0.6);padding:6px 10px;transition:color 0.2s;letter-spacing:0.04em;text-transform:uppercase;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.nav-right{display:flex;align-items:center;gap:0.75rem;flex-shrink:0}
+.nav-theme{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);width:32px;height:32px;border-radius:3px;cursor:pointer;font-size:0.85rem;transition:all 0.2s;display:flex;align-items:center;justify-content:center}
+.nav-theme:hover{background:rgba(255,255,255,0.14);color:#fff}
+.nav-sub{background:var(--gold);color:var(--forest);border:none;font-family:var(--sans);font-size:0.7rem;font-weight:600;padding:7px 16px;border-radius:3px;cursor:pointer;letter-spacing:0.05em;text-transform:uppercase;transition:all 0.2s;white-space:nowrap}
+.nav-sub:hover{background:var(--gold2)}
+.nav-hamburger{display:none;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);width:32px;height:32px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;flex-shrink:0;border-radius:2px}
+.nav-hamburger span{display:block;width:16px;height:1.5px;background:currentColor}
+.nav-mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--forest2);border-bottom:1px solid rgba(255,255,255,0.08);z-index:299;padding:0.5rem 0}
+.nav-mobile-menu a{display:block;font-family:var(--sans);font-size:0.82rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.7);padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,0.06);text-decoration:none}
+.nav-mobile-menu a:last-child{border-bottom:none}
+
+/* PAGE HEADER */
+.page-header{background:var(--forest);padding:4rem 3rem 3.5rem}
+.page-header-inner{max-width:var(--max);margin:0 auto}
+.page-kicker{font-family:var(--sans);font-size:0.62rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage);margin-bottom:1rem;display:flex;align-items:center;gap:10px}
+.page-kicker::before{content:'';width:28px;height:1px;background:var(--sage)}
+.page-title{font-family:var(--serif);font-size:clamp(2rem,3vw,3rem);font-weight:700;color:#fff;line-height:1.15;letter-spacing:-0.025em;margin-bottom:0.75rem}
+.page-title em{font-style:italic;font-weight:400;color:var(--sage2)}
+.page-sub{font-family:var(--body);font-size:1rem;font-weight:300;color:rgba(255,255,255,0.5);font-style:italic;line-height:1.8}
+
+/* CATEGORIES GRID */
+.cat-sec{padding:4rem 3rem;background:var(--cream)}
+.cat-inner{max-width:var(--max);margin:0 auto}
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
+
+/* CATEGORY CARD */
+.cat-card{padding:2.5rem 2rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);cursor:pointer;transition:background 0.2s;position:relative;overflow:hidden}
+.cat-card:nth-child(3n){border-right:none}
+.cat-card:nth-last-child(-n+3){border-bottom:none}
+.cat-card:hover{background:var(--cream2)}
+.cat-card:hover .cat-name{color:var(--forest3)}
+.cat-accent{position:absolute;top:0;left:0;width:3px;height:100%;background:var(--forest3)}
+.cat-num{font-family:var(--serif);font-size:2rem;font-style:italic;color:var(--line2);line-height:1;margin-bottom:1rem}
+.cat-name{font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--text);letter-spacing:-0.02em;margin-bottom:0.5rem;transition:color 0.2s}
+.cat-desc{font-family:var(--body);font-size:0.85rem;font-weight:300;color:var(--text2);line-height:1.72;font-style:italic;margin-bottom:1.25rem}
+.cat-count{font-family:var(--sans);font-size:0.65rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--text3)}
+.cat-count span{color:var(--forest3);font-weight:600}
+
+/* FOOTER */
+footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);padding:1.5rem 3rem}
+.foot-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.foot-logo{display:flex;align-items:center;gap:8px}
+.foot-logo-icon{width:22px;height:22px}
+.foot-logo-name{font-family:var(--serif);font-size:0.88rem;font-weight:700;color:rgba(255,255,255,0.7)}
+.foot-logo-name em{font-style:italic;font-weight:400;color:var(--sage)}
+.foot-links{display:flex;gap:1.5rem}
+.foot-links a{font-family:var(--sans);font-size:0.65rem;letter-spacing:0.05em;text-transform:uppercase;color:rgba(255,255,255,0.3);transition:color 0.2s}
+.foot-links a:hover{color:var(--sage2)}
+.foot-copy{font-family:var(--sans);font-size:0.62rem;color:rgba(255,255,255,0.2)}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{display:none}.nav-inner{padding:0 1.25rem}.nav-hamburger{display:flex}
+  .nav-mobile-menu.open{display:block}nav{position:sticky;top:0}
+  .page-header{padding:3rem 1.25rem 2.5rem}
+  .cat-sec{padding:3rem 1.25rem}
+  .cat-grid{grid-template-columns:1fr 1fr!important}
+  .cat-card:nth-child(3n){border-right:1px solid var(--line)}
+  .cat-card:nth-child(2n){border-right:none}
+  .cat-card:nth-last-child(-n+3){border-bottom:1px solid var(--line)}
+  .cat-card:last-child{border-bottom:none}
+  .foot-inner{flex-direction:column;align-items:flex-start;gap:1rem}
+  footer{padding:1.5rem 1.25rem}
+}
+@media(max-width:480px){
+  .nav-inner{height:50px;padding:0 1rem}.nav-name{font-size:0.88rem}
+  .page-header{padding:2.5rem 1rem 2rem}
+  .cat-sec{padding:2.5rem 1rem}
+  .cat-grid{grid-template-columns:1fr!important}
+  .cat-card{border-right:none!important;border-bottom:1px solid var(--line)!important}
+  .cat-card:last-child{border-bottom:none!important}
+  footer{padding:1.25rem 1rem}
+  .foot-links{flex-wrap:wrap;gap:0.75rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <svg class="nav-icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="14" cy="14" r="13" fill="#2d6347" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+        <path d="M9 14h10M14 9v10" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"/>
+        <circle cx="14" cy="14" r="3.5" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+        <circle cx="14" cy="14" r="1.5" fill="#c9a84c"/>
+      </svg>
+      <span class="nav-name">Figuring Out <em>Pharma</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="categories.html" class="active">Categories</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="nav-theme" onclick="toggleTheme()" id="themeBtn">&#9790;</button>
+      <a href="https://figuring-outs-newsletter.beehiiv.com/subscribe" target="_blank"><button class="nav-sub">Subscribe</button></a>
+      <button class="nav-hamburger" onclick="toggleMobileMenu()" id="hamburgerBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="blogs.html">Blogs</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="categories.html">Categories</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-kicker">Browse by topic</div>
+    <h1 class="page-title">Find what you are<br><em>looking for.</em></h1>
+    <p class="page-sub">Six topic areas covering the full picture of how the pharma industry actually works — from marketing strategy to regulatory affairs.</p>
+  </div>
+</div>
+
+<!-- CATEGORIES GRID -->
+<section class="cat-sec">
+  <div class="cat-inner">
+    <div class="cat-grid">
+
+      <div class="cat-card" onclick="window.location='blogs.html'">
+        <div class="cat-accent"></div>
+        <div class="cat-num">01</div>
+        <div class="cat-name">Marketing</div>
+        <p class="cat-desc">How pharma brands are built, positioned, and marketed — OTC vs prescription, FMCG comparisons, digital marketing, and brand strategy explained from scratch.</p>
+        <div class="cat-count"><span>0</span> articles</div>
+      </div>
+
+      <div class="cat-card" onclick="window.location='blogs.html'" style="--cat-color:var(--gold)">
+        <div class="cat-accent" style="background:var(--gold)"></div>
+        <div class="cat-num">02</div>
+        <div class="cat-name">Careers</div>
+        <p class="cat-desc">What pharma jobs actually look like day to day — product managers, medical reps, brand managers, industrial training, and how to enter the industry as a fresher.</p>
+        <div class="cat-count"><span>0</span> articles</div>
+      </div>
+
+      <div class="cat-card" onclick="window.location='blogs.html'">
+        <div class="cat-accent" style="background:#4a8ab5"></div>
+        <div class="cat-num">03</div>
+        <div class="cat-name">Industry</div>
+        <p class="cat-desc">How the pharma industry operates — drug launches, pricing, market access, IQVIA data, supply chains, and the business of building and selling medicines.</p>
+        <div class="cat-count"><span>0</span> articles</div>
+      </div>
+
+      <div class="cat-card" onclick="window.location='blogs.html'">
+        <div class="cat-accent" style="background:var(--sage)"></div>
+        <div class="cat-num">04</div>
+        <div class="cat-name">Brand Strategy</div>
+        <p class="cat-desc">How pharma companies build brands that doctors and patients remember — product monographs, brand lifecycle, key opinion leaders, and brand reviews.</p>
+        <div class="cat-count"><span>0</span> articles</div>
+      </div>
+
+      <div class="cat-card" onclick="window.location='blogs.html'">
+        <div class="cat-accent" style="background:#8a5ab5"></div>
+        <div class="cat-num">05</div>
+        <div class="cat-name">Digital</div>
+        <p class="cat-desc">Why pharma is 10 years behind on digital, what's changing, and what content marketing, social media, and patient communities mean for the industry now.</p>
+        <div class="cat-count"><span>0</span> articles</div>
+      </div>
+
+      <div class="cat-card" onclick="window.location='blogs.html'">
+        <div class="cat-accent" style="background:#e05c4a"></div>
+        <div class="cat-num">06</div>
+        <div class="cat-name">Regulatory</div>
+        <p class="cat-desc">DCGI guidelines, drug advertising rules, DPCO pricing controls, and why pharma can't advertise the same way every other industry does.</p>
+        <div class="cat-count"><span>0</span> articles</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-logo">
+      <svg class="foot-logo-icon" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="11" cy="11" r="10" fill="#2d6347" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+        <path d="M7 11h8M11 7v8" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="11" cy="11" r="2.8" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.8"/>
+        <circle cx="11" cy="11" r="1.2" fill="#c9a84c"/>
+      </svg>
+      <span class="foot-logo-name">Figuring Out <em>Pharma</em></span>
+    </div>
+    <div class="foot-links">
+      <a href="index.html">Home</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="foot-copy">&#169; 2026 Figuring Out Pharma</div>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){
+  const html=document.documentElement;
+  const dark=html.getAttribute('data-theme')==='dark';
+  html.setAttribute('data-theme',dark?'light':'dark');
+  document.getElementById('themeBtn').innerHTML=dark?'&#9790;':'&#9728;';
+  localStorage.setItem('fop-theme',dark?'light':'dark');
+}
+const saved=localStorage.getItem('fop-theme');
+if(saved){document.documentElement.setAttribute('data-theme',saved);document.getElementById('themeBtn').innerHTML=saved==='dark'?'&#9728;':'&#9790;';}
+function toggleMobileMenu(){
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+document.querySelectorAll('.nav-mobile-menu a').forEach(function(l){
+  l.addEventListener('click',function(){document.getElementById('mobileMenu').classList.remove('open');});
+});
+document.addEventListener('click',function(e){
+  const m=document.getElementById('mobileMenu');const b=document.getElementById('hamburgerBtn');
+  if(m&&b&&!m.contains(e.target)&&!b.contains(e.target))m.classList.remove('open');
+});
+</script>
+</body>
+</html>
