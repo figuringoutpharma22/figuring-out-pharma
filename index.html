@@ -410,7 +410,7 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-right">
-      <button class="nav-search" onclick="toggleSrch()">Search</button>
+     <button class="nav-search" onclick="toggleSrch()" style="display:none">Search</button>
       <button class="nav-theme" onclick="toggleTheme()" id="themeBtn">&#9790;</button>
       <a href="https://figuring-outs-newsletter.beehiiv.com/subscribe" target="_blank"><button class="nav-sub">Subscribe</button></a>
       <button class="nav-hamburger" onclick="toggleMobileMenu()" id="hamburgerBtn" aria-label="Open menu">
@@ -509,7 +509,7 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
           <p class="art-excerpt">DPCO, trade margins, and what your pharmacoeconomics textbook quietly skipped.</p>
           <div class="art-meta" style="margin-top:auto;padding-top:0.75rem"><span class="art-min">5 min</span></div>
         </div>
-        <div class="side-art" onclick="sendPrompt('Write a full article outline for: FMCG vs pharma marketing — explained from scratch no assumptions')">
+        <div class="side-art" onclick="window.location='articles/fmcg-vs-pharma-marketing.html'">
           <div class="art-cat">Marketing</div>
           <div class="art-title">FMCG vs pharma marketing — explained from scratch, no assumptions</div>
           <p class="art-excerpt">People keep saying pharma is just like FMCG. It is not. Here is the full breakdown.</p>

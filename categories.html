@@ -271,6 +271,29 @@ document.addEventListener('click',function(e){
   const m=document.getElementById('mobileMenu');const b=document.getElementById('hamburgerBtn');
   if(m&&b&&!m.contains(e.target)&&!b.contains(e.target))m.classList.remove('open');
 });
+
+// Auto-count articles per category from articles.json
+fetch('articles.json')
+  .then(function(r){return r.json();})
+  .then(function(articles){
+    var counts = {};
+    articles.forEach(function(a){
+      var cat = a.category;
+      counts[cat] = (counts[cat] || 0) + 1;
+    });
+    document.querySelectorAll('.cat-card').forEach(function(card){
+      var catName = card.querySelector('.cat-name').textContent.trim();
+      var countEl = card.querySelector('.cat-count span');
+      if(countEl){
+        countEl.textContent = counts[catName] || 0;
+      }
+      // Update onclick to filter blogs.html by category
+      card.setAttribute('onclick', "window.location='blogs.html?cat=" + encodeURIComponent(catName) + "'");
+    });
+  })
+  .catch(function(){
+    // If fetch fails just leave counts at 0
+  });
 </script>
 </body>
 </html>
