@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Drugs are Priced in India — The Real Explanation — Figuring Out Pharma</title>
+<meta name="description" content="DPCO, trade margins, and what your pharmacoeconomics textbook quietly skipped. How drug pricing in India actually works — explained plainly.">
+<meta property="og:title" content="How Drugs are Priced in India — The Real Explanation">
+<meta property="og:description" content="DPCO, trade margins, and what your pharmacoeconomics textbook quietly skipped.">
+<meta property="og:type" content="article">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --forest:#1a3a2a;--forest2:#234d38;--forest3:#2d6347;--forest4:#3a7a58;
+  --sage:#7aab8e;--sage2:#a8c9b5;
+  --cream:#faf8f2;--cream2:#f3f0e6;--cream3:#e8e3d4;
+  --gold:#c9a84c;--gold2:#e8c96a;
+  --line:#ddd8c8;--line2:#ccc6b4;
+  --text:#1c1a14;--text2:#4a4638;--text3:#8a8474;
+  --card:#ffffff;
+  --serif:'Playfair Display',Georgia,serif;
+  --body:'Source Serif 4',Georgia,serif;
+  --sans:'DM Sans',sans-serif;
+  --max:960px;--prose:680px;
+}
+[data-theme="dark"]{--cream:#0e1a14;--cream2:#132019;--cream3:#1c2e22;--line:#2a3d30;--line2:#3a5044;--text:#e8f0e4;--text2:#9db89a;--text3:#5a7464;--card:#132019;}
+html{font-size:16px;scroll-behavior:smooth;background:var(--cream)}
+body{color:var(--text);font-family:var(--body);line-height:1.7;background:var(--cream);transition:background 0.3s,color 0.3s}
+a{text-decoration:none;color:inherit}
+#prog{position:fixed;top:0;left:0;height:2px;background:var(--gold);z-index:9999;width:0%;transition:width 0.1s linear;pointer-events:none}
+nav{background:var(--forest);position:sticky;top:0;z-index:300;border-bottom:1px solid rgba(255,255,255,0.06)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:52px;gap:2rem}
+.nav-logo{display:flex;align-items:center;gap:9px;flex-shrink:0}
+.nav-icon{width:24px;height:24px}
+.nav-name{font-family:var(--serif);font-size:0.98rem;font-weight:700;color:#fff;letter-spacing:-0.01em;white-space:nowrap}
+.nav-name em{font-style:italic;font-weight:400;color:var(--sage2)}
+.nav-links{display:flex;gap:0;list-style:none;flex:1;justify-content:center}
+.nav-links a{font-family:var(--sans);font-size:0.7rem;font-weight:400;color:rgba(255,255,255,0.55);padding:6px 13px;transition:color 0.2s;letter-spacing:0.04em;text-transform:uppercase}
+.nav-links a:hover{color:#fff}
+.nav-right{display:flex;align-items:center;gap:0.75rem;flex-shrink:0}
+.nav-theme{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);width:30px;height:30px;border-radius:2px;cursor:pointer;font-size:0.82rem;transition:all 0.2s;display:flex;align-items:center;justify-content:center}
+.nav-theme:hover{background:rgba(255,255,255,0.14);color:#fff}
+.nav-sub{background:var(--gold);color:var(--forest);border:none;font-family:var(--sans);font-size:0.68rem;font-weight:600;padding:6px 14px;border-radius:2px;cursor:pointer;letter-spacing:0.05em;text-transform:uppercase;transition:all 0.2s}
+.nav-sub:hover{background:var(--gold2)}
+.nav-hamburger{display:none;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);width:30px;height:30px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:4px;flex-shrink:0;border-radius:2px}
+.nav-hamburger span{display:block;width:14px;height:1.5px;background:currentColor}
+.nav-mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--forest2);border-bottom:1px solid rgba(255,255,255,0.08);z-index:299;padding:0.5rem 0}
+.nav-mobile-menu a{display:block;font-family:var(--sans);font-size:0.82rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.7);padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,0.06)}
+.nav-mobile-menu a:last-child{border-bottom:none}
+.art-header{background:var(--forest);padding:3.5rem 2rem 3rem;border-bottom:1px solid rgba(255,255,255,0.06)}
+.art-header-inner{max-width:var(--prose);margin:0 auto}
+.art-cat{font-family:var(--sans);font-size:0.62rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);margin-bottom:1rem;display:flex;align-items:center;gap:8px}
+.art-cat a{color:var(--sage);transition:color 0.2s}
+.art-cat a:hover{color:var(--sage2)}
+.art-cat-sep{opacity:0.4}
+.art-title{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;color:#fff;line-height:1.18;letter-spacing:-0.025em;margin-bottom:1.25rem}
+.art-title em{font-style:italic;font-weight:400;color:var(--sage2)}
+.art-deck{font-family:var(--body);font-size:1.05rem;font-weight:300;color:rgba(255,255,255,0.58);line-height:1.78;font-style:italic;margin-bottom:1.75rem}
+.art-meta-row{display:flex;align-items:center;gap:1.5rem;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,0.1)}
+.meta-author{font-family:var(--sans);font-size:0.78rem;font-weight:500;color:rgba(255,255,255,0.7)}
+.meta-sep{color:rgba(255,255,255,0.2);font-size:0.8rem}
+.meta-date{font-family:var(--sans);font-size:0.72rem;color:rgba(255,255,255,0.4)}
+.meta-time{font-family:var(--sans);font-size:0.7rem;font-weight:500;background:rgba(201,168,76,0.2);color:var(--gold2);padding:3px 9px;border-radius:1px;letter-spacing:0.04em}
+.cover{max-width:var(--prose);margin:0 auto;padding:2.5rem 2rem 0}
+.cover-img{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,var(--forest2),var(--forest3));display:flex;align-items:center;justify-content:center;border:1px solid var(--line);overflow:hidden}
+.cover-caption{font-family:var(--sans);font-size:0.68rem;color:var(--text3);margin-top:0.6rem;font-style:italic;text-align:right}
+.art-layout{max-width:var(--max);margin:0 auto;padding:2.5rem 2rem 4rem;display:grid;grid-template-columns:1fr 220px;gap:4rem;align-items:start}
+.toc{position:sticky;top:70px;border:1px solid var(--line);padding:1.25rem;background:var(--cream2)}
+.toc-label{font-family:var(--sans);font-size:0.6rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3);margin-bottom:0.875rem;padding-bottom:0.625rem;border-bottom:1px solid var(--line)}
+.toc-list{list-style:none;display:flex;flex-direction:column;gap:2px}
+.toc-list a{font-family:var(--sans);font-size:0.78rem;font-weight:400;color:var(--text2);padding:4px 8px;display:block;border-left:2px solid transparent;transition:all 0.2s;line-height:1.4}
+.toc-list a:hover,.toc-list a.active{color:var(--forest3);border-left-color:var(--forest3);background:var(--cream)}
+.toc-share{margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--line)}
+.toc-share-label{font-family:var(--sans);font-size:0.6rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:0.625rem}
+.share-btn{display:block;width:100%;font-family:var(--sans);font-size:0.72rem;font-weight:500;color:var(--text2);background:var(--cream);border:1px solid var(--line);padding:7px 12px;margin-bottom:6px;cursor:pointer;text-align:left;transition:all 0.2s;letter-spacing:0.02em}
+.share-btn:hover{background:var(--forest);color:#fff;border-color:var(--forest)}
+.prose{max-width:var(--prose);font-family:var(--body);font-size:1.05rem;line-height:1.82;color:var(--text2)}
+.prose h2{font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-0.02em;margin:2.5rem 0 1rem;padding-top:0.5rem}
+.prose h3{font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--text);line-height:1.3;margin:2rem 0 0.75rem;font-style:italic}
+.prose p{margin-bottom:1.4rem;font-weight:300}
+.prose p:last-child{margin-bottom:0}
+.prose strong{color:var(--text);font-weight:500;font-style:normal}
+.prose em{font-style:italic}
+.prose a{color:var(--forest3);text-decoration:underline;text-decoration-color:var(--sage2);text-underline-offset:3px;transition:color 0.2s}
+.prose a:hover{color:var(--forest)}
+.prose ul,.prose ol{padding-left:1.5rem;margin-bottom:1.4rem}
+.prose li{margin-bottom:0.4rem;font-weight:300}
+.prose blockquote{border-left:3px solid var(--gold);padding:0.875rem 1.25rem;margin:2rem 0;background:var(--cream2);font-style:italic;color:var(--text2)}
+.prose blockquote p{margin-bottom:0;font-size:1rem}
+.prose .callout{background:var(--cream2);border:1px solid var(--line);border-left:3px solid var(--forest3);padding:1.25rem 1.5rem;margin:2rem 0}
+.prose .callout-label{font-family:var(--sans);font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--forest3);margin-bottom:0.5rem}
+.prose .callout p{margin-bottom:0;font-size:0.92rem}
+.prose hr{border:none;border-top:1px solid var(--line);margin:2.5rem 0}
+.art-foot{max-width:var(--prose);margin:0 auto;padding:2.5rem 2rem 0;border-top:1px solid var(--line)}
+.tags-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:2rem}
+.tag-pill{font-family:var(--sans);font-size:0.65rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:4px 12px;border:1px solid var(--line);color:var(--text3);transition:all 0.2s;cursor:pointer}
+.tag-pill:hover{background:var(--forest);color:#fff;border-color:var(--forest)}
+.related{background:var(--cream2);border-top:1px solid var(--line);padding:3.5rem 2rem}
+.related-inner{max-width:var(--max);margin:0 auto}
+.related-head{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:1.75rem;padding-bottom:0.75rem;border-bottom:2px solid var(--text);letter-spacing:-0.01em}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
+.rel-card{padding:1.5rem;border-right:1px solid var(--line);cursor:pointer;transition:background 0.2s}
+.rel-card:last-child{border-right:none}
+.rel-card:hover{background:var(--cream)}
+.rel-card:hover .rel-title{color:var(--forest3)}
+.rel-cat{font-family:var(--sans);font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--forest3);margin-bottom:0.5rem}
+.rel-title{font-family:var(--serif);font-size:0.95rem;font-weight:700;color:var(--text);line-height:1.35;margin-bottom:0.5rem;transition:color 0.15s;letter-spacing:-0.01em}
+.rel-time{font-family:var(--sans);font-size:0.62rem;color:var(--text3)}
+footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);padding:1.25rem 2rem}
+.foot-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.foot-logo{display:flex;align-items:center;gap:8px}
+.foot-logo svg{width:20px;height:20px}
+.foot-logo-name{font-family:var(--serif);font-size:0.85rem;font-weight:700;color:rgba(255,255,255,0.65)}
+.foot-logo-name em{font-style:italic;font-weight:400;color:var(--sage)}
+.foot-links{display:flex;gap:1.5rem}
+.foot-links a{font-family:var(--sans);font-size:0.62rem;letter-spacing:0.05em;text-transform:uppercase;color:rgba(255,255,255,0.28);transition:color 0.2s}
+.foot-links a:hover{color:var(--sage2)}
+.foot-copy{font-family:var(--sans);font-size:0.6rem;color:rgba(255,255,255,0.2)}
+@media(max-width:768px){
+  .nav-links{display:none}.nav-inner{padding:0 1.25rem}.nav-hamburger{display:flex}
+  .nav-mobile-menu.open{display:block}
+  .art-layout{grid-template-columns:1fr;padding:2rem 1.25rem 3rem}
+  .toc{position:static;margin-bottom:2rem}
+  .art-header{padding:2.5rem 1.25rem 2rem}
+  .cover{padding:1.5rem 1.25rem 0}
+  .art-foot{padding:2rem 1.25rem 0}
+  .related{padding:2.5rem 1.25rem}
+  .related-grid{grid-template-columns:1fr}
+  .rel-card{border-right:none;border-bottom:1px solid var(--line)}
+  .rel-card:last-child{border-bottom:none}
+  .foot-inner{flex-direction:column;gap:1rem;align-items:flex-start}
+  footer{padding:1.25rem}
+}
+@media(max-width:480px){
+  .art-title{font-size:1.7rem!important}
+  .prose{font-size:0.98rem}
+  .foot-links{flex-wrap:wrap;gap:0.75rem}
+}
+</style>
+</head>
+<body>
+
+<div id="prog"></div>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="../index.html">
+      <svg class="nav-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="30" fill="#2d6347"/>
+        <circle cx="32" cy="32" r="22" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+        <rect x="29" y="14" width="6" height="36" rx="2" fill="#c9a84c"/>
+        <rect x="14" y="29" width="36" height="6" rx="2" fill="#c9a84c"/>
+        <circle cx="32" cy="32" r="4" fill="#ffffff" opacity="0.85"/>
+        <circle cx="32" cy="32" r="2" fill="#c9a84c"/>
+      </svg>
+      <span class="nav-name">Figuring Out <em>Pharma</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../blogs.html">Blogs</a></li>
+      <li><a href="../case-studies.html">Case Studies</a></li>
+      <li><a href="../categories.html">Categories</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="nav-theme" onclick="toggleTheme()" id="themeBtn">&#9790;</button>
+      <a href="https://figuring-outs-newsletter.beehiiv.com/subscribe" target="_blank"><button class="nav-sub">Subscribe</button></a>
+      <button class="nav-hamburger" onclick="toggleMobileMenu()" id="hamburgerBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile-menu" id="mobileMenu">
+    <a href="../index.html">Home</a>
+    <a href="../blogs.html">Blogs</a>
+    <a href="../case-studies.html">Case Studies</a>
+    <a href="../categories.html">Categories</a>
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="art-header">
+  <div class="art-header-inner">
+    <div class="art-cat">
+      <a href="../blogs.html">Industry</a>
+      <span class="art-cat-sep">/</span>
+      <a href="../blogs.html">Regulatory</a>
+    </div>
+    <h1 class="art-title">
+      How drugs are priced in India — <em>the real explanation</em>
+    </h1>
+    <p class="art-deck">
+      Your pharmacoeconomics textbook explains drug pricing using insurance systems and government bargaining. None of that is how it actually works in India. Here is what actually happens — and what nobody mentions in class.
+    </p>
+    <div class="art-meta-row">
+      <span class="meta-author">Figuring Out Pharma</span>
+      <span class="meta-sep">·</span>
+      <span class="meta-date">June 2026</span>
+      <span class="meta-sep">·</span>
+      <span class="meta-time">5 min read</span>
+    </div>
+  </div>
+</header>
+
+<div class="cover">
+  <div class="cover-img">
+    <img src="../images/drug-pricing-india-cover.jpg" alt="How drugs are priced in India" style="width:100%;height:100%;object-fit:contain;background:#fff;">
+  </div>
+  <p class="cover-caption">Illustration via Canva AI</p>
+</div>
+
+<div class="art-layout">
+
+  <article class="prose">
+
+    <p>
+      Open any pharmacoeconomics textbook and you will find a clean explanation of how drug prices are set — cost of production, plus a reasonable margin, regulated fairly across the system. It sounds logical. It also describes almost no country you will actually work in as a pharma professional.
+    </p>
+
+    <p>
+      India's drug pricing works differently. And once you understand how, a lot of things about this industry start making sense.
+    </p>
+
+    <h2 id="who-is-actually-paying">Start here: who is actually paying</h2>
+
+    <p>
+      In most Western countries that textbooks are written for, patients do not directly pay for their medicines. Insurance companies, government health schemes, or employers cover most of the cost. The patient pays a small fixed amount and moves on.
+    </p>
+
+    <p>
+      In India, more than half the population has no comprehensive health insurance. There is no insurer sitting between the patient and the pharmacy counter. The patient walks in, the chemist quotes a price, and the patient pays from their own pocket.
+    </p>
+
+    <p>
+      And it is not a small amount. <strong>Between 60 and 90 percent of what Indian households spend on healthcare goes entirely on medicines.</strong> Not doctors, not hospitals — medicines. This is why drug pricing in India is not just a commercial question. It directly hits household finances.
+    </p>
+
+    <p>
+      This is the backdrop against which the government created the DPCO.
+    </p>
+
+    <h2 id="what-dpco-actually-is">What DPCO actually is</h2>
+
+    <p>
+      DPCO stands for Drug Prices Control Order. It is a government tool, enforced by an authority called the NPPA — the National Pharmaceutical Pricing Authority — that sets price ceilings on essential medicines. Companies cannot legally charge above these ceilings.
+    </p>
+
+    <p>
+      The list of medicines covered by DPCO is called the National List of Essential Medicines, or NLEM. If your drug is on this list, your price is capped. If it is not on this list, you can charge whatever the market allows.
+    </p>
+
+    <h2 id="how-ceiling-price-is-calculated">How the ceiling price is actually calculated</h2>
+
+    <p>
+      Before 2013, the NPPA used to calculate price caps the old-fashioned way — tracking the actual cost of raw materials, manufacturing, packaging, and adding a fixed return. Logical on paper. The problem was that companies would inflate their reported production costs to push the ceiling higher. The system was easy to game.
+    </p>
+
+    <p>
+      In 2013 the government scrapped that approach entirely and switched to a market-based formula. Instead of tracking costs, the NPPA now looks at what brands are actually selling for in the market. It takes the average retail price of every brand that holds at least a 1% market share for that molecule, then adds 16% on top as the retail margin. That number becomes the ceiling.
+    </p>
+
+    <div class="callout">
+      <div class="callout-label">What this means in practice</div>
+      <p>The ceiling price is anchored to what the market is already charging — not what it costs to make the drug. If most brands are already expensive, the ceiling will be set at an expensive level. The formula controls the top, it does not necessarily make medicines affordable.</p>
+    </div>
+
+    <h2 id="loopholes-nobody-mentions">The loopholes nobody mentions in class</h2>
+
+    <p>
+      Here is what textbooks leave out entirely.
+    </p>
+
+    <h3>The FDC trick</h3>
+    <p>
+      If Paracetamol 500mg is price-controlled, a company can combine it with another compound — say, a mild decongestant — to create a new combination tablet. If that specific combination is not on the NLEM, it falls outside DPCO completely. The company can now price it freely. This is why you see so many fixed-dose combination drugs in the Indian market. Some are clinically justified. Some exist primarily to step around price controls.
+    </p>
+
+    <h3>The strength swap</h3>
+    <p>
+      A company might quietly stop promoting the controlled 500mg version of a drug and start pushing a 650mg version instead. If the 650mg is not on the NLEM, there is no ceiling on it. Same molecule, slightly different dose, completely different pricing freedom.
+    </p>
+
+    <h3>The brand variation nobody talks about</h3>
+    <p>
+      Two brands containing the exact same molecule, same dose, same formulation — one can cost ten times the other. <strong>Brand price variations for the same generic molecule in India can range anywhere from 1000% to 4000%.</strong> The only thing driving that gap is brand popularity and what doctors are used to prescribing. The medicine inside the strip is identical.
+    </p>
+
+    <h2 id="chemists-real-incentive">The chemist's real incentive</h2>
+
+    <p>
+      For drugs that are not on the NLEM — the uncontrolled ones — manufacturers set the MRP themselves. And to get chemists to stock and push their brand, they offer enormous trade margins.
+    </p>
+
+    <blockquote>
+      <p>A chemist might buy a strip for ₹10 and sell it to the patient at the printed MRP of ₹150. That margin sits entirely with the retailer — not the manufacturer, not the patient.</p>
+    </blockquote>
+
+    <p>
+      This creates a quiet incentive at the pharmacy counter. When there is any flexibility — when the prescription says the generic name, or when the patient asks for something for a minor ailment — the chemist will often reach for the brand that gives the best margin. Not the cheapest option. Not the most clinically appropriate one. The most profitable one.
+    </p>
+
+    <p>
+      This is not illegal. It is just how the economics of the channel work.
+    </p>
+
+    <h2 id="what-this-means-for-you">What this means for you</h2>
+
+    <p>
+      If you end up in pharma marketing, pricing strategy is not just about what you charge. It is about whether your drug is on the NLEM, what that means for your ceiling, and how you structure your product portfolio to protect margins within regulatory limits.
+    </p>
+
+    <p>
+      If you end up in pharmacy practice, understanding trade margins explains a lot about the recommendations you will see — and be expected to make — at the counter.
+    </p>
+
+    <p>
+      Either way, this is the version of drug pricing that actually matters for your career. Not the textbook one.
+    </p>
+
+    <hr>
+
+    <p>
+      <em>If this was useful, the next piece worth reading is on FMCG vs pharma marketing — which covers why the commercial logic of pharma is so different from every other consumer industry.</em>
+    </p>
+
+  </article>
+
+  <aside>
+    <div class="toc">
+      <div class="toc-label">In this article</div>
+      <ul class="toc-list">
+        <li><a href="#who-is-actually-paying">Who is actually paying</a></li>
+        <li><a href="#what-dpco-actually-is">What DPCO actually is</a></li>
+        <li><a href="#how-ceiling-price-is-calculated">How the ceiling price works</a></li>
+        <li><a href="#loopholes-nobody-mentions">The loopholes</a></li>
+        <li><a href="#chemists-real-incentive">The chemist's incentive</a></li>
+        <li><a href="#what-this-means-for-you">What this means for you</a></li>
+      </ul>
+      <div class="toc-share">
+        <div class="toc-share-label">Share</div>
+        <button class="share-btn" onclick="copyLink()">Copy link</button>
+        <button class="share-btn" onclick="shareLinkedIn()">LinkedIn</button>
+      </div>
+    </div>
+  </aside>
+
+</div>
+
+<div class="art-foot">
+  <div class="tags-row">
+    <span class="tag-pill">Industry</span>
+    <span class="tag-pill">Regulatory</span>
+    <span class="tag-pill">DPCO</span>
+    <span class="tag-pill">Drug Pricing</span>
+    <span class="tag-pill">NPPA</span>
+    <span class="tag-pill">B.Pharma</span>
+    <span class="tag-pill">NLEM</span>
+  </div>
+</div>
+
+<section class="related">
+  <div class="related-inner">
+    <div class="related-head">Related Articles</div>
+    <div class="related-grid">
+      <div class="rel-card" onclick="window.location='fmcg-vs-pharma-marketing.html'">
+        <div class="rel-cat">Marketing</div>
+        <div class="rel-title">FMCG vs pharma marketing — explained from scratch, no assumptions</div>
+        <div class="rel-time">11 min read</div>
+      </div>
+      <div class="rel-card" onclick="window.location='#'">
+        <div class="rel-cat">Marketing</div>
+        <div class="rel-title">OTC vs prescription — two completely different marketing games</div>
+        <div class="rel-time">6 min read</div>
+      </div>
+      <div class="rel-card" onclick="window.location='#'">
+        <div class="rel-cat">Careers</div>
+        <div class="rel-title">What does a pharma product manager actually do — day by day</div>
+        <div class="rel-time">7 min read</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-logo">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="30" fill="#2d6347"/>
+        <rect x="29" y="14" width="6" height="36" rx="2" fill="#c9a84c"/>
+        <rect x="14" y="29" width="36" height="6" rx="2" fill="#c9a84c"/>
+        <circle cx="32" cy="32" r="3" fill="#fff" opacity="0.85"/>
+      </svg>
+      <span class="foot-logo-name">Figuring Out <em>Pharma</em></span>
+    </div>
+    <div class="foot-links">
+      <a href="../index.html">Home</a>
+      <a href="../blogs.html">Blogs</a>
+      <a href="../case-studies.html">Case Studies</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+    <div class="foot-copy">&#169; 2026 Figuring Out Pharma</div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{const h=document.documentElement;const pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;document.getElementById('prog').style.width=pct+'%';});
+const headings=document.querySelectorAll('.prose h2');
+const tocLinks=document.querySelectorAll('.toc-list a');
+window.addEventListener('scroll',()=>{let current='';headings.forEach(h=>{if(h.offsetTop-120<=window.scrollY)current=h.id});tocLinks.forEach(a=>{a.classList.remove('active');if(a.getAttribute('href')==='#'+current)a.classList.add('active');});});
+function toggleTheme(){const html=document.documentElement;const dark=html.getAttribute('data-theme')==='dark';html.setAttribute('data-theme',dark?'light':'dark');document.getElementById('themeBtn').innerHTML=dark?'&#9790;':'&#9728;';localStorage.setItem('fop-theme',dark?'light':'dark');}
+const saved=localStorage.getItem('fop-theme');
+if(saved){document.documentElement.setAttribute('data-theme',saved);document.getElementById('themeBtn').innerHTML=saved==='dark'?'&#9728;':'&#9790;';}
+function toggleMobileMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
+document.querySelectorAll('.nav-mobile-menu a').forEach(function(link){link.addEventListener('click',function(){document.getElementById('mobileMenu').classList.remove('open');});});
+document.addEventListener('click',function(e){const menu=document.getElementById('mobileMenu');const btn=document.getElementById('hamburgerBtn');if(menu&&btn&&!menu.contains(e.target)&&!btn.contains(e.target)){menu.classList.remove('open');}});
+function copyLink(){navigator.clipboard.writeText(window.location.href).then(()=>{const btn=event.target;btn.textContent='Copied!';setTimeout(()=>btn.textContent='Copy link',2000);});}
+function shareLinkedIn(){window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank');}
+</script>
+</body>
+</html>
