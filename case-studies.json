@@ -4,7 +4,7 @@
   "tag": "Breakthrough",
   "slug": "articles/covid-vaccine-development.html",
   "excerpt": "Vaccines approved in under a year. The fastest before this had taken four years. Here is how it actually happened — the science, the money, the regulatory shortcuts that were not shortcuts, and why India sat at the centre of it.",
-  "date": "2021 - 2022",
+  "year": "2021 - 2022",
   "readTime": "10 min",
   "featured": false
 },
@@ -13,7 +13,7 @@
   "tag": "Patent",
   "slug": "articles/lipitor-patent-cliff.html",
   "excerpt": "Lipitor generated over $125 billion before its patent expired in 2011. The full story of Pfizer's pre-cliff strategy, the Ranbaxy legal fight, and what the playbook teaches about pharma lifecycle management.",
-  "date": "2011",
+  "year": "2011",
   "readTime": "10 min",
   "featured": false
 },
@@ -22,7 +22,7 @@
   "tag": "M&A",
   "slug": "articles/bayer-monsanto-merger.html",
   "excerpt": "Bayer went to bed a pharmaceutical company and woke up an agrochemical defendant. The $63 billion Monsanto acquisition starved the pharma pipeline, triggered $17 billion in litigation, and wiped out €35 billion in market value.",
-  "date": "2018",
+  "year": "2018",
   "readTime": "11 min",
   "featured": false
 },
@@ -31,7 +31,7 @@
   "tag": "Tragedy",
   "slug": "articles/thalidomide-tragedy.html",
   "excerpt": "A sedative sold as the safest drug in the world caused birth defects in over 10,000 children. Here is what happened, why India's story is more complicated than most people know, and what it permanently changed about how drugs get approved.",
-  "date": "1957 - 1962",
+  "year": "1957 - 1962",
   "readTime": "10 min",
   "featured": false
 },
@@ -40,7 +40,7 @@
   "tag": "Regulatory",
   "slug": "articles/ranbaxy-and-the-fda.html",
   "excerpt": "India's biggest pharma success story collapsed under data fraud allegations — and permanently changed how generic drug manufacturers are scrutinised worldwide.",
-  "date": "2004 - 2013",
+  "year": "2004 - 2013",
   "readTime": "7 min",
   "featured": false
 },
@@ -49,7 +49,7 @@
   "tag": "Withdrawal",
   "slug": "articles/vioxx-withdrawal.html",
   "excerpt": "Merck pulled its blockbuster painkiller in 2004 after a placebo-controlled trial proved an undeniable link to heart attacks. The $7 billion fallout permanently changed how drug safety is monitored worldwide.",
-  "date": "2004",
+  "year": "2004",
   "readTime": "10 min",
   "featured": false
 }
