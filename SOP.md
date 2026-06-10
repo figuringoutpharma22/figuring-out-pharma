@@ -686,7 +686,7 @@ Files to verify in GitHub Desktop:
 |---|---|---|
 | The Thalidomide Tragedy | Placeholder | thalidomide-tragedy |
 | Ranbaxy and the FDA | Placeholder | ranbaxy-and-the-fda |
-| The Vioxx Withdrawal | Placeholder | vioxx-withdrawal |
+| The Vioxx Withdrawal | Published | vioxx-withdrawal |
 | COVID-19 Vaccine Development | Placeholder | covid-vaccine-development |
 | Lipitor's Patent Cliff | Placeholder | lipitor-patent-cliff |
 | Bayer–Monsanto Merger | Placeholder | bayer-monsanto-merger |
