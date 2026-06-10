@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lipitor's Patent Cliff — How the World's Best-Selling Drug Lost Everything Overnight — Figuring Out Pharma</title>
+<meta name="description" content="Lipitor generated over $125 billion before its patent expired in 2011. Here is what Pfizer did before, during, and after the cliff — and what it teaches about pharma lifecycle management.">
+<meta property="og:title" content="Lipitor's Patent Cliff — How the World's Best-Selling Drug Lost Everything Overnight">
+<meta property="og:description" content="Lipitor generated over $125 billion before its patent expired in 2011. Here is what Pfizer did before, during, and after the cliff — and what it teaches about pharma lifecycle management.">
+<meta property="og:url" content="https://figuringoutpharma.com/articles/lipitor-patent-cliff.html">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://figuringoutpharma.com/articles/lipitor-patent-cliff.html">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --forest:#1a3a2a;--forest2:#234d38;--forest3:#2d6347;--forest4:#3a7a58;
+  --sage:#7aab8e;--sage2:#a8c9b5;
+  --cream:#faf8f2;--cream2:#f3f0e6;--cream3:#e8e3d4;
+  --gold:#c9a84c;--gold2:#e8c96a;
+  --line:#ddd8c8;--line2:#ccc6b4;
+  --text:#1c1a14;--text2:#4a4638;--text3:#8a8474;
+  --card:#ffffff;
+  --serif:'Playfair Display',Georgia,serif;
+  --body:'Source Serif 4',Georgia,serif;
+  --sans:'DM Sans',sans-serif;
+  --max:960px;--prose:680px;
+}
+[data-theme="dark"]{
+  --cream:#0e1a14;--cream2:#132019;--cream3:#1c2e22;
+  --line:#2a3d30;--line2:#3a5044;
+  --text:#e8f0e4;--text2:#9db89a;--text3:#5a7464;
+  --card:#132019;
+}
+html{font-size:16px;scroll-behavior:smooth;background:var(--cream)}
+body{color:var(--text);font-family:var(--body);line-height:1.7;background:var(--cream);transition:background 0.3s,color 0.3s}
+a{text-decoration:none;color:inherit}
+
+#prog{position:fixed;top:0;left:0;height:2px;background:var(--gold);z-index:9999;width:0%;transition:width 0.1s linear;pointer-events:none}
+
+nav{background:var(--forest);position:sticky;top:0;z-index:300;border-bottom:1px solid rgba(255,255,255,0.06)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:52px;gap:2rem}
+.nav-logo{display:flex;align-items:center;gap:9px;flex-shrink:0}
+.nav-icon{width:24px;height:24px}
+.nav-name{font-family:var(--serif);font-size:0.98rem;font-weight:700;color:#fff;letter-spacing:-0.01em;white-space:nowrap}
+.nav-name em{font-style:italic;font-weight:400;color:var(--sage2)}
+.nav-links{display:flex;gap:0;list-style:none;flex:1;justify-content:center}
+.nav-links a{font-family:var(--sans);font-size:0.7rem;font-weight:400;color:rgba(255,255,255,0.55);padding:6px 13px;transition:color 0.2s;letter-spacing:0.04em;text-transform:uppercase}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.nav-right{display:flex;align-items:center;gap:0.75rem;flex-shrink:0}
+.nav-theme{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);width:30px;height:30px;border-radius:2px;cursor:pointer;font-size:0.82rem;transition:all 0.2s;display:flex;align-items:center;justify-content:center}
+.nav-theme:hover{background:rgba(255,255,255,0.14);color:#fff}
+.nav-sub{background:var(--gold);color:var(--forest);border:none;font-family:var(--sans);font-size:0.68rem;font-weight:600;padding:6px 14px;border-radius:2px;cursor:pointer;letter-spacing:0.05em;text-transform:uppercase;transition:all 0.2s}
+.nav-sub:hover{background:var(--gold2)}
+.nav-hamburger{display:none;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);width:30px;height:30px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:4px;flex-shrink:0;border-radius:2px}
+.nav-hamburger span{display:block;width:14px;height:1.5px;background:currentColor}
+.nav-mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--forest2);border-bottom:1px solid rgba(255,255,255,0.08);z-index:299;padding:0.5rem 0}
+.nav-mobile-menu a{display:block;font-family:var(--sans);font-size:0.82rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.7);padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,0.06)}
+.nav-mobile-menu a:last-child{border-bottom:none}
+
+.cs-header{background:var(--forest);padding:3.5rem 2rem 0;border-bottom:none;position:relative;overflow:hidden}
+.cs-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(201,168,76,0.04) 0%,transparent 60%);pointer-events:none}
+.cs-header-inner{max-width:var(--prose);margin:0 auto;position:relative}
+
+.cs-breadcrumb{font-family:var(--sans);font-size:0.62rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);margin-bottom:1.25rem;display:flex;align-items:center;gap:8px}
+.cs-breadcrumb a{color:var(--sage);transition:color 0.2s}
+.cs-breadcrumb a:hover{color:var(--sage2)}
+.cs-breadcrumb-sep{opacity:0.35}
+
+.cs-header-tag{display:inline-flex;align-items:center;font-family:var(--sans);font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 10px;border-radius:1px;margin-bottom:1rem}
+.t-blue{background:rgba(74,138,181,0.18);color:#7ab4d5}
+
+.cs-title{font-family:var(--serif);font-size:clamp(1.9rem,3.8vw,2.8rem);font-weight:700;color:#fff;line-height:1.15;letter-spacing:-0.025em;margin-bottom:1.1rem}
+.cs-title em{font-style:italic;font-weight:400;color:var(--sage2)}
+.cs-deck{font-family:var(--body);font-size:1.05rem;font-weight:300;color:rgba(255,255,255,0.55);line-height:1.78;font-style:italic;margin-bottom:1.75rem}
+
+.cs-meta-row{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;padding:1.25rem 0;border-top:1px solid rgba(255,255,255,0.1)}
+.cs-meta-author{font-family:var(--sans);font-size:0.75rem;font-weight:500;color:rgba(255,255,255,0.65)}
+.cs-meta-sep{color:rgba(255,255,255,0.18)}
+.cs-meta-date{font-family:var(--sans);font-size:0.7rem;color:rgba(255,255,255,0.38)}
+.cs-meta-time{font-family:var(--sans);font-size:0.68rem;font-weight:500;background:rgba(201,168,76,0.18);color:var(--gold2);padding:3px 9px;border-radius:1px;letter-spacing:0.04em}
+
+.cover{max-width:var(--prose);margin:0 auto;padding:2.5rem 2rem 0}
+.cover-img{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,var(--forest2),var(--forest3));display:flex;align-items:center;justify-content:center;border:1px solid var(--line);overflow:hidden}
+.cover-caption{font-family:var(--sans);font-size:0.68rem;color:var(--text3);margin-top:0.6rem;font-style:italic;text-align:right}
+
+.cs-layout{max-width:var(--max);margin:0 auto;padding:2.5rem 2rem 4rem;display:grid;grid-template-columns:1fr 220px;gap:4rem;align-items:start}
+
+.cs-sidebar{display:flex;flex-direction:column;gap:1.25rem}
+
+.cs-facts{border:1px solid var(--line);background:var(--cream2)}
+.cs-facts-label{font-family:var(--sans);font-size:0.58rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3);padding:0.875rem 1rem 0.625rem;border-bottom:1px solid var(--line)}
+.cs-fact-row{padding:0.625rem 1rem;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:2px}
+.cs-fact-row:last-child{border-bottom:none}
+.cs-fact-key{font-family:var(--sans);font-size:0.58rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text3)}
+.cs-fact-val{font-family:var(--sans);font-size:0.78rem;color:var(--text);font-weight:500;line-height:1.4}
+
+.toc{border:1px solid var(--line);padding:1.25rem;background:var(--cream2)}
+.toc-label{font-family:var(--sans);font-size:0.58rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3);margin-bottom:0.875rem;padding-bottom:0.625rem;border-bottom:1px solid var(--line)}
+.toc-list{list-style:none;display:flex;flex-direction:column;gap:2px}
+.toc-list a{font-family:var(--sans);font-size:0.76rem;font-weight:400;color:var(--text2);padding:4px 8px;display:block;border-left:2px solid transparent;transition:all 0.2s;line-height:1.4}
+.toc-list a:hover,.toc-list a.active{color:var(--forest3);border-left-color:var(--forest3);background:var(--cream)}
+.toc-share{margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--line)}
+.toc-share-label{font-family:var(--sans);font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:0.625rem}
+.share-btn{display:block;width:100%;font-family:var(--sans);font-size:0.72rem;font-weight:500;color:var(--text2);background:var(--cream);border:1px solid var(--line);padding:7px 12px;margin-bottom:6px;cursor:pointer;text-align:left;transition:all 0.2s;letter-spacing:0.02em}
+.share-btn:hover{background:var(--forest);color:#fff;border-color:var(--forest)}
+
+.prose{max-width:var(--prose);font-family:var(--body);font-size:1.05rem;line-height:1.82;color:var(--text2)}
+.prose h2{font-family:var(--serif);font-size:1.45rem;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-0.02em;margin:2.5rem 0 1rem;padding-top:0.5rem}
+.prose h3{font-family:var(--serif);font-size:1.12rem;font-weight:700;color:var(--text);line-height:1.3;margin:2rem 0 0.75rem;font-style:italic}
+.prose p{margin-bottom:1.4rem;font-weight:300}
+.prose p:last-child{margin-bottom:0}
+.prose strong{color:var(--text);font-weight:500;font-style:normal}
+.prose em{font-style:italic}
+.prose a{color:var(--forest3);text-decoration:underline;text-decoration-color:var(--sage2);text-underline-offset:3px;transition:color 0.2s}
+.prose a:hover{color:var(--forest)}
+.prose ul,.prose ol{padding-left:1.5rem;margin-bottom:1.4rem}
+.prose li{margin-bottom:0.4rem;font-weight:300}
+.prose blockquote{border-left:3px solid var(--gold);padding:0.875rem 1.25rem;margin:2rem 0;background:var(--cream2);font-style:italic;color:var(--text2)}
+.prose blockquote p{margin-bottom:0;font-size:1rem}
+.prose hr{border:none;border-top:1px solid var(--line);margin:2.5rem 0}
+.prose .callout{background:var(--cream2);border:1px solid var(--line);border-left:3px solid var(--forest3);padding:1.25rem 1.5rem;margin:2rem 0}
+.prose .callout-label{font-family:var(--sans);font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--forest3);margin-bottom:0.5rem}
+.prose .callout p{margin-bottom:0;font-size:0.92rem}
+
+.timeline{margin:2.5rem 0;position:relative}
+.timeline-label{font-family:var(--sans);font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3);margin-bottom:1.25rem;display:flex;align-items:center;gap:10px}
+.timeline-label::after{content:'';flex:1;height:1px;background:var(--line)}
+.timeline-item{display:grid;grid-template-columns:80px 1fr;gap:0;margin-bottom:0;position:relative}
+.timeline-item::before{content:'';position:absolute;left:79px;top:8px;bottom:-1px;width:1px;background:var(--line)}
+.timeline-item:last-child::before{display:none}
+.timeline-year{font-family:var(--sans);font-size:0.7rem;font-weight:600;color:var(--text3);padding:0.5rem 1rem 0.5rem 0;letter-spacing:0.04em;line-height:1.6}
+.timeline-content{padding:0.5rem 0 1.25rem 1.25rem;border-left:1px solid var(--line);position:relative}
+.timeline-content::before{content:'';position:absolute;left:-4px;top:10px;width:7px;height:7px;border-radius:50%;background:var(--forest3);border:1px solid var(--cream)}
+.timeline-event{font-family:var(--sans);font-size:0.78rem;font-weight:600;color:var(--text);margin-bottom:0.2rem}
+.timeline-detail{font-family:var(--body);font-size:0.82rem;font-weight:300;color:var(--text2);font-style:italic;line-height:1.6}
+
+.verdict{background:var(--forest);border:none;padding:1.75rem 1.75rem;margin:2.5rem 0;position:relative;overflow:hidden}
+.verdict::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold)}
+.verdict-label{font-family:var(--sans);font-size:0.6rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage);margin-bottom:0.75rem;display:flex;align-items:center;gap:8px}
+.verdict-label::before{content:'';width:18px;height:1px;background:var(--sage)}
+.verdict-text{font-family:var(--body);font-size:1rem;font-weight:300;color:rgba(255,255,255,0.72);line-height:1.82;font-style:italic}
+.verdict-text strong{color:#fff;font-weight:500;font-style:normal}
+
+.art-foot{max-width:var(--prose);margin:0 auto;padding:2.5rem 2rem 0;border-top:1px solid var(--line)}
+.tags-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:2rem}
+.tag-pill{font-family:var(--sans);font-size:0.65rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:4px 12px;border:1px solid var(--line);color:var(--text3);transition:all 0.2s;cursor:pointer}
+.tag-pill:hover{background:var(--forest);color:#fff;border-color:var(--forest)}
+
+.related{background:var(--cream2);border-top:1px solid var(--line);padding:3.5rem 2rem}
+.related-inner{max-width:var(--max);margin:0 auto}
+.related-head{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:1.75rem;padding-bottom:0.75rem;border-bottom:2px solid var(--text);letter-spacing:-0.01em}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
+.rel-card{padding:1.5rem;border-right:1px solid var(--line);cursor:pointer;transition:background 0.2s}
+.rel-card:last-child{border-right:none}
+.rel-card:hover{background:var(--cream)}
+.rel-card:hover .rel-title{color:var(--forest3)}
+.rel-cat{font-family:var(--sans);font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--forest3);margin-bottom:0.5rem}
+.rel-title{font-family:var(--serif);font-size:0.95rem;font-weight:700;color:var(--text);line-height:1.35;margin-bottom:0.5rem;transition:color 0.15s;letter-spacing:-0.01em}
+.rel-time{font-family:var(--sans);font-size:0.62rem;color:var(--text3)}
+
+footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);padding:1.25rem 2rem}
+.foot-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.foot-logo{display:flex;align-items:center;gap:8px}
+.foot-logo svg{width:20px;height:20px}
+.foot-logo-name{font-family:var(--serif);font-size:0.85rem;font-weight:700;color:rgba(255,255,255,0.65)}
+.foot-logo-name em{font-style:italic;font-weight:400;color:var(--sage)}
+.foot-links{display:flex;gap:1.5rem}
+.foot-links a{font-family:var(--sans);font-size:0.62rem;letter-spacing:0.05em;text-transform:uppercase;color:rgba(255,255,255,0.28);transition:color 0.2s}
+.foot-links a:hover{color:var(--sage2)}
+.foot-copy{font-family:var(--sans);font-size:0.6rem;color:rgba(255,255,255,0.2)}
+
+@media(max-width:768px){
+  .nav-links{display:none}.nav-inner{padding:0 1.25rem}.nav-hamburger{display:flex}
+  .nav-mobile-menu.open{display:block}
+  .cs-header{padding:2.5rem 1.25rem 0}
+  .cover{padding:1.5rem 1.25rem 0}
+  .cs-layout{grid-template-columns:1fr;padding:2rem 1.25rem 3rem;gap:0}
+  .cs-sidebar{order:-1;margin-bottom:2rem}
+  .toc{display:none}
+  .art-foot{padding:2rem 1.25rem 0}
+  .related{padding:2.5rem 1.25rem}
+  .related-grid{grid-template-columns:1fr}
+  .rel-card{border-right:none;border-bottom:1px solid var(--line)}
+  .rel-card:last-child{border-bottom:none}
+  .foot-inner{flex-direction:column;gap:1rem;align-items:flex-start}
+  footer{padding:1.25rem}
+}
+@media(max-width:480px){
+  .nav-inner{height:50px;padding:0 1rem}.nav-name{font-size:0.88rem}
+  .cs-title{font-size:1.75rem!important}
+  .cs-deck{font-size:0.92rem}
+  .timeline-item{grid-template-columns:60px 1fr}
+  .prose{font-size:0.98rem}
+  .prose h2{font-size:1.25rem}
+  .foot-links{flex-wrap:wrap;gap:0.75rem}
+  footer{padding:1rem}
+}
+</style>
+</head>
+<body>
+
+<div id="prog"></div>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="../index.html">
+      <svg class="nav-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="30" fill="#2d6347"/>
+        <circle cx="32" cy="32" r="22" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+        <rect x="29" y="14" width="6" height="36" rx="2" fill="#c9a84c"/>
+        <rect x="14" y="29" width="36" height="6" rx="2" fill="#c9a84c"/>
+        <circle cx="32" cy="32" r="4" fill="#ffffff" opacity="0.85"/>
+        <circle cx="32" cy="32" r="2" fill="#c9a84c"/>
+      </svg>
+      <span class="nav-name">Figuring Out <em>Pharma</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../blogs.html">Blogs</a></li>
+      <li><a href="../case-studies.html" class="active">Case Studies</a></li>
+      <li><a href="../categories.html">Categories</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="nav-theme" onclick="toggleTheme()" id="themeBtn">&#9790;</button>
+      <a href="https://figuring-outs-newsletter.beehiiv.com/subscribe" target="_blank"><button class="nav-sub">Subscribe</button></a>
+      <button class="nav-hamburger" onclick="toggleMobileMenu()" id="hamburgerBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile-menu" id="mobileMenu">
+    <a href="../index.html">Home</a>
+    <a href="../blogs.html">Blogs</a>
+    <a href="../case-studies.html">Case Studies</a>
+    <a href="../categories.html">Categories</a>
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="cs-header">
+  <div class="cs-header-inner">
+    <div class="cs-breadcrumb">
+      <a href="../case-studies.html">Case Studies</a>
+      <span class="cs-breadcrumb-sep">/</span>
+      <a href="../case-studies.html">Patent</a>
+    </div>
+    <div class="cs-header-tag t-blue">Patent</div>
+    <h1 class="cs-title">
+      Lipitor's patent cliff —<br><em>how the world's best-selling drug lost everything overnight</em>
+    </h1>
+    <p class="cs-deck">
+      Lipitor generated over $125 billion during its patent window. Then a calendar date arrived. Here is what Pfizer did before, during, and after — and what the playbook teaches about how pharma manages the most predictable crisis in the industry.
+    </p>
+    <div class="cs-meta-row">
+      <span class="cs-meta-author">Figuring Out Pharma</span>
+      <span class="cs-meta-sep">·</span>
+      <span class="cs-meta-date">June 2026</span>
+      <span class="cs-meta-sep">·</span>
+      <span class="cs-meta-time">10 min read</span>
+    </div>
+  </div>
+</header>
+
+<div class="cover">
+  <div class="cover-img">
+    <img src="../images/lipitor-patent-cliff-cover.jpg" alt="Lipitor's Patent Cliff — how the world's best-selling drug lost patent protection" style="width:100%;height:100%;object-fit:contain;background:#fff;">
+  </div>
+  <p class="cover-caption">Illustration via Ideogram.ai</p>
+</div>
+
+<div class="cs-layout">
+
+  <article class="prose">
+
+    <p>
+      In November 2011, Pfizer lost more revenue in a single day than most companies generate in a year. Not because a drug failed. Not because patients stopped needing it. Because a calendar date arrived.
+    </p>
+
+    <p>
+      That date was November 30, 2011 — the day Lipitor's core patent expired. Within months, a molecule that had generated over $125 billion for one company was being sold by dozens of manufacturers at a fraction of the price. The brand that had defined an era of pharmaceutical dominance lost the one thing that made it dominant: exclusivity.
+    </p>
+
+    <p>
+      Understanding how that happened — and what Pfizer did before and after — is one of the clearest windows you will ever get into how the business of pharma actually works.
+    </p>
+
+    <div class="timeline">
+      <div class="timeline-label">How it unfolded</div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">1997</div>
+        <div class="timeline-content">
+          <div class="timeline-event">Lipitor launches — enters a crowded statin market</div>
+          <div class="timeline-detail">Priced slightly below existing branded statins and backed by strong LDL-reduction data, Lipitor begins systematically building market share against Merck's Zocor.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2005</div>
+        <div class="timeline-content">
+          <div class="timeline-event">Zocor goes off-patent — Lipitor absorbs the premium</div>
+          <div class="timeline-detail">When generic simvastatin floods the market and erodes Zocor's position, Lipitor becomes the default branded statin choice for doctors who want to stay on a brand-name product.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2004</div>
+        <div class="timeline-content">
+          <div class="timeline-event">Ranbaxy files to invalidate Lipitor's patents</div>
+          <div class="timeline-detail">Indian generic manufacturer Ranbaxy challenges the validity of both core Lipitor patents, intending to launch a generic years ahead of the official expiry date.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2006</div>
+        <div class="timeline-content">
+          <div class="timeline-event">Torcetrapib fails in clinical trials</div>
+          <div class="timeline-detail">Pfizer's planned successor molecule — expected to absorb Lipitor's patient base after patent expiry — is halted after trials show increased patient mortality. Over $800 million is written off. Pfizer now has no successor drug.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2008</div>
+        <div class="timeline-content">
+          <div class="timeline-event">Pay-for-delay settlement with Ranbaxy</div>
+          <div class="timeline-detail">Pfizer drops its patent infringement claims; Ranbaxy agrees to hold back its generic until the official expiry date. In exchange, Ranbaxy receives early generic rights on Caduet, a less significant combination pill.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">Nov 2011</div>
+        <div class="timeline-content">
+          <div class="timeline-event">Patent expires — the cliff arrives</div>
+          <div class="timeline-detail">On November 30, Lipitor's core enantiomer patent expires. Pfizer launches three simultaneous defensive strategies: the Lipitor-for-You rebate program, an authorised generic with Watson, and a push for OTC conversion.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2012–14</div>
+        <div class="timeline-content">
+          <div class="timeline-event">Generic atorvastatin captures the market</div>
+          <div class="timeline-detail">Despite Pfizer's defences, generic substitution accelerates rapidly. Research documents billions in healthcare savings for patients who switch — alongside significant "excess expenditure" by patients who stay on the brand due to rebate programs.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 id="how-lipitor-got-there">How Lipitor became the world's best-selling drug</h2>
+
+    <p>
+      Atorvastatin is not a complicated molecule to understand. It lowers LDL cholesterol. It reduces the risk of heart attacks and strokes. Statins as a drug class were already well-established when Lipitor launched in 1997 — Merck's Zocor was the market leader, and it had been for years.
+    </p>
+
+    <p>
+      Pfizer entered a crowded category with no obvious competitive edge on the molecule itself. What they did differently was commercial, not scientific. They priced Lipitor slightly below the existing branded statins — just enough to make it an easier choice for doctors already comfortable with the category. Then they backed it with clinical data showing Lipitor achieved better LDL reduction than competitors at equivalent doses.
+    </p>
+
+    <p>
+      The real acceleration came in 2005 when Zocor's patent expired. Generic simvastatin entered the market and immediately eroded Zocor's premium position. Lipitor — still under patent — absorbed the doctors who wanted to stay on a branded statin. By the late 2000s, Lipitor was not just the best-selling statin. It was the best-selling drug of any kind, anywhere in the world.
+    </p>
+
+    <p>
+      The two patents protecting it — one covering the core molecular structure of the compound class, one covering the specific active form of atorvastatin calcium — were the legal foundation of that entire commercial empire.
+    </p>
+
+    <h2 id="extracting-maximum-value">Extracting maximum value before the cliff</h2>
+
+    <p>
+      Every pharma patent has an expiry date. Twenty years from filing, the protection ends and any manufacturer can make a generic version. For a drug generating over $10 billion a year, the countdown to that date is the most consequential event on the company's strategic calendar.
+    </p>
+
+    <p>
+      Pfizer's first move was straightforward: extract as much revenue as possible before the date arrived. Between 2006 and 2011, the list price of a standard annual Lipitor regimen rose from around $1,290 to $1,939. In 2011 alone — the final year of exclusivity — the price was raised by 17.5 percent. This is counterintuitive from a consumer perspective but entirely rational commercially. Brand-loyal patients and insurers who had not yet switched would keep paying. Every dollar extracted before November 30 was revenue the company would never see again from a protected molecule.
+    </p>
+
+    <p>
+      Alongside the price escalation, Pfizer was spending close to $1 billion a year on direct-to-consumer advertising — a budget more than double its nearest competitor. Television, print, and physician detailing at a scale few companies could match. The goal was to cement Lipitor's position so deeply in the minds of patients and doctors that when cheap generics arrived, switching would feel like a risk rather than a saving.
+    </p>
+
+    <div class="callout">
+      <div class="callout-label">The successor molecule that failed</div>
+      <p>Pfizer also invested over $800 million into a drug called torcetrapib, designed to raise HDL cholesterol through a different mechanism and absorb Lipitor's patient base after patent expiry. In 2006, large-scale trials showed that torcetrapib increased patient mortality. The project was halted immediately, the entire investment written off. Pfizer entered the patent cliff without a successor. Everything rested on managing the cliff itself.</p>
+    </div>
+
+    <h2 id="the-legal-fight">The legal fight Ranbaxy started</h2>
+
+    <p>
+      In 2004, Indian generic manufacturer Ranbaxy filed lawsuits challenging the validity of Lipitor's core patents — seven years before official expiry. If Ranbaxy had succeeded, the cliff would have arrived in 2004 instead of 2011. Seven years of patent-protected revenue, roughly $70 billion, would have evaporated early.
+    </p>
+
+    <p>
+      Pfizer fought back with sustained litigation across multiple jurisdictions. The legal battle ran for four years. In 2008, it ended in what the pharmaceutical industry calls a pay-for-delay agreement. Pfizer dropped its infringement claims. Ranbaxy agreed to hold back its generic Lipitor until November 30, 2011 — the official expiry date. In exchange, Ranbaxy received early rights to launch a generic version of Caduet, a less important combination pill, years ahead of schedule.
+    </p>
+
+    <p>
+      Both sides got something. Pfizer got certainty — a fixed date it could plan around. Ranbaxy got first-mover position on generic atorvastatin when the time came. The patients who would have benefited from cheaper statins after 2008 paid the cost of the delay in real terms. The US Federal Trade Commission subsequently highlighted pay-for-delay settlements as a category of competitive harm worth scrutinising, precisely because of cases like this.
+    </p>
+
+    <h2 id="three-defences">What Pfizer did on the day the patent expired</h2>
+
+    <p>
+      November 30, 2011. The patent falls. Pfizer's answer was to compete with generics on their own terms — using three mechanisms simultaneously.
+    </p>
+
+    <h3>The Lipitor-for-You rebate program</h3>
+    <p>
+      Pfizer issued coupon cards to privately insured patients in the United States that reduced their monthly out-of-pocket cost to four dollars. Generic atorvastatin, once it entered the market, was typically available for around ten dollars in co-payment. By pricing the brand below the generic co-payment, Pfizer removed the financial incentive to switch. Millions of patients stayed on branded Lipitor not because they were loyal to the brand, but because switching would have cost them more.
+    </p>
+
+    <h3>The authorised generic with Watson</h3>
+    <p>
+      Pfizer partnered with Watson Pharmaceuticals, granting them the right to sell an unbranded version of the identical Lipitor molecule on the day of patent expiry. This was the same drug — manufactured by Pfizer, sold under Watson's label, at a five percent discount to the brand. Watson kept around thirty percent of revenue; Pfizer kept seventy. Because it bypassed the normal FDA generic approval cycle, Watson could launch immediately, directly eroding the profits Ranbaxy had expected from its 180-day first-filer exclusivity window.
+    </p>
+
+    <h3>The OTC conversion attempt</h3>
+    <p>
+      The third line of defence was an application to the FDA to transition low-dose atorvastatin to over-the-counter status. An OTC approval would have created a non-prescription category for the molecule with three additional years of marketing exclusivity. The FDA ultimately declined, citing concerns about unsupervised patient use of statins. The strategy illustrates the logic though: every pathway to extending the commercial life of the molecule was worth pursuing.
+    </p>
+
+    <h2 id="what-actually-happened">What actually happened to the market</h2>
+
+    <p>
+      Despite everything Pfizer did, the cliff was real.
+    </p>
+
+    <p>
+      Within two years of patent expiry, generic atorvastatin had captured the overwhelming majority of new prescriptions. Research published in JAMA Internal Medicine documented the scale of substitution and its impact on healthcare spending. The generic entry drove billions of dollars in savings for patients and healthcare systems — for patients who switched, the cost reduction was immediate and substantial.
+    </p>
+
+    <p>
+      What the same research also documented was the cost of the strategies designed to prevent switching. The excess expenditure — the gap between what brand-loyal patients and their insurers paid for branded Lipitor and what they would have paid for a therapeutically identical generic — ran into hundreds of millions of dollars over the post-expiry window. Sophisticated rebate programs and coupon schemes can sustain a brand's market share well past the point where it is economically rational, transferring cost from patients who switch to systems that absorb the brand premium.
+    </p>
+
+    <blockquote>
+      <p>The patent does not just protect a molecule. It organises the entire commercial logic of the drug's existence. When it falls, everything built around it has to be rebuilt from scratch — or defended at great cost against something that is fundamentally cheaper.</p>
+    </blockquote>
+
+    <div class="verdict">
+      <div class="verdict-label">The verdict</div>
+      <p class="verdict-text">
+        The Lipitor patent cliff is the clearest case study in pharmaceutical lifecycle management that exists. <strong>Every tactic in it has been replicated across the industry</strong> — price escalation before expiry, pay-for-delay litigation, authorised generics, consumer rebate programs, and OTC conversion attempts. The underlying logic is always the same: build the revenue peak as high as possible before the drop, and make the drop as gradual as possible once it arrives. The patent does not last forever. The question is whether you planned for that, or just hoped it would not matter.
+      </p>
+    </div>
+
+    <h2 id="what-this-means">What this means for you</h2>
+
+    <p>
+      If you end up in pharma marketing or commercial roles, patent timelines will be part of every strategic conversation you have. Product managers at innovative pharma companies live and breathe lifecycle management — when to launch line extensions, when to push for new indications, when to prepare the field force for the generic competition that is coming. None of this is accidental planning. It starts years before the patent falls.
+    </p>
+
+    <p>
+      If you end up in a generic company, the Lipitor case shows you exactly what the innovator will do when your product threatens theirs — and why the authorised generic play in particular can significantly undercut a first-filer's 180-day exclusivity window.
+    </p>
+
+    <p>
+      And if you end up in regulatory or policy work, pay-for-delay settlements remain one of the most contested areas in pharmaceutical competition law globally. Understanding how they work — and why they happen — gives you context that most people in the industry never fully develop.
+    </p>
+
+    <p>
+      The patent cliff is not a surprise. It is written into the structure of the industry. Understanding how it works is understanding the commercial logic of pharma at its most fundamental level.
+    </p>
+
+    <hr>
+
+    <p>
+      <em>If this was useful, the next piece worth reading is on how drugs are priced in India — which covers the DPCO mechanics and what happens to branded generics when price controls arrive from a different direction entirely.</em>
+    </p>
+
+  </article>
+
+  <aside class="cs-sidebar">
+
+    <div class="cs-facts">
+      <div class="cs-facts-label">Case at a glance</div>
+      <div class="cs-fact-row">
+        <div class="cs-fact-key">Drug</div>
+        <div class="cs-fact-val">Atorvastatin calcium (Lipitor)</div>
+      </div>
+      <div class="cs-fact-row">
+        <div class="cs-fact-key">Company</div>
+        <div class="cs-fact-val">Pfizer</div>
+      </div>
+      <div class="cs-fact-row">
+        <div class="cs-fact-key">Category</div>
+        <div class="cs-fact-val">Statin / Cholesterol-lowering</div>
+      </div>
+      <div class="cs-fact-row">
+        <div class="cs-fact-key">Patent expiry</div>
+        <div class="cs-fact-val">30 November 2011</div>
+      </div>
+      <div class="cs-fact-row">
+        <div class="cs-fact-key">Total patent-window revenue</div>
+        <div class="cs-fact-val">Over $125 billion</div>
+      </div>
+      <div class="cs-fact-row">
+        <div class="cs-fact-key">Key legal event</div>
+        <div class="cs-fact-val">Pay-for-delay settlement with Ranbaxy, 2008</div>
+      </div>
+      <div class="cs-fact-row">
+        <div class="cs-fact-key">Industry impact</div>
+        <div class="cs-fact-val">Defined the patent cliff lifecycle playbook still in use today</div>
+      </div>
+    </div>
+
+    <div class="toc">
+      <div class="toc-label">In this case study</div>
+      <ul class="toc-list">
+        <li><a href="#how-lipitor-got-there">How Lipitor got there</a></li>
+        <li><a href="#extracting-maximum-value">Extracting max value</a></li>
+        <li><a href="#the-legal-fight">The Ranbaxy legal fight</a></li>
+        <li><a href="#three-defences">Three cliff defences</a></li>
+        <li><a href="#what-actually-happened">What actually happened</a></li>
+        <li><a href="#what-this-means">What this means for you</a></li>
+      </ul>
+      <div class="toc-share">
+        <div class="toc-share-label">Share</div>
+        <button class="share-btn" onclick="copyLink()">Copy link</button>
+        <button class="share-btn" onclick="shareLinkedIn()">LinkedIn</button>
+      </div>
+    </div>
+
+  </aside>
+
+</div>
+
+<div class="art-foot">
+  <div class="tags-row">
+    <span class="tag-pill">Patent Cliff</span>
+    <span class="tag-pill">Lipitor</span>
+    <span class="tag-pill">Pfizer</span>
+    <span class="tag-pill">Lifecycle Management</span>
+    <span class="tag-pill">Generics</span>
+    <span class="tag-pill">Case Study</span>
+    <span class="tag-pill">B.Pharma</span>
+  </div>
+</div>
+
+<section class="related">
+  <div class="related-inner">
+    <div class="related-head">Related Articles</div>
+    <div class="related-grid">
+      <div class="rel-card" onclick="window.location='how-drugs-are-priced-in-india.html'">
+        <div class="rel-cat">Industry</div>
+        <div class="rel-title">How drugs are priced in India — the real explanation</div>
+        <div class="rel-time">5 min read</div>
+      </div>
+      <div class="rel-card" onclick="window.location='how-crocin-became-a-household-brand.html'">
+        <div class="rel-cat">Brand Strategy</div>
+        <div class="rel-title">How Crocin turned a generic molecule into a household brand</div>
+        <div class="rel-time">9 min read</div>
+      </div>
+      <div class="rel-card" onclick="window.location='fmcg-vs-pharma-marketing.html'">
+        <div class="rel-cat">Marketing</div>
+        <div class="rel-title">FMCG vs pharma marketing — explained from scratch, no assumptions</div>
+        <div class="rel-time">11 min read</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-logo">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="30" fill="#2d6347"/>
+        <rect x="29" y="14" width="6" height="36" rx="2" fill="#c9a84c"/>
+        <rect x="14" y="29" width="36" height="6" rx="2" fill="#c9a84c"/>
+        <circle cx="32" cy="32" r="3" fill="#fff" opacity="0.85"/>
+      </svg>
+      <span class="foot-logo-name">Figuring Out <em>Pharma</em></span>
+    </div>
+    <div class="foot-links">
+      <a href="../index.html">Home</a>
+      <a href="../blogs.html">Blogs</a>
+      <a href="../case-studies.html">Case Studies</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+    <div class="foot-copy">&#169; 2026 Figuring Out Pharma</div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{const h=document.documentElement;const pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;document.getElementById('prog').style.width=pct+'%';});
+const headings=document.querySelectorAll('.prose h2');
+const tocLinks=document.querySelectorAll('.toc-list a');
+window.addEventListener('scroll',()=>{let current='';headings.forEach(h=>{if(h.offsetTop-120<=window.scrollY)current=h.id});tocLinks.forEach(a=>{a.classList.remove('active');if(a.getAttribute('href')==='#'+current)a.classList.add('active');});});
+function toggleTheme(){const html=document.documentElement;const dark=html.getAttribute('data-theme')==='dark';html.setAttribute('data-theme',dark?'light':'dark');document.getElementById('themeBtn').innerHTML=dark?'&#9790;':'&#9728;';localStorage.setItem('fop-theme',dark?'light':'dark');}
+const saved=localStorage.getItem('fop-theme');
+if(saved){document.documentElement.setAttribute('data-theme',saved);document.getElementById('themeBtn').innerHTML=saved==='dark'?'&#9728;':'&#9790;';}
+function toggleMobileMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
+document.querySelectorAll('.nav-mobile-menu a').forEach(function(link){link.addEventListener('click',function(){document.getElementById('mobileMenu').classList.remove('open');});});
+document.addEventListener('click',function(e){const menu=document.getElementById('mobileMenu');const btn=document.getElementById('hamburgerBtn');if(menu&&btn&&!menu.contains(e.target)&&!btn.contains(e.target)){menu.classList.remove('open');}});
+function copyLink(){navigator.clipboard.writeText(window.location.href).then(()=>{const btn=event.target;btn.textContent='Copied!';setTimeout(()=>btn.textContent='Copy link',2000);});}
+function shareLinkedIn(){window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank');}
+</script>
+</body>
+</html>
