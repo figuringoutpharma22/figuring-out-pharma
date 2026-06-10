@@ -1,5 +1,14 @@
 [
-     {
+{
+  "title": "The Bayer–Monsanto Merger — how a $63 billion agricultural bet destroyed a pharmaceutical legacy",
+  "category": "M&A",
+  "slug": "articles/bayer-monsanto-merger.html",
+  "excerpt": "Bayer went to bed a pharmaceutical company and woke up an agrochemical defendant. The $63 billion Monsanto acquisition starved the pharma pipeline, triggered $17 billion in litigation, and wiped out €35 billion in market value.",
+  "date": "2026-06-10",
+  "readTime": "11 min",
+  "featured": false
+},
+ {
   "title": "The Thalidomide Tragedy — and the untold Indian chapter",
   "category": "Tragedy",
   "slug": "articles/thalidomide-tragedy.html",
@@ -8,7 +17,7 @@
   "readTime": "10 min",
   "featured": false
 },
-    {
+ {
   "title": "Ranbaxy and the FDA — How India's biggest pharma success story collapsed",
   "category": "Regulatory",
   "slug": "articles/ranbaxy-and-the-fda.html",

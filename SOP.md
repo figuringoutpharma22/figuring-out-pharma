@@ -684,12 +684,12 @@ Files to verify in GitHub Desktop:
 
 | Case Study | Status | Slug when published |
 |---|---|---|
-| The Thalidomide Tragedy | Placeholder | thalidomide-tragedy |
-| Ranbaxy and the FDA | Placeholder | ranbaxy-and-the-fda |
+| The Thalidomide Tragedy | Published | thalidomide-tragedy |
+| Ranbaxy and the FDA | Published | ranbaxy-and-the-fda |
 | The Vioxx Withdrawal | Published | vioxx-withdrawal |
 | COVID-19 Vaccine Development | Placeholder | covid-vaccine-development |
 | Lipitor's Patent Cliff | Placeholder | lipitor-patent-cliff |
-| Bayer–Monsanto Merger | Placeholder | bayer-monsanto-merger |
+| Bayer–Monsanto Merger | Published | bayer-monsanto-merger |
 
 Update Status to "Published" and add the actual slug each time one goes live.
 
