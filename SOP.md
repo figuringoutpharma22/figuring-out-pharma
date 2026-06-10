@@ -687,8 +687,8 @@ Files to verify in GitHub Desktop:
 | The Thalidomide Tragedy | Published | thalidomide-tragedy |
 | Ranbaxy and the FDA | Published | ranbaxy-and-the-fda |
 | The Vioxx Withdrawal | Published | vioxx-withdrawal |
-| COVID-19 Vaccine Development | Placeholder | covid-vaccine-development |
-| Lipitor's Patent Cliff | Placeholder | lipitor-patent-cliff |
+| COVID-19 Vaccine Development | Published | covid-vaccine-development |
+| Lipitor's Patent Cliff | Published | lipitor-patent-cliff |
 | Bayer–Monsanto Merger | Published | bayer-monsanto-merger |
 
 Update Status to "Published" and add the actual slug each time one goes live.
