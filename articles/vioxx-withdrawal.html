@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Vioxx Withdrawal — Figuring Out Pharma</title>
+<meta name="description" content="Merck pulled its blockbuster painkiller in 2004 after a placebo-controlled trial proved an undeniable link to heart attacks. The $7 billion fallout permanently changed how drug safety is monitored worldwide.">
+<meta property="og:title" content="The Vioxx Withdrawal">
+<meta property="og:description" content="Merck pulled its blockbuster painkiller in 2004 after a placebo-controlled trial proved an undeniable link to heart attacks. The $7 billion fallout permanently changed how drug safety is monitored worldwide.">
+<meta property="og:url" content="https://figuringoutpharma.com/articles/vioxx-withdrawal.html">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://figuringoutpharma.com/articles/vioxx-withdrawal.html">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --forest:#1a3a2a;--forest2:#234d38;--forest3:#2d6347;--forest4:#3a7a58;
+  --sage:#7aab8e;--sage2:#a8c9b5;
+  --cream:#faf8f2;--cream2:#f3f0e6;--cream3:#e8e3d4;
+  --gold:#c9a84c;--gold2:#e8c96a;
+  --line:#ddd8c8;--line2:#ccc6b4;
+  --text:#1c1a14;--text2:#4a4638;--text3:#8a8474;
+  --card:#ffffff;
+  --serif:'Playfair Display',Georgia,serif;
+  --body:'Source Serif 4',Georgia,serif;
+  --sans:'DM Sans',sans-serif;
+  --max:960px;--prose:680px;
+}
+[data-theme="dark"]{
+  --cream:#0e1a14;--cream2:#132019;--cream3:#1c2e22;
+  --line:#2a3d30;--line2:#3a5044;
+  --text:#e8f0e4;--text2:#9db89a;--text3:#5a7464;
+  --card:#132019;
+}
+html{font-size:16px;scroll-behavior:smooth;background:var(--cream)}
+body{color:var(--text);font-family:var(--body);line-height:1.7;background:var(--cream);transition:background 0.3s,color 0.3s}
+a{text-decoration:none;color:inherit}
+
+/* READING PROGRESS */
+#prog{position:fixed;top:0;left:0;height:2px;background:var(--gold);z-index:9999;width:0%;transition:width 0.1s linear;pointer-events:none}
+
+/* ── NAV ── */
+nav{background:var(--forest);position:sticky;top:0;z-index:300;border-bottom:1px solid rgba(255,255,255,0.06)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:52px;gap:2rem}
+.nav-logo{display:flex;align-items:center;gap:9px;flex-shrink:0}
+.nav-icon{width:24px;height:24px}
+.nav-name{font-family:var(--serif);font-size:0.98rem;font-weight:700;color:#fff;letter-spacing:-0.01em;white-space:nowrap}
+.nav-name em{font-style:italic;font-weight:400;color:var(--sage2)}
+.nav-links{display:flex;gap:0;list-style:none;flex:1;justify-content:center}
+.nav-links a{font-family:var(--sans);font-size:0.7rem;font-weight:400;color:rgba(255,255,255,0.55);padding:6px 13px;transition:color 0.2s;letter-spacing:0.04em;text-transform:uppercase}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.nav-right{display:flex;align-items:center;gap:0.75rem;flex-shrink:0}
+.nav-theme{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);width:30px;height:30px;border-radius:2px;cursor:pointer;font-size:0.82rem;transition:all 0.2s;display:flex;align-items:center;justify-content:center}
+.nav-theme:hover{background:rgba(255,255,255,0.14);color:#fff}
+.nav-sub{background:var(--gold);color:var(--forest);border:none;font-family:var(--sans);font-size:0.68rem;font-weight:600;padding:6px 14px;border-radius:2px;cursor:pointer;letter-spacing:0.05em;text-transform:uppercase;transition:all 0.2s}
+.nav-sub:hover{background:var(--gold2)}
+.nav-hamburger{display:none;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);width:30px;height:30px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:4px;flex-shrink:0;border-radius:2px}
+.nav-hamburger span{display:block;width:14px;height:1.5px;background:currentColor}
+.nav-mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--forest2);border-bottom:1px solid rgba(255,255,255,0.08);z-index:299;padding:0.5rem 0}
+.nav-mobile-menu a{display:block;font-family:var(--sans);font-size:0.82rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.7);padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,0.06)}
+.nav-mobile-menu a:last-child{border-bottom:none}
+
+/* ── CASE STUDY HEADER ── */
+.cs-header{background:var(--forest);padding:3.5rem 2rem 0;border-bottom:none;position:relative;overflow:hidden}
+.cs-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(201,168,76,0.04) 0%,transparent 60%);pointer-events:none}
+.cs-header-inner{max-width:var(--prose);margin:0 auto;position:relative}
+.cs-breadcrumb{font-family:var(--sans);font-size:0.62rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);margin-bottom:1.25rem;display:flex;align-items:center;gap:8px}
+.cs-breadcrumb a{color:var(--sage);transition:color 0.2s}
+.cs-breadcrumb a:hover{color:var(--sage2)}
+.cs-breadcrumb-sep{opacity:0.35}
+.cs-header-tag{display:inline-flex;align-items:center;font-family:var(--sans);font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 10px;border-radius:1px;margin-bottom:1rem}
+.t-red{background:rgba(224,92,74,0.18);color:#e08474}
+.t-amber{background:rgba(201,168,76,0.18);color:var(--gold2)}
+.t-green{background:rgba(122,171,142,0.18);color:var(--sage2)}
+.t-blue{background:rgba(74,138,181,0.18);color:#7ab4d5}
+.t-purple{background:rgba(138,90,181,0.18);color:#b48ad5}
+.t-teal{background:rgba(58,122,88,0.18);color:var(--sage)}
+.cs-title{font-family:var(--serif);font-size:clamp(1.9rem,3.8vw,2.8rem);font-weight:700;color:#fff;line-height:1.15;letter-spacing:-0.025em;margin-bottom:1.1rem}
+.cs-title em{font-style:italic;font-weight:400;color:var(--sage2)}
+.cs-deck{font-family:var(--body);font-size:1.05rem;font-weight:300;color:rgba(255,255,255,0.55);line-height:1.78;font-style:italic;margin-bottom:1.75rem}
+.cs-meta-row{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;padding:1.25rem 0;border-top:1px solid rgba(255,255,255,0.1)}
+.cs-meta-author{font-family:var(--sans);font-size:0.75rem;font-weight:500;color:rgba(255,255,255,0.65)}
+.cs-meta-sep{color:rgba(255,255,255,0.18)}
+.cs-meta-date{font-family:var(--sans);font-size:0.7rem;color:rgba(255,255,255,0.38)}
+.cs-meta-time{font-family:var(--sans);font-size:0.68rem;font-weight:500;background:rgba(201,168,76,0.18);color:var(--gold2);padding:3px 9px;border-radius:1px;letter-spacing:0.04em}
+.cs-year-band{background:rgba(0,0,0,0.25);border-top:1px solid rgba(255,255,255,0.07);padding:0.875rem 0;margin-top:0;display:flex;align-items:center;gap:1.5rem}
+.cs-year-label{font-family:var(--sans);font-size:0.58rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3)}
+.cs-year-value{font-family:var(--serif);font-size:1.05rem;font-style:italic;color:rgba(255,255,255,0.72);letter-spacing:0.02em}
+.cs-year-divider{width:1px;height:20px;background:rgba(255,255,255,0.1)}
+.cs-year-companies{font-family:var(--sans);font-size:0.7rem;color:rgba(255,255,255,0.38);letter-spacing:0.04em}
+
+/* ── COVER IMAGE ── */
+.cover{max-width:var(--prose);margin:0 auto;padding:2.5rem 2rem 0}
+.cover-img{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,var(--forest2),var(--forest3));display:flex;align-items:center;justify-content:center;border:1px solid var(--line);overflow:hidden}
+.cover-caption{font-family:var(--sans);font-size:0.68rem;color:var(--text3);margin-top:0.6rem;font-style:italic;text-align:right}
+
+/* ── LAYOUT ── */
+.cs-layout{max-width:var(--max);margin:0 auto;padding:2.5rem 2rem 4rem;display:grid;grid-template-columns:1fr 220px;gap:4rem;align-items:start}
+.cs-sidebar{display:flex;flex-direction:column;gap:1.25rem}
+
+/* Quick facts */
+.cs-facts{border:1px solid var(--line);background:var(--cream2)}
+.cs-facts-label{font-family:var(--sans);font-size:0.58rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3);padding:0.875rem 1rem 0.625rem;border-bottom:1px solid var(--line)}
+.cs-fact-row{padding:0.625rem 1rem;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:2px}
+.cs-fact-row:last-child{border-bottom:none}
+.cs-fact-key{font-family:var(--sans);font-size:0.58rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text3)}
+.cs-fact-val{font-family:var(--sans);font-size:0.78rem;color:var(--text);font-weight:500;line-height:1.4}
+
+/* TOC */
+.toc{border:1px solid var(--line);padding:1.25rem;background:var(--cream2)}
+.toc-label{font-family:var(--sans);font-size:0.58rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3);margin-bottom:0.875rem;padding-bottom:0.625rem;border-bottom:1px solid var(--line)}
+.toc-list{list-style:none;display:flex;flex-direction:column;gap:2px}
+.toc-list a{font-family:var(--sans);font-size:0.76rem;font-weight:400;color:var(--text2);padding:4px 8px;display:block;border-left:2px solid transparent;transition:all 0.2s;line-height:1.4}
+.toc-list a:hover,.toc-list a.active{color:var(--forest3);border-left-color:var(--forest3);background:var(--cream)}
+.toc-share{margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--line)}
+.toc-share-label{font-family:var(--sans);font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:0.625rem}
+.share-btn{display:block;width:100%;font-family:var(--sans);font-size:0.72rem;font-weight:500;color:var(--text2);background:var(--cream);border:1px solid var(--line);padding:7px 12px;margin-bottom:6px;cursor:pointer;text-align:left;transition:all 0.2s;letter-spacing:0.02em}
+.share-btn:hover{background:var(--forest);color:#fff;border-color:var(--forest)}
+
+/* ── PROSE ── */
+.prose{max-width:var(--prose);font-family:var(--body);font-size:1.05rem;line-height:1.82;color:var(--text2)}
+.prose h2{font-family:var(--serif);font-size:1.45rem;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-0.02em;margin:2.5rem 0 1rem;padding-top:0.5rem}
+.prose h3{font-family:var(--serif);font-size:1.12rem;font-weight:700;color:var(--text);line-height:1.3;margin:2rem 0 0.75rem;font-style:italic}
+.prose p{margin-bottom:1.4rem;font-weight:300}
+.prose p:last-child{margin-bottom:0}
+.prose strong{color:var(--text);font-weight:500;font-style:normal}
+.prose em{font-style:italic}
+.prose a{color:var(--forest3);text-decoration:underline;text-decoration-color:var(--sage2);text-underline-offset:3px;transition:color 0.2s}
+.prose a:hover{color:var(--forest)}
+.prose ul,.prose ol{padding-left:1.5rem;margin-bottom:1.4rem}
+.prose li{margin-bottom:0.4rem;font-weight:300}
+.prose blockquote{border-left:3px solid var(--gold);padding:0.875rem 1.25rem;margin:2rem 0;background:var(--cream2);font-style:italic;color:var(--text2)}
+.prose blockquote p{margin-bottom:0;font-size:1rem}
+.prose hr{border:none;border-top:1px solid var(--line);margin:2.5rem 0}
+.prose .callout{background:var(--cream2);border:1px solid var(--line);border-left:3px solid var(--forest3);padding:1.25rem 1.5rem;margin:2rem 0}
+.prose .callout-label{font-family:var(--sans);font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--forest3);margin-bottom:0.5rem}
+.prose .callout p{margin-bottom:0;font-size:0.92rem}
+
+/* ── TIMELINE ── */
+.timeline{margin:2.5rem 0;position:relative}
+.timeline-label{font-family:var(--sans);font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3);margin-bottom:1.25rem;display:flex;align-items:center;gap:10px}
+.timeline-label::after{content:'';flex:1;height:1px;background:var(--line)}
+.timeline-item{display:grid;grid-template-columns:80px 1fr;gap:0;margin-bottom:0;position:relative}
+.timeline-item::before{content:'';position:absolute;left:79px;top:8px;bottom:-1px;width:1px;background:var(--line)}
+.timeline-item:last-child::before{display:none}
+.timeline-year{font-family:var(--sans);font-size:0.7rem;font-weight:600;color:var(--text3);padding:0.5rem 1rem 0.5rem 0;letter-spacing:0.04em;line-height:1.6}
+.timeline-content{padding:0.5rem 0 1.25rem 1.25rem;border-left:1px solid var(--line);position:relative}
+.timeline-content::before{content:'';position:absolute;left:-4px;top:10px;width:7px;height:7px;border-radius:50%;background:var(--forest3);border:1px solid var(--cream)}
+.timeline-event{font-family:var(--sans);font-size:0.78rem;font-weight:600;color:var(--text);margin-bottom:0.2rem}
+.timeline-detail{font-family:var(--body);font-size:0.82rem;font-weight:300;color:var(--text2);font-style:italic;line-height:1.6}
+
+/* ── VERDICT BOX ── */
+.verdict{background:var(--forest);border:none;padding:1.75rem 1.75rem;margin:2.5rem 0;position:relative;overflow:hidden}
+.verdict::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold)}
+.verdict-label{font-family:var(--sans);font-size:0.6rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage);margin-bottom:0.75rem;display:flex;align-items:center;gap:8px}
+.verdict-label::before{content:'';width:18px;height:1px;background:var(--sage)}
+.verdict-text{font-family:var(--body);font-size:1rem;font-weight:300;color:rgba(255,255,255,0.72);line-height:1.82;font-style:italic}
+.verdict-text strong{color:#fff;font-weight:500;font-style:normal}
+
+/* ── TAGS ── */
+.art-foot{max-width:var(--prose);margin:0 auto;padding:2.5rem 2rem 0;border-top:1px solid var(--line)}
+.tags-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:2rem}
+.tag-pill{font-family:var(--sans);font-size:0.65rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:4px 12px;border:1px solid var(--line);color:var(--text3);transition:all 0.2s;cursor:pointer}
+.tag-pill:hover{background:var(--forest);color:#fff;border-color:var(--forest)}
+
+/* ── RELATED ── */
+.related{background:var(--cream2);border-top:1px solid var(--line);padding:3.5rem 2rem}
+.related-inner{max-width:var(--max);margin:0 auto}
+.related-head{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:1.75rem;padding-bottom:0.75rem;border-bottom:2px solid var(--text);letter-spacing:-0.01em}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
+.rel-card{padding:1.5rem;border-right:1px solid var(--line);cursor:pointer;transition:background 0.2s}
+.rel-card:last-child{border-right:none}
+.rel-card:hover{background:var(--cream)}
+.rel-card:hover .rel-title{color:var(--forest3)}
+.rel-cat{font-family:var(--sans);font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--forest3);margin-bottom:0.5rem}
+.rel-title{font-family:var(--serif);font-size:0.95rem;font-weight:700;color:var(--text);line-height:1.35;margin-bottom:0.5rem;transition:color 0.15s;letter-spacing:-0.01em}
+.rel-time{font-family:var(--sans);font-size:0.62rem;color:var(--text3)}
+
+/* ── FOOTER ── */
+footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);padding:1.25rem 2rem}
+.foot-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.foot-logo{display:flex;align-items:center;gap:8px}
+.foot-logo svg{width:20px;height:20px}
+.foot-logo-name{font-family:var(--serif);font-size:0.85rem;font-weight:700;color:rgba(255,255,255,0.65)}
+.foot-logo-name em{font-style:italic;font-weight:400;color:var(--sage)}
+.foot-links{display:flex;gap:1.5rem}
+.foot-links a{font-family:var(--sans);font-size:0.62rem;letter-spacing:0.05em;text-transform:uppercase;color:rgba(255,255,255,0.28);transition:color 0.2s}
+.foot-links a:hover{color:var(--sage2)}
+.foot-copy{font-family:var(--sans);font-size:0.6rem;color:rgba(255,255,255,0.2)}
+
+/* ── MOBILE ── */
+@media(max-width:768px){
+  .nav-links{display:none}.nav-inner{padding:0 1.25rem}.nav-hamburger{display:flex}
+  .nav-mobile-menu.open{display:block}
+  .cs-header{padding:2.5rem 1.25rem 0}
+  .cs-year-band{gap:1rem}
+  .cover{padding:1.5rem 1.25rem 0}
+  .cs-layout{grid-template-columns:1fr;padding:2rem 1.25rem 3rem;gap:0}
+  .cs-sidebar{order:-1;margin-bottom:2rem}
+  .toc{display:none}
+  .art-foot{padding:2rem 1.25rem 0}
+  .related{padding:2.5rem 1.25rem}
+  .related-grid{grid-template-columns:1fr}
+  .rel-card{border-right:none;border-bottom:1px solid var(--line)}
+  .rel-card:last-child{border-bottom:none}
+  .foot-inner{flex-direction:column;gap:1rem;align-items:flex-start}
+  footer{padding:1.25rem}
+}
+@media(max-width:480px){
+  .nav-inner{height:50px;padding:0 1rem}.nav-name{font-size:0.88rem}
+  .cs-title{font-size:1.75rem!important}
+  .cs-deck{font-size:0.92rem}
+  .cs-year-band{flex-wrap:wrap;gap:0.75rem}
+  .cs-year-divider{display:none}
+  .timeline-item{grid-template-columns:60px 1fr}
+  .prose{font-size:0.98rem}
+  .prose h2{font-size:1.25rem}
+  .foot-links{flex-wrap:wrap;gap:0.75rem}
+  footer{padding:1rem}
+}
+</style>
+</head>
+<body>
+
+<div id="prog"></div>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="../index.html">
+      <svg class="nav-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="30" fill="#2d6347"/>
+        <circle cx="32" cy="32" r="22" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+        <rect x="29" y="14" width="6" height="36" rx="2" fill="#c9a84c"/>
+        <rect x="14" y="29" width="36" height="6" rx="2" fill="#c9a84c"/>
+        <circle cx="32" cy="32" r="4" fill="#ffffff" opacity="0.85"/>
+        <circle cx="32" cy="32" r="2" fill="#c9a84c"/>
+      </svg>
+      <span class="nav-name">Figuring Out <em>Pharma</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../blogs.html">Blogs</a></li>
+      <li><a href="../case-studies.html" class="active">Case Studies</a></li>
+      <li><a href="../categories.html">Categories</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="nav-theme" onclick="toggleTheme()" id="themeBtn">&#9790;</button>
+      <a href="https://figuring-outs-newsletter.beehiiv.com/subscribe" target="_blank"><button class="nav-sub">Subscribe</button></a>
+      <button class="nav-hamburger" onclick="toggleMobileMenu()" id="hamburgerBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile-menu" id="mobileMenu">
+    <a href="../index.html">Home</a>
+    <a href="../blogs.html">Blogs</a>
+    <a href="../case-studies.html">Case Studies</a>
+    <a href="../categories.html">Categories</a>
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="cs-header">
+  <div class="cs-header-inner">
+
+    <div class="cs-breadcrumb">
+      <a href="../case-studies.html">Case Studies</a>
+      <span class="cs-breadcrumb-sep">/</span>
+      <a href="../case-studies.html">Withdrawal</a>
+    </div>
+
+    <div class="cs-header-tag t-teal">Withdrawal</div>
+
+    <h1 class="cs-title">
+      The Vioxx Withdrawal — <em>blockbuster economics, selective science, and the fall of a $20 billion drug</em>
+    </h1>
+
+    <p class="cs-deck">
+      Merck's painkiller Vioxx had been prescribed to over 80 million patients worldwide before a placebo-controlled trial made denial impossible. On September 30, 2004, it was pulled from every global market in a single day. The $7 billion fallout permanently changed how drug safety is monitored — and what companies are allowed to hide.
+    </p>
+
+    <div class="cs-meta-row">
+      <span class="cs-meta-author">Figuring Out Pharma</span>
+      <span class="cs-meta-sep">·</span>
+      <span class="cs-meta-date">June 2026</span>
+      <span class="cs-meta-sep">·</span>
+      <span class="cs-meta-time">10 min read</span>
+    </div>
+
+  </div>
+
+
+</header>
+
+<div class="cover">
+  <div class="cover-img">
+    <img src="../images/vioxx-withdrawal-cover.jpg" alt="The Vioxx Withdrawal — Merck's blockbuster drug pulled from global markets" style="width:100%;height:100%;object-fit:contain;background:#fff;">
+  </div>
+  <p class="cover-caption">Illustration via Canva AI</p>
+</div>
+
+<div class="cs-layout">
+
+  <article class="prose">
+
+    <p>
+      On September 30, 2004, Merck &amp; Co. did something no pharmaceutical company had done at that scale before: it pulled a drug from every market in the world simultaneously. No phased withdrawal, no regional recall, no warning label compromise. A drug being taken by tens of millions of patients globally was simply gone by end of day.
+    </p>
+
+    <p>
+      That drug was Vioxx — rofecoxib — a painkiller that had become one of the best-selling pharmaceuticals in history. It had 80 million lifetime prescriptions, billions in annual revenue, and a marketing apparatus that spanned doctor's offices and television screens. And it had a cardiovascular safety problem that the company had known about for four years.
+    </p>
+
+    <div class="timeline">
+      <div class="timeline-label">How it unfolded</div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">1999</div>
+        <div class="timeline-content">
+          <div class="timeline-event">Vioxx approved and launched globally</div>
+          <div class="timeline-detail">The FDA approves rofecoxib as a selective COX-2 inhibitor offering pain relief without the gastrointestinal damage of traditional NSAIDs. Merck launches aggressively — consumer advertising, large field force, DTC campaigns.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2000</div>
+        <div class="timeline-content">
+          <div class="timeline-event">VIGOR trial reveals a four-fold cardiovascular risk</div>
+          <div class="timeline-detail">The VIGOR trial comparing high-dose Vioxx against naproxen confirms excellent gastric results — but also records four times the rate of serious heart attacks in the Vioxx group. Merck advances the Naproxen Hypothesis to explain the gap away.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2001–2003</div>
+        <div class="timeline-content">
+          <div class="timeline-event">Commercial machinery manages the science</div>
+          <div class="timeline-detail">Medical reps are given internal scripts to deflect cardiovascular questions. Ghostwritten journals favourable to Vioxx are distributed under the appearance of independent peer review. Prescriptions continue climbing.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">Sept 2004</div>
+        <div class="timeline-content">
+          <div class="timeline-event">APPROVe trial delivers an undeniable verdict</div>
+          <div class="timeline-detail">The independent Data Safety Monitoring Board for the APPROVe trial alerts Merck: patients on continuous Vioxx therapy show double the cardiovascular risk versus placebo. There is no comparator drug to blame. The Naproxen Hypothesis is finished.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">30 Sept 2004</div>
+        <div class="timeline-content">
+          <div class="timeline-event">Largest voluntary drug withdrawal in history</div>
+          <div class="timeline-detail">Merck pulls Vioxx from all global markets in a single day. Over 105,000 personal injury claimants eventually file suit. Total settlements and legal costs cross $7 billion.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 id="the-problem-vioxx-solved">The problem Vioxx was genuinely solving</h2>
+
+    <p>
+      To understand how Vioxx became what it became, you have to start with the real clinical problem it addressed — because the science was legitimate before the commercial management went wrong.
+    </p>
+
+    <p>
+      Traditional anti-inflammatory drugs — aspirin, ibuprofen, naproxen — work by blocking two enzymes: COX-1 and COX-2. COX-2 drives inflammation and pain. COX-1 protects the stomach lining. Traditional NSAIDs block both, which means long-term use causes serious gastrointestinal damage — ulcers, perforations, internal bleeding. For patients with chronic arthritis taking high doses over years, this was a genuine and serious problem.
+    </p>
+
+    <p>
+      COX-2 inhibitors were engineered to target only the inflammatory enzyme, leaving COX-1 intact. The result was the same pain relief without the stomach damage. This was a real clinical advance for a real patient need, and when Vioxx launched in 1999 it rapidly became one of the most prescribed drugs in the world — expanding the anti-arthritic market to an estimated $20 billion annually.
+    </p>
+
+    <h2 id="vigor-and-the-first-signal">The VIGOR trial and the first red flag</h2>
+
+    <p>
+      The safety problem emerged in 2000 during a large clinical trial called VIGOR — Vioxx Gastrointestinal Outcomes Research. The trial enrolled approximately 8,000 rheumatoid arthritis patients and compared high-dose Vioxx against naproxen to test gastric safety directly.
+    </p>
+
+    <p>
+      The gastric results were excellent. Vioxx showed a 50% reduction in serious gastrointestinal events compared to naproxen. That was the headline Merck wanted.
+    </p>
+
+    <p>
+      But the same data recorded something else. Patients taking Vioxx experienced <strong>four times the rate of serious cardiovascular events</strong> — primarily heart attacks — compared to the naproxen group. Four times. That is not a marginal signal.
+    </p>
+
+    <blockquote>
+      <p>The cardiovascular gap was real. What followed was not a genuine scientific debate — it was a corporate strategy to make a real signal look like a statistical artefact.</p>
+    </blockquote>
+
+    <p>
+      Merck's response was the Naproxen Hypothesis. The company argued that the gap was not caused by Vioxx increasing heart attack risk — it was caused by naproxen reducing it. Naproxen, they claimed, had aspirin-like cardioprotective properties that artificially lowered the heart attack count in the control group. Vioxx was not dangerous. The comparison drug was simply unusually protective.
+    </p>
+
+    <p>
+      It was a plausible story. It was also convenient. The VIGOR trial had excluded patients with known cardiovascular risk and those already on aspirin, making the comparison harder to interrogate from the outside. Merck advanced the hypothesis publicly and continued marketing Vioxx aggressively.
+    </p>
+
+    <h2 id="how-the-science-was-managed">How the science got managed</h2>
+
+    <p>
+      What emerged during subsequent litigation — particularly the landmark Australian class action Peterson v Merck Sharpe &amp; Dohme (2010) — showed that the cardiovascular question was not being debated in good faith. It was being actively managed through the commercial apparatus.
+    </p>
+
+    <p>
+      Medical representatives were given internal training scripts specifically designed to deflect questions about cardiovascular risk. If a doctor raised the VIGOR data or asked directly about heart attack risk, the rep was instructed to pivot back to gastric protection and advance the unvalidated naproxen hypothesis. This was not a guideline — it was a formal training module referred to internally as a "dodge script."
+    </p>
+
+    <div class="callout">
+      <div class="callout-label">What the litigation revealed</div>
+      <p>Documents showed that the corporate marketing apparatus collaborated with medical publishers to produce what looked like independent peer-reviewed journals — but were entirely funded by Merck and filled with ghostwritten articles favourable to Vioxx's clinical profile. The Australasian Journal of Bone and Joint Medicine appeared to be a legitimate scientific publication. It was not.</p>
+    </div>
+
+    <p>
+      These are not interpretations or allegations. They were findings of fact in court proceedings. The systemic nature of the information management — scripts for reps, fake journals for doctors, the Naproxen Hypothesis for the public record — is what made the Vioxx case so consequential for the industry's regulatory framework.
+    </p>
+
+    <h2 id="approve-and-the-end">APPROVe: the trial that made denial impossible</h2>
+
+    <p>
+      The data that finally ended Vioxx came from a completely different study. APPROVe — Adenomatous Polyp Prevention on Vioxx — was evaluating whether low-dose Vioxx (25mg daily) could prevent the recurrence of colorectal polyps. Cardiovascular risk was not the primary focus.
+    </p>
+
+    <p>
+      But the APPROVe trial had a design feature the VIGOR trial lacked: it was <strong>placebo-controlled</strong>. There was no naproxen in the comparison group. There was no alternative explanation available.
+    </p>
+
+    <p>
+      On September 24, 2004, the independent Data Safety Monitoring Board overseeing APPROVe sent an urgent alert to Merck. The data showed a statistically significant <strong>doubling of cardiovascular risk</strong> among patients on continuous Vioxx therapy compared to placebo. The risk became pronounced after 18 months of continuous use.
+    </p>
+
+    <p>
+      The Naproxen Hypothesis was obsolete. No comparator drug to blame. The data was clean, placebo-controlled, and unambiguous. Six days later, Merck executed the largest voluntary drug withdrawal in medical history.
+    </p>
+
+    <h2 id="financial-fallout">The financial fallout</h2>
+
+    <p>
+      More than 105,000 personal injury claimants pursued litigation in the United States. The multi-district settlement reached $4.85 billion. The Australian Federal Court awarded A$300,000 in the Peterson case, where the commercial manipulation of scientific communication was most thoroughly documented. Total global compensation and legal costs crossed $7 billion.
+    </p>
+
+    <p>
+      Beyond the litigation, the sudden removal of a drug that millions of chronic pain patients depended on forced a massive reshaping of prescribing patterns. Many patients shifted to celecoxib, the remaining COX-2 inhibitor, which itself came under intensified cardiovascular scrutiny. Many others returned to traditional NSAIDs, but now required proton-pump inhibitors alongside them to manage the gastric risk that Vioxx had originally solved. The problem Vioxx addressed did not disappear when Vioxx did.
+    </p>
+
+    <h2 id="what-changed-after">What changed permanently after Vioxx</h2>
+
+    <p>
+      The regulatory transformation that followed is the part of this case study that matters most for anyone studying the pharmaceutical industry today.
+    </p>
+
+    <p>
+      Before Vioxx, post-market drug safety monitoring was largely passive. Regulators waited for doctors to voluntarily report adverse events. The system depended on a general practitioner noticing a pattern across their patient caseload and filing a report. For a drug being taken by tens of millions of people, that is a slow, unreliable detection mechanism.
+    </p>
+
+    <p>
+      After Vioxx, the FDA built the <strong>Sentinel Initiative</strong> — an active, automated surveillance network that continuously mines electronic health records and insurance claims data across millions of patients in real time. It does not wait for doctors to notice something. It looks for signals automatically, at scale, before the pattern becomes a tragedy.
+    </p>
+
+    <p>
+      The second major change was <strong>mandatory clinical trial registration</strong>. Before Vioxx, a pharmaceutical company could design a trial, run it, find results it did not like, and simply not publish them. Trials with positive results got published. Trials with unfavourable results quietly disappeared. Regulators and doctors only saw the evidence companies chose to share.
+    </p>
+
+    <p>
+      After Vioxx, international law now requires all clinical trials to register their protocols, endpoints, and design on public registries — such as ClinicalTrials.gov and the WHO International Clinical Trials Registry Platform — before the trial begins. If a registered trial never publishes results, that absence is itself visible. Suppressing unfavourable data is no longer invisible.
+    </p>
+
+    <div class="verdict">
+      <div class="verdict-label">The verdict</div>
+      <p class="verdict-text">
+        Vioxx did not fail because the science was bad. It failed because the commercial machinery built to protect a blockbuster asset was allowed to override the scientific signals that existed from 2000 onward. <strong>The four-year gap between the first red flag and the withdrawal is not a regulatory failure — it is a documentation of exactly how much a passive system can miss when a motivated actor is actively managing the information.</strong> The rules that exist today — active surveillance, mandatory trial registration, strict restrictions on ghostwriting — are not abstract regulatory principles. They are the direct consequence of this case.
+      </p>
+    </div>
+
+    <h2 id="what-this-means">What this means for you</h2>
+
+    <p>
+      If you are heading into pharma — whether in marketing, regulatory affairs, medical affairs, or commercial roles — the Vioxx case is worth understanding beyond its headline number.
+    </p>
+
+    <p>
+      The science was not suppressed all at once. It was managed incrementally — a hypothesis here, a training script there, a friendly journal article — until the accumulation became undeniable. Each individual decision might have seemed defensible in isolation. The pattern was not.
+    </p>
+
+    <p>
+      The withdrawal also happened not because the system caught the signal, but because a placebo-controlled trial made denial impossible. The regulatory system that was supposed to catch a signal this significant — voluntary adverse event reporting — failed to do so for four years while millions of patients continued taking a drug that was doubling their cardiovascular risk.
+    </p>
+
+    <p>
+      Understanding this case prepares you for a question you will encounter in almost any pharma role: when does protecting a commercial asset cross the line into something else? The Vioxx case is the clearest documented answer to that question in modern pharmaceutical history.
+    </p>
+
+    <hr>
+
+    <p>
+      <em>The next case study in this series covers Ranbaxy and the FDA — a different kind of pharmaceutical scandal, where the manipulation was not in clinical data but in manufacturing records, and where the consequences were felt across the entire Indian generics industry.</em>
+    </p>
+
+  </article>
+
+  <aside class="cs-sidebar">
+
+    <div class="cs-facts">
+      <div class="cs-facts-label">Case at a glance</div>
+      <div class="cs-fact-row">
+        <div class="cs-fact-key">Drug / Product</div>
+        <div class="cs-fact-val">Rofecoxib (Vioxx)</div>
+      </div>
+      <div class="cs-fact-row">
+        <div class="cs-fact-key">Company</div>
+        <div class="cs-fact-val">Merck &amp; Co.</div>
+      </div>
+      <div class="cs-fact-row">
+        <div class="cs-fact-key">Drug Category</div>
+        <div class="cs-fact-val">COX-2 Inhibitor / Prescription NSAID</div>
+      </div>
+      <div class="cs-fact-row">
+        <div class="cs-fact-key">Approved</div>
+        <div class="cs-fact-val">1999 (FDA)</div>
+      </div>
+      <div class="cs-fact-row">
+        <div class="cs-fact-key">Withdrawn</div>
+        <div class="cs-fact-val">30 September 2004 — all global markets</div>
+      </div>
+      <div class="cs-fact-row">
+        <div class="cs-fact-key">What went wrong</div>
+        <div class="cs-fact-val">Doubled cardiovascular risk confirmed by placebo-controlled APPROVe trial after 4 years of known but managed VIGOR signal</div>
+      </div>
+      <div class="cs-fact-row">
+        <div class="cs-fact-key">Financial outcome</div>
+        <div class="cs-fact-val">$4.85B US settlement · A$300K Australian award · &gt;$7B total costs</div>
+      </div>
+      <div class="cs-fact-row">
+        <div class="cs-fact-key">Industry impact</div>
+        <div class="cs-fact-val">FDA Sentinel Initiative built; mandatory clinical trial registration introduced globally</div>
+      </div>
+    </div>
+
+    <div class="toc">
+      <div class="toc-label">In this case study</div>
+      <ul class="toc-list">
+        <li><a href="#the-problem-vioxx-solved">The problem Vioxx solved</a></li>
+        <li><a href="#vigor-and-the-first-signal">VIGOR — the first signal</a></li>
+        <li><a href="#how-the-science-was-managed">How the science was managed</a></li>
+        <li><a href="#approve-and-the-end">APPROVe — denial impossible</a></li>
+        <li><a href="#financial-fallout">Financial fallout</a></li>
+        <li><a href="#what-changed-after">What changed permanently</a></li>
+        <li><a href="#what-this-means">What this means for you</a></li>
+      </ul>
+      <div class="toc-share">
+        <div class="toc-share-label">Share</div>
+        <button class="share-btn" onclick="copyLink()">Copy link</button>
+        <button class="share-btn" onclick="shareLinkedIn()">LinkedIn</button>
+      </div>
+    </div>
+
+  </aside>
+
+</div>
+
+<div class="art-foot">
+  <div class="tags-row">
+    <span class="tag-pill">Withdrawal</span>
+    <span class="tag-pill">Pharmacovigilance</span>
+    <span class="tag-pill">Drug Safety</span>
+    <span class="tag-pill">Merck</span>
+    <span class="tag-pill">COX-2 Inhibitor</span>
+    <span class="tag-pill">Case Study</span>
+    <span class="tag-pill">B.Pharma</span>
+  </div>
+</div>
+
+<section class="related">
+  <div class="related-inner">
+    <div class="related-head">Related Articles</div>
+    <div class="related-grid">
+      <div class="rel-card" onclick="window.location='how-drugs-are-priced-in-india.html'">
+        <div class="rel-cat">Industry</div>
+        <div class="rel-title">How drugs are priced in India — the real explanation</div>
+        <div class="rel-time">5 min read</div>
+      </div>
+      <div class="rel-card" onclick="window.location='fmcg-vs-pharma-marketing.html'">
+        <div class="rel-cat">Marketing</div>
+        <div class="rel-title">FMCG vs pharma marketing — explained from scratch, no assumptions</div>
+        <div class="rel-time">11 min read</div>
+      </div>
+      <div class="rel-card" onclick="window.location='schedule-m-regulatory-shift-explained.html'">
+        <div class="rel-cat">Regulatory</div>
+        <div class="rel-title">Schedule M explained — the biggest regulatory shift in Indian pharma in decades</div>
+        <div class="rel-time">7 min read</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-logo">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="30" fill="#2d6347"/>
+        <rect x="29" y="14" width="6" height="36" rx="2" fill="#c9a84c"/>
+        <rect x="14" y="29" width="36" height="6" rx="2" fill="#c9a84c"/>
+        <circle cx="32" cy="32" r="3" fill="#fff" opacity="0.85"/>
+      </svg>
+      <span class="foot-logo-name">Figuring Out <em>Pharma</em></span>
+    </div>
+    <div class="foot-links">
+      <a href="../index.html">Home</a>
+      <a href="../blogs.html">Blogs</a>
+      <a href="../case-studies.html">Case Studies</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+    <div class="foot-copy">&#169; 2026 Figuring Out Pharma</div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{const h=document.documentElement;const pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;document.getElementById('prog').style.width=pct+'%';});
+const headings=document.querySelectorAll('.prose h2');
+const tocLinks=document.querySelectorAll('.toc-list a');
+window.addEventListener('scroll',()=>{let current='';headings.forEach(h=>{if(h.offsetTop-120<=window.scrollY)current=h.id});tocLinks.forEach(a=>{a.classList.remove('active');if(a.getAttribute('href')==='#'+current)a.classList.add('active');});});
+function toggleTheme(){const html=document.documentElement;const dark=html.getAttribute('data-theme')==='dark';html.setAttribute('data-theme',dark?'light':'dark');document.getElementById('themeBtn').innerHTML=dark?'&#9790;':'&#9728;';localStorage.setItem('fop-theme',dark?'light':'dark');}
+const saved=localStorage.getItem('fop-theme');
+if(saved){document.documentElement.setAttribute('data-theme',saved);document.getElementById('themeBtn').innerHTML=saved==='dark'?'&#9728;':'&#9790;';}
+function toggleMobileMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
+document.querySelectorAll('.nav-mobile-menu a').forEach(function(link){link.addEventListener('click',function(){document.getElementById('mobileMenu').classList.remove('open');});});
+document.addEventListener('click',function(e){const menu=document.getElementById('mobileMenu');const btn=document.getElementById('hamburgerBtn');if(menu&&btn&&!menu.contains(e.target)&&!btn.contains(e.target)){menu.classList.remove('open');}});
+function copyLink(){navigator.clipboard.writeText(window.location.href).then(()=>{const btn=event.target;btn.textContent='Copied!';setTimeout(()=>btn.textContent='Copy link',2000);});}
+function shareLinkedIn(){window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank');}
+</script>
+</body>
+</html>

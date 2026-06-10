@@ -37,7 +37,13 @@ IMAGE FILE:   e.g. crocin-household-brand-cover.jpg
 
 ## Step 1 — Generate the Cover Image
 
-Use this prompt in **Canva AI** (Text to Image). Copy it exactly and replace the bracketed parts.
+### Preferred tools (in order):
+
+1. **Ideogram.ai** — best results for flat editorial illustration style. Free tier, no watermark.
+2. **Microsoft Designer** (designer.microsoft.com) — completely free, sign in with any Microsoft account. Outputs PNG — convert to JPG after downloading.
+3. **Adobe Firefly** (firefly.adobe.com) — free tier with Adobe account.
+
+Canva AI is no longer the primary tool as free limits run out quickly.
 
 ### Standard Cover Image Prompt
 
@@ -49,7 +55,9 @@ Clean geometric shapes. Think editorial magazine illustration.
 ```
 
 ### Rules for every cover image:
-- Canvas size: **1200 × 675px** (16:9)
+- Canvas size: **1200 × 675px** (16:9) — if the tool outputs a different size, crop or resize before saving
+- If the output is PNG, convert to JPG before saving
+- If the output is not exactly 16:9, use Paint (Windows) or Preview (Mac) to crop — centring on the illustration. The `object-fit:contain` tag on the site means a slightly different ratio will still display correctly with cream letterboxing, so this is not critical.
 - Style: flat line illustration, forest green on cream/white
 - No text in the image
 - No photorealistic elements
@@ -65,9 +73,31 @@ Clean geometric shapes. Think editorial magazine illustration.
 **FMCG vs Pharma article:**
 > Flat line illustration. Two shelves side by side — one with consumer packaged goods, one with medicine boxes. Forest green lines on white background. Editorial magazine style. No text. No shadows.
 
+**Online pharmacies article:**
+> Flat line illustration. A smartphone showing a medicine delivery app on one side, a traditional pharmacy storefront on the other, connected by a simple dotted delivery route. Forest green lines on a cream background. Minimal, editorial magazine style. No text. No gradients. No shadows.
+
 ---
 
-## Step 2 — Create the Article HTML File
+## Step 2 — Write and Create the Article HTML File
+
+### 2A — Write the article first (if working from research/PDF)
+
+If the article is being written from a research document or PDF rather than a pre-written draft:
+
+1. **Show the written article to Piyush before building any HTML.** Claude reads the source material, writes the full article body in the site's voice, and shares it as plain text first.
+2. Wait for approval or edits before proceeding to HTML.
+
+**The site's voice — non-negotiable:**
+- Written like a smart fresher explaining things to another fresher, not an academic or consultant
+- Short paragraphs. Plain language. No jargon unless it is explained immediately after.
+- Opens by calling out the gap between what textbooks say and what actually happens
+- Each section builds on the last — not a list of disconnected facts
+- Closes by connecting the topic to what it means for a pharma career
+- Tone reference: read the opening three paragraphs of `how-drugs-are-priced-in-india.html` before writing anything
+
+**Length:** Target 9 minutes read time (~1800 words of body copy). Use the research to choose the most interesting parts — do not try to include everything.
+
+### 2B — Create the HTML file
 
 1. Open VS Code
 2. Open `articles/article-template.html`
@@ -230,19 +260,108 @@ The Featured section has one **main card (Editor's Pick)** and **two side cards*
 
 ### 5B — Latest Section
 
-The Latest section shows 3 article cards. Shift cards down by one and add the new article as card 1:
+The Latest section shows exactly 3 article cards, newest first. Every time a new article is published, the rotation is done with **two separate Ctrl+H operations** — one to insert the new article at card 1, one to delete card 3.
 
+**Rotation logic:**
+- New article → card 1
+- Previous card 1 → card 2
+- Previous card 2 → card 3
+- Previous card 3 → deleted from Latest, moves to Also Reading (see 5D)
+
+**Operation 1 — Insert new article at card 1.**
+Find the opening line of the current card 1 and replace it with the new article card + the current card 1 opening line below it:
+
+Find:
 ```html
-<!-- Card 1 — NEW ARTICLE -->
-<div class="art-card" onclick="window.location='articles/[SLUG].html'">
-  <div class="art-cat">[CATEGORY]</div>
-  <div class="art-title">[TITLE]</div>
-  <p class="art-excerpt" style="font-family:var(--body);font-size:0.83rem;font-weight:300;color:var(--text2);line-height:1.72;font-style:italic;margin-bottom:0.75rem;margin-top:0.5rem">[EXCERPT]</p>
-  <div class="art-meta"><span class="art-min">[READ TIME]</span></div>
-</div>
+<div class="art-card" onclick="window.location='articles/[CURRENT CARD 1 SLUG].html'">
 ```
 
-Remove the oldest card (card 3) to keep it at 3 total. That article is still accessible via blogs.html.
+Replace with:
+```html
+<div class="art-card" onclick="window.location='articles/[NEW SLUG].html'">
+        <div class="art-cat">[CATEGORY]</div>
+        <div class="art-title">[TITLE]</div>
+        <p class="art-excerpt" style="font-family:var(--body);font-size:0.83rem;font-weight:300;color:var(--text2);line-height:1.72;font-style:italic;margin-bottom:0.75rem;margin-top:0.5rem">[EXCERPT]</p>
+        <div class="art-meta"><span class="art-min">[READ TIME]</span></div>
+      </div>
+      <div class="art-card" onclick="window.location='articles/[CURRENT CARD 1 SLUG].html'">
+```
+
+**Operation 2 — Delete card 3.**
+Find the entire card 3 block and replace with nothing (leave the Replace field empty):
+
+Find:
+```html
+<div class="art-card" onclick="window.location='articles/[CURRENT CARD 3 SLUG].html'">
+        <div class="art-cat">[CARD 3 CATEGORY]</div>
+        <div class="art-title">[CARD 3 TITLE]</div>
+        <p class="art-excerpt" style="font-family:var(--body);font-size:0.83rem;font-weight:300;color:var(--text2);line-height:1.72;font-style:italic;margin-bottom:0.75rem;margin-top:0.5rem">[CARD 3 EXCERPT]</p>
+        <div class="art-meta"><span class="art-min">[CARD 3 READ TIME]</span></div>
+      </div>
+```
+
+Replace with: *(nothing — empty field)*
+
+### 5D — Also Reading Section (Hero sidebar)
+
+The Also Reading section always has exactly 3 items. Every time a new article is published, the rotation is done with **two separate Ctrl+H operations** — one to insert the dropped article at position 01, one to delete position 03.
+
+**Rotation logic:**
+- Article removed from Latest card 3 → position 01
+- Previous position 01 → position 02
+- Previous position 02 → position 03
+- Previous position 03 → deleted from Also Reading entirely
+
+**Operation 1 — Insert dropped article at position 01.**
+Find the opening line of the current position 01 and replace with the new item + current 01 below it:
+
+Find:
+```html
+<div class="hs-item" onclick="window.location='articles/[CURRENT 01 SLUG].html'">
+        <div class="hs-num">01</div>
+```
+
+Replace with:
+```html
+<div class="hs-item" onclick="window.location='articles/[DROPPED FROM LATEST SLUG].html'">
+        <div class="hs-num">01</div>
+        <div class="hs-cat">[CATEGORY]</div>
+        <div class="hs-title">[TITLE]</div>
+        <div class="hs-time">[READ TIME] read</div>
+      </div>
+      <div class="hs-item" onclick="window.location='articles/[CURRENT 01 SLUG].html'">
+        <div class="hs-num">02</div>
+```
+
+Note: this also renumbers the old 01 to 02 in the same operation.
+
+**Operation 2 — Delete position 03 and renumber 02 → 03.**
+Find the current position 02 (which is now becoming 03) and update its number, then find position 03 and delete it:
+
+Find:
+```html
+<div class="hs-num">02</div>
+```
+Replace with:
+```html
+<div class="hs-num">03</div>
+```
+
+Then find the current position 03 block and replace with nothing:
+
+Find:
+```html
+<div class="hs-item" onclick="window.location='articles/[CURRENT 03 SLUG].html'">
+        <div class="hs-num">03</div>
+        <div class="hs-cat">[CURRENT 03 CATEGORY]</div>
+        <div class="hs-title">[CURRENT 03 TITLE]</div>
+        <div class="hs-time">[CURRENT 03 READ TIME] read</div>
+      </div>
+```
+
+Replace with: *(nothing — empty field)*
+
+**Always provide the exact Ctrl+H FIND and REPLACE strings for all operations in 5B and 5D.**
 
 ### 5C — In Depth Strip
 
@@ -283,7 +402,8 @@ At the bottom of every article are 3 Related Article cards. Choose them like thi
 **Current published articles to choose from:**
 - `fmcg-vs-pharma-marketing.html` — Marketing, 11 min
 - `how-drugs-are-priced-in-india.html` — Industry, 5 min
-- *(add new articles here as you publish them)*
+- `how-crocin-became-a-household-brand.html` — Brand Strategy, 9 min
+- `how-online-pharmacies-changed-indian-pharma.html` — Digital, 9 min
 
 ### 6B — Update Related Articles in EXISTING articles
 
@@ -372,11 +492,208 @@ If the new article mentions a topic you plan to cover in a future article, note 
 **Pending cross-links to add when articles are published:**
 - Crocin article → link to OTC vs Rx article (when published)
 - Drug pricing article → link to DPCO deep-dive (when published)
-- FMCG vs Pharma article → link to Crocin article (when published — update Related section)
+- Online pharmacies article → link to regulatory/DCGI article (when published)
 
 ---
 
-## Quick Reference — Article Categories
+## Quick Reference — Current Homepage State
+
+Use this to know what is currently live on the homepage before making any changes.
+
+| Section | Position 1 | Position 2 | Position 3 |
+|---|---|---|---|
+| Featured Editor's Pick | Online Pharmacies | — | — |
+| Featured side cards | Drug Pricing | FMCG vs Pharma | — |
+| Latest | Schedule M | Medical Reps | Online Pharmacies |
+| Also Reading | FMCG (01) | Drug Pricing (02) | Crocin (03) |
+
+In Depth strip (left to right): FMCG (01) → Drug Pricing (02) → Crocin (03) → Online Pharmacies (04) → Medical Reps (05) → Schedule M (06)
+
+**Update this table every time you publish.** This is the source of truth before any Ctrl+H.
+
+---
+
+## CASE STUDY PUBLISHING WORKFLOW
+
+Case studies live on `case-studies.html`, not `blogs.html`. They are a separate content type with a different page, different card design, and different HTML template. Follow this workflow every time you publish a case study.
+
+---
+
+### CS Variables You Need Before Starting
+
+```
+TITLE:        e.g. The Thalidomide Tragedy
+SLUG:         e.g. thalidomide-tragedy
+              (save as: articles/thalidomide-tragedy.html)
+TAG:          Tragedy / Regulatory / Withdrawal / Breakthrough / Patent / M&A
+TAG COLOUR:   t-red / t-amber / t-green / t-blue / t-purple / t-teal
+CARD COLOUR:  cc-red / cc-amber / cc-green / cc-blue / cc-purple / cc-teal
+YEAR:         e.g. 1957 – 1962
+EXCERPT:      One sentence summary for the card. Max 160 characters.
+DATE:         Today's date in YYYY-MM-DD format
+READ TIME:    e.g. 10 min
+IMAGE FILE:   e.g. thalidomide-tragedy-cover.jpg
+```
+
+Tag and card colour pairings:
+| Tag | Tag class | Card class |
+|---|---|---|
+| Tragedy | t-red | cc-red |
+| Regulatory | t-amber | cc-amber |
+| Breakthrough | t-green | cc-green |
+| Patent / Industry | t-blue | cc-blue |
+| M&A | t-purple | cc-purple |
+| Withdrawal / Teal | t-teal | cc-teal |
+
+---
+
+### CS Step 1 — Write the Case Study First
+
+Same rules as articles (Step 2A). Show the written case study to Piyush before building HTML.
+
+**Case study voice — slightly different from articles:**
+- Opens with the stakes: what happened and why it matters
+- Tells it as a story with a clear timeline — not a list of facts
+- Explains the industry consequences, not just the event itself
+- Closes with what this means for pharma today or for your career
+- Same plain language, same short paragraphs, same "no assumptions" tone
+- Target length: 10 minutes read time (~2000 words)
+
+---
+
+### CS Step 2 — Create the HTML File
+
+Case studies use the same article template as regular articles (`articles/article-template.html`). Duplicate it and save as `articles/[SLUG].html`.
+
+Fill in all EDIT markers exactly as you would for a regular article. The structure is identical — header, cover image, prose body, TOC, related articles, footer.
+
+The only difference is the category breadcrumb — use the case study tag instead of a category:
+```html
+<div class="art-cat">
+  <a href="../case-studies.html">Case Studies</a>
+  <span class="art-cat-sep">/</span>
+  <a href="../case-studies.html">[TAG — e.g. Tragedy]</a>
+</div>
+```
+
+---
+
+### CS Step 3 — Update articles.json
+
+Add the case study entry at the top of `articles.json` exactly like a regular article. Use the tag as the category field:
+
+```json
+{
+  "title": "[TITLE]",
+  "category": "[TAG — e.g. Tragedy]",
+  "slug": "articles/[SLUG].html",
+  "excerpt": "[EXCERPT]",
+  "date": "[DATE]",
+  "readTime": "[READ TIME]",
+  "featured": false
+},
+```
+
+---
+
+### CS Step 4 — Update sitemap.xml
+
+Add a new `<url>` block exactly as you would for a regular article.
+
+---
+
+### CS Step 5 — Update case-studies.html
+
+This is the main step that is different from regular articles.
+
+Open `case-studies.html`. Find the coming-soon placeholder block OR find the existing card for this case study (which currently has `onclick="sendPrompt(...)"`) and replace it with a real card.
+
+**The card block to use:**
+
+```html
+<div class="cs-card [CARD COLOUR e.g. cc-red]" onclick="window.location='articles/[SLUG].html'">
+  <div class="tag [TAG COLOUR e.g. t-red]">[TAG e.g. Tragedy]</div>
+  <div class="csc-year">[YEAR e.g. 1957 – 1962]</div>
+  <div class="csc-title">[TITLE]</div>
+  <p class="csc-sum">[EXCERPT]</p>
+  <span class="csc-read">Read case study →</span>
+</div>
+```
+
+**Before making any changes — read the current code first.** Identify which card is still a placeholder (`onclick="sendPrompt(...)"`) and which are real articles (`onclick="window.location='...'"`) before touching anything. Write out the exact FIND and REPLACE strings for Ctrl+H.
+
+**If the coming-soon block is still showing** (no cards published yet), replace the entire coming-soon div with the first card:
+
+Find:
+```html
+<div class="cs-coming">
+```
+*(replace the whole cs-coming block)*
+
+Replace with the card block above.
+
+---
+
+### CS Step 6 — Update index.html Case Studies Section
+
+The homepage has a Case Studies section with 6 cards. All 6 currently show `onclick="sendPrompt(...)"`. Replace the matching placeholder card with the real one using Ctrl+H.
+
+Find the card with the matching title and replace its `onclick`:
+
+**Find:**
+```
+onclick="sendPrompt('Write a detailed case study article on: [MATCHING TITLE]')"
+```
+
+**Replace with:**
+```
+onclick="window.location='articles/[SLUG].html'"
+```
+
+This is a targeted single-line replacement — you only need to change the onclick, not the whole card. The title, tag, year, and summary are already correct in the placeholder.
+
+---
+
+### CS Step 7 — Push to GitHub
+
+Same as regular articles. Commit message format: `Publish: [CASE STUDY TITLE] case study`
+
+Files to verify in GitHub Desktop:
+- `articles/[SLUG].html` ✓
+- `articles.json` ✓
+- `sitemap.xml` ✓
+- `case-studies.html` ✓
+- `index.html` ✓
+- `images/[IMAGE FILE].jpg` ✓
+
+---
+
+### CS Step 8 — Post-Publish Verification
+
+- [ ] Case study URL loads: `figuringoutpharma.com/articles/[SLUG].html`
+- [ ] Cover image displays correctly
+- [ ] `case-studies.html` shows the new card (not the coming-soon block)
+- [ ] Clicking the card on case-studies.html opens the article correctly
+- [ ] Homepage Case Studies section card now links to the article (not sendPrompt)
+- [ ] blogs.html does NOT show case studies — they are separate content
+- [ ] Dark mode looks correct
+
+---
+
+### Current Case Studies State
+
+| Case Study | Status | Slug when published |
+|---|---|---|
+| The Thalidomide Tragedy | Placeholder | thalidomide-tragedy |
+| Ranbaxy and the FDA | Placeholder | ranbaxy-and-the-fda |
+| The Vioxx Withdrawal | Placeholder | vioxx-withdrawal |
+| COVID-19 Vaccine Development | Placeholder | covid-vaccine-development |
+| Lipitor's Patent Cliff | Placeholder | lipitor-patent-cliff |
+| Bayer–Monsanto Merger | Placeholder | bayer-monsanto-merger |
+
+Update Status to "Published" and add the actual slug each time one goes live.
+
+---
 
 | Category | What belongs here |
 |---|---|
@@ -405,7 +722,7 @@ If the new article mentions a topic you plan to cover in a future article, note 
 
 ---
 
-## Canva AI Prompt — Master Template
+## Image Generation Prompt — Master Template
 
 Keep this nearby every time you make a cover image.
 
@@ -424,5 +741,5 @@ No photorealistic elements. Clean geometric shapes only.
 
 ---
 
-*Last updated: June 2026*  
+*Last updated: June 2026 — updated with precise Latest push-down and Also Reading rotation rules, corrected homepage state table, added full Case Study publishing workflow.*  
 *Maintained by: Figuring Out Pharma*
