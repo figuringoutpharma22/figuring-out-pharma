@@ -105,6 +105,26 @@ If the article is being written from a research document or PDF rather than a pr
 4. Rename the duplicate to: `articles/[SLUG].html`
    - Example: `articles/how-crocin-became-a-household-brand.html`
 
+### 2C — Add the GA4 tracking tag
+
+Immediately after the closing `</title>` tag in the `<head>` of every new HTML file — whether a regular article, case study, or any new page — paste this block:
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K3ENKKGSH5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-K3ENKKGSH5');
+</script>
+
+Rules:
+- Every new file without exception — articles, case studies, new pages
+- Place it right after </title> and before the first <meta> description tag
+- Never skip — without it the page will not appear in Google Analytics
+- Do not add it twice — search for G-K3ENKKGSH5 before pasting to confirm it is not already there
+- Both templates (article-template.html and case-study-template.html) already have this tag baked in — so any file duplicated from them will have it automatically
+
 ### Fill in every EDIT marker — in order:
 
 **In the `<head>`:**
