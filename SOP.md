@@ -482,17 +482,51 @@ Check every item:
 
 1. Log into Beehiiv
 2. Go to **Campaigns** → find your last newsletter
-3. Click **Duplicate**
-4. Update the subject line: `New: [TITLE]`
-5. Replace the article title, excerpt, and link in the email body
-6. Update the cover image in the email
-7. Preview on mobile before sending
-8. Send
+3. Click **Duplicate** — never edit the original template directly
+4. Fill in every EDIT placeholder using the template below
+5. Preview on mobile before sending
+6. Send
 
 **Standard subject line format:**
 ```
 New on Figuring Out Pharma: [SHORT TITLE]
 ```
+**Email body:**
+
+---
+
+Hey,
+
+A new piece just went up on Figuring Out Pharma.
+
+**[EDIT: FULL ARTICLE TITLE]**
+
+[EDIT: 2 to 3 sentences expanding on what the article covers. Plain language, no jargon, tells the reader exactly what they will understand after reading it that they did not before. Do not copy the excerpt word for word — rewrite it slightly so it feels personal.]
+
+This one is worth reading if you are [EDIT: one line describing who this is most useful for — e.g. "figuring out what pharma marketing actually looks like on the ground" or "trying to understand why drug prices in India work the way they do"].
+
+[BUTTON: Read the article →] — links to [EDIT: full article URL e.g. https://figuringoutpharma.com/articles/SLUG.html]
+
+---
+
+That is it for this one.
+
+If you found it useful, forward it to someone else who is figuring out pharma.
+
+— Figuring Out Pharma
+
+---
+
+### Email EDIT checklist — complete before hitting Send
+
+- [ ] Subject line updated
+- [ ] Preview text updated — under 100 characters
+- [ ] Article title updated
+- [ ] 2 to 3 sentence body paragraph written fresh
+- [ ] "Worth reading if you are..." line filled in
+- [ ] Button URL updated to correct article slug
+- [ ] Previewed on mobile
+- [ ] Duplicated from last campaign — original template untouched
 
 ---
 
