@@ -26,21 +26,21 @@
 
   <!-- SITE PAGES -->
   <url>
-    <loc>https://figuringoutpharma.com/blogs.html</loc>
+    <loc>https://figuringoutpharma.com/blogs</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://figuringoutpharma.com/case-studies.html</loc>
+    <loc>https://figuringoutpharma.com/case-studies</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://figuringoutpharma.com/categories.html</loc>
+    <loc>https://figuringoutpharma.com/categories</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -48,82 +48,82 @@
 
   <!-- ARTICLES — add a new block here each time you publish -->
   <url>
-  <loc>https://figuringoutpharma.com/articles/fmcg-vs-pharma-marketing.html</loc>
+  <loc>https://figuringoutpharma.com/articles/fmcg-vs-pharma-marketing</loc>
   <lastmod>2026-06-08</lastmod>
   <priority>0.8</priority>
 </url>
 
   <url>
-  <loc>https://figuringoutpharma.com/articles/how-medical-reps-are-trained.html</loc>
+  <loc>https://figuringoutpharma.com/articles/how-medical-reps-are-trained</loc>
   <lastmod>2026-06-09</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
   
 <url>
-  <loc>https://figuringoutpharma.com/articles/how-drugs-are-priced-in-india.html</loc>
+  <loc>https://figuringoutpharma.com/articles/how-drugs-are-priced-in-india</loc>
   <lastmod>2026-06-08</lastmod>
   <priority>0.8</priority>
 </url>
 
 <url>
-  <loc>https://figuringoutpharma.com/articles/how-online-pharmacies-changed-indian-pharma.html</loc>
-  <lastmod>2026-06-08</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
-
-<url>
-  <loc>https://figuringoutpharma.com/articles/how-crocin-became-a-household-brand.html</loc>
+  <loc>https://figuringoutpharma.com/articles/how-online-pharmacies-changed-indian-pharma</loc>
   <lastmod>2026-06-08</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
 
 <url>
-  <loc>https://figuringoutpharma.com/articles/schedule-m-regulatory-shift-explained.html</loc>
+  <loc>https://figuringoutpharma.com/articles/how-crocin-became-a-household-brand</loc>
+  <lastmod>2026-06-08</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://figuringoutpharma.com/articles/schedule-m-regulatory-shift-explained</loc>
   <lastmod>2026-06-09</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
 
 <url>
-  <loc>https://figuringoutpharma.com/articles/vioxx-withdrawal.html</loc>
+  <loc>https://figuringoutpharma.com/articles/vioxx-withdrawal</loc>
   <lastmod>2026-06-10</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
 
 <url>
-  <loc>https://figuringoutpharma.com/articles/ranbaxy-and-the-fda.html</loc>
+  <loc>https://figuringoutpharma.com/articles/ranbaxy-and-the-fda</loc>
   <lastmod>2026-06-10</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
 
 <url>
-  <loc>https://figuringoutpharma.com/articles/thalidomide-tragedy.html</loc>
+  <loc>https://figuringoutpharma.com/articles/thalidomide-tragedy</loc>
   <lastmod>2026-06-09</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
 
 <url>
-  <loc>https://figuringoutpharma.com/articles/bayer-monsanto-merger.html</loc>
+  <loc>https://figuringoutpharma.com/articles/bayer-monsanto-merger</loc>
   <lastmod>2026-06-10</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
 
 <url>
-  <loc>https://figuringoutpharma.com/articles/lipitor-patent-cliff.html</loc>
+  <loc>https://figuringoutpharma.com/articles/lipitor-patent-cliff</loc>
   <lastmod>2026-06-10</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
 
 <url>
-  <loc>https://figuringoutpharma.com/articles/covid-vaccine-development.html</loc>
+  <loc>https://figuringoutpharma.com/articles/covid-vaccine-development</loc>
   <lastmod>2026-06-09</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
@@ -132,7 +132,7 @@
     EXAMPLE — copy and paste this block for each new article:
     
     <url>
-      <loc>https://figuringoutpharma.com/articles/YOUR-ARTICLE-SLUG.html</loc>
+      <loc>https://figuringoutpharma.com/articles/YOUR-ARTICLE-SLUG</loc>
       <lastmod>YYYY-MM-DD</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
