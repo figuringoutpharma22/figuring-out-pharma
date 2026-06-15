@@ -139,7 +139,7 @@ Rules:
 **Article header section:**
 ```html
 <!-- Category breadcrumb -->
-<a href="../blogs.html">[CATEGORY]</a>
+<a href="../blogs">[CATEGORY]</a>
 
 <!-- Title — use <em> tags for the italic part -->
 <h1 class="art-title">[TITLE WITH <em>ITALIC PART</em>]</h1>
@@ -624,9 +624,9 @@ Fill in all EDIT markers exactly as you would for a regular article. The structu
 The only difference is the category breadcrumb — use the case study tag instead of a category:
 ```html
 <div class="art-cat">
-  <a href="../case-studies.html">Case Studies</a>
+  <a href="../case-studies">Case Studies</a>
   <span class="art-cat-sep">/</span>
-  <a href="../case-studies.html">[TAG — e.g. Tragedy]</a>
+  <a href="../case-studies">[TAG — e.g. Tragedy]</a>
 </div>
 ```
 
