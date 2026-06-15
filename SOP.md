@@ -148,7 +148,7 @@ Rules:
 <p class="art-deck">[DECK]</p>
 
 <!-- Meta row -->
-<span class="meta-author">Figuring Out Pharma</span>
+<span class="meta-author">Piyush Singh</span>
 <span class="meta-date">[MONTH YEAR e.g. June 2026]</span>
 <span class="meta-time">[READ TIME] read</span>
 ```
