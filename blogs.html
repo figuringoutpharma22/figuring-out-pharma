@@ -167,8 +167,8 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
       <li><a href="blogs" class="active">Blogs</a></li>
       <li><a href="case-studies">Case Studies</a></li>
       <li><a href="categories">Categories</a></li>
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#contact">Contact</a></li>
     </ul>
     <div class="nav-right">
       <button class="nav-theme" onclick="toggleTheme()" id="themeBtn">&#9790;</button>
@@ -183,8 +183,8 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
     <a href="blogs">Blogs</a>
     <a href="case-studies">Case Studies</a>
     <a href="categories">Categories</a>
-    <a href="index.html#about">About</a>
-    <a href="index.html#contact">Contact</a>
+    <a href="/#about">About</a>
+    <a href="/#contact">Contact</a>
   </div>
 </nav>
 
@@ -242,8 +242,8 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
       <a href="index">Home</a>
       <a href="blogs">Blogs</a>
       <a href="case-studies">Case Studies</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
       <a href="https://www.instagram.com/figuringoutpharma/" target="_blank" style="display:flex;align-items:center;transition:color 0.2s" aria-label="Instagram">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
@@ -367,7 +367,7 @@ fetch('articles.json')
   .then(function(r){return r.json();})
   .then(function(data){
     allArticles = data;
-    // Check if a category was passed in the URL e.g. blogs.html?cat=Marketing
+    // Check if a category was passed in the URL e.g. blogs?cat=Marketing
     var urlParams = new URLSearchParams(window.location.search);
     var catParam = urlParams.get('cat');
     if(catParam){

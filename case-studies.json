@@ -2,7 +2,7 @@
    {
   "title": "COVID-19 Vaccine Development — how pharma did the impossible",
   "tag": "Breakthrough",
-  "slug": "articles/covid-vaccine-development.html",
+  "slug": "articles/covid-vaccine-development",
   "excerpt": "Vaccines approved in under a year. The fastest before this had taken four years. Here is how it actually happened — the science, the money, the regulatory shortcuts that were not shortcuts, and why India sat at the centre of it.",
   "year": "2021 - 2022",
   "readTime": "10 min",
@@ -11,7 +11,7 @@
 {
   "title": "Lipitor's Patent Cliff — how the world's best-selling drug lost everything overnight",
   "tag": "Patent",
-  "slug": "articles/lipitor-patent-cliff.html",
+  "slug": "articles/lipitor-patent-cliff",
   "excerpt": "Lipitor generated over $125 billion before its patent expired in 2011. The full story of Pfizer's pre-cliff strategy, the Ranbaxy legal fight, and what the playbook teaches about pharma lifecycle management.",
   "year": "2011",
   "readTime": "10 min",
@@ -20,7 +20,7 @@
 {
   "title": "The Bayer–Monsanto Merger — how a $63 billion agricultural bet destroyed a pharmaceutical legacy",
   "tag": "M&A",
-  "slug": "articles/bayer-monsanto-merger.html",
+  "slug": "articles/bayer-monsanto-merger",
   "excerpt": "Bayer went to bed a pharmaceutical company and woke up an agrochemical defendant. The $63 billion Monsanto acquisition starved the pharma pipeline, triggered $17 billion in litigation, and wiped out €35 billion in market value.",
   "year": "2018",
   "readTime": "11 min",
@@ -29,7 +29,7 @@
  {
   "title": "The Thalidomide Tragedy — and the untold Indian chapter",
   "tag": "Tragedy",
-  "slug": "articles/thalidomide-tragedy.html",
+  "slug": "articles/thalidomide-tragedy",
   "excerpt": "A sedative sold as the safest drug in the world caused birth defects in over 10,000 children. Here is what happened, why India's story is more complicated than most people know, and what it permanently changed about how drugs get approved.",
   "year": "1957 - 1962",
   "readTime": "10 min",
@@ -38,7 +38,7 @@
  {
   "title": "Ranbaxy and the FDA — How India's biggest pharma success story collapsed",
   "tag": "Regulatory",
-  "slug": "articles/ranbaxy-and-the-fda.html",
+  "slug": "articles/ranbaxy-and-the-fda",
   "excerpt": "India's biggest pharma success story collapsed under data fraud allegations — and permanently changed how generic drug manufacturers are scrutinised worldwide.",
   "year": "2004 - 2013",
   "readTime": "7 min",
@@ -47,7 +47,7 @@
   {
   "title": "The Vioxx Withdrawal — blockbuster economics, selective science, and the fall of a $20 billion drug",
   "tag": "Withdrawal",
-  "slug": "articles/vioxx-withdrawal.html",
+  "slug": "articles/vioxx-withdrawal",
   "excerpt": "Merck pulled its blockbuster painkiller in 2004 after a placebo-controlled trial proved an undeniable link to heart attacks. The $7 billion fallout permanently changed how drug safety is monitored worldwide.",
   "year": "2004",
   "readTime": "10 min",

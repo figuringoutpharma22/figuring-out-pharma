@@ -150,8 +150,8 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
       <li><a href="blogs">Blogs</a></li>
       <li><a href="case-studies">Case Studies</a></li>
       <li><a href="categories" class="active">Categories</a></li>
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#contact">Contact</a></li>
     </ul>
     <div class="nav-right">
       <button class="nav-theme" onclick="toggleTheme()" id="themeBtn">&#9790;</button>
@@ -166,8 +166,8 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
     <a href="blogs">Blogs</a>
     <a href="case-studies">Case Studies</a>
     <a href="categories">Categories</a>
-    <a href="index.html#about">About</a>
-    <a href="index.html#contact">Contact</a>
+    <a href="/#about">About</a>
+    <a href="/#contact">Contact</a>
   </div>
 </nav>
 
@@ -185,7 +185,7 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
   <div class="cat-inner">
     <div class="cat-grid">
 
-      <div class="cat-card" onclick="window.location='blogs.html'">
+      <div class="cat-card" onclick="window.location='blogs'">
         <div class="cat-accent"></div>
         <div class="cat-num">01</div>
         <div class="cat-name">Marketing</div>
@@ -193,7 +193,7 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
         <div class="cat-count"><span>0</span> articles</div>
       </div>
 
-      <div class="cat-card" onclick="window.location='blogs.html'" style="--cat-color:var(--gold)">
+      <div class="cat-card" onclick="window.location='blogs'" style="--cat-color:var(--gold)">
         <div class="cat-accent" style="background:var(--gold)"></div>
         <div class="cat-num">02</div>
         <div class="cat-name">Careers</div>
@@ -201,7 +201,7 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
         <div class="cat-count"><span>0</span> articles</div>
       </div>
 
-      <div class="cat-card" onclick="window.location='blogs.html'">
+      <div class="cat-card" onclick="window.location='blogs'">
         <div class="cat-accent" style="background:#4a8ab5"></div>
         <div class="cat-num">03</div>
         <div class="cat-name">Industry</div>
@@ -209,7 +209,7 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
         <div class="cat-count"><span>0</span> articles</div>
       </div>
 
-      <div class="cat-card" onclick="window.location='blogs.html'">
+      <div class="cat-card" onclick="window.location='blogs'">
         <div class="cat-accent" style="background:var(--sage)"></div>
         <div class="cat-num">04</div>
         <div class="cat-name">Brand Strategy</div>
@@ -217,7 +217,7 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
         <div class="cat-count"><span>0</span> articles</div>
       </div>
 
-      <div class="cat-card" onclick="window.location='blogs.html'">
+      <div class="cat-card" onclick="window.location='blogs'">
         <div class="cat-accent" style="background:#8a5ab5"></div>
         <div class="cat-num">05</div>
         <div class="cat-name">Digital</div>
@@ -225,7 +225,7 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
         <div class="cat-count"><span>0</span> articles</div>
       </div>
 
-      <div class="cat-card" onclick="window.location='blogs.html'">
+      <div class="cat-card" onclick="window.location='blogs'">
         <div class="cat-accent" style="background:#e05c4a"></div>
         <div class="cat-num">06</div>
         <div class="cat-name">Regulatory</div>
@@ -253,8 +253,8 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
       <a href="index">Home</a>
       <a href="blogs">Blogs</a>
       <a href="case-studies">Case Studies</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
       <a href="https://www.instagram.com/figuringoutpharma/" target="_blank" style="display:flex;align-items:center;transition:color 0.2s" aria-label="Instagram">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
@@ -309,8 +309,8 @@ fetch('articles.json')
       if(countEl){
         countEl.textContent = counts[catName] || 0;
       }
-      // Update onclick to filter blogs.html by category
-      card.setAttribute('onclick', "window.location='blogs.html?cat=" + encodeURIComponent(catName) + "'");
+      // Update onclick to filter blogs by category
+      card.setAttribute('onclick', "window.location='blogs?cat=" + encodeURIComponent(catName) + "'");
     });
   })
   .catch(function(){
