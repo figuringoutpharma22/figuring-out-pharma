@@ -1,5 +1,5 @@
 # Figuring Out Pharma
-> A pharma editorial blog written for B.Pharma students and freshers in India who want to understand how the pharmaceutical industry actually works — not how textbooks say it does.
+> A pharma editorial blog written for B.Pharma students and freshers in India who want to understand how the pharmaceutical industry actually works - not how textbooks say it does.
 
 The site covers pharma marketing, drug pricing, brand strategy, regulatory affairs, careers, and industry history. All content is written in plain language with no assumed prior knowledge. Published by a final-year B.Pharma student based in Mumbai.
 
@@ -9,69 +9,69 @@ URL: https://figuringoutpharma.com
 
 ## Articles
 
-### How drugs are priced in India — the real explanation
-URL: https://figuringoutpharma.com/articles/how-drugs-are-priced-in-india
-Topic: Drug pricing in India, DPCO, NPPA, NLEM, trade margins, chemist incentives
-Summary: Explains how the Drug Prices Control Order (DPCO) works, how the NPPA calculates ceiling prices using a market-based formula, the loopholes companies use to step around price controls (FDC trick, strength swaps), and why brand price variations for the same molecule can range from 1000% to 4000% in India.
-
 ### FMCG vs pharma marketing — explained from scratch, no assumptions
 URL: https://figuringoutpharma.com/articles/fmcg-vs-pharma-marketing
-Topic: Pharma marketing, FMCG marketing, prescription drugs, OTC, brand strategy, medical representatives
-Summary: A full breakdown of how FMCG and pharmaceutical marketing differ — different audiences (doctors, pharmacists, patients, payers vs. one consumer), brand lifespans (patent cliff vs. indefinite), advertising restrictions (mass media vs. professional channels only for Rx drugs), pricing dynamics, and where the two industries converge at Rx-to-OTC switches.
+Topic: pharma marketing, FMCG marketing, prescription drugs, OTC marketing, brand strategy India, medical representatives
+Summary: A full breakdown of how FMCG and pharmaceutical marketing differ across four dimensions — audiences, brand lifespan, advertising restrictions, and pricing. Explains why pharma cannot advertise prescription drugs in mass media in India, how the patent cliff creates a fundamentally different brand lifecycle, and where the two industries converge at Rx-to-OTC switches.
+
+### How drugs are priced in India — the real explanation
+URL: https://figuringoutpharma.com/articles/how-drugs-are-priced-in-india
+Topic: DPCO, drug pricing India, NLEM, NPPA, trade margins, chemist incentives, FDC loophole
+Summary: Explains how the Drug Prices Control Order works in India, how the NPPA calculates ceiling prices using a market-based formula rather than production costs, and the loopholes companies use including FDC combinations and strength variations. Covers trade margin structures and why brand price variations for the same molecule can range from 1000 to 4000 percent.
 
 ### How Crocin turned a generic molecule into a household brand
 URL: https://figuringoutpharma.com/articles/how-crocin-became-a-household-brand
-Topic: Brand strategy, OTC marketing, paracetamol, Crocin, Dolo 650, DPCO, pharma branding
-Summary: Explains how GSK Consumer Healthcare built Crocin into India's dominant paracetamol brand through consumer pull advertising and a dual-brand pincer strategy (Crocin for consumers, Calpol for doctors). Covers how Dolo 650 disrupted the market by exploiting the DPCO pricing gap on the 650mg formulation, and how COVID-19 amplified Dolo's prescription-led position.
+Topic: Crocin, Dolo 650, paracetamol brand strategy, OTC marketing India, DPCO loophole, pharma branding
+Summary: Explains how GSK Consumer Healthcare built Crocin into India's dominant paracetamol brand through consumer pull advertising and a dual-brand strategy with Calpol for doctors. Covers how Dolo 650 disrupted the market by exploiting the DPCO pricing gap on the 650mg formulation, and how COVID-19 amplified Dolo's prescription-led position.
 
-### How online pharmacies changed the Indian pharma industry
+### How Online Pharmacies Changed the Indian Pharma Industry
 URL: https://figuringoutpharma.com/articles/how-online-pharmacies-changed-indian-pharma
-Topic: E-pharmacy, online pharmacy India, Tata 1mg, PharmEasy, Netmeds, DCGI, regulatory, digital pharma
-Summary: Covers the rise of e-pharmacies in India from 2% of retail to a multi-billion dollar industry, the four business models (inventory, marketplace, hybrid, B2B), why consumers switched (perceived safety, not just price), what e-pharmacies did to the AIOCD retail cartel, the prescription recycling loophole, AMR concerns, and why the E-Pharmacy Rules drafted in 2018 have still not been notified into law as of 2026.
+Topic: e-pharmacy India, online pharmacy, Tata 1mg, PharmEasy, Netmeds, DCGI, digital pharma, E-Pharmacy Rules
+Summary: Covers the rise of e-pharmacies in India from a 2 percent niche to a multi-billion dollar industry, the four business models in use, why consumers switched based on perceived safety rather than price alone, and what e-pharmacies did to the AIOCD retail cartel. Explains why the E-Pharmacy Rules drafted in 2018 have still not been notified into law as of 2026.
 
 ### How medical reps are actually trained — and what they are really selling
 URL: https://figuringoutpharma.com/articles/how-medical-reps-are-trained
-Topic: Medical representative, MR training, pharma field force, PCA framework, UCPMP 2024, pharma careers
-Summary: Explains the Promotion-Conversion-Availability (PCA) training framework, why scientific depth (not samples or gifts) drives prescriber influence, the concept of physician mindshare as the real commercial asset, the emotional labour demands of the role, how CRM tools and digital detailing have changed the job, and what UCPMP 2024 means for the field force.
+Topic: medical representative, MR training, pharma field force, PCA framework, UCPMP 2024, pharma careers India
+Summary: Explains the Promotion-Conversion-Availability training framework that governs how medical reps are trained in India. Covers why scientific depth drives prescriber influence more than gifts or samples, the concept of physician mindshare as the real commercial asset, and what UCPMP 2024 means for the field force going forward.
 
 ### Schedule M explained — the biggest regulatory shift in Indian pharma in decades
 URL: https://figuringoutpharma.com/articles/schedule-m-regulatory-shift-explained
 Topic: Schedule M, GMP India, CDSCO, DCGI, pharmaceutical manufacturing, quality risk management, MSME pharma
-Summary: Explains the shift from the rule-based 2001 Schedule M (minimum factory specifications) to the risk-based revised Schedule M (Pharmaceutical Quality System and Quality Risk Management). Covers what changed on the factory floor, the phased compliance deadlines, why only ~1,600–1,700 MSME units applied for the 2025 extension out of 8,500+ eligible, and enforcement status as of 2026.
+Summary: Explains the shift from the rule-based 2001 Schedule M to the risk-based revised Schedule M requiring Pharmaceutical Quality System and Quality Risk Management. Covers what changed on the factory floor, the phased compliance deadlines, and why most MSME units did not apply for the 2025 extension. Enforcement status as of 2026 is addressed.
 
 ---
 
 ## Case Studies
 
-### The Thalidomide Tragedy — and the untold Indian chapter
-URL: https://figuringoutpharma.com/articles/thalidomide-tragedy
-Topic: Thalidomide, drug safety, Frances Kelsey, FDA history, Kefauver-Harris Amendments, teratogenicity, Indian pharma history, Goa
-Summary: Full timeline of the thalidomide crisis (1953–1964+), including Frances Kelsey's FDA refusal, the specific fetal vulnerability window (gestational days 20–36), India's complicated story (Goa as a Portuguese colony received thalidomide shipments in 1959 while mainland India blocked it), and the drug's unexpected second life as a leprosy treatment. Explains what the Kefauver-Harris Amendments of 1962 permanently changed about drug approval worldwide.
-
-### Ranbaxy and the FDA — how India's biggest pharma success story collapsed
-URL: https://figuringoutpharma.com/articles/ranbaxy-and-the-fda
-Topic: Ranbaxy, FDA, data fraud, generic drugs, GMP, bioequivalence, whistleblower, Dinesh Thakur, GDUFA
-Summary: Covers Ranbaxy's rise from Amritsar distributor to world's third-largest generic manufacturer, Dinesh Thakur's whistleblower investigation, the systematic fabrication of bioequivalence and stability data, the FDA's Application Integrity Policy on Paonta Sahib, the $500 million criminal settlement in 2013, the Daiichi Sankyo acquisition and $525 million arbitration award, and how the case permanently changed generic drug auditing globally.
-
 ### The Vioxx Withdrawal — blockbuster economics, selective science, and the fall of a $20 billion drug
 URL: https://figuringoutpharma.com/articles/vioxx-withdrawal
 Topic: Vioxx, rofecoxib, Merck, COX-2 inhibitor, drug safety, pharmacovigilance, FDA Sentinel Initiative, clinical trial registration
-Summary: Explains what COX-2 inhibitors were solving, the VIGOR trial's four-fold cardiovascular risk signal and Merck's Naproxen Hypothesis response, how the commercial machinery managed the science (dodge scripts for MRs, ghostwritten journals), why the APPROVe placebo-controlled trial made denial impossible, the $7 billion fallout, and what changed permanently — the FDA Sentinel Initiative and mandatory clinical trial registration.
+Summary: Explains what COX-2 inhibitors were solving and the VIGOR trial's four-fold cardiovascular risk signal that Merck managed through the Naproxen Hypothesis. Covers how the commercial machinery used training scripts for reps and ghostwritten journals to suppress the signal, why the APPROVe placebo-controlled trial made denial impossible, and what permanently changed including the FDA Sentinel Initiative and mandatory clinical trial registration.
 
-### COVID-19 Vaccine Development — how pharma did the impossible
-URL: https://figuringoutpharma.com/articles/covid-vaccine-development
-Topic: COVID-19 vaccines, mRNA vaccines, Covishield, Covaxin, Serum Institute, Bharat Biotech, EUA, rolling review, vaccine development
-Summary: Explains why vaccines normally take 10–15 years and what structurally changed during COVID (parallel development funded by government advance market commitments), the three platform technologies (mRNA, viral vector, inactivated whole-virus), how rolling regulatory review worked, India's specific role (Serum Institute producing 200+ million doses/month, Bharat Biotech's indigenously developed Covaxin), and what permanently changed in platform science and supply chains.
+### Ranbaxy and the FDA — How India's biggest pharma success story collapsed
+URL: https://figuringoutpharma.com/articles/ranbaxy-and-the-fda
+Topic: Ranbaxy, FDA, data fraud, generic drugs, GMP, bioequivalence, whistleblower, Dinesh Thakur, GDUFA
+Summary: Covers Ranbaxy's rise from Amritsar distributor to the world's third-largest generic manufacturer and the whistleblower investigation by Dinesh Thakur that uncovered systematic fabrication of bioequivalence and stability data. Explains the FDA's Application Integrity Policy, the 500 million dollar criminal settlement in 2013, and how the case permanently changed generic drug auditing globally.
 
-### Lipitor's patent cliff — how the world's best-selling drug lost everything overnight
-URL: https://figuringoutpharma.com/articles/lipitor-patent-cliff
-Topic: Lipitor, atorvastatin, Pfizer, patent cliff, generic drugs, lifecycle management, pay-for-delay, Ranbaxy
-Summary: Covers how Lipitor became the world's best-selling drug, Pfizer's pre-cliff strategies (17.5% price increase in final year, ~$1 billion/year DTC advertising), the torcetrapib failure, the pay-for-delay settlement with Ranbaxy in 2008, and the three cliff defences Pfizer executed on November 30 2011 (Lipitor-for-You rebate program, authorised generic with Watson, OTC conversion attempt). The standard lifecycle management playbook for the pharma industry.
+### The Thalidomide Tragedy — and the untold Indian chapter
+URL: https://figuringoutpharma.com/articles/thalidomide-tragedy
+Topic: thalidomide, drug safety history, Frances Kelsey, FDA, Kefauver-Harris Amendments, teratogenicity, Indian pharma history, Goa
+Summary: Full timeline of the thalidomide crisis including Frances Kelsey's FDA refusal and the specific fetal vulnerability window between gestational days 20 and 36. Covers India's complicated story where Goa as a Portuguese colony received thalidomide shipments in 1959 while mainland India blocked it. Explains what the Kefauver-Harris Amendments of 1962 permanently changed about drug approval worldwide.
 
 ### The Bayer–Monsanto Merger — how a $63 billion agricultural bet destroyed a pharmaceutical legacy
 URL: https://figuringoutpharma.com/articles/bayer-monsanto-merger
-Topic: Bayer, Monsanto, M&A, glyphosate, Roundup, pharma pipeline, capital allocation, shareholder revolt
-Summary: Covers Bayer's pre-deal pipeline problem, Werner Baumann's unsolicited $63 billion all-cash bid (bypassing shareholder vote via debt financing), the antitrust divestitures to BASF that hollowed out the crop science rationale, the Johnson v. Monsanto glyphosate verdict two months after closing, $17 billion in total litigation provisions, the historic 55% shareholder vote against management in 2019, and how the agricultural liabilities starved the pharmaceutical R&D pipeline.
+Topic: Bayer, Monsanto, merger, glyphosate, Roundup, pharma pipeline, capital allocation, shareholder revolt
+Summary: Covers Bayer's pre-deal pipeline problem and Werner Baumann's unsolicited 63 billion dollar all-cash bid that bypassed a shareholder vote through debt financing. Explains how the glyphosate litigation produced over 17 billion dollars in provisions, how agricultural liabilities starved the pharmaceutical R&D pipeline, and the historic 55 percent shareholder vote against management in 2019.
+
+### Lipitor's Patent Cliff — how the world's best-selling drug lost everything overnight
+URL: https://figuringoutpharma.com/articles/lipitor-patent-cliff
+Topic: Lipitor, atorvastatin, Pfizer, patent cliff, generic drugs, lifecycle management, pay-for-delay, Ranbaxy
+Summary: Covers how Lipitor became the world's best-selling drug and Pfizer's pre-cliff strategies including a 17.5 percent price increase in the final year and one billion dollars annually in direct-to-consumer advertising. Explains the pay-for-delay settlement with Ranbaxy in 2008 and the three defensive strategies Pfizer executed on the day the patent expired in November 2011.
+
+### COVID-19 Vaccine Development — how pharma did the impossible
+URL: https://figuringoutpharma.com/articles/covid-vaccine-development
+Topic: COVID-19 vaccines, mRNA vaccines, Covishield, Covaxin, Serum Institute, Bharat Biotech, rolling review, vaccine development India
+Summary: Explains why vaccines normally take 10 to 15 years and what structurally changed during COVID through parallel development funded by government advance market commitments. Covers the three platform technologies, how rolling regulatory review worked, India's specific role with Serum Institute producing over 200 million doses per month, and what permanently changed in platform science and supply chains.
 
 ---
 
@@ -80,6 +80,6 @@ Summary: Covers Bayer's pre-deal pipeline problem, Werner Baumann's unsolicited 
 Published: June 2026
 Author: Figuring Out Pharma (B.Pharma student, Mumbai, India)
 Primary audience: B.Pharma students and freshers entering the Indian pharmaceutical industry
-Content types: Long-form articles (5–12 min read), pharma case studies (10–11 min read)
+Content types: Long-form articles (5-12 min read), pharma case studies (10-11 min read)
 Topics covered: Pharma marketing, drug pricing, brand strategy, regulatory affairs, pharma careers, industry history, global case studies
 Contact: contact@figuringoutpharma.com

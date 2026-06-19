@@ -9,6 +9,9 @@
 <meta property="og:description" content="Lipitor generated $125 billion before its 2011 patent expiry. Here is what Pfizer did before, during, and after the cliff — and what the playbook teaches about pharma lifecycle management.">
 <meta property="og:url" content="https://figuringoutpharma.com/articles/lipitor-patent-cliff">
 <meta property="og:type" content="article">
+<meta property="og:image" content="https://figuringoutpharma.com/images/lipitor-patent-cliff-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://figuringoutpharma.com/images/lipitor-patent-cliff-cover.jpg">
 <link rel="canonical" href="https://figuringoutpharma.com/articles/lipitor-patent-cliff">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -121,6 +124,22 @@ nav{background:var(--forest);position:sticky;top:0;z-index:300;border-bottom:1px
 .prose blockquote{border-left:3px solid var(--gold);padding:0.875rem 1.25rem;margin:2rem 0;background:var(--cream2);font-style:italic;color:var(--text2)}
 .prose blockquote p{margin-bottom:0;font-size:1rem}
 .prose hr{border:none;border-top:1px solid var(--line);margin:2.5rem 0}
+.refs-wrap{margin:2rem 0;border:1px solid var(--line);background:var(--cream2)}
+.refs-toggle{display:flex;align-items:center;justify-content:space-between;padding:0.875rem 1.25rem;cursor:pointer;border-left:3px solid var(--forest3);transition:background 0.2s}
+.refs-toggle:hover{background:var(--cream3)}
+.refs-toggle-label{font-family:var(--sans);font-size:0.78rem;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:var(--text);display:flex;align-items:center;gap:8px}
+.refs-toggle-label::before{content:'';width:14px;height:14px;border:1px solid var(--forest3);border-radius:50%;display:inline-block;flex-shrink:0}
+.refs-count{font-family:var(--sans);font-size:0.68rem;color:var(--text3);font-weight:400;text-transform:none;letter-spacing:0}
+.refs-icon{font-family:var(--sans);font-size:0.9rem;color:var(--forest3);transition:transform 0.25s}
+.refs-wrap.open .refs-icon{transform:rotate(180deg)}
+.refs-body{max-height:0;overflow:hidden;transition:max-height 0.3s ease}
+.refs-wrap.open .refs-body{max-height:2000px}
+.refs-list{list-style:none;padding:0 1.25rem 1.25rem;margin:0;border-top:1px solid var(--line)}
+.refs-list li{font-family:var(--sans);font-size:0.8rem;color:var(--text2);line-height:1.6;padding:0.75rem 0;border-bottom:1px solid var(--line)}
+.refs-list li:last-child{border-bottom:none}
+.refs-list a{color:var(--forest3);text-decoration:underline;text-decoration-color:var(--sage2);text-underline-offset:2px}
+.refs-list a:hover{color:var(--forest)}
+.refs-note{font-family:var(--sans);font-size:0.78rem;color:var(--text3);font-style:italic;padding:1rem 1.25rem;border-top:1px solid var(--line)}
 .prose .callout{background:var(--cream2);border:1px solid var(--line);border-left:3px solid var(--forest3);padding:1.25rem 1.5rem;margin:2rem 0}
 .prose .callout-label{font-family:var(--sans);font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--forest3);margin-bottom:0.5rem}
 .prose .callout p{margin-bottom:0;font-size:0.92rem}
@@ -529,7 +548,18 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
     <h3>What is a pay-for-delay settlement?</h3>
     <p>It is an agreement where a branded drug manufacturer drops patent infringement litigation against a generic challenger in exchange for that challenger agreeing to delay launching its generic version. Pfizer and Ranbaxy reached one in 2008, which let Ranbaxy launch a generic Lipitor exactly on the official expiry date in exchange for early generic rights to a smaller Pfizer drug, Caduet.</p>
 
-    <hr>
+    <div class="refs-wrap" id="refsBox">
+  <div class="refs-toggle" onclick="toggleRefs()">
+    <span class="refs-toggle-label">References <span class="refs-count">(2 sources)</span></span>
+    <span class="refs-icon">&#9660;</span>
+  </div>
+  <div class="refs-body">
+    <ul class="refs-list">
+      <li>Chao, C. K., Hu, H., Zhang, L., & Wu, J. (2016). Managing the challenges of pharmaceutical patent expiry: a case study of Lipitor. <em>Journal of Science and Technology Policy Management</em>, 7(3), 258–272. <a href="https://doi.org/10.1108/JSTPM-12-2015-0040" target="_blank">DOI</a></li>
+      <li>Warraich, H. J., Salami, J. A., Khera, R., Valero-Elizondo, J., Okunrintemi, V., & Nasir, K. (2018). Trends in Use and Expenditures of Brand-name Atorvastatin After Introduction of Generic Atorvastatin. <em>JAMA Internal Medicine</em>, 178(5), 719–721. <a href="https://doi.org/10.1001/jamainternmed.2018.0990" target="_blank">DOI</a></li>
+    </ul>
+  </div>
+</div>
 
     <hr>
 
@@ -675,6 +705,7 @@ if(saved){document.documentElement.setAttribute('data-theme',saved);document.get
 function toggleMobileMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
 document.querySelectorAll('.nav-mobile-menu a').forEach(function(link){link.addEventListener('click',function(){document.getElementById('mobileMenu').classList.remove('open');});});
 document.addEventListener('click',function(e){const menu=document.getElementById('mobileMenu');const btn=document.getElementById('hamburgerBtn');if(menu&&btn&&!menu.contains(e.target)&&!btn.contains(e.target)){menu.classList.remove('open');}});
+function toggleRefs(){document.getElementById('refsBox').classList.toggle('open');}
 function copyLink(){navigator.clipboard.writeText(window.location.href).then(()=>{const btn=event.target;btn.textContent='Copied!';setTimeout(()=>btn.textContent='Copy link',2000);});}
 function shareLinkedIn(){window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank');}
 </script>

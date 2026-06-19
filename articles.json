@@ -6,7 +6,9 @@
   "excerpt": "India's revised Schedule M forces every drug manufacturer to move from basic hygiene rules to global quality risk management. Here is what changed, why it matters, and what the deadlines actually mean.",
   "date": "2026-06-09",
   "readTime": "7 min",
-  "featured": false
+  "featured": false,
+  "llmsTopic": "Schedule M, GMP India, CDSCO, DCGI, pharmaceutical manufacturing, quality risk management, MSME pharma",
+"llmsSummary": "Explains the shift from the rule-based 2001 Schedule M to the risk-based revised Schedule M requiring Pharmaceutical Quality System and Quality Risk Management. Covers what changed on the factory floor, the phased compliance deadlines, and why most MSME units did not apply for the 2025 extension. Enforcement status as of 2026 is addressed."
 },
   {
   "title": "How medical reps are actually trained — and what they are really selling",
@@ -15,7 +17,9 @@
   "excerpt": "Medical reps are not sample-dropping couriers. They are trained commercial operators selling something far more valuable than a molecule — and understanding how changes how you see the entire pharma field force.",
   "date": "2026-06-09",
   "readTime": "8 min",
-  "featured": false
+  "featured": false,
+  "llmsTopic": "medical representative, MR training, pharma field force, PCA framework, UCPMP 2024, pharma careers India",
+"llmsSummary": "Explains the Promotion-Conversion-Availability training framework that governs how medical reps are trained in India. Covers why scientific depth drives prescriber influence more than gifts or samples, the concept of physician mindshare as the real commercial asset, and what UCPMP 2024 means for the field force going forward."
 },
   {
   "title": "How Online Pharmacies Changed the Indian Pharma Industry",
@@ -24,7 +28,9 @@
   "excerpt": "E-pharmacies went from a 2% niche to a multi-billion dollar industry in under a decade. Here is the full breakdown — business models, consumer behaviour, regulatory paralysis, and what comes next.",
   "date": "2026-06-08",
   "readTime": "12 min",
-  "featured": true
+  "featured": true,
+  "llmsTopic": "e-pharmacy India, online pharmacy, Tata 1mg, PharmEasy, Netmeds, DCGI, digital pharma, E-Pharmacy Rules",
+"llmsSummary": "Covers the rise of e-pharmacies in India from a 2 percent niche to a multi-billion dollar industry, the four business models in use, why consumers switched based on perceived safety rather than price alone, and what e-pharmacies did to the AIOCD retail cartel. Explains why the E-Pharmacy Rules drafted in 2018 have still not been notified into law as of 2026."
 },
   {
   "title": "How Crocin turned a generic molecule into a household brand",
@@ -33,7 +39,9 @@
   "excerpt": "Paracetamol is a commodity any factory can make. So how did one brand own it for five decades? The full breakdown of Crocin's dual-brand strategy, the Dolo 650 disruption, and what it teaches about pharma brand strategy.",
   "date": "2026-06-08",
   "readTime": "9 min",
-  "featured": false
+  "featured": false,
+  "llmsTopic": "Crocin, Dolo 650, paracetamol brand strategy, OTC marketing India, DPCO loophole, pharma branding",
+"llmsSummary": "Explains how GSK Consumer Healthcare built Crocin into India's dominant paracetamol brand through consumer pull advertising and a dual-brand strategy with Calpol for doctors. Covers how Dolo 650 disrupted the market by exploiting the DPCO pricing gap on the 650mg formulation, and how COVID-19 amplified Dolo's prescription-led position."
 },
   {
   "title": "How drugs are priced in India — the real explanation",
@@ -42,7 +50,9 @@
   "excerpt": "DPCO, trade margins, and what your pharmacoeconomics textbook quietly skipped. Here is how drug pricing in India actually works.",
   "date": "2026-06-08",
   "readTime": "5 min",
-  "featured": false
+  "featured": false,
+  "llmsTopic": "DPCO, drug pricing India, NLEM, NPPA, trade margins, chemist incentives, FDC loophole",
+"llmsSummary": "Explains how the Drug Prices Control Order works in India, how the NPPA calculates ceiling prices using a market-based formula rather than production costs, and the loopholes companies use including FDC combinations and strength variations. Covers trade margin structures and why brand price variations for the same molecule can range from 1000 to 4000 percent."
 },
   {
   "title": "FMCG vs pharma marketing — explained from scratch, no assumptions",
@@ -51,7 +61,9 @@
   "excerpt": "People keep saying pharma is just like FMCG with more rules. It is not. Here is the full breakdown of how the two industries actually work.",
   "date": "2026-06-08",
   "readTime": "11 min",
-  "featured": false
+  "featured": false,
+  "llmsTopic": "pharma marketing, FMCG marketing, prescription drugs, OTC marketing, brand strategy India, medical representatives",
+"llmsSummary": "A full breakdown of how FMCG and pharmaceutical marketing differ across four dimensions — audiences, brand lifespan, advertising restrictions, and pricing. Explains why pharma cannot advertise prescription drugs in mass media in India, how the patent cliff creates a fundamentally different brand lifecycle, and where the two industries converge at Rx-to-OTC switches."
 }
  
 ]

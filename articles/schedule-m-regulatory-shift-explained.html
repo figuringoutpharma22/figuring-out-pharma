@@ -9,6 +9,9 @@
 <meta property="og:description" content="India's revised Schedule M replaced all GMP rules for drug manufacturers. What changed, CDSCO's deadlines, and what every B.Pharma student and QA professional needs to know.">
 <meta property="og:url" content="https://figuringoutpharma.com/articles/schedule-m-regulatory-shift-explained">
 <meta property="og:type" content="article">
+<meta property="og:image" content="https://figuringoutpharma.com/images/schedule-m-regulatory-shift-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://figuringoutpharma.com/images/schedule-m-regulatory-shift-cover.jpg">
 <link rel="canonical" href="https://figuringoutpharma.com/articles/schedule-m-regulatory-shift-explained">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -95,6 +98,22 @@ nav{background:var(--forest);position:sticky;top:0;z-index:300;border-bottom:1px
 .prose .callout-label{font-family:var(--sans);font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--forest3);margin-bottom:0.5rem}
 .prose .callout p{margin-bottom:0;font-size:0.92rem}
 .prose hr{border:none;border-top:1px solid var(--line);margin:2.5rem 0}
+.refs-wrap{margin:2rem 0;border:1px solid var(--line);background:var(--cream2)}
+.refs-toggle{display:flex;align-items:center;justify-content:space-between;padding:0.875rem 1.25rem;cursor:pointer;border-left:3px solid var(--forest3);transition:background 0.2s}
+.refs-toggle:hover{background:var(--cream3)}
+.refs-toggle-label{font-family:var(--sans);font-size:0.78rem;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:var(--text);display:flex;align-items:center;gap:8px}
+.refs-toggle-label::before{content:'';width:14px;height:14px;border:1px solid var(--forest3);border-radius:50%;display:inline-block;flex-shrink:0}
+.refs-count{font-family:var(--sans);font-size:0.68rem;color:var(--text3);font-weight:400;text-transform:none;letter-spacing:0}
+.refs-icon{font-family:var(--sans);font-size:0.9rem;color:var(--forest3);transition:transform 0.25s}
+.refs-wrap.open .refs-icon{transform:rotate(180deg)}
+.refs-body{max-height:0;overflow:hidden;transition:max-height 0.3s ease}
+.refs-wrap.open .refs-body{max-height:2000px}
+.refs-list{list-style:none;padding:0 1.25rem 1.25rem;margin:0;border-top:1px solid var(--line)}
+.refs-list li{font-family:var(--sans);font-size:0.8rem;color:var(--text2);line-height:1.6;padding:0.75rem 0;border-bottom:1px solid var(--line)}
+.refs-list li:last-child{border-bottom:none}
+.refs-list a{color:var(--forest3);text-decoration:underline;text-decoration-color:var(--sage2);text-underline-offset:2px}
+.refs-list a:hover{color:var(--forest)}
+.refs-note{font-family:var(--sans);font-size:0.78rem;color:var(--text3);font-style:italic;padding:1rem 1.25rem;border-top:1px solid var(--line)}
 .art-foot{max-width:var(--prose);margin:0 auto;padding:2.5rem 2rem 0;border-top:1px solid var(--line)}
 .tags-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:2rem}
 .tag-pill{font-family:var(--sans);font-size:0.65rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:4px 12px;border:1px solid var(--line);color:var(--text3);transition:all 0.2s;cursor:pointer}
@@ -385,6 +404,17 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
     <h3>Who enforces Schedule M?</h3>
     <p>The CDSCO (Central Drugs Standard Control Organisation), under India's Ministry of Health and Family Welfare, enforces Schedule M through state drug control authorities and licensing inspections.</p>
 
+    <div class="refs-wrap" id="refsBox">
+  <div class="refs-toggle" onclick="toggleRefs()">
+    <span class="refs-toggle-label">References <span class="refs-count">(1 source)</span></span>
+    <span class="refs-icon">&#9660;</span>
+  </div>
+  <div class="refs-body">
+    <ul class="refs-list">
+      <li>Dey, S., Dutta, S., & Ray, J. — <em>A Review Article on an Existing Schedule M vs Revised Schedule M</em></li>
+    </ul>
+  </div>
+</div>
     <hr>
 
     <p>
@@ -430,7 +460,7 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
   <div class="related-inner">
     <div class="related-head">Related Articles</div>
     <div class="related-grid">
-      <div class="rel-card" onclick="window.location='how-drugs-are-priced-in-india.'">
+      <div class="rel-card" onclick="window.location='how-drugs-are-priced-in-india'">
         <div class="rel-cat">Industry</div>
         <div class="rel-title">How drugs are priced in India — the real explanation</div>
         <div class="rel-time">5 min read</div>
@@ -494,6 +524,7 @@ if(saved){document.documentElement.setAttribute('data-theme',saved);document.get
 function toggleMobileMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
 document.querySelectorAll('.nav-mobile-menu a').forEach(function(link){link.addEventListener('click',function(){document.getElementById('mobileMenu').classList.remove('open');});});
 document.addEventListener('click',function(e){const menu=document.getElementById('mobileMenu');const btn=document.getElementById('hamburgerBtn');if(menu&&btn&&!menu.contains(e.target)&&!btn.contains(e.target)){menu.classList.remove('open');}});
+function toggleRefs(){document.getElementById('refsBox').classList.toggle('open');}
 function copyLink(){navigator.clipboard.writeText(window.location.href).then(()=>{const btn=event.target;btn.textContent='Copied!';setTimeout(()=>btn.textContent='Copy link',2000);});}
 function shareLinkedIn(){window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank');}
 </script>

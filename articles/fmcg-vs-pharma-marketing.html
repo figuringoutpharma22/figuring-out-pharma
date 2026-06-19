@@ -12,8 +12,10 @@
 <meta property="og:description" content="Pharma marketing and FMCG marketing look similar but work completely differently. Promotion rules, brand strategy, regulation — and what the differences mean for your pharma career in India.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://figuringoutpharma.com/articles/fmcg-vs-pharma-marketing">
+<meta property="og:image" content="https://figuringoutpharma.com/images/fmcg-vs-pharma-cover-v2.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://figuringoutpharma.com/images/fmcg-vs-pharma-cover-v2.jpg">
 <link rel="canonical" href="https://figuringoutpharma.com/articles/fmcg-vs-pharma-marketing">
-
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -123,6 +125,22 @@ nav{background:var(--forest);position:sticky;top:0;z-index:300;border-bottom:1px
 .prose .callout-label{font-family:var(--sans);font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--forest3);margin-bottom:0.5rem}
 .prose .callout p{margin-bottom:0;font-size:0.92rem}
 .prose hr{border:none;border-top:1px solid var(--line);margin:2.5rem 0}
+.refs-wrap{margin:2rem 0;border:1px solid var(--line);background:var(--cream2)}
+.refs-toggle{display:flex;align-items:center;justify-content:space-between;padding:0.875rem 1.25rem;cursor:pointer;border-left:3px solid var(--forest3);transition:background 0.2s}
+.refs-toggle:hover{background:var(--cream3)}
+.refs-toggle-label{font-family:var(--sans);font-size:0.78rem;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:var(--text);display:flex;align-items:center;gap:8px}
+.refs-toggle-label::before{content:'';width:14px;height:14px;border:1px solid var(--forest3);border-radius:50%;display:inline-block;flex-shrink:0}
+.refs-count{font-family:var(--sans);font-size:0.68rem;color:var(--text3);font-weight:400;text-transform:none;letter-spacing:0}
+.refs-icon{font-family:var(--sans);font-size:0.9rem;color:var(--forest3);transition:transform 0.25s}
+.refs-wrap.open .refs-icon{transform:rotate(180deg)}
+.refs-body{max-height:0;overflow:hidden;transition:max-height 0.3s ease}
+.refs-wrap.open .refs-body{max-height:2000px}
+.refs-list{list-style:none;padding:0 1.25rem 1.25rem;margin:0;border-top:1px solid var(--line)}
+.refs-list li{font-family:var(--sans);font-size:0.8rem;color:var(--text2);line-height:1.6;padding:0.75rem 0;border-bottom:1px solid var(--line)}
+.refs-list li:last-child{border-bottom:none}
+.refs-list a{color:var(--forest3);text-decoration:underline;text-decoration-color:var(--sage2);text-underline-offset:2px}
+.refs-list a:hover{color:var(--forest)}
+.refs-note{font-family:var(--sans);font-size:0.78rem;color:var(--text3);font-style:italic;padding:1rem 1.25rem;border-top:1px solid var(--line)}
 .prose figure{margin:2rem 0}
 .prose figcaption{font-family:var(--sans);font-size:0.72rem;color:var(--text3);text-align:center;margin-top:0.5rem;font-style:italic}
 
@@ -583,6 +601,22 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
     <h3>What is an Rx-to-OTC switch?</h3>
     <p>It is when a drug that previously required a prescription is reclassified so it can be sold over the counter. This is the one point where pharma and FMCG marketing genuinely converge — the audience shifts from doctors to consumers overnight, and the company suddenly needs mass media, packaging, and consumer insight skills instead of clinical detailing.</p>
 
+    <div class="refs-wrap" id="refsBox">
+  <div class="refs-toggle" onclick="toggleRefs()">
+    <span class="refs-toggle-label">References <span class="refs-count">(6 sources)</span></span>
+    <span class="refs-icon">&#9660;</span>
+  </div>
+  <div class="refs-body">
+    <ul class="refs-list">
+      <li>Schuiling, I., & Moss, G. (2004). How different are branding strategies in the pharmaceutical industry and the fast-moving consumer goods sector? <em>Journal of Brand Management</em>, 11, 366–380. <a href="https://doi.org/10.1057/palgrave.bm.2540182" target="_blank">DOI</a></li>
+      <li>Khan, M. Y., Gupta, P., Goswami, D., Bihari, B., & Verma, V. K. (2013). A Review on marketing of OTC drugs. <em>Asian Journal of Research in Pharmaceutical Science</em>, 3(2), 72–78.</li>
+      <li>Kumar, M. S., & Obulesu, V. (2020). A study on innovative marketing strategy towards fast movable consumer goods (FMCG) industries in India. <em>Journal of Mechanics of Continua and Mathematical Sciences</em>, 15, 787–798.</li>
+      <li>Wake, T. S., Darshana, A., Shambharkar, R. S., & Bijwar, L. N. (2025). Different marketing strategy for OTC and branded drug: A systematic review. <em>World Journal of Pharmaceutical Research</em>, 14(6), 339–363.</li>
+      <li>Bhullar, P. S. (2017). Empirical Analysis of Operating Efficiency and Firm Value: A Study of Fast Moving Consumer Goods and Pharmaceutical Sector in India. <em>International Journal of Economics and Financial Issues</em>, 7(3), 671–675.</li>
+      <li>Haider, R. (2023). Pharmaceutical Market: An Overview. <em>IJIS</em>, 2, 2087–2104.</li>
+    </ul>
+  </div>
+</div>
     <hr>
 
     <p>
@@ -725,7 +759,7 @@ document.addEventListener('click',function(e){
     menu.classList.remove('open');
   }
 });
-
+function toggleRefs(){document.getElementById('refsBox').classList.toggle('open');}
 // SHARE
 function copyLink(){
   navigator.clipboard.writeText(window.location.href).then(()=>{

@@ -8,8 +8,10 @@
 <meta property="og:title" content="Online Pharmacy in India — How E-Pharmacies Disrupted the Industry">
 <meta property="og:description" content="How online pharmacies in India grew from a 2% niche to a multi-billion dollar industry — business models, trade margins, regulatory gaps, and what it means for pharma careers.">
 <meta property="og:url" content="https://figuringoutpharma.com/articles/how-online-pharmacies-changed-indian-pharma">
-
 <meta property="og:type" content="article">
+<meta property="og:image" content="https://figuringoutpharma.com/images/online-pharmacies-india-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://figuringoutpharma.com/images/online-pharmacies-india-cover.jpg">
 <link rel="canonical" href="https://figuringoutpharma.com/articles/how-online-pharmacies-changed-indian-pharma">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -96,6 +98,22 @@ nav{background:var(--forest);position:sticky;top:0;z-index:300;border-bottom:1px
 .prose .callout-label{font-family:var(--sans);font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--forest3);margin-bottom:0.5rem}
 .prose .callout p{margin-bottom:0;font-size:0.92rem}
 .prose hr{border:none;border-top:1px solid var(--line);margin:2.5rem 0}
+.refs-wrap{margin:2rem 0;border:1px solid var(--line);background:var(--cream2)}
+.refs-toggle{display:flex;align-items:center;justify-content:space-between;padding:0.875rem 1.25rem;cursor:pointer;border-left:3px solid var(--forest3);transition:background 0.2s}
+.refs-toggle:hover{background:var(--cream3)}
+.refs-toggle-label{font-family:var(--sans);font-size:0.78rem;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:var(--text);display:flex;align-items:center;gap:8px}
+.refs-toggle-label::before{content:'';width:14px;height:14px;border:1px solid var(--forest3);border-radius:50%;display:inline-block;flex-shrink:0}
+.refs-count{font-family:var(--sans);font-size:0.68rem;color:var(--text3);font-weight:400;text-transform:none;letter-spacing:0}
+.refs-icon{font-family:var(--sans);font-size:0.9rem;color:var(--forest3);transition:transform 0.25s}
+.refs-wrap.open .refs-icon{transform:rotate(180deg)}
+.refs-body{max-height:0;overflow:hidden;transition:max-height 0.3s ease}
+.refs-wrap.open .refs-body{max-height:2000px}
+.refs-list{list-style:none;padding:0 1.25rem 1.25rem;margin:0;border-top:1px solid var(--line)}
+.refs-list li{font-family:var(--sans);font-size:0.8rem;color:var(--text2);line-height:1.6;padding:0.75rem 0;border-bottom:1px solid var(--line)}
+.refs-list li:last-child{border-bottom:none}
+.refs-list a{color:var(--forest3);text-decoration:underline;text-decoration-color:var(--sage2);text-underline-offset:2px}
+.refs-list a:hover{color:var(--forest)}
+.refs-note{font-family:var(--sans);font-size:0.78rem;color:var(--text3);font-style:italic;padding:1rem 1.25rem;border-top:1px solid var(--line)}
 .art-foot{max-width:var(--prose);margin:0 auto;padding:2.5rem 2rem 0;border-top:1px solid var(--line)}
 .tags-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:2rem}
 .tag-pill{font-family:var(--sans);font-size:0.65rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:4px 12px;border:1px solid var(--line);color:var(--text3);transition:all 0.2s;cursor:pointer}
@@ -453,6 +471,21 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
     <h3>What happened to traditional chemists because of online pharmacies?</h3>
     <p>Survey data shows 43 percent of traditional retail pharmacists reported an immediate drop in foot traffic, and 24 percent had to reduce prices to stay competitive. In response, over 52 percent of local pharmacies have started adopting some form of digital system, such as WhatsApp ordering or delivery partnerships, rather than disappearing entirely.</p>
 
+    <div class="refs-wrap" id="refsBox">
+  <div class="refs-toggle" onclick="toggleRefs()">
+    <span class="refs-toggle-label">References <span class="refs-count">(5 sources)</span></span>
+    <span class="refs-icon">&#9660;</span>
+  </div>
+  <div class="refs-body">
+    <ul class="refs-list">
+      <li>Thalkari, A. B., Karwa, P. N., & Gawli, C. S. (2018). A review on online pharmacy: Views and counterviews. <em>Asian Journal of Pharmacy and Technology</em>, 8(2), 108–111. <a href="https://doi.org/10.5958/2231-5713.2018.00017.X" target="_blank">DOI</a></li>
+      <li>Dcruz, A. C., Mokashi, V. N., Pai, S. R., & Sreedhar, D. (2022). The rise of E-pharmacy in India: Benefits, challenges, and the road ahead. <em>Indian Journal of Pharmacology</em>, 54(4), 282–291. <a href="https://doi.org/10.4103/ijp.ijp_445_21" target="_blank">DOI</a></li>
+      <li>Misra, P. (2025). Purchase intention toward E-pharmacy: the consumption value perspective. <em>International Journal of Pharmaceutical and Healthcare Marketing</em>, 19(2), 181–208. <a href="https://doi.org/10.1108/IJPHM-12-2023-0107" target="_blank">DOI</a></li>
+      <li>Paliwal, D., & Puttanna, K. Digital Dispense: The Rise of E-Pharmacies and Their Impact on Traditional Pharmacies in India.</li>
+      <li>Agrawal, K. (2025). Online Pharmacies in India: A Case of Policy Paralysis and Legal Uncertainty. <a href="https://dx.doi.org/10.2139/ssrn.6464444" target="_blank">SSRN</a></li>
+    </ul>
+  </div>
+</div>
     <hr>
 
     <p>
@@ -564,6 +597,7 @@ if(saved){document.documentElement.setAttribute('data-theme',saved);document.get
 function toggleMobileMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
 document.querySelectorAll('.nav-mobile-menu a').forEach(function(link){link.addEventListener('click',function(){document.getElementById('mobileMenu').classList.remove('open');});});
 document.addEventListener('click',function(e){const menu=document.getElementById('mobileMenu');const btn=document.getElementById('hamburgerBtn');if(menu&&btn&&!menu.contains(e.target)&&!btn.contains(e.target)){menu.classList.remove('open');}});
+function toggleRefs(){document.getElementById('refsBox').classList.toggle('open');}
 function copyLink(){navigator.clipboard.writeText(window.location.href).then(()=>{const btn=event.target;btn.textContent='Copied!';setTimeout(()=>btn.textContent='Copy link',2000);});}
 function shareLinkedIn(){window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank');}
 </script>
