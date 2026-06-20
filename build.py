@@ -145,6 +145,9 @@ STATIC_PAGES = [
     ("/blogs",        "weekly",  "0.9"),
     ("/case-studies", "weekly",  "0.9"),
     ("/categories",   "monthly", "0.7"),
+    ("/about",          "monthly", "0.6"),
+    ("/privacy-policy", "yearly",  "0.3"),
+    ("/terms",          "yearly",  "0.3"),
 ]
 
 

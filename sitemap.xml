@@ -35,6 +35,27 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://figuringoutpharma.com/about</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://figuringoutpharma.com/privacy-policy</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://figuringoutpharma.com/terms</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
   <!-- ARTICLES -->
   <url>
     <loc>https://figuringoutpharma.com/articles/schedule-m-regulatory-shift-explained</loc>
