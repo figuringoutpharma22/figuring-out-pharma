@@ -135,7 +135,7 @@ nav{background:var(--forest);position:sticky;top:0;z-index:300;border-bottom:1px
 .btn-o:hover{border-color:rgba(255,255,255,0.5);color:#fff}
 .hero-side{border-left:1px solid rgba(255,255,255,0.1);padding-left:3rem}
 .hs-label{font-family:var(--sans);font-size:0.6rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);margin-bottom:1.25rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(255,255,255,0.08)}
-.hs-item{padding:1rem 0;border-bottom:1px solid rgba(255,255,255,0.07);cursor:pointer;transition:all 0.2s}
+.hs-item{display:block;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,0.07);cursor:pointer;transition:all 0.2s}
 .hs-item:last-child{border-bottom:none}
 .hs-item:hover .hs-title{color:var(--sage2)}
 .hs-num{font-family:var(--serif);font-size:1.3rem;font-style:italic;color:rgba(255,255,255,0.12);line-height:1;margin-bottom:0.35rem}
@@ -154,7 +154,7 @@ nav{background:var(--forest);position:sticky;top:0;z-index:300;border-bottom:1px
 
 /* FEATURED GRID */
 .feat-grid{display:grid;grid-template-columns:3fr 2fr;gap:0;border:1px solid var(--line)}
-.feat-main{padding:2rem;border-right:1px solid var(--line);cursor:pointer;transition:background 0.2s}
+.feat-main{display:block;padding:2rem;border-right:1px solid var(--line);cursor:pointer;transition:background 0.2s}
 .feat-main:hover{background:var(--cream2)}
 .feat-main:hover .art-title{color:var(--forest3)}
 .feat-badge{display:inline-block;font-family:var(--sans);font-size:0.58rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:var(--forest);color:#fff;padding:3px 9px;border-radius:1px;margin-bottom:1rem}
@@ -173,7 +173,7 @@ nav{background:var(--forest);position:sticky;top:0;z-index:300;border-bottom:1px
 
 /* ARTICLE GRID */
 .art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
-.art-card{padding:1.75rem 1.5rem;border-right:1px solid var(--line);cursor:pointer;transition:background 0.2s}
+.art-card{display:block;padding:1.75rem 1.5rem;border-right:1px solid var(--line);cursor:pointer;transition:background 0.2s}
 .art-card:last-child{border-right:none}
 .art-card:hover{background:var(--cream2)}
 .art-card:hover .art-title{color:var(--forest3)}
@@ -183,7 +183,7 @@ nav{background:var(--forest);position:sticky;top:0;z-index:300;border-bottom:1px
 .scroll-head{max-width:var(--max);margin:0 auto 2rem;padding-right:3rem;display:flex;align-items:baseline;justify-content:space-between}
 .scroll-track{display:flex;gap:0;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;scroll-snap-type:x mandatory}
 .scroll-track::-webkit-scrollbar{display:none}
-.scroll-card{background:var(--card);border:1px solid var(--line);border-right:none;min-width:240px;max-width:240px;padding:1.5rem;cursor:pointer;transition:background 0.2s;scroll-snap-align:start;flex-shrink:0}
+.scroll-card{display:block;background:var(--card);border:1px solid var(--line);border-right:none;min-width:240px;max-width:240px;padding:1.5rem;cursor:pointer;transition:background 0.2s;scroll-snap-align:start;flex-shrink:0}
 .scroll-card:last-child{border-right:1px solid var(--line)}
 .scroll-card:hover{background:var(--cream2)}
 .scroll-card:hover .art-title{color:var(--forest3)}
@@ -197,7 +197,7 @@ nav{background:var(--forest);position:sticky;top:0;z-index:300;border-bottom:1px
 .case-head .sec-more{color:rgba(255,255,255,0.35)}
 .case-head .sec-more:hover{color:var(--sage2)}
 .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
-.case-card{border:1px solid rgba(255,255,255,0.08);border-right:none;padding:1.75rem 1.5rem;cursor:pointer;transition:background 0.2s;position:relative}
+.case-card{display:block;border:1px solid rgba(255,255,255,0.08);border-right:none;padding:1.75rem 1.5rem;cursor:pointer;transition:background 0.2s;position:relative}
 .case-card:last-child{border-right:1px solid rgba(255,255,255,0.08)}
 .case-card:hover{background:rgba(255,255,255,0.04)}
 .case-card:hover .cs-title{color:var(--sage2)}
@@ -513,24 +513,24 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
     <div class="hero-side">
       <div class="hs-label">Also reading</div>
       <!-- AUTO:ALSO-READING:START -->
-      <div class="hs-item" onclick="window.location='articles/how-crocin-became-a-household-brand'">
+      <a class="hs-item" href="articles/how-crocin-became-a-household-brand">
         <div class="hs-num">01</div>
         <div class="hs-cat">Brand Strategy</div>
         <div class="hs-title">How Crocin turned a generic molecule into a household brand</div>
         <div class="hs-time">9 min read</div>
-      </div>
-      <div class="hs-item" onclick="window.location='articles/how-drugs-are-priced-in-india'">
+      </a>
+      <a class="hs-item" href="articles/how-drugs-are-priced-in-india">
         <div class="hs-num">02</div>
         <div class="hs-cat">Industry</div>
         <div class="hs-title">How drugs are priced in India — the real explanation</div>
         <div class="hs-time">5 min read</div>
-      </div>
-      <div class="hs-item" onclick="window.location='articles/fmcg-vs-pharma-marketing'">
+      </a>
+      <a class="hs-item" href="articles/fmcg-vs-pharma-marketing">
         <div class="hs-num">03</div>
         <div class="hs-cat">Marketing</div>
         <div class="hs-title">FMCG vs pharma marketing — explained from scratch, no assumptions</div>
         <div class="hs-time">11 min read</div>
-      </div>
+      </a>
 <!-- AUTO:ALSO-READING:END -->
     </div>
   </div>
@@ -544,27 +544,27 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
       <a class="sec-more" href="blogs">All articles &#x2192;</a>
     </div>
     <div class="feat-grid">
-      <div class="feat-main" onclick="window.location='articles/how-online-pharmacies-changed-indian-pharma'">
+      <a class="feat-main" href="articles/how-online-pharmacies-changed-indian-pharma">
         <div class="feat-badge">Editor's Pick</div>
         <div class="art-cat">Digital</div>
         <div class="art-title">How online pharmacies changed the Indian pharma industry</div>
         <p class="art-excerpt">E-pharmacies went from a 2% niche to a multi-billion dollar industry in under a decade. Business models, consumer behaviour, regulatory paralysis, and what comes next.</p>
         <div class="art-meta"><span class="art-min">12 min read</span><span>Digital</span></div>
-      </div>
+      </a>
       <div class="feat-side">
       <!-- AUTO:FEAT-SIDE:START -->
-        <div class="side-art" onclick="window.location='articles/how-drugs-are-priced-in-india'">
+        <a class="side-art" href="articles/how-drugs-are-priced-in-india">
           <div class="art-cat">Industry</div>
           <div class="art-title">How drugs are priced in India - the real explanation</div>
           <p class="art-excerpt">DPCO, trade margins, and what your pharmacoeconomics textbook quietly skipped.</p>
           <div class="art-meta" style="margin-top:auto;padding-top:0.75rem"><span class="art-min">5 min</span></div>
-        </div>
-        <div class="side-art" onclick="window.location='articles/fmcg-vs-pharma-marketing'">
+        </a>
+        <a class="side-art" href="articles/fmcg-vs-pharma-marketing">
           <div class="art-cat">Marketing</div>
           <div class="art-title">FMCG vs pharma marketing - explained from scratch, no assumptions</div>
           <p class="art-excerpt">People keep saying pharma is just like FMCG. It is not. Here is the full breakdown.</p>
           <div class="art-meta" style="margin-top:auto;padding-top:0.75rem"><span class="art-min">11 min</span></div>
-        </div>
+        </a>
 <!-- AUTO:FEAT-SIDE:END -->
       </div>
     </div>
@@ -580,24 +580,24 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
     </div>
     <div class="art-grid">
       <!-- AUTO:LATEST:START -->
-      <div class="art-card" onclick="window.location='articles/schedule-m-regulatory-shift-explained'">
+      <a class="art-card" href="articles/schedule-m-regulatory-shift-explained">
         <div class="art-cat">Regulatory</div>
         <div class="art-title">Schedule M explained — the biggest regulatory shift in Indian pharma in decades</div>
         <p class="art-excerpt" style="font-family:var(--body);font-size:0.83rem;font-weight:300;color:var(--text2);line-height:1.72;font-style:italic;margin-bottom:0.75rem;margin-top:0.5rem">India's revised Schedule M forces every drug manufacturer to move from basic hygiene rules to global quality risk management. Here is what changed, why it matters, and what the deadlines actually mean.</p>
         <div class="art-meta"><span class="art-min">7 min</span></div>
-      </div>
-      <div class="art-card" onclick="window.location='articles/how-medical-reps-are-trained'">
+      </a>
+      <a class="art-card" href="articles/how-medical-reps-are-trained">
         <div class="art-cat">Careers</div>
         <div class="art-title">How medical reps are actually trained — and what they are really selling</div>
         <p class="art-excerpt" style="font-family:var(--body);font-size:0.83rem;font-weight:300;color:var(--text2);line-height:1.72;font-style:italic;margin-bottom:0.75rem;margin-top:0.5rem">Medical reps are not sample-dropping couriers. They are trained commercial operators selling something far more valuable than a molecule — and understanding how changes how you see the entire pharma field force.</p>
         <div class="art-meta"><span class="art-min">8 min</span></div>
-      </div>
-      <div class="art-card" onclick="window.location='articles/how-online-pharmacies-changed-indian-pharma'">
+      </a>
+      <a class="art-card" href="articles/how-online-pharmacies-changed-indian-pharma">
         <div class="art-cat">Digital</div>
         <div class="art-title">How Online Pharmacies Changed the Indian Pharma Industry</div>
         <p class="art-excerpt" style="font-family:var(--body);font-size:0.83rem;font-weight:300;color:var(--text2);line-height:1.72;font-style:italic;margin-bottom:0.75rem;margin-top:0.5rem">E-pharmacies went from a 2% niche to a multi-billion dollar industry in under a decade. Here is the full breakdown — business models, consumer behaviour, regulatory paralysis, and what comes next.</p>
         <div class="art-meta"><span class="art-min">12 min</span></div>
-      </div>
+      </a>
 <!-- AUTO:LATEST:END -->
     </div>
   </div>
@@ -611,42 +611,42 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
   </div>
   <div class="scroll-track">
 <!-- AUTO:IN-DEPTH:START -->
-    <div class="scroll-card" onclick="window.location='articles/schedule-m-regulatory-shift-explained'">
+    <a class="scroll-card" href="articles/schedule-m-regulatory-shift-explained">
       <div class="scroll-num">01</div>
       <div class="art-cat">Regulatory</div>
       <div class="art-title" style="font-size:0.9rem">Schedule M explained — the biggest regulatory shift in Indian pharma in decades</div>
       <div class="art-meta" style="margin-top:0.75rem"><span class="art-min">7 min</span></div>
-    </div>
-    <div class="scroll-card" onclick="window.location='articles/how-medical-reps-are-trained'">
+    </a>
+    <a class="scroll-card" href="articles/how-medical-reps-are-trained">
       <div class="scroll-num">02</div>
       <div class="art-cat">Careers</div>
       <div class="art-title" style="font-size:0.9rem">How medical reps are actually trained — and what they are really selling</div>
       <div class="art-meta" style="margin-top:0.75rem"><span class="art-min">8 min</span></div>
-    </div>
-    <div class="scroll-card" onclick="window.location='articles/how-online-pharmacies-changed-indian-pharma'">
+    </a>
+    <a class="scroll-card" href="articles/how-online-pharmacies-changed-indian-pharma">
       <div class="scroll-num">03</div>
       <div class="art-cat">Digital</div>
       <div class="art-title" style="font-size:0.9rem">How Online Pharmacies Changed the Indian Pharma Industry</div>
       <div class="art-meta" style="margin-top:0.75rem"><span class="art-min">12 min</span></div>
-    </div>
-    <div class="scroll-card" onclick="window.location='articles/how-crocin-became-a-household-brand'">
+    </a>
+    <a class="scroll-card" href="articles/how-crocin-became-a-household-brand">
       <div class="scroll-num">04</div>
       <div class="art-cat">Brand Strategy</div>
       <div class="art-title" style="font-size:0.9rem">How Crocin turned a generic molecule into a household brand</div>
       <div class="art-meta" style="margin-top:0.75rem"><span class="art-min">9 min</span></div>
-    </div>
-    <div class="scroll-card" onclick="window.location='articles/how-drugs-are-priced-in-india'">
+    </a>
+    <a class="scroll-card" href="articles/how-drugs-are-priced-in-india">
       <div class="scroll-num">05</div>
       <div class="art-cat">Industry</div>
       <div class="art-title" style="font-size:0.9rem">How drugs are priced in India — the real explanation</div>
       <div class="art-meta" style="margin-top:0.75rem"><span class="art-min">5 min</span></div>
-    </div>
-    <div class="scroll-card" onclick="window.location='articles/fmcg-vs-pharma-marketing'">
+    </a>
+    <a class="scroll-card" href="articles/fmcg-vs-pharma-marketing">
       <div class="scroll-num">06</div>
       <div class="art-cat">Marketing</div>
       <div class="art-title" style="font-size:0.9rem">FMCG vs pharma marketing — explained from scratch, no assumptions</div>
       <div class="art-meta" style="margin-top:0.75rem"><span class="art-min">11 min</span></div>
-    </div>
+    </a>
 <!-- AUTO:IN-DEPTH:END -->
   </div>
 </div>
@@ -660,48 +660,48 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
     </div>
     <div class="case-grid">
       <!-- AUTO:CASE-STUDIES:START -->
-      <div class="case-card cc-green" onclick="window.location='articles/covid-vaccine-development'">
+      <a class="case-card cc-green" href="articles/covid-vaccine-development">
         <div class="cs-tag t-green">Breakthrough</div>
         <div class="cs-year">2021 &#x2013; 2022</div>
         <div class="cs-title">COVID-19 Vaccine Development — how pharma did the impossible</div>
         <p class="cs-sum">Vaccines approved in under a year. The fastest before this had taken four years. Here is how it actually happened — the science, the money, the regulatory shortcuts that were not shortcuts, and why India sat at the centre of it.</p>
         <span class="cs-read">Read case study &#x2192;</span>
-      </div>
-      <div class="case-card cc-blue" onclick="window.location='articles/lipitor-patent-cliff'">
+      </a>
+      <a class="case-card cc-blue" href="articles/lipitor-patent-cliff">
         <div class="cs-tag t-blue">Patent</div>
         <div class="cs-year">2011</div>
         <div class="cs-title">Lipitor's Patent Cliff — how the world's best-selling drug lost everything overnight</div>
         <p class="cs-sum">Lipitor generated over $125 billion before its patent expired in 2011. The full story of Pfizer's pre-cliff strategy, the Ranbaxy legal fight, and what the playbook teaches about pharma lifecycle management.</p>
         <span class="cs-read">Read case study &#x2192;</span>
-      </div>
-      <div class="case-card cc-purple" onclick="window.location='articles/bayer-monsanto-merger'">
+      </a>
+      <a class="case-card cc-purple" href="articles/bayer-monsanto-merger">
         <div class="cs-tag t-purple">M&amp;A</div>
         <div class="cs-year">2018</div>
         <div class="cs-title">The Bayer–Monsanto Merger — how a $63 billion agricultural bet destroyed a pharmaceutical legacy</div>
         <p class="cs-sum">Bayer went to bed a pharmaceutical company and woke up an agrochemical defendant. The $63 billion Monsanto acquisition starved the pharma pipeline, triggered $17 billion in litigation, and wiped out €35 billion in market value.</p>
         <span class="cs-read">Read case study &#x2192;</span>
-      </div>
-      <div class="case-card cc-red" onclick="window.location='articles/thalidomide-tragedy'">
+      </a>
+      <a class="case-card cc-red" href="articles/thalidomide-tragedy">
         <div class="cs-tag t-red">Tragedy</div>
         <div class="cs-year">1957 &#x2013; 1962</div>
         <div class="cs-title">The Thalidomide Tragedy — and the untold Indian chapter</div>
         <p class="cs-sum">A sedative sold as the safest drug in the world caused birth defects in over 10,000 children. Here is what happened, why India's story is more complicated than most people know, and what it permanently changed about how drugs get approved.</p>
         <span class="cs-read">Read case study &#x2192;</span>
-      </div>
-      <div class="case-card cc-amber" onclick="window.location='articles/ranbaxy-and-the-fda'">
+      </a>
+      <a class="case-card cc-amber" href="articles/ranbaxy-and-the-fda">
         <div class="cs-tag t-amber">Regulatory</div>
         <div class="cs-year">2004 &#x2013; 2013</div>
         <div class="cs-title">Ranbaxy and the FDA — How India's biggest pharma success story collapsed</div>
         <p class="cs-sum">India's biggest pharma success story collapsed under data fraud allegations — and permanently changed how generic drug manufacturers are scrutinised worldwide.</p>
         <span class="cs-read">Read case study &#x2192;</span>
-      </div>
-      <div class="case-card cc-red" onclick="window.location='articles/vioxx-withdrawal'">
+      </a>
+      <a class="case-card cc-red" href="articles/vioxx-withdrawal">
         <div class="cs-tag t-red">Withdrawal</div>
         <div class="cs-year">2004</div>
         <div class="cs-title">The Vioxx Withdrawal — blockbuster economics, selective science, and the fall of a $20 billion drug</div>
         <p class="cs-sum">Merck pulled its blockbuster painkiller in 2004 after a placebo-controlled trial proved an undeniable link to heart attacks. The $7 billion fallout permanently changed how drug safety is monitored worldwide.</p>
         <span class="cs-read">Read case study &#x2192;</span>
-      </div>
+      </a>
 <!-- AUTO:CASE-STUDIES:END -->
     </div>
   </div>

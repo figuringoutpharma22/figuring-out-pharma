@@ -122,7 +122,7 @@ nav{background:var(--forest);position:sticky;top:0;z-index:300;border-bottom:1px
 .related-inner{max-width:var(--max);margin:0 auto}
 .related-head{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:1.75rem;padding-bottom:0.75rem;border-bottom:2px solid var(--text);letter-spacing:-0.01em}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
-.rel-card{padding:1.5rem;border-right:1px solid var(--line);cursor:pointer;transition:background 0.2s}
+.rel-card{display:block;padding:1.5rem;border-right:1px solid var(--line);cursor:pointer;transition:background 0.2s}
 .rel-card:last-child{border-right:none}
 .rel-card:hover{background:var(--cream)}
 .rel-card:hover .rel-title{color:var(--forest3)}
@@ -468,21 +468,21 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
   <div class="related-inner">
     <div class="related-head">Related Articles</div>
     <div class="related-grid">
-      <div class="rel-card" onclick="window.location='how-drugs-are-priced-in-india'">
+      <a class="rel-card" href="how-drugs-are-priced-in-india">
         <div class="rel-cat">Industry</div>
         <div class="rel-title">How drugs are priced in India — the real explanation</div>
         <div class="rel-time">5 min read</div>
-      </div>
-      <div class="rel-card" onclick="window.location='how-medical-reps-are-trained'">
+      </a>
+      <a class="rel-card" href="how-medical-reps-are-trained">
         <div class="rel-cat">Careers</div>
         <div class="rel-title">How medical reps are actually trained — and what they are really selling</div>
         <div class="rel-time">8 min read</div>
-      </div>
-      <div class="rel-card" onclick="window.location='covid-vaccine-development'">
+      </a>
+      <a class="rel-card" href="covid-vaccine-development">
         <div class="rel-cat">Case Study · Breakthrough</div>
         <div class="rel-title">COVID-19 Vaccine Development — how pharma did the impossible</div>
         <div class="rel-time">10 min read</div>
-      </div>
+      </a>
     </div>
   </div>
 </section>

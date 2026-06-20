@@ -340,12 +340,12 @@ function renderArticles(){
 
   grid.innerHTML = filtered.map(function(a, i){
     var isLastRow = i >= filtered.length - (filtered.length % 3 || 3);
-    return '<div class="article-card" onclick="window.location=\'' + a.slug + '\'" style="' + (isLastRow ? 'border-bottom:none' : '') + '">' +
+    return '<a class="article-card" href="' + a.slug + '" style="' + (isLastRow ? 'border-bottom:none' : '') + '">' +
       '<div class="ac-cat">' + a.category + '</div>' +
       '<div class="ac-title">' + a.title + '</div>' +
       '<p class="ac-excerpt">' + a.excerpt + '</p>' +
       '<div class="ac-meta"><span class="ac-min">' + a.readTime + ' read</span><span>' + formatDate(a.date) + '</span></div>' +
-      '</div>';
+      '</a>';
   }).join('');
 
   if(totalPages <= 1){ pagination.innerHTML = ''; return; }

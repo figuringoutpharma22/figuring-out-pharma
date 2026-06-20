@@ -73,7 +73,7 @@ nav{background:var(--forest);position:sticky;top:0;z-index:300;border-bottom:1px
 .cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
 
 /* CATEGORY CARD */
-.cat-card{padding:2.5rem 2rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);cursor:pointer;transition:background 0.2s;position:relative;overflow:hidden}
+.cat-card{display:block;padding:2.5rem 2rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);cursor:pointer;transition:background 0.2s;position:relative;overflow:hidden}
 .cat-card:nth-child(3n){border-right:none}
 .cat-card:nth-last-child(-n+3){border-bottom:none}
 .cat-card:hover{background:var(--cream2)}
@@ -185,53 +185,53 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
   <div class="cat-inner">
     <div class="cat-grid">
 
-      <div class="cat-card" onclick="window.location='blogs'">
+      <a class="cat-card" href="blogs">
         <div class="cat-accent"></div>
         <div class="cat-num">01</div>
         <div class="cat-name">Marketing</div>
         <p class="cat-desc">How pharma brands are built, positioned, and marketed — OTC vs prescription, FMCG comparisons, digital marketing, and brand strategy explained from scratch.</p>
         <div class="cat-count"><span>0</span> articles</div>
-      </div>
+      </a>
 
-      <div class="cat-card" onclick="window.location='blogs'" style="--cat-color:var(--gold)">
+      <a class="cat-card" href="blogs" style="--cat-color:var(--gold)">
         <div class="cat-accent" style="background:var(--gold)"></div>
         <div class="cat-num">02</div>
         <div class="cat-name">Careers</div>
         <p class="cat-desc">What pharma jobs actually look like day to day — product managers, medical reps, brand managers, industrial training, and how to enter the industry as a fresher.</p>
         <div class="cat-count"><span>0</span> articles</div>
-      </div>
+      </a>
 
-      <div class="cat-card" onclick="window.location='blogs'">
+      <a class="cat-card" href="blogs">
         <div class="cat-accent" style="background:#4a8ab5"></div>
         <div class="cat-num">03</div>
         <div class="cat-name">Industry</div>
         <p class="cat-desc">How the pharma industry operates — drug launches, pricing, market access, IQVIA data, supply chains, and the business of building and selling medicines.</p>
         <div class="cat-count"><span>0</span> articles</div>
-      </div>
+      </a>
 
-      <div class="cat-card" onclick="window.location='blogs'">
+      <a class="cat-card" href="blogs">
         <div class="cat-accent" style="background:var(--sage)"></div>
         <div class="cat-num">04</div>
         <div class="cat-name">Brand Strategy</div>
         <p class="cat-desc">How pharma companies build brands that doctors and patients remember — product monographs, brand lifecycle, key opinion leaders, and brand reviews.</p>
         <div class="cat-count"><span>0</span> articles</div>
-      </div>
+      </a>
 
-      <div class="cat-card" onclick="window.location='blogs'">
+      <a class="cat-card" href="blogs">
         <div class="cat-accent" style="background:#8a5ab5"></div>
         <div class="cat-num">05</div>
         <div class="cat-name">Digital</div>
         <p class="cat-desc">Why pharma is 10 years behind on digital, what's changing, and what content marketing, social media, and patient communities mean for the industry now.</p>
         <div class="cat-count"><span>0</span> articles</div>
-      </div>
+      </a>
 
-      <div class="cat-card" onclick="window.location='blogs'">
+      <a class="cat-card" href="blogs">
         <div class="cat-accent" style="background:#e05c4a"></div>
         <div class="cat-num">06</div>
         <div class="cat-name">Regulatory</div>
         <p class="cat-desc">DCGI guidelines, drug advertising rules, DPCO pricing controls, and why pharma can't advertise the same way every other industry does.</p>
         <div class="cat-count"><span>0</span> articles</div>
-      </div>
+      </a>
 
     </div>
   </div>
@@ -312,7 +312,7 @@ fetch('articles.json')
         countEl.textContent = counts[catName] || 0;
       }
       // Update onclick to filter blogs by category
-      card.setAttribute('onclick', "window.location='blogs?cat=" + encodeURIComponent(catName) + "'");
+      card.setAttribute('href', "blogs?cat=" + encodeURIComponent(catName));
     });
   })
   .catch(function(){

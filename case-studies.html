@@ -392,13 +392,13 @@ function render(){
     var total = pageItems.length;
     var cols = 3;
     var isLastRow = i >= total - (total % cols || cols);
-    return '<div class="cs-card ' + colours.card + '" onclick="window.location=\'' + cs.slug + '\'"' + (isLastRow ? ' style="border-bottom:1px solid rgba(255,255,255,0.08)"' : '') + '>' +
+    return '<a class="cs-card ' + colours.card + '" href="' + cs.slug + '"' + (isLastRow ? ' style="border-bottom:1px solid rgba(255,255,255,0.08)"' : '') + '>' +
       '<div class="tag ' + colours.tag + '">' + cs.tag + '</div>' +
       '<div class="csc-year">' + cs.year + '</div>' +
       '<div class="csc-title">' + cs.title + '</div>' +
       '<p class="csc-sum">' + cs.excerpt + '</p>' +
       '<span class="csc-read">Read case study &#x2192;</span>' +
-      '</div>';
+      '</a>';
   }).join('');
 
   // Render pagination

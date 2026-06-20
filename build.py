@@ -297,69 +297,67 @@ EXCERPT_STYLE = (
 
 def render_latest_card(a):
     return (
-        f'      <div class="art-card" onclick="window.location=\'{a["slug"]}\'">\n'
+        f'      <a class="art-card" href="{a["slug"]}">\n'
         f'        <div class="art-cat">{esc(a["category"])}</div>\n'
         f'        <div class="art-title">{esc(a["title"])}</div>\n'
         f'        <p class="art-excerpt" style="{EXCERPT_STYLE}">{esc(a["excerpt"])}</p>\n'
         f'        <div class="art-meta"><span class="art-min">{esc(a["readTime"])}</span></div>\n'
-        f'      </div>'
+        f'      </a>'
     )
 
 
 def render_in_depth_card(a, num):
     return (
-        f'    <div class="scroll-card" onclick="window.location=\'{a["slug"]}\'">\n'
+        f'    <a class="scroll-card" href="{a["slug"]}">\n'
         f'      <div class="scroll-num">{num:02d}</div>\n'
         f'      <div class="art-cat">{esc(a["category"])}</div>\n'
         f'      <div class="art-title" style="font-size:0.9rem">{esc(a["title"])}</div>\n'
         f'      <div class="art-meta" style="margin-top:0.75rem">'
         f'<span class="art-min">{esc(a["readTime"])}</span></div>\n'
-        f'    </div>'
+        f'    </a>'
     )
 
 
 def render_also_reading_item(a, num):
     return (
-        f'      <div class="hs-item" onclick="window.location=\'{a["slug"]}\'">\n'
+        f'      <a class="hs-item" href="{a["slug"]}">\n'
         f'        <div class="hs-num">{num:02d}</div>\n'
         f'        <div class="hs-cat">{esc(a["category"])}</div>\n'
         f'        <div class="hs-title">{esc(a["title"])}</div>\n'
         f'        <div class="hs-time">{esc(a["readTime"])} read</div>\n'
-        f'      </div>'
+        f'      </a>'
     )
 
 
 def render_case_grid_card(cs):
     tag_class, card_class = TAG_COLOURS.get(cs["tag"], DEFAULT_TAG_COLOUR)
     return (
-        f'      <div class="case-card {card_class}" onclick="window.location=\'{cs["slug"]}\'">\n'
+        f'      <a class="case-card {card_class}" href="{cs["slug"]}">\n'
         f'        <div class="cs-tag {tag_class}">{esc(cs["tag"])}</div>\n'
         f'        <div class="cs-year">{year_html(cs["year"])}</div>\n'
         f'        <div class="cs-title">{esc(short_title(cs["title"]))}</div>\n'
         f'        <p class="cs-sum">{esc(cs["excerpt"])}</p>\n'
         f'        <span class="cs-read">Read case study &#x2192;</span>\n'
-        f'      </div>'
+        f'      </a>'
     )
 
 
 def render_feat_side_article(item):
-    """Renders a side card that shows an article (fallback)."""
     return (
-        f'        <div class="side-art" onclick="window.location=\'{item["slug"]}\'">\n'
+        f'        <a class="side-art" href="{item["slug"]}">\n'
         f'          <div class="art-cat">{esc(item["category"])}</div>\n'
         f'          <div class="art-title">{esc(item["title"])}</div>\n'
         f'          <p class="art-excerpt">{esc(item["excerpt"])}</p>\n'
         f'          <div class="art-meta" style="margin-top:auto;padding-top:0.75rem">'
         f'<span class="art-min">{esc(item["readTime"])}</span></div>\n'
-        f'        </div>'
+        f'        </a>'
     )
 
 
 def render_feat_side_case_study(cs):
-    """Renders a side card that shows a case study (used from #7 onward)."""
     tag_class, _ = TAG_COLOURS.get(cs["tag"], DEFAULT_TAG_COLOUR)
     return (
-        f'        <div class="side-art" onclick="window.location=\'{cs["slug"]}\'">\n'
+        f'        <a class="side-art" href="{cs["slug"]}">\n'
         f'          <div class="art-cat" style="display:flex;gap:6px;align-items:center">'
         f'<span class="cs-tag {tag_class}" style="margin:0">{esc(cs["tag"])}</span>'
         f'<span>{year_html(cs["year"])}</span></div>\n'
@@ -367,7 +365,7 @@ def render_feat_side_case_study(cs):
         f'          <p class="art-excerpt">{esc(cs["excerpt"])}</p>\n'
         f'          <div class="art-meta" style="margin-top:auto;padding-top:0.75rem">'
         f'<span class="art-min">{esc(cs["readTime"])}</span></div>\n'
-        f'        </div>'
+        f'        </a>'
     )
 
 
