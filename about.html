@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Categories — Figuring Out Pharma</title>
-<meta name="description" content="Browse pharma articles by topic — marketing, careers, industry, brand strategy, digital and regulatory.">
+<title>About — Figuring Out Pharma</title>
+<meta name="description" content="Why Figuring Out Pharma exists, who writes it, and who it's for — B.Pharma students figuring out the gap between syllabus and industry, and anyone curious how pharma actually works.">
 <meta name="author" content="Figuring Out Pharma">
-<link rel="canonical" href="https://figuringoutpharma.com/categories">
-<meta property="og:title" content="Categories — Figuring Out Pharma">
-<meta property="og:url" content="https://figuringoutpharma.com/categories">
+<link rel="canonical" href="https://figuringoutpharma.com/about">
+<meta property="og:title" content="About — Figuring Out Pharma">
+<meta property="og:description" content="Why Figuring Out Pharma exists, who writes it, and who it's for.">
+<meta property="og:url" content="https://figuringoutpharma.com/about">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -25,14 +26,9 @@
   --serif:'Playfair Display',Georgia,serif;
   --body:'Source Serif 4',Georgia,serif;
   --sans:'DM Sans',sans-serif;
-  --max:1200px;
+  --max:1200px;--prose:680px;
 }
-[data-theme="dark"]{
-  --cream:#0e1a14;--cream2:#132019;--cream3:#1c2e22;
-  --line:#2a3d30;--line2:#3a5044;
-  --text:#e8f0e4;--text2:#9db89a;--text3:#5a7464;
-  --card:#132019;
-}
+[data-theme="dark"]{--cream:#0e1a14;--cream2:#132019;--cream3:#1c2e22;--line:#2a3d30;--line2:#3a5044;--text:#e8f0e4;--text2:#9db89a;--text3:#5a7464;--card:#132019;}
 html{font-size:16px;scroll-behavior:smooth;background:var(--cream)}
 body{color:var(--text);font-family:var(--body);line-height:1.7;background:var(--cream);transition:background 0.3s,color 0.3s}
 a{text-decoration:none;color:inherit}
@@ -65,25 +61,24 @@ nav{background:var(--forest);position:sticky;top:0;z-index:300;border-bottom:1px
 .page-kicker::before{content:'';width:28px;height:1px;background:var(--sage)}
 .page-title{font-family:var(--serif);font-size:clamp(2rem,3vw,3rem);font-weight:700;color:#fff;line-height:1.15;letter-spacing:-0.025em;margin-bottom:0.75rem}
 .page-title em{font-style:italic;font-weight:400;color:var(--sage2)}
-.page-sub{font-family:var(--body);font-size:1rem;font-weight:300;color:rgba(255,255,255,0.5);font-style:italic;line-height:1.8}
+.page-sub{font-family:var(--body);font-size:1rem;font-weight:300;color:rgba(255,255,255,0.5);font-style:italic;line-height:1.8;max-width:560px}
 
-/* CATEGORIES GRID */
-.cat-sec{padding:4rem 3rem;background:var(--cream)}
-.cat-inner{max-width:var(--max);margin:0 auto}
-.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
+/* PROSE SECTION */
+.about-sec{padding:4.5rem 3rem;background:var(--cream)}
+.about-inner{max-width:var(--prose);margin:0 auto}
+.about-prose{font-family:var(--body);font-size:1.08rem;line-height:1.88;color:var(--text2)}
+.about-prose p{margin-bottom:1.6rem;font-weight:300}
+.about-prose p:last-of-type{margin-bottom:0}
+.about-prose strong{color:var(--text);font-weight:500;font-style:normal}
+.about-sign{margin-top:2.25rem;padding-top:1.5rem;border-top:1px solid var(--line);font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--text)}
 
-/* CATEGORY CARD */
-.cat-card{padding:2.5rem 2rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);cursor:pointer;transition:background 0.2s;position:relative;overflow:hidden}
-.cat-card:nth-child(3n){border-right:none}
-.cat-card:nth-last-child(-n+3){border-bottom:none}
-.cat-card:hover{background:var(--cream2)}
-.cat-card:hover .cat-name{color:var(--forest3)}
-.cat-accent{position:absolute;top:0;left:0;width:3px;height:100%;background:var(--forest3)}
-.cat-num{font-family:var(--serif);font-size:2rem;font-style:italic;color:var(--line2);line-height:1;margin-bottom:1rem}
-.cat-name{font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--text);letter-spacing:-0.02em;margin-bottom:0.5rem;transition:color 0.2s}
-.cat-desc{font-family:var(--body);font-size:0.85rem;font-weight:300;color:var(--text2);line-height:1.72;font-style:italic;margin-bottom:1.25rem}
-.cat-count{font-family:var(--sans);font-size:0.65rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--text3)}
-.cat-count span{color:var(--forest3);font-weight:600}
+/* CONTACT STRIP */
+.about-contact{background:var(--cream2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:3rem}
+.about-contact-inner{max-width:var(--prose);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.ac-label{font-family:var(--sans);font-size:0.6rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3);margin-bottom:0.4rem}
+.ac-val{font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--text)}
+.ac-btn{font-family:var(--sans);font-size:0.72rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:#fff;background:var(--forest);padding:10px 20px;border-radius:2px;transition:background 0.2s;white-space:nowrap}
+.ac-btn:hover{background:var(--forest3)}
 
 /* FOOTER */
 footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);padding:1.5rem 3rem}
@@ -100,24 +95,20 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
 /* MOBILE */
 @media(max-width:768px){
   .nav-links{display:none}.nav-inner{padding:0 1.25rem}.nav-hamburger{display:flex}
-  .nav-mobile-menu.open{display:block}nav{position:sticky;top:0}
+  .nav-mobile-menu.open{display:block}
   .page-header{padding:3rem 1.25rem 2.5rem}
-  .cat-sec{padding:3rem 1.25rem}
-  .cat-grid{grid-template-columns:1fr 1fr!important}
-  .cat-card:nth-child(3n){border-right:1px solid var(--line)}
-  .cat-card:nth-child(2n){border-right:none}
-  .cat-card:nth-last-child(-n+3){border-bottom:1px solid var(--line)}
-  .cat-card:last-child{border-bottom:none}
+  .about-sec{padding:3rem 1.25rem}
+  .about-contact{padding:2.25rem 1.25rem}
+  .about-contact-inner{flex-direction:column;align-items:flex-start;gap:1.25rem}
   .foot-inner{flex-direction:column;align-items:flex-start;gap:1rem}
   footer{padding:1.5rem 1.25rem}
 }
 @media(max-width:480px){
   .nav-inner{height:50px;padding:0 1rem}.nav-name{font-size:0.88rem}
   .page-header{padding:2.5rem 1rem 2rem}
-  .cat-sec{padding:2.5rem 1rem}
-  .cat-grid{grid-template-columns:1fr!important}
-  .cat-card{border-right:none!important;border-bottom:1px solid var(--line)!important}
-  .cat-card:last-child{border-bottom:none!important}
+  .about-sec{padding:2.5rem 1rem}
+  .about-prose{font-size:1rem}
+  .about-contact{padding:2rem 1rem}
   footer{padding:1.25rem 1rem}
   .foot-links{flex-wrap:wrap;gap:0.75rem}
 }
@@ -128,8 +119,21 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-K3ENKKGSH5');
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About — Figuring Out Pharma",
+  "url": "https://figuringoutpharma.com/about",
+  "description": "Why Figuring Out Pharma exists, who writes it, and who it's for.",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Piyush Singh",
+    "description": "Writer of Figuring Out Pharma, a B.Pharm graduate."
+  }
+}
 </script>
 </head>
 <body>
@@ -149,8 +153,8 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
       <li><a href="/">Home</a></li>
       <li><a href="blogs">Blogs</a></li>
       <li><a href="case-studies">Case Studies</a></li>
-      <li><a href="categories" class="active">Categories</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="categories">Categories</a></li>
+      <li><a href="about" class="active">About</a></li>
       <li><a href="/#contact">Contact</a></li>
     </ul>
     <div class="nav-right">
@@ -166,78 +170,49 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
     <a href="blogs">Blogs</a>
     <a href="case-studies">Case Studies</a>
     <a href="categories">Categories</a>
-    <a href="#about">About</a>
+    <a href="about">About</a>
     <a href="/#contact">Contact</a>
   </div>
 </nav>
 
-<!-- PAGE HEADER -->
 <div class="page-header">
   <div class="page-header-inner">
-    <div class="page-kicker">Browse by topic</div>
-    <h1 class="page-title">Find what you are<br><em>looking for.</em></h1>
-    <p class="page-sub">Six topic areas covering the full picture of how the pharma industry actually works — from marketing strategy to regulatory affairs.</p>
+    <div class="page-kicker">About</div>
+    <h1 class="page-title">Why this site <em>exists.</em></h1>
+    <p class="page-sub">Not written by an expert. Written by someone who got tired of not understanding the industry.</p>
   </div>
 </div>
 
-<!-- CATEGORIES GRID -->
-<section class="cat-sec">
-  <div class="cat-inner">
-    <div class="cat-grid">
+<section class="about-sec">
+  <div class="about-inner">
+    <div class="about-prose">
 
-      <div class="cat-card" onclick="window.location='blogs'">
-        <div class="cat-accent"></div>
-        <div class="cat-num">01</div>
-        <div class="cat-name">Marketing</div>
-        <p class="cat-desc">How pharma brands are built, positioned, and marketed — OTC vs prescription, FMCG comparisons, digital marketing, and brand strategy explained from scratch.</p>
-        <div class="cat-count"><span>0</span> articles</div>
-      </div>
+      <p>I'm not a pharma executive. I'm not a professor. I have a B.Pharm degree, and somewhere in those four years, I got tired of not understanding the industry I was about to enter.</p>
 
-      <div class="cat-card" onclick="window.location='blogs'" style="--cat-color:var(--gold)">
-        <div class="cat-accent" style="background:var(--gold)"></div>
-        <div class="cat-num">02</div>
-        <div class="cat-name">Careers</div>
-        <p class="cat-desc">What pharma jobs actually look like day to day — product managers, medical reps, brand managers, industrial training, and how to enter the industry as a fresher.</p>
-        <div class="cat-count"><span>0</span> articles</div>
-      </div>
+      <p>A pharma degree teaches you the mechanism of action of practically any drug class. It does not teach you why a chemist recommends one paracetamol brand over another, what a medical rep actually does between 9 and 6, or why a multi-billion-dollar drug can vanish from the market overnight. None of that was in the syllabus. It still mostly isn't.</p>
 
-      <div class="cat-card" onclick="window.location='blogs'">
-        <div class="cat-accent" style="background:#4a8ab5"></div>
-        <div class="cat-num">03</div>
-        <div class="cat-name">Industry</div>
-        <p class="cat-desc">How the pharma industry operates — drug launches, pricing, market access, IQVIA data, supply chains, and the business of building and selling medicines.</p>
-        <div class="cat-count"><span>0</span> articles</div>
-      </div>
+      <p>So I started figuring it out on my own — reading regulatory filings, court documents, industry reports, talking to people who actually work in this, and writing down what I learned in language that didn't assume the reader already knew everything. That's this site.</p>
 
-      <div class="cat-card" onclick="window.location='blogs'">
-        <div class="cat-accent" style="background:var(--sage)"></div>
-        <div class="cat-num">04</div>
-        <div class="cat-name">Brand Strategy</div>
-        <p class="cat-desc">How pharma companies build brands that doctors and patients remember — product monographs, brand lifecycle, key opinion leaders, and brand reviews.</p>
-        <div class="cat-count"><span>0</span> articles</div>
-      </div>
+      <p>Two kinds of people seem to find it useful. One is B.Pharma students and freshers who feel the same gap I did — between what's taught and what the job actually looks like. The other is people with nothing to do with pharma, who are just curious how an industry that touches their life constantly — through every prescription, every price tag, every drug recall in the news — actually works. Pharma has a habit of sounding more complicated than it is. I try to write for both kinds of readers without dumbing anything down.</p>
 
-      <div class="cat-card" onclick="window.location='blogs'">
-        <div class="cat-accent" style="background:#8a5ab5"></div>
-        <div class="cat-num">05</div>
-        <div class="cat-name">Digital</div>
-        <p class="cat-desc">Why pharma is 10 years behind on digital, what's changing, and what content marketing, social media, and patient communities mean for the industry now.</p>
-        <div class="cat-count"><span>0</span> articles</div>
-      </div>
+      <p>I'm not claiming expertise I don't have. I'm someone writing in public, checking my facts, getting corrected when I'm wrong, and getting better at this one article at a time. If you know more about something here than I do, I'd like to hear it.</p>
 
-      <div class="cat-card" onclick="window.location='blogs'">
-        <div class="cat-accent" style="background:#e05c4a"></div>
-        <div class="cat-num">06</div>
-        <div class="cat-name">Regulatory</div>
-        <p class="cat-desc">DCGI guidelines, drug advertising rules, DPCO pricing controls, and why pharma can't advertise the same way every other industry does.</p>
-        <div class="cat-count"><span>0</span> articles</div>
-      </div>
+      <p class="about-sign">— Piyush Singh</p>
 
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<div class="about-contact">
+  <div class="about-contact-inner">
+    <div>
+      <div class="ac-label">Get in touch</div>
+      <div class="ac-val">contact@figuringoutpharma.com</div>
+    </div>
+    <a href="mailto:contact@figuringoutpharma.com" class="ac-btn">Write in &#8594;</a>
+  </div>
+</div>
+
 <footer>
   <div class="foot-inner">
     <div class="foot-logo">
@@ -253,7 +228,7 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
       <a href="/">Home</a>
       <a href="blogs">Blogs</a>
       <a href="case-studies">Case Studies</a>
-      <a href="#about">About</a>
+      <a href="about">About</a>
       <a href="/#contact">Contact</a>
       <a href="privacy-policy">Privacy Policy</a>
 <a href="terms">Terms</a>
@@ -270,7 +245,6 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
         </svg>
       </a>
     </div>
-     
     <div class="foot-copy">&#169; 2026 Figuring Out Pharma</div>
   </div>
 </footer>
@@ -295,29 +269,6 @@ document.addEventListener('click',function(e){
   const m=document.getElementById('mobileMenu');const b=document.getElementById('hamburgerBtn');
   if(m&&b&&!m.contains(e.target)&&!b.contains(e.target))m.classList.remove('open');
 });
-
-// Auto-count articles per category from articles.json
-fetch('articles.json')
-  .then(function(r){return r.json();})
-  .then(function(articles){
-    var counts = {};
-    articles.forEach(function(a){
-      var cat = a.category;
-      counts[cat] = (counts[cat] || 0) + 1;
-    });
-    document.querySelectorAll('.cat-card').forEach(function(card){
-      var catName = card.querySelector('.cat-name').textContent.trim();
-      var countEl = card.querySelector('.cat-count span');
-      if(countEl){
-        countEl.textContent = counts[catName] || 0;
-      }
-      // Update onclick to filter blogs by category
-      card.setAttribute('onclick', "window.location='blogs?cat=" + encodeURIComponent(catName) + "'");
-    });
-  })
-  .catch(function(){
-    // If fetch fails just leave counts at 0
-  });
 </script>
 </body>
 </html>

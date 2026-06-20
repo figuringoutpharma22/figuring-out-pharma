@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Figuring Out Pharma</title>
+<meta name="description" content="How Figuring Out Pharma collects, uses, and protects your data — analytics, newsletter sign-ups, and email contact.">
+<meta name="author" content="Figuring Out Pharma">
+<link rel="canonical" href="https://figuringoutpharma.com/privacy-policy">
+<meta property="og:title" content="Privacy Policy — Figuring Out Pharma">
+<meta property="og:url" content="https://figuringoutpharma.com/privacy-policy">
+<meta property="og:type" content="website">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --forest:#1a3a2a;--forest2:#234d38;--forest3:#2d6347;--forest4:#3a7a58;
+  --sage:#7aab8e;--sage2:#a8c9b5;
+  --cream:#faf8f2;--cream2:#f3f0e6;--cream3:#e8e3d4;
+  --gold:#c9a84c;--gold2:#e8c96a;
+  --line:#ddd8c8;--line2:#ccc6b4;
+  --text:#1c1a14;--text2:#4a4638;--text3:#8a8474;
+  --card:#ffffff;
+  --serif:'Playfair Display',Georgia,serif;
+  --body:'Source Serif 4',Georgia,serif;
+  --sans:'DM Sans',sans-serif;
+  --max:1200px;--prose:740px;
+}
+[data-theme="dark"]{
+  --cream:#0e1a14;--cream2:#132019;--cream3:#1c2e22;
+  --line:#2a3d30;--line2:#3a5044;
+  --text:#e8f0e4;--text2:#9db89a;--text3:#5a7464;
+  --card:#132019;
+}
+html{font-size:16px;scroll-behavior:smooth;background:var(--cream)}
+body{color:var(--text);font-family:var(--body);line-height:1.7;background:var(--cream);transition:background 0.3s,color 0.3s}
+a{text-decoration:none;color:inherit}
+
+nav{background:var(--forest);position:sticky;top:0;z-index:300;border-bottom:1px solid rgba(255,255,255,0.06)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 3rem;display:flex;align-items:center;justify-content:space-between;height:60px;gap:2rem}
+.nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.nav-icon{width:28px;height:28px;flex-shrink:0}
+.nav-name{font-family:var(--serif);font-size:1.05rem;font-weight:700;color:#fff;letter-spacing:-0.01em;white-space:nowrap}
+.nav-name em{font-style:italic;font-weight:400;color:var(--sage2)}
+.nav-links{display:flex;gap:0;list-style:none;flex:1;justify-content:center}
+.nav-links a{font-family:var(--sans);font-size:0.72rem;font-weight:400;color:rgba(255,255,255,0.6);padding:6px 10px;transition:color 0.2s;letter-spacing:0.04em;text-transform:uppercase;white-space:nowrap}
+.nav-links a:hover{color:#fff}
+.nav-right{display:flex;align-items:center;gap:0.75rem;flex-shrink:0}
+.nav-theme{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);width:32px;height:32px;border-radius:3px;cursor:pointer;font-size:0.85rem;transition:all 0.2s;display:flex;align-items:center;justify-content:center}
+.nav-theme:hover{background:rgba(255,255,255,0.14);color:#fff}
+.nav-sub{background:var(--gold);color:var(--forest);border:none;font-family:var(--sans);font-size:0.7rem;font-weight:600;padding:7px 16px;border-radius:3px;cursor:pointer;letter-spacing:0.05em;text-transform:uppercase;transition:all 0.2s;white-space:nowrap}
+.nav-sub:hover{background:var(--gold2)}
+.nav-hamburger{display:none;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);width:32px;height:32px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;flex-shrink:0;border-radius:2px}
+.nav-hamburger span{display:block;width:16px;height:1.5px;background:currentColor}
+.nav-mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--forest2);border-bottom:1px solid rgba(255,255,255,0.08);z-index:299;padding:0.5rem 0}
+.nav-mobile-menu a{display:block;font-family:var(--sans);font-size:0.82rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.7);padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,0.06);text-decoration:none}
+.nav-mobile-menu a:last-child{border-bottom:none}
+
+.page-header{background:var(--forest);padding:4rem 3rem 3.5rem}
+.page-header-inner{max-width:var(--prose);margin:0 auto}
+.page-kicker{font-family:var(--sans);font-size:0.62rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage);margin-bottom:1rem;display:flex;align-items:center;gap:10px}
+.page-kicker::before{content:'';width:28px;height:1px;background:var(--sage)}
+.page-title{font-family:var(--serif);font-size:clamp(1.9rem,3vw,2.6rem);font-weight:700;color:#fff;line-height:1.15;letter-spacing:-0.025em;margin-bottom:0.75rem}
+.page-sub{font-family:var(--body);font-size:0.95rem;font-weight:300;color:rgba(255,255,255,0.5);font-style:italic;line-height:1.8}
+.page-updated{font-family:var(--sans);font-size:0.68rem;color:rgba(255,255,255,0.32);letter-spacing:0.04em;margin-top:1.25rem;text-transform:uppercase}
+
+.legal-sec{padding:3.5rem 3rem 5rem;background:var(--cream)}
+.legal-inner{max-width:var(--prose);margin:0 auto}
+.prose{font-family:var(--body);font-size:1rem;line-height:1.82;color:var(--text2)}
+.prose h2{font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-0.02em;margin:2.25rem 0 0.9rem;padding-top:0.25rem}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:1.2rem;font-weight:300}
+.prose p:last-child{margin-bottom:0}
+.prose strong{color:var(--text);font-weight:500;font-style:normal}
+.prose a{color:var(--forest3);text-decoration:underline;text-decoration-color:var(--sage2);text-underline-offset:3px;transition:color 0.2s}
+.prose a:hover{color:var(--forest)}
+.prose ul{padding-left:1.4rem;margin-bottom:1.2rem}
+.prose li{margin-bottom:0.5rem;font-weight:300}
+.prose .callout{background:var(--cream2);border:1px solid var(--line);border-left:3px solid var(--forest3);padding:1.1rem 1.4rem;margin:1.75rem 0}
+.prose .callout-label{font-family:var(--sans);font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--forest3);margin-bottom:0.5rem}
+.prose .callout p{margin-bottom:0;font-size:0.88rem}
+.toc-jump{border:1px solid var(--line);background:var(--cream2);padding:1.25rem 1.5rem;margin-bottom:2.5rem}
+.toc-jump-label{font-family:var(--sans);font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:0.75rem}
+.toc-jump-list{display:flex;flex-wrap:wrap;gap:6px 0}
+.toc-jump-list a{font-family:var(--sans);font-size:0.78rem;color:var(--forest3);padding:3px 0;display:inline-block;width:50%}
+
+footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);padding:1.5rem 3rem}
+.foot-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.foot-logo{display:flex;align-items:center;gap:8px}
+.foot-logo-icon{width:22px;height:22px}
+.foot-logo-name{font-family:var(--serif);font-size:0.88rem;font-weight:700;color:rgba(255,255,255,0.7)}
+.foot-logo-name em{font-style:italic;font-weight:400;color:var(--sage)}
+.foot-links{display:flex;gap:1.5rem;flex-wrap:wrap}
+.foot-links a{font-family:var(--sans);font-size:0.65rem;letter-spacing:0.05em;text-transform:uppercase;color:rgba(255,255,255,0.3);transition:color 0.2s}
+.foot-links a:hover{color:var(--sage2)}
+.foot-copy{font-family:var(--sans);font-size:0.62rem;color:rgba(255,255,255,0.2)}
+
+@media(max-width:768px){
+  .nav-links{display:none}.nav-inner{padding:0 1.25rem}.nav-hamburger{display:flex}
+  .nav-mobile-menu.open{display:block}
+  .page-header{padding:3rem 1.25rem 2.5rem}
+  .legal-sec{padding:2.5rem 1.25rem 4rem}
+  .toc-jump-list a{width:100%}
+  .foot-inner{flex-direction:column;align-items:flex-start;gap:1rem}
+  footer{padding:1.5rem 1.25rem}
+}
+@media(max-width:480px){
+  .nav-inner{height:50px;padding:0 1rem}.nav-name{font-size:0.88rem}
+  .page-header{padding:2.5rem 1rem 2rem}
+  .legal-sec{padding:2rem 1rem 3rem}
+  footer{padding:1.25rem 1rem}
+  .foot-links{flex-wrap:wrap;gap:0.75rem}
+}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K3ENKKGSH5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-K3ENKKGSH5');
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="/">
+      <svg class="nav-icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="14" cy="14" r="13" fill="#2d6347" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+        <path d="M9 14h10M14 9v10" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"/>
+        <circle cx="14" cy="14" r="3.5" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+        <circle cx="14" cy="14" r="1.5" fill="#c9a84c"/>
+      </svg>
+      <span class="nav-name">Figuring Out <em>Pharma</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="blogs">Blogs</a></li>
+      <li><a href="case-studies">Case Studies</a></li>
+      <li><a href="categories">Categories</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="nav-theme" onclick="toggleTheme()" id="themeBtn">&#9790;</button>
+      <a href="https://figuring-outs-newsletter.beehiiv.com/subscribe" target="_blank"><button class="nav-sub">Subscribe</button></a>
+      <button class="nav-hamburger" onclick="toggleMobileMenu()" id="hamburgerBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile-menu" id="mobileMenu">
+    <a href="/">Home</a>
+    <a href="blogs">Blogs</a>
+    <a href="case-studies">Case Studies</a>
+    <a href="categories">Categories</a>
+    <a href="#about">About</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-kicker">Legal</div>
+    <h1 class="page-title">Privacy Policy</h1>
+    <p class="page-sub">What we collect, why we collect it, and what control you have over it.</p>
+    <p class="page-updated">Last updated: June 2026</p>
+  </div>
+</div>
+
+<section class="legal-sec">
+  <div class="legal-inner">
+
+    <div class="toc-jump">
+      <div class="toc-jump-label">Jump to a section</div>
+      <div class="toc-jump-list">
+        <a href="#what-we-collect">What we collect</a>
+        <a href="#how-we-use-it">How we use it</a>
+        <a href="#cookies-analytics">Cookies &amp; analytics</a>
+        <a href="#third-parties">Third-party services</a>
+        <a href="#data-retention">Data retention</a>
+        <a href="#your-rights">Your rights</a>
+        <a href="#childrens-privacy">Children's privacy</a>
+        <a href="#changes">Changes to this policy</a>
+        <a href="#contact-us">Contact us</a>
+      </div>
+    </div>
+
+    <article class="prose">
+
+      <p>
+        Figuring Out Pharma ("we," "us," "this site") is a personal editorial blog published by a B.Pharma student based in Mumbai, India. This policy explains what information we collect when you visit figuringoutpharma.com, why we collect it, and what choices you have. We have tried to write it in the same plain language we use everywhere else on this site.
+      </p>
+
+      <h2 id="what-we-collect">What we collect</h2>
+      <p>
+        We collect very little, and almost none of it is collected directly by us. Specifically:
+      </p>
+      <ul>
+        <li><strong>Site analytics</strong> — through Google Analytics (GA4), we receive aggregated, anonymised-where-possible data such as which pages you visit, how long you stay, your approximate location (city/country level, derived from IP address), device type, and the site that referred you here.</li>
+        <li><strong>Newsletter sign-up</strong> — if you click "Subscribe," you are taken to our newsletter platform, Beehiiv, where you provide your email address directly to them. We receive your email address as a subscriber on our list, but the sign-up itself happens on Beehiiv's site under Beehiiv's own privacy policy.</li>
+        <li><strong>Direct email</strong> — if you email us at contact@figuringoutpharma.com, we receive whatever you choose to include in that email (your name, email address, and message).</li>
+      </ul>
+      <p>
+        We do not currently run a contact form, comment system, user account system, or payment system on this site, so we do not collect or store passwords, payment details, or any data beyond what is described above.
+      </p>
+
+      <h2 id="how-we-use-it">How we use it</h2>
+      <p>
+        Analytics data is used only to understand which articles are useful, how people find the site, and where to focus future writing. Your email address (if you subscribe) is used only to send you the newsletter you signed up for. Email you send us is used only to read and respond to you. We do not sell, rent, or trade any of this information to anyone.
+      </p>
+
+      <h2 id="cookies-analytics">Cookies &amp; analytics</h2>
+      <p>
+        This site uses Google Analytics 4, which sets cookies in your browser to distinguish you from other visitors and to remember basic preferences (such as light/dark theme, stored via local browser storage rather than a cookie). We do not use advertising cookies, retargeting pixels, or third-party tracking networks — there is no ad network running on this site.
+      </p>
+      <p>
+        You can block or delete cookies at any time through your browser settings, or opt out of Google Analytics tracking using <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google's official browser opt-out tool</a>. Blocking cookies will not affect your ability to read any content on this site.
+      </p>
+
+      <h2 id="third-parties">Third-party services</h2>
+      <p>
+        We rely on a small number of external services to run this site, each of which processes data under its own privacy policy:
+      </p>
+      <ul>
+        <li><strong>Google Analytics</strong> — site usage analytics. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+        <li><strong>Beehiiv</strong> — our newsletter platform, used to collect and manage email subscriptions. See <a href="https://www.beehiiv.com/privacy" target="_blank" rel="noopener">Beehiiv's Privacy Policy</a>.</li>
+        <li><strong>Cloudflare Pages</strong> — our hosting provider, which processes standard web request logs (IP address, browser type) as part of serving the site. See <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare's Privacy Policy</a>.</li>
+      </ul>
+
+      <div class="callout">
+        <div class="callout-label">In plain terms</div>
+        <p>We are a one-person blog, not an ad-funded media company. We have no commercial reason to track you closely, and we don't.</p>
+      </div>
+
+      <h2 id="data-retention">Data retention</h2>
+      <p>
+        Analytics data is retained according to Google Analytics' default retention settings. Newsletter subscriber data is retained by Beehiiv until you unsubscribe. Emails you send us are kept for as long as is reasonably useful for record-keeping, and deleted when no longer needed.
+      </p>
+
+      <h2 id="your-rights">Your rights</h2>
+      <p>
+        Depending on where you live, you may have rights under laws such as the GDPR (EU/UK), the CCPA (California), or India's Digital Personal Data Protection Act, 2023 — including the right to know what data we hold about you, request its correction or deletion, and withdraw consent at any time.
+      </p>
+      <p>
+        To unsubscribe from the newsletter, use the unsubscribe link in any email from us, or manage your subscription directly through Beehiiv. For any other request relating to your data, email <a href="mailto:contact@figuringoutpharma.com">contact@figuringoutpharma.com</a> and we will respond within a reasonable time.
+      </p>
+
+      <h2 id="childrens-privacy">Children's privacy</h2>
+      <p>
+        This site is intended for B.Pharma students, freshers, and professionals, and is not directed at children. We do not knowingly collect personal information from anyone under 13.
+      </p>
+
+      <h2 id="changes">Changes to this policy</h2>
+      <p>
+        We may update this policy as the site evolves — for example, if we add new tools or services. Material changes will be reflected by updating the "Last updated" date at the top of this page. We encourage you to review this page occasionally.
+      </p>
+
+      <h2 id="contact-us">Contact us</h2>
+      <p>
+        Questions about this policy or your data are always welcome at <a href="mailto:contact@figuringoutpharma.com">contact@figuringoutpharma.com</a>.
+      </p>
+
+    </article>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-logo">
+      <svg class="foot-logo-icon" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="11" cy="11" r="10" fill="#2d6347" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+        <path d="M7 11h8M11 7v8" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="11" cy="11" r="2.8" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.8"/>
+        <circle cx="11" cy="11" r="1.2" fill="#c9a84c"/>
+      </svg>
+      <span class="foot-logo-name">Figuring Out <em>Pharma</em></span>
+    </div>
+    <div class="foot-links">
+      <a href="/">Home</a>
+      <a href="blogs">Blogs</a>
+      <a href="case-studies">Case Studies</a>
+      <a href="privacy-policy">Privacy Policy</a>
+      <a href="terms">Terms &amp; Disclaimer</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="foot-copy">&#169; 2026 Figuring Out Pharma</div>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){
+  var html=document.documentElement;
+  var dark=html.getAttribute('data-theme')==='dark';
+  html.setAttribute('data-theme',dark?'light':'dark');
+  document.getElementById('themeBtn').innerHTML=dark?'&#9790;':'&#9728;';
+  localStorage.setItem('fop-theme',dark?'light':'dark');
+}
+var saved=localStorage.getItem('fop-theme');
+if(saved){document.documentElement.setAttribute('data-theme',saved);document.getElementById('themeBtn').innerHTML=saved==='dark'?'&#9728;':'&#9790;';}
+function toggleMobileMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
+document.querySelectorAll('.nav-mobile-menu a').forEach(function(l){l.addEventListener('click',function(){document.getElementById('mobileMenu').classList.remove('open');});});
+document.addEventListener('click',function(e){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');if(m&&b&&!m.contains(e.target)&&!b.contains(e.target))m.classList.remove('open');});
+</script>
+</body>
+</html>
