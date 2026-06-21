@@ -172,6 +172,24 @@ nav{background:var(--forest);position:sticky;top:0;z-index:300;border-bottom:1px
 .prose blockquote p{margin-bottom:0;font-size:1rem}
 .prose hr{border:none;border-top:1px solid var(--line);margin:2.5rem 0}
 
+/* References box */
+.refs-wrap{margin:2rem 0;border:1px solid var(--line);background:var(--cream2)}
+.refs-toggle{display:flex;align-items:center;justify-content:space-between;padding:0.875rem 1.25rem;cursor:pointer;border-left:3px solid var(--forest3);transition:background 0.2s}
+.refs-toggle:hover{background:var(--cream3)}
+.refs-toggle-label{font-family:var(--sans);font-size:0.78rem;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:var(--text);display:flex;align-items:center;gap:8px}
+.refs-toggle-label::before{content:'';width:14px;height:14px;border:1px solid var(--forest3);border-radius:50%;display:inline-block;flex-shrink:0}
+.refs-count{font-family:var(--sans);font-size:0.68rem;color:var(--text3);font-weight:400;text-transform:none;letter-spacing:0}
+.refs-icon{font-family:var(--sans);font-size:0.9rem;color:var(--forest3);transition:transform 0.25s}
+.refs-wrap.open .refs-icon{transform:rotate(180deg)}
+.refs-body{max-height:0;overflow:hidden;transition:max-height 0.3s ease}
+.refs-wrap.open .refs-body{max-height:2000px}
+.refs-list{list-style:none;padding:0 1.25rem 1.25rem;margin:0;border-top:1px solid var(--line)}
+.refs-list li{font-family:var(--sans);font-size:0.8rem;color:var(--text2);line-height:1.6;padding:0.75rem 0;border-bottom:1px solid var(--line)}
+.refs-list li:last-child{border-bottom:none}
+.refs-list a{color:var(--forest3);text-decoration:underline;text-decoration-color:var(--sage2);text-underline-offset:2px}
+.refs-list a:hover{color:var(--forest)}
+.refs-note{font-family:var(--sans);font-size:0.78rem;color:var(--text3);font-style:italic;padding:1rem 1.25rem;border-top:1px solid var(--line)}
+
 /* Callout — same as articles */
 .prose .callout{background:var(--cream2);border:1px solid var(--line);border-left:3px solid var(--forest3);padding:1.25rem 1.5rem;margin:2rem 0}
 .prose .callout-label{font-family:var(--sans);font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--forest3);margin-bottom:0.5rem}
@@ -352,7 +370,7 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
     <a href="../blogs">Blogs</a>
     <a href="../case-studies">Case Studies</a>
     <a href="../categories">Categories</a>
-    <a href="about">About</a>
+    <a href="../about">About</a>
     <a href="/#contact">Contact</a>
   </div>
 </nav>
@@ -525,6 +543,32 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
         EDIT: One to three sentences summarising the most important lesson from this case study. What does this mean for pharma? <strong>EDIT: The key phrase or lesson in bold.</strong> This is the sentence a reader should remember after they close the page.
       </p>
     </div>
+
+    <!-- OPTIONAL: Quick Answers / FAQ section — only include if this case study needs one.
+         If you add this, also fill in the FAQ schema block in the <head> with matching questions.
+         If you don't use this section, delete the FAQ schema block from the head entirely.
+
+    <h2 id="faq">Quick answers</h2>
+
+    <h3>EDIT: Question 1</h3>
+    <p>EDIT: Answer 1</p>
+
+    <h3>EDIT: Question 2</h3>
+    <p>EDIT: Answer 2</p>
+
+    <div class="refs-wrap" id="refsBox">
+      <div class="refs-toggle" onclick="toggleRefs()">
+        <span class="refs-toggle-label">References <span class="refs-count">(EDIT: N sources)</span></span>
+        <span class="refs-icon">&#9660;</span>
+      </div>
+      <div class="refs-body">
+        <ul class="refs-list">
+          <li>EDIT: Source citation 1</li>
+          <li>EDIT: Source citation 2</li>
+        </ul>
+      </div>
+    </div>
+    -->
 
     <h2 id="what-this-means">What this means for you</h2>
 
@@ -714,6 +758,7 @@ document.addEventListener('click',function(e){
   const menu=document.getElementById('mobileMenu');const btn=document.getElementById('hamburgerBtn');
   if(menu&&btn&&!menu.contains(e.target)&&!btn.contains(e.target)){menu.classList.remove('open');}
 });
+function toggleRefs(){document.getElementById('refsBox').classList.toggle('open');}
 // SHARE
 function copyLink(){
   navigator.clipboard.writeText(window.location.href).then(()=>{

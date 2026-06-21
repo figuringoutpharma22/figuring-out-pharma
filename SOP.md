@@ -207,6 +207,30 @@ Work through the file top to bottom. Replace every placeholder marked EDIT.
 
 Note: no `.html` at the end of the slug in URLs. Cloudflare handles the clean URL.
 
+**Schema markup (in the `<head>` block, below the GA4 tag):**
+
+Every article and case study ships with three JSON-LD blocks: Article, BreadcrumbList, and an optional FAQPage. The Article block now includes `image`, `author.url`, `publisher.logo`, full ISO datetime fields, and a `citation` array — all of this is already structured correctly in `article-template.html` and `case-study-template.html`. You only need to fill in the EDIT markers, not rebuild the structure.
+
+```json
+"image": {"@type": "ImageObject", "url": "https://figuringoutpharma.com/images/[IMAGE FILE]", "width": 1200, "height": 675},
+"author": {"@type": "Person", "name": "Piyush Singh", "url": "https://figuringoutpharma.com/about"},
+"publisher": {"@type": "Organization", "name": "Figuring Out Pharma", "url": "https://figuringoutpharma.com", "logo": {"@type": "ImageObject", "url": "https://figuringoutpharma.com/og-image.png"}},
+"datePublished": "[DATE]T09:00:00+05:30",
+"dateModified": "[DATE]T09:00:00+05:30",
+```
+
+**Date format rule — this one breaks easily.** `datePublished` and `dateModified` must be a full ISO 8601 datetime with a timezone offset, not just a date. Use `09:00:00+05:30` (9 AM IST) as the default time for every new article unless you actually know the real publish time. `"2026-07-01"` is invalid. `"2026-07-01T09:00:00+05:30"` is correct.
+
+**Citation array — fill this from your References box.** If the article has a References section, copy each source into the `citation` array in the same order they appear in the visible refs list:
+
+```json
+"citation": [
+  {"@type": "CreativeWork", "name": "[Source title]", "author": "[Author name(s)]", "datePublished": "[Year]"}
+]
+```
+
+One `citation` entry per reference. Use the same title/author/year you already wrote in the visible `.refs-list` — don't write new ones. If the article has **no References section**, delete the entire `"citation": [...]` block from the schema, including the trailing comma on the line above it (`"mainEntityOfPage"` becomes the last field).
+
 **For a regular article — header section:**
 
 ```html
@@ -371,10 +395,10 @@ cd path/to/your/project-folder
 Then run:
 
 ```
-python3 build.py
+py build.py
 ```
 
-On Windows, if `python3` gives an error, try `python build.py` instead.
+On Windows, if `python3` gives an error, try `py build.py' instead.
 
 ### What it does
 
@@ -523,6 +547,7 @@ Open your browser. Go to `https://figuringoutpharma.com`. Hard refresh first: `C
 - [ ] All 3 Related Article links at the bottom open the correct pages
 - [ ] Dark mode looks correct — toggle the theme button to check
 - [ ] On mobile: article is readable, cover image shows, TOC sidebar is hidden
+- [ ] Run the live article URL through [Google's Rich Results Test](https://search.google.com/test/rich-results) — confirm Article schema shows no warnings (image, author url, publisher logo, valid datetime should all be green)
 
 ### For a new case study (same checks plus)
 
