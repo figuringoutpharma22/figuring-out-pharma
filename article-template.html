@@ -229,6 +229,50 @@ footer{background:var(--forest2);border-top:1px solid rgba(255,255,255,0.06);pad
 
   gtag('config', 'G-K3ENKKGSH5');
 </script>
+
+<!-- EDIT: Article schema — fill in every EDIT marker. Citation array is optional; delete it if the article has no references box -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "EDIT: Full article title",
+  "description": "EDIT: One sentence description — same as your meta description",
+  "image": {"@type": "ImageObject", "url": "https://figuringoutpharma.com/images/EDIT-IMAGE-FILENAME.jpg", "width": 1200, "height": 675},
+  "author": {"@type": "Person", "name": "Piyush Singh", "url": "https://figuringoutpharma.com/about"},
+  "publisher": {"@type": "Organization", "name": "Figuring Out Pharma", "url": "https://figuringoutpharma.com", "logo": {"@type": "ImageObject", "url": "https://figuringoutpharma.com/og-image.png"}},
+  "datePublished": "EDIT: YYYY-MM-DDT09:00:00+05:30",
+  "dateModified": "EDIT: YYYY-MM-DDT09:00:00+05:30",
+  "mainEntityOfPage": "https://figuringoutpharma.com/articles/EDIT-SLUG",
+  "citation": [
+    {"@type": "CreativeWork", "name": "EDIT: Source title", "author": "EDIT: Author(s)", "datePublished": "EDIT: Year"}
+  ]
+}
+</script>
+
+<!-- EDIT: Breadcrumb schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://figuringoutpharma.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Articles", "item": "https://figuringoutpharma.com/blogs"},
+    {"@type": "ListItem", "position": 3, "name": "EDIT: Article title", "item": "https://figuringoutpharma.com/articles/EDIT-SLUG"}
+  ]
+}
+</script>
+
+<!-- EDIT: FAQ schema — only include if the article has a Quick Answers / FAQ section. Delete this whole block if not -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "EDIT: Question 1", "acceptedAnswer": {"@type": "Answer", "text": "EDIT: Answer 1"}},
+    {"@type": "Question", "name": "EDIT: Question 2", "acceptedAnswer": {"@type": "Answer", "text": "EDIT: Answer 2"}}
+  ]
+}
+</script>
 </head>
 <body>
 
