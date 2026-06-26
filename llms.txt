@@ -39,6 +39,11 @@ URL: https://figuringoutpharma.com/articles/schedule-m-regulatory-shift-explaine
 Topic: Schedule M, GMP India, CDSCO, DCGI, pharmaceutical manufacturing, quality risk management, MSME pharma
 Summary: Explains the shift from the rule-based 2001 Schedule M to the risk-based revised Schedule M requiring Pharmaceutical Quality System and Quality Risk Management. Covers what changed on the factory floor, the phased compliance deadlines, and why most MSME units did not apply for the 2025 extension. Enforcement status as of 2026 is addressed.
 
+### Dolo 650 uses, dosage and side effects — explained
+URL: https://figuringoutpharma.com/articles/dolo-650-uses-dosage-side-effects
+Topic: Dolo 650, paracetamol dosage, paracetamol side effects, NLEM, DPCO, drug pricing India, acetaminophen India
+Summary: Explains what Dolo 650 is, its clinical uses for fever and pain relief, the correct adult dosage table, liver toxicity risks, pregnancy and breastfeeding safety guidance, and the pharmacological difference from Crocin. Covers the DPCO pricing arbitrage that caused the 650mg dose to dominate India's paracetamol market and the 2022 NLEM revision that brought it under price control.
+
 ---
 
 ## Case Studies
