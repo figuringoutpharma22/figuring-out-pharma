@@ -78,6 +78,11 @@ URL: https://figuringoutpharma.com/articles/covid-vaccine-development
 Topic: COVID-19 vaccines, mRNA vaccines, Covishield, Covaxin, Serum Institute, Bharat Biotech, rolling review, vaccine development India
 Summary: Explains why vaccines normally take 10 to 15 years and what structurally changed during COVID through parallel development funded by government advance market commitments. Covers the three platform technologies, how rolling regulatory review worked, India's specific role with Serum Institute producing over 200 million doses per month, and what permanently changed in platform science and supply chains.
 
+### The Coldrif Cough Syrup Tragedy — How Diethylene Glycol Killed 20+ Children in India
+URL: https://figuringoutpharma.com/articles/coldrif-cough-syrup-tragedy
+Topic: Coldrif, diethylene glycol, DEG poisoning, cough syrup deaths, pediatric drug safety, Sresan Pharmaceuticals, CDSCO, drug regulation India
+Summary: Covers the 2025 Coldrif cough syrup tragedy in Madhya Pradesh, where diethylene glycol contamination in a children's cough syrup killed more than 20 children. Explains the toxicology of DEG poisoning, why children are especially vulnerable, the corruption trail linking a prescribing doctor to the manufacturer, and the structural gaps in India's dual central-state drug regulatory system that let it happen.
+
 ---
 
 ## Site Information
