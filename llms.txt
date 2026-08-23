@@ -54,6 +54,11 @@ URL: https://figuringoutpharma.com/articles/unbranded-disease-awareness-marketin
 Topic: disease awareness campaign, unbranded pharma marketing, DTCA India, Schedule J, Drugs and Magic Remedies Act, Cipla Berok Zindagi, Lupin HuMrahi, help-seeking advertising
 Summary: Explains how Indian pharma companies legally advertise around the Schedule H/X ban on prescription drug advertising by running unbranded disease-awareness campaigns instead, governed by Schedule J's 54-disease no-cure-claim rule and the Drugs and Magic Remedies Act, 1954. Covers real campaigns including Cipla's Berok Zindagi and Tuffies, Lupin's HuMrahi and NovaShakti, and Abbott's celebrity-fronted awareness pushes, plus physician survey data on effectiveness and disease-mongering concerns.
 
+### E-prescriptions in India — are they legal, and how do they actually work
+URL: https://figuringoutpharma.com/articles/e-prescriptions-in-india-legal-explained
+Topic: e-prescription India legal, telemedicine practice guidelines, digital signature prescription, List O A B prohibited drugs, Rule 65 Schedule H1, e-prescription pharmacist liability, IT Act digital signature, ABDM ABHA eSanjeevani
+Summary: Explains when an e-prescription is legally valid in India under the Telemedicine Practice Guidelines, 2020 and the IT Act, 2000 — covering the List O/A/B/Prohibited drug tiers, why a WhatsApp prescription doesn't meet the legal bar, and the Rule 65/Section 42 dispensing rules pharmacists are bound by. Opens with the 2018 Pawaskar case that exposed the pre-2020 legal vacuum, and covers ABDM/eSanjeevani infrastructure plus the live threat of e-pharmacy restrictions under the draft Drugs, Medical Devices and Cosmetics Act.
+
 ---
 
 ## Case Studies
