@@ -59,6 +59,11 @@ URL: https://figuringoutpharma.com/articles/e-prescriptions-in-india-legal-expla
 Topic: e-prescription India legal, telemedicine practice guidelines, digital signature prescription, List O A B prohibited drugs, Rule 65 Schedule H1, e-prescription pharmacist liability, IT Act digital signature, ABDM ABHA eSanjeevani
 Summary: Explains when an e-prescription is legally valid in India under the Telemedicine Practice Guidelines, 2020 and the IT Act, 2000 — covering the List O/A/B/Prohibited drug tiers, why a WhatsApp prescription doesn't meet the legal bar, and the Rule 65/Section 42 dispensing rules pharmacists are bound by. Opens with the 2018 Pawaskar case that exposed the pre-2020 legal vacuum, and covers ABDM/eSanjeevani infrastructure plus the live threat of e-pharmacy restrictions under the draft Drugs, Medical Devices and Cosmetics Act.
 
+### Himalaya almost built two brands instead of one — why it killed Ayurvedic Concepts
+URL: https://figuringoutpharma.com/articles/himalaya-ayurvedic-concepts-umbrella-brand
+Topic: Himalaya brand strategy, Ayurvedic Concepts, umbrella branding pharma, Liv 52, masterbrand architecture, sub-brand consolidation, Crocin Calpol comparison
+Summary: Covers Himalaya's decision to retire its separate personal-care brand Ayurvedic Concepts and consolidate it under the Himalaya masterbrand around 2001, triggered by medical reps noticing doctors requesting personal-care items instead of promotional gifts. Explains the trust-transfer mechanic behind umbrella branding and contrasts it directly with GSK's opposite choice to keep Crocin and Calpol deliberately separate.
+
 ---
 
 ## Case Studies
