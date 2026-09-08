@@ -64,6 +64,11 @@ URL: https://figuringoutpharma.com/articles/himalaya-ayurvedic-concepts-umbrella
 Topic: Himalaya brand strategy, Ayurvedic Concepts, umbrella branding pharma, Liv 52, masterbrand architecture, sub-brand consolidation, Crocin Calpol comparison
 Summary: Covers Himalaya's decision to retire its separate personal-care brand Ayurvedic Concepts and consolidate it under the Himalaya masterbrand around 2001, triggered by medical reps noticing doctors requesting personal-care items instead of promotional gifts. Explains the trust-transfer mechanic behind umbrella branding and contrasts it directly with GSK's opposite choice to keep Crocin and Calpol deliberately separate.
 
+### What is regulatory affairs in pharma — a B.Pharma-first explainer
+URL: https://figuringoutpharma.com/articles/regulatory-affairs-career-india-explained
+Topic: what is regulatory affairs in pharma, regulatory affairs career India, RA associate salary, CDSCO dossier, CTD eCTD explained, regulatory affairs vs QA vs pharmacovigilance, Ranbaxy data integrity, B.Pharm career path
+Summary: Explains what regulatory affairs is in the pharmaceutical industry and what an RA associate actually does inside an Indian pharma company, anchored in the Ranbaxy data-fraud case to show what RA guards against. Distinguishes RA from QA, pharmacovigilance, and medical writing, and gives a realistic B.Pharm-only entry path alongside CDSCO's Schedule Y, CTD/eCTD structure, and salary bands by experience tier.
+
 ---
 
 ## Case Studies
